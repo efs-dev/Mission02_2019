@@ -1,0 +1,70 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGEndGame {public IEnumerator Run() {
+// were all player items traded?
+GameFlags.P2TradedAll = GameFlags.TGPlayerItems.ConvertAll<bool>(item => !item.HasItem || item.IsTraded).Aggregate((item, nextItem) => item && nextItem);
+
+
+if (GameFlags.TGUnadjustedAttitudeOffset < 0)
+{
+     yield return Actions.OpenPopupBlocking("p2_grumble");
+}
+else
+{
+     yield return Actions.OpenPopupBlocking("p2_come_again");
+}
+
+GameFlags.TGTraderItems.ForEach(item =>
+{
+     if (item.IsTraded)
+          GameFlags.TGItemsTradedFor++;
+});
+
+// should eventually replace P2NumItemsTradedFor everywhere else with TGItemsTradedFor
+GameFlags.P2NumItemsTradedFor = GameFlags.TGItemsTradedFor;
+
+// we increment this in GlobalScripts.TGTradeSuccess ... should this be here too?
+if (GameFlags.TGTraderItems.Find(item => item.Id == "gun").IsTraded){
+     GameFlags.P4GunCount++;
+     GameFlags.P2GunTraded=true;
+}
+if (GameFlags.TGTraderItems.Find(item => item.Id == "hat").IsTraded){
+     GameFlags.P2HatTraded=true;
+}
+if (GameFlags.TGTraderItems.Find(item => item.Id == "powder1").IsTraded){
+     GameFlags.P2Powder1Traded=true;
+}
+if (GameFlags.TGTraderItems.Find(item => item.Id == "powder2").IsTraded){
+     GameFlags.P2Powder2Traded=true;
+}
+if (GameFlags.TGTraderItems.Find(item => item.Id == "axe").IsTraded){
+     GameFlags.P2AxeTraded=true;
+}
+if (GameFlags.TGTraderItems.Find(item => item.Id == "kettle").IsTraded){
+     GameFlags.P2KettleTraded=true;
+}
+if (GameFlags.TGTraderItems.Find(item => item.Id == "blanket").IsTraded){
+     GameFlags.P2BlanketTraded=true;
+}
+
+if (GameFlags.TGPlayerItems.Find(item => item.Id == "hides1").IsTraded){
+     GameFlags.P2Hides1Traded=true;
+}
+if (GameFlags.TGPlayerItems.Find(item => item.Id == "hides2").IsTraded){
+     GameFlags.P2Hides2Traded=true;
+}
+if (GameFlags.TGPlayerItems.Find(item => item.Id == "hides3").IsTraded){
+     GameFlags.P2Hides3Traded=true;
+}
+if (GameFlags.TGPlayerItems.Find(item => item.Id == "robe").IsTraded){
+     GameFlags.P2RobeTraded=true;
+}
+if (GameFlags.TGPlayerItems.Find(item => item.Id == "spyglass").IsTraded){
+     GameFlags.HasSpyglass=false;
+}
+if (GameFlags.TGPlayerItems.Find(item => item.Id == "knife").IsTraded){
+     GameFlags.HasLargeKnife=false;
+     GameFlags.HasSharpKnife=false;
+}
+if (GameFlags.TGPlayerItems.Find(item => item.Id == "money").IsTraded){
+     GameFlags.HasMoney=false;
+}
+}}

@@ -1,0 +1,40 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_OneTimeInit {public void Run() {
+
+if( GameFlags.P4DidOnetimeInit )
+{
+     Debug.Log("skipping one time init");
+     return;
+}
+
+Debug.Log("one time init ");
+
+GameFlags.P4DidOnetimeInit = true;
+
+GameFlags.P4MetMiners = false;
+GameFlags.P4MetHunters = false;
+GameFlags.P4MetSettlers = false;
+GameFlags.P4DoReprisal = false;
+
+// init social flags
+GameFlags.P4DullKnife = false;
+GameFlags.P4CrazyHorse = false;
+GameFlags.P4LittleWolf = false;
+GameFlags.P4SittingBull = false;
+
+// have we already commented on you meeting them?
+GameFlags.P4DullKnifeMsg = false;
+GameFlags.P4CrazyHorseMsg = false;
+GameFlags.P4LittleWolfMsg = false;
+GameFlags.P4SittingBullMsg = false;
+
+// gets inc'ed after this
+GameFlags.P4SeasonCount = 0;
+
+GameFlags.P4TribeHealth = 0;
+GameFlags.P4FirstHunt = true;
+
+GameFlags.P4ElderCount = GameFlags.P4ElderStart;
+GameFlags.P4WarriorCount = GameFlags.P4WarriorStart;
+GameFlags.P4FemaleCount = GameFlags.P4FemaleStart;
+GameFlags.P4ChildCount = GameFlags.P4ChildStart;
+}}

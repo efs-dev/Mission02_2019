@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_agency_annuity_p1_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4DelayCheck = 0;
+GameFlags.P4Delayed = true;
+/*
+showNpc(true,1)
+npcTalk("NEUTRAL", true, "audio/dlgs/p3/p3_map/p3_map_agency_annuity_p0.mp3", "Saville")*/
+}}

@@ -1,0 +1,10 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_englishOnActiveDescription : Quest {public IEnumerator Run() {
+if (GameFlags.tEnglish == 0)
+return "This is a skill you have not yet encountered or been trained in.";
+else if (GameFlags.tEnglish == 1)
+return "You have learned a few English words and phrases.";
+else if (GameFlags.tEnglish == 2)
+return "You can hold a conversation in English about common topics. You are familiar with the alphabet and can read a little.";
+else
+return "You are almost a fluent speaker of English and can talk about most things. You can read and are starting to write as well.";
+}}

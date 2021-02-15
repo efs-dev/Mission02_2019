@@ -1,0 +1,5 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_horses_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("dayambprimo", true);
+yield return Actions.DialogOpenBlocking("p1_mn_wildhorse");
+yield return Actions.LoadScene("loc_camp_overlook");
+}}

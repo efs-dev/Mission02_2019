@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p1_mn_precrow_n02_r1_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+Actions.SetHotspotVisible("precrow", false);
+Actions.SetHotspotVisible("crkrbt", false);
+GameFlags.tBravery ++;
+GameFlags.P1GoingCrow = true;
+Actions.SetHotspotVisible("crow_hill", true);
+}}

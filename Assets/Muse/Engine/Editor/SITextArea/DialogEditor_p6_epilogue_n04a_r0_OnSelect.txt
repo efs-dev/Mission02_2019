@@ -1,0 +1,5 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p6_epilogue_n04a_r0_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+Actions.SetHotspotVisible("story3", false);
+Actions.SetHotspotVisible("art3", true);
+Actions.AudioStop("epi_story3");
+}}

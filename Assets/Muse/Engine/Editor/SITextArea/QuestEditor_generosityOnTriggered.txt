@@ -1,0 +1,14 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_generosityOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tGenerosity == 1)
+Actions.AlertFromId("generosity_point_tut");
+else if (GameFlags.tGenerosity == 2)
+IncrementBadgeRank (1, "Your generosity is known among your band.", "generosity_rank1");
+else if (GameFlags.tGenerosity < 4)
+Actions.AlertFromId("generosity_point");
+else if (GameFlags.tGenerosity == 4)
+IncrementBadgeRank (1, "Your generosity is known among the Northern Cheyenne.", "generosity_rank2");
+else if (GameFlags.tGenerosity < 6)
+Actions.AlertFromId("generosity_point");
+else if (GameFlags.tGenerosity == 6)
+IncrementBadgeRank (1, "Your generosity is known among all the People.", "generosity_rank3");
+}}

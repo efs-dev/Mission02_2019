@@ -1,0 +1,101 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_FindHerd {public bool Run() {
+Debug.Log("FindHerd()");
+
+var rand = UnityEngine.Random.Range(1, 100);
+
+Debug.Log("...random roll: " + rand);
+Debug.Log("...cur BuffaloChance: " + GameFlags.P4CurrentBuffaloChance);
+
+
+
+// base chance can't drop below 30%
+if (GameFlags.P4CurrentBuffaloChance < 30)
+     GameFlags.P4CurrentBuffaloChance = 30;
+
+
+// mods
+var mods = 0f;
+
+if (GameFlags.HasSpyglass)
+{
+     Debug.Log("...adding spyglass mod +10");
+     mods += 5;
+}
+
+var wisMod = Quest.GetQuest("bravery").Rank * 2.5f;
+Debug.Log("...adding wisdom * 2.5: " + wisMod);
+mods += wisMod;
+
+var elderMod = GameFlags.P4ElderCount;
+//Log.info("...elder mod: " + elderMod);
+mods += elderMod;
+
+//trace("...find herd mods:",mods);
+
+// modified chance to find herd
+var modifiedChance = GameFlags.P4CurrentBuffaloChance + (int)mods;
+
+// seasonal mods
+// ??
+
+if (GameFlags.P4DidBufDance)
+{
+     GameFlags.P4Dance = true;
+     GameFlags.P4DidBufDance = false;
+}
+
+
+
+var curNode = GameFlags.P4CurNode;
+var seasonCount = GameFlags.P4SeasonCount;
+
+// MODIFY CHANCE TO FIND HERD BASED ON LOCATION
+if (curNode == "hunting_grounds")
+{
+     //Log.info("...hunting grounds mod");
+     modifiedChance -= (10 * seasonCount);
+}
+else if (curNode == "sioux")
+{
+     //Log.info("...great sioux mod");
+     modifiedChance -= (5 * seasonCount);
+}
+
+
+
+var campBonus = GameFlags.P4CampBuffaloBonus;
+if (campBonus)
+{
+     //Log.info("adding co-camping bonus to find");
+     modifiedChance += 10;
+}
+
+
+// GUARANTEE FIRST HUNT Log.info("**** FIRST HUNT GUARANTEED FIND ****");
+if (GameFlags.P4FirstHunt) rand = 2;
+     
+
+// ADD IN BUFFALO DANCE MOD
+var danceBuf = GameFlags.P4DanceBuff;
+
+if (GameFlags.P4Dance)
+{
+     modifiedChance += danceBuf;
+     Debug.Log("applied dance buff, chance now " + modifiedChance);
+}
+
+
+if (rand < modifiedChance)
+{
+     //M3.Out("found a herd");
+     // found a herd
+     GlobalScripts.FoundHerd();
+     return true;
+}
+else
+{
+     Debug.Log("did not find a herd");
+     GameFlags.P4HerdSizeString = "";  // none
+     return false;  // found nothing
+}
+}}

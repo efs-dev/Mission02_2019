@@ -1,0 +1,68 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("nightamb", true);
+if (!GameFlags.P1SeeHerd)
+{
+	GameFlags.CurrentPonyMapLoc = "hill";
+	yield return Actions.OpenPopupBlocking(PopupIds.p1_see_herd);
+	Actions.SetHotspotVisible("pin_lf", true);
+	yield return Actions.MoveToHotspotBlocking("pin_lf", "hill", 3.0f, 1f, 0.75f);
+	yield return Actions.OpenPopupBlocking(PopupIds.p1_crooked_rabbit);
+	Actions.SetHotspotVisible("pin_cr", true);
+	yield return Actions.MoveToHotspotBlocking("pin_cr", "hill", 2.5f, 1.15f, 0.65f);
+	yield return Actions.Wait(1.5f);
+	GameFlags.P1PonyQuestStep = 1;
+	GameFlags.P1SeeHerd = true;
+	yield return Actions.LoadScene("loc_overlook");
+	
+}
+
+if (GameFlags.P1PonyQuestStep == 1)
+{
+	if (GameFlags.P1GoToCamp)
+	{
+		yield return Actions.MoveToHotspotBlocking("pin_lf", "camp", 2.5f, 1.0f, 0.75f);
+		yield return Actions.Wait(1.0f);
+		yield return Actions.LoadScene("loc_camp_night");
+	}
+	else if (GameFlags.P1CRBackToCamp)
+	{
+		yield return Actions.MoveToHotspotBlocking("pin_cr", "camp", 2.5f, 1.0f, 0.75f);
+		yield return Actions.Wait(1.0f);
+		GameFlags.P1PonyQuestStep = 2;
+		Actions.SetHotspotVisible("pin_cr", false);
+		Actions.BlinkHotspot("river");
+		yield return Actions.BlinkHotspotBlocking("ponies");
+	}
+}
+
+else if (GameFlags.P1PonyQuestStep == 2)
+{
+Actions.BlinkHotspot("river");
+yield return Actions.BlinkHotspotBlocking("ponies");
+}
+
+else if (GameFlags.P1PonyQuestStep == 3)
+{
+	if (GameFlags.P1PreCrow)
+	{
+		Actions.SetHotspotVisible("trees", true);
+		if ( GameFlags.P1WithCR)
+		{
+			Actions.MoveToHotspot("pin_lf", "trees", 4.0f, 1.0f, 0.75f);
+			Actions.MoveToHotspot("pin_cr", "trees", 4.0f, 1.15f, 0.65f);
+			yield return Actions.Wait(3.0f);
+			Actions.SetHotspotVisible("precrow", true);
+			yield return Actions.DialogOpenBlocking("p1_mn_precrow");
+		}
+		else
+		{
+			yield return Actions.MoveToHotspotBlocking("pin_lf", "trees", 2.5f, 1.0f, 0.75f);
+			Actions.SetHotspotVisible("precrow", true);
+			yield return Actions.DialogOpenBlocking("p1_mn_precrow");
+		}
+	}
+	else if (GameFlags.P1LookElsewhere)
+		GameFlags.P1PonyQuestStep = 2;
+	
+}
+}}

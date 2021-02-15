@@ -1,0 +1,12 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p4_intro_OnShowText {public IEnumerator Run() {
+if (GameFlags.P3WarriorChoice == "elk")
+{
+Actions.SetHotspotVisible("elks", true);
+yield return Actions.SceneTimelineBlocking("elks");
+}
+else
+{
+Actions.SetHotspotVisible("crazy_dogs", true);
+yield return Actions.SceneTimelineBlocking("crazy_dogs");
+}
+}}

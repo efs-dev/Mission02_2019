@@ -1,0 +1,19 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_OnbighornClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "bighorn")
+    yield break;
+
+// summer
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "bighorn");
+
+if (GameFlags.P4PopupConfirm)
+{
+     
+     yield return Actions.MoveToHotspotBlocking("player", "bighorn", 3f, 1f, 1f);
+   
+     // arrival script
+    GameFlags.P4MapStartNode = "bighorn";
+    GameFlags.P4NodeDescr = "in the Bighorn Mountains";
+    GameFlags.P4RootNode = "_bighorn_mountains";
+    yield return Actions.LoadScene("p4_survival_dlg");
+}
+}}

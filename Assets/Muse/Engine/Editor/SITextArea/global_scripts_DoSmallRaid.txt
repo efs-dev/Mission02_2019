@@ -1,0 +1,62 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_DoSmallRaid {public void Run() {
+Debug.Log("DoSmallRaid()");
+
+GameFlags.P4NewFood = 0;
+GameFlags.P4NewSupplies = 0;
+GameFlags.P4GotHorse = false;
+
+int r = 0;
+// each warrior 0 - 2 food
+for (var i = 0; i < GameFlags.P4WarriorCount; i++)
+{
+     r = UnityEngine.Random.Range(0, 2);
+     GameFlags.P4NewFood += r;
+     
+     // 25% supply
+     r = UnityEngine.Random.Range(1, 100);
+     if (r < 25)
+     {
+          GameFlags.P4NewSupplies++;
+     }
+}
+GameFlags.P4Food += GameFlags.P4NewFood;
+GameFlags.P4Supplies += GameFlags.P4NewSupplies;
+
+// 25% fast horse
+r = UnityEngine.Random.Range(1, 100);
+if (r < 25)
+{
+     GameFlags.P4GotHorse = true;
+     GameFlags.P4HorseCount++;
+}
+
+string ret = "Your raiding party ";
+
+switch (GameFlags.P4RaidInfo)
+{
+     case "settlers": ret += "sneaks onto the farm "; break;
+     case "surveyors": ret += "sneaks into the camp "; break;
+     case "miners": ret += "sneaks into the miners' camp "; break;
+}
+
+ret += "and escapes with some oxen and cattle (" + GameFlags.P4NewFood + "). ";
+
+if ((GameFlags.P4NewSupplies > 0) && GameFlags.P4GotHorse)
+{
+     ret += "You also get some supplies (" + GameFlags.P4NewSupplies + "), and take a fast-looking horse.";
+     GameFlags.P4GotHorse = false;
+}
+else if (GameFlags.P4NewSupplies > 0)
+{
+     ret += "You also get some supplies (" + GameFlags.P4NewSupplies + "). ";
+}
+
+if (GameFlags.P4GotHorse)
+{
+     ret += "You also take a fast-looking horse.";
+}
+
+// your raiding party quietly sneaks in and escapes with some oxen and cattle (31 food ). You take a fast-looking horse. You also get 12 supplies.
+
+GameFlags.P4RaidResult = ret;
+}}

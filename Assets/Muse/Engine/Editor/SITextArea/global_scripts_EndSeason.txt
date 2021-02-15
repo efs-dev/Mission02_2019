@@ -1,0 +1,19 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_EndSeason {public IEnumerator Run() {
+var populationPreChange = (GameFlags.P4Population); // Tracks old population to prevent newcomers from eating food
+
+GlobalScripts.CalculateSummary();
+
+var food = Mathf.Max(0, GameFlags.P4Food - populationPreChange); // cant drop below 0
+GameFlags.P4Value = food; // DG really not sure what this is doing, need to check
+
+GameFlags.P4Raided = false; // clear the raiding flag to allow next season
+GameFlags.P4Partied = false;
+GameFlags.P4DidSunDance = false;
+GameFlags.P4GameBonus = 0;
+GameFlags.P4CampBuffaloBonus = false;
+GameFlags.P4SkipSeasonChange = false;
+GameFlags.P4AutoTrip = "";
+
+yield return Actions.LoadScene("p4_survival_end_season");
+GameFlags.P4Food = food; // set this after loading the next scene, that way the top bar in dialog doesnt update
+}}

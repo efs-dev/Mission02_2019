@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_night_Onuncles_tipiClick {public IEnumerator Run() {
+GameFlags.P1PonyQuestStep = 2;
+yield return Actions.LoadScene("loc_uncles_tipi_night");
+}}

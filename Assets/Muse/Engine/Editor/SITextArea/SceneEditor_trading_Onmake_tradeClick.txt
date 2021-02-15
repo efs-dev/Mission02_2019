@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_trading_Onmake_tradeClick {public IEnumerator Run() {
+yield return GlobalScripts.TGMakeOffer();
+if ( GameFlags.TGEndGame) 
+{
+  yield return GlobalScripts.TGEndGame();
+  yield return Actions.LoadScene("map_p2");
+}
+}}

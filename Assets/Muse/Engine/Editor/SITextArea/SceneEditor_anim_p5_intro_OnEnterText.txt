@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p5_intro_OnEnterText {public IEnumerator Run() {
+
+}}

@@ -1,0 +1,20 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class p4_survival_z_soc08_VisualData_ImagePath {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+var id  = "";
+switch( GameFlags.P4Season )
+{
+case 1:
+id += "win_";
+break;
+case 2:
+id += "spr_";
+break;
+case 3:
+id += "sum_";
+break;
+case 4:
+id += "fal_";
+break;
+}
+id += "trading";
+return id;
+}}

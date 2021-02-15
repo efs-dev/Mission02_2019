@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_Tooltip_People_Warriors_OnToolTip {public IEnumerator Run() {
+if (GameFlags.P4WarriorCount > 1)
+    return "There are " + GameFlags.P4WarriorCount + " warriors in your band.";
+else if (GameFlags.P4WarriorCount == 1)
+    return "There is one warrior in your band.";
+else
+    return "There are no warriors in your band.";
+}}

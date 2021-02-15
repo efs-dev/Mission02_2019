@@ -1,0 +1,9 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony_OncampClick {public IEnumerator Run() {
+if ((GameFlags.P1UncleAssignedTask || GameFlags.P1PlayerGoLook) && !GameFlags.P1FoundGrayMare)
+yield return Actions.OpenPopupBlocking(PopupIds.p1_do_stuff);
+else if ((GameFlags.P1UncleAssignedTask || GameFlags.P1PlayerGoLook) && GameFlags.P1FoundGrayMare)
+yield return Actions.OpenPopupBlocking(PopupIds.p1_go_back_choice);
+else
+yield return Actions.LoadScene("loc_camp_night");
+
+}}

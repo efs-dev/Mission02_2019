@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p3_outro5_OnShowText {public IEnumerator Run() {
+yield return Actions.SceneTimelineBlocking("outro5");
+yield return Actions.EndPart();
+}}

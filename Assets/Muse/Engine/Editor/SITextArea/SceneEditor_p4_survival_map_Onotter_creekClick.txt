@@ -1,0 +1,20 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_Onotter_creekClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "otter_creek")
+    yield break;
+
+// spring/fall
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "otter_creek");
+if(GameFlags.P4PopupConfirm) {
+  yield return Actions.MoveToHotspotBlocking("player", "otter_creek", 3f, 1f, 1f);
+  //Actions.SetHotspotVisible("otter_spring", true);
+  
+
+    // arrival script
+    GameFlags.P4MapStartNode = "otter_creek";
+GameFlags.P4NodeDescr = "beside a spot on Otter Creek";
+GameFlags.P4RootNode = "_otter_creek";
+    yield return Actions.LoadScene("p4_survival_dlg");
+
+
+}
+}}

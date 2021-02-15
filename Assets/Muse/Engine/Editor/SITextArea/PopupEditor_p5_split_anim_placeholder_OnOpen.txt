@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class PopupEditor_p5_split_anim_placeholder_OnOpen {public IEnumerator Run() {
+
+}}

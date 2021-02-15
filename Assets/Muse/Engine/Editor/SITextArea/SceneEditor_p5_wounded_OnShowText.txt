@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p5_wounded_OnShowText {public IEnumerator Run() {
+yield return Actions.DialogOpenBlocking("p5_wounded");
+yield return Actions.LoadScene("p5_littlewolf");
+}}

@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateGame {public int Run() {
+var gchance = GameFlags.P4BaseGameChance / 100f;
+var percent = gchance + (UnityEngine.Random.value * .08f);
+
+var total = percent * GameFlags.P4Population;
+Debug.Log("calculate game: " + total);
+return Mathf.RoundToInt(total);
+}}

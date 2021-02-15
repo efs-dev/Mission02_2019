@@ -1,0 +1,19 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_turn1_game_p1_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4Food += GameFlags.P4GameFood;
+/*
+$temp = "gfx/smartmap/map_supply/herds/no_buf_"
+switch( GameFlags.P4Season )
+= 1
+$temp += "win"
+= 2
+$temp += "spr"
+= 3
+$temp += "sum"
+= 4
+$temp += "fal"
+}
+
+$temp += "_2.jpg"
+
+//setLayer("fg", $temp) */
+}}

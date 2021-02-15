@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p1_mn_precrow_n01_r0_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P1CrowCode = 1;
+GameFlags.tWisdom ++;
+yield return Actions.LoadScene("loc_uncles_tipi_dawn");
+}}

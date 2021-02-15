@@ -1,0 +1,7 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_winter_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("winterdayamb", true);
+yield return Actions.DialogOpenBlocking("p2_unc_001");
+Actions.SetHotspotVisible("UncleRobe", false);
+yield return Actions.OpenPopupBlocking(PopupIds.p2_wait_impatiently);
+yield return Actions.LoadScene("loc_spring_thaw");
+}}

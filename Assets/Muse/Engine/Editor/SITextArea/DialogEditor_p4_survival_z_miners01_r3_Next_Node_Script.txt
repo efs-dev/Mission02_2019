@@ -1,0 +1,9 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_miners01_r3_Next_Node_Script {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4Value = SurvivalGame.Random(100);
+if( GameFlags.P4Value > 40 ) {
+GlobalScripts.DoRaid("miners2");
+return "z_miners02";
+} else {
+return "z_miners03";
+}
+}}

@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_soc04_r2_Next_Node_Script {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+if (GameFlags.P4NumTrades == GameFlags.P4TradeLimit) {
+return "z_soc05";
+} else return "z_soc04";
+}}

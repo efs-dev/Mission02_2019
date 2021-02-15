@@ -1,0 +1,39 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony_OnEnterText {public IEnumerator Run() {
+Actions.SetHotspotVisible("river2", GameFlags.P1SearchedCreek2);
+Actions.SetHotspotVisible("trees", false);
+Actions.SetHotspotVisible("crow_hill", false);
+Actions.SetHotspotVisible("CrkRbt", false);
+
+if (GameFlags.P1PonyQuestStep == 0)
+{
+	Actions.SetHotspotVisible("pin_lf", false);
+	Actions.SetHotspotVisible("pin_cr", false);
+}
+
+if (GameFlags.P1PonyQuestStep > 1)
+	Actions.SetHotspotVisible("pin_cr", !GameFlags.P1CRBackToCamp);
+
+if (GameFlags.P1PonyQuestStep == 1)
+{
+	Actions.MoveToHotspot("pin_lf", "hill", 0f, 1f, 0.75f);
+	Actions.MoveToHotspot("pin_cr", "hill", 0f, 1.15f, 0.65f);
+}
+else if (GameFlags.P1PonyQuestStep == 2)
+{
+	if (GameFlags.P1GoToCamp)
+	{
+		Actions.MoveToHotspot("pin_lf", "camp", 0f, 1f, 0.75f);
+		Actions.MoveToHotspot("pin_cr", "hill", 0f, 1.15f, 0.65f);
+	}
+	else if (GameFlags.P1PlayerGoLook)
+	{
+		Actions.MoveToHotspot("pin_lf", "hill", 0f, 1f, 0.75f);
+		Actions.MoveToHotspot("pin_cr", "hill", 0f, 1.15f, 0.65f);
+	}
+}
+else if (GameFlags.P1PonyQuestStep == 3)
+{
+	Actions.MoveToHotspot("pin_lf", "ponies", 0f, 1.0f, 0.75f);
+	Actions.MoveToHotspot("pin_cr", "ponies", 0f, 1.15f, 0.65f);
+}
+}}

@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class PopupEditor_p4_declaration_Response_0_OnSelect {public IEnumerator Run() {
+Actions.ClosePopup();
+}}

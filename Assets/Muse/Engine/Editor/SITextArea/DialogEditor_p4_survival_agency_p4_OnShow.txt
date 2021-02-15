@@ -1,0 +1,10 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_agency_p4_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+/* // if (GameFlags.P4Season == 1)
+playambient("audio/sfx/p3_map_sfx/winterdayamb.mp3")
+else if (GameFlags.#p3_season == 2)
+playambient("audio/sfx/p3_map_sfx/springdayamb.mp3")
+else if (GameFlags.#p3_season == 3)
+playambient("audio/sfx/p3_map_sfx/summerdayhorseamb.mp3")
+else
+playambient("audio/sfx/p3_map_sfx/falldayamb.mp3") */
+}}

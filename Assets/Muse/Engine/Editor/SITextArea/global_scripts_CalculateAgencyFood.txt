@@ -1,0 +1,17 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateAgencyFood {public int Run(int times) {
+var food = 0;
+
+for (var i = 0; i < times; i++)
+{
+     //SurvivalGame.Random(20);
+     float percent = 75 + UnityEngine.Random.Range(1, 20);
+     percent *= .01f;
+     
+     var total = percent * GameFlags.GetGameFlagValue<int>("P4Population");
+     total /= 3;
+     
+     food += Mathf.RoundToInt(total);
+}
+
+return food;
+}}

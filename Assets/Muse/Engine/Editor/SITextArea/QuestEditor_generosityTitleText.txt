@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_generosityTitleText : Quest {public IEnumerator Run() {
+return "Generosity";
+}}

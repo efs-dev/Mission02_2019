@@ -1,0 +1,26 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGToggleItem {public void Run(string id) {
+var playerItem = GameFlags.TGPlayerItems.Find(x=>x.Id == id);
+var traderItem = GameFlags.TGTraderItems.Find(x=>x.Id == id);
+
+var item = playerItem != null ? playerItem : traderItem;
+
+item.OnTable = !item.OnTable;
+
+var moveY = 4f;
+if (playerItem != null && !item.OnTable)
+     moveY *= -1;
+else if (traderItem != null && item.OnTable)
+     moveY *= -1;
+
+var hotspot = Actions.GetHotspot(id);
+var pos = hotspot.transform.localPosition;
+pos.y += moveY;
+hotspot.transform.localPosition = pos;
+
+if (item.OnTable)
+     TGTableAdd(item.Id);
+else
+     TGTableRemove(item.Id);
+
+
+}}

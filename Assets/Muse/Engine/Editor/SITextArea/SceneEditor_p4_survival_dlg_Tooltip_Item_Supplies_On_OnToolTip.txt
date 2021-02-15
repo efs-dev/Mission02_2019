@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_Tooltip_Item_Supplies_On_OnToolTip {public IEnumerator Run() {
+if (GameFlags.P4Supplies == 1)
+     return "You have " + GameFlags.P4Supplies + " supply.";
+else
+     return "You have " + GameFlags.P4Supplies + " supplies.";
+}}

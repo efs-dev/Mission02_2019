@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_overlook_OnExitText {public IEnumerator Run() {
+
+}}

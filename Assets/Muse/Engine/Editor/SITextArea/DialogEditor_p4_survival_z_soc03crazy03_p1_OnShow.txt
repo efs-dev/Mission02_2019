@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_soc03crazy03_p1_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+M3.SimpleAlert("", "You become better at shooting rifles.");
+GameFlags.tRiflery = GameFlags.tRiflery + 1;
+GameFlags.P4GameBonus = GameFlags.P4GameBonus + 5;
+GameFlags.P4CampBuffaloBonus = true;
+}}

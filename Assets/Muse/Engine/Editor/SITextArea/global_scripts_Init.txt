@@ -1,0 +1,33 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_Init {public void Run() {
+Debug.Log("surv game init() ");
+
+// misc
+//GameFlags.P4AutoTrip = "";
+
+// chokeberries etc
+GameFlags.P4Berries = "";
+
+// sundance
+GameFlags.P4Attended = false;
+
+
+GameFlags.P4WhiteBuf = false;
+GameFlags.P4WhiteBuffaloHides = 0;
+
+//GameFlags.P4StarveCount = 0;
+
+GameFlags.P4HerdSizeString = "X";  // didn't hunt
+
+GameFlags.P4BigRaidCount = 0;
+
+GameFlags.P4CurrentBuffaloChance = GameFlags.P4BaseBuffaloChance;
+
+
+
+GameFlags.P4NewPopulation = 0;
+GameFlags.P4TotalShrink = 0;
+
+GameFlags.P4BowUp = false;
+GameFlags.P4RifleUp = false;
+GameFlags.P4HorseUp = false;
+}}

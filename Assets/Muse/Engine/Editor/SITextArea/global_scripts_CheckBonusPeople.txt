@@ -1,0 +1,39 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CheckBonusPeople {public int Run() {
+
+var roll = UnityEngine.Random.Range(1, 100);
+
+if (roll > 4) return 0;  // 3% chance 1 - 3
+     
+Debug.Log("checking for bonus people: rolled: " + roll);
+
+roll = UnityEngine.Random.Range(1, 4);
+
+
+switch (roll)
+{
+     case 1: // warrior joins
+     GameFlags.P4WarriorCount++;
+     GameFlags.P4NewPopulation++;
+     GameFlags.P4PopulationUp = true;
+     return 1;
+     case 2: // warrior and wife joins
+     GameFlags.P4WarriorCount++;
+     GameFlags.P4FemaleCount++;
+     GameFlags.P4NewPopulation += 2;
+     GameFlags.P4PopulationUp = true;
+     return 2;
+     case 3: // warrior wife and child
+     GameFlags.P4WarriorCount++;
+     GameFlags.P4FemaleCount++;
+     GameFlags.P4ChildCount++;
+     GameFlags.P4NewPopulation += 3;
+     GameFlags.P4PopulationUp = true;
+     return 3;
+     case 4: // child becomes warrior
+     GameFlags.P4ChildCount--;
+     GameFlags.P4WarriorCount++;
+     return 0;
+}
+
+return 0;
+}}

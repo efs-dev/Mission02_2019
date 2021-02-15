@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_overlook_OnShowText {public IEnumerator Run() {
+yield return Actions.DialogOpenBlocking("p1_mn_overlook");
+yield return Actions.LoadScene("loc_camp_day");
+}}

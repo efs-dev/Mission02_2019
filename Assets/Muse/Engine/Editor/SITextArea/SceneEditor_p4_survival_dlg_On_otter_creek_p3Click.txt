@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_On_otter_creek_p3Click {public IEnumerator Run() {
+
+}}

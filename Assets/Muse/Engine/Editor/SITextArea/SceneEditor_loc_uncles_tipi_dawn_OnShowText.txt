@@ -1,0 +1,63 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_uncles_tipi_dawn_OnShowText {public IEnumerator Run() {
+if (!GameFlags.P1TalkMother)
+{
+yield return Actions.OpenPopupBlocking(PopupIds.p1_uncle_dawn);
+GameFlags.P1TalkMother = true;
+GameFlags.P1FailedColt = true;
+GameFlags.P1FailedCrowClue = true;
+GameFlags.P1FailedGrayMare = true;
+GameFlags.P1FailedLongMane = true;
+GameFlags.P1FailedStallion = true;
+GameFlags.P1FailedUnclesFavorite = true;
+
+if (GameFlags.P1CrowCode == 0)
+{
+  if (GameFlags.P1PlayerGoLook)
+{
+  yield return Actions.DialogOpenBlocking("p1_unc_005");
+  yield return Actions.LoadScene("loc_camp_day");
+}
+  else
+{
+  yield return Actions.DialogOpenBlocking("p1_unc_005", "n02");
+  yield return Actions.LoadScene("loc_camp_day");
+}
+}
+else if (GameFlags.P1CrowCode == 1 || GameFlags.P1CrowCode == 2)
+{
+  if (GameFlags.P1PlayerGoLook)
+{
+  yield return Actions.DialogOpenBlocking("p1_unc_004");
+  yield return Actions.LoadScene("loc_camp_day");
+}
+  else
+{
+  yield return Actions.DialogOpenBlocking("p1_unc_004", "n01b");
+  yield return Actions.LoadScene("loc_camp_day");
+}
+}	
+
+else if (GameFlags.P1CrowCode == 3)
+{	
+
+  yield return Actions.DialogOpenBlocking("p1_unc_003");
+  yield return Actions.LoadScene("loc_camp_day");
+}
+
+else if (GameFlags.P1CrowCode == 4)
+{
+  if (GameFlags.P1PlayerGoLook)
+{
+  yield return Actions.DialogOpenBlocking("p1_unc_002");
+  yield return Actions.LoadScene("loc_camp_day");
+}
+  else
+{
+  yield return Actions.DialogOpenBlocking("p1_unc_002", "n01d");
+  yield return Actions.LoadScene("loc_camp_day");
+}
+}
+}
+
+// test
+}}

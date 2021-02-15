@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_raid_r6_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+/* setLayer("fg", "gfx/smartmap/map_supply/raid/raid_horse_2.jpg") */
+GameFlags.P4RaidInfo = "Pawnee";
+GlobalScripts.DoHorseRaid();
+}}

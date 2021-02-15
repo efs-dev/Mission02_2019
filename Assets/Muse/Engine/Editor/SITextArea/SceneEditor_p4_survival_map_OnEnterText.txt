@@ -1,0 +1,36 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_OnEnterText {public IEnumerator Run() {
+
+GlobalScripts.OneTimeInit();
+
+GlobalScripts.Init(); // recurring init
+
+// if GameFlags.P4AutoTrip set do NOT advance season
+// GameFlags.P4SkipSeason is set by this
+
+			
+// update the season, unless flag is set
+if(GameFlags.P4SkipSeasonChange == false) {
+  GlobalScripts.NextSeason();
+  
+} else {
+  Debug.Log("NOT changing season");
+}
+
+// display season no matter what
+SurvivalSceneObject.DisplaySeason();  
+
+/////////////////////////////////////////////////////////
+SurvivalSceneObject.HideAllCamps();
+
+
+
+SurvivalSceneObject.DisplayGoodCamps(GameFlags.P4Season);
+
+// **** NOTE: *** the individual dlgs are responsible for upping the turn #
+				 	
+Debug.Log("survival map showing, cur_node: " + GameFlags.P4CurNode);
+
+Debug.Log("supply turn = " + GameFlags.P4SupplyTurn);
+Debug.Log("season = " + GameFlags.P4Season); 
+		Debug.Log("season count = " + GameFlags.P4SeasonCount);
+}}

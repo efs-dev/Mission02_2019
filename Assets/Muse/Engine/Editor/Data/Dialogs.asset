@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Dialogs
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:Muse.Editors.Dialogs:DialogEditorPersistantData2
+  SITextAreas: []
+  SelectedTextAreaName: 
+  DrawBackground: 1
+  DrawTopBar: 1
+  DrawSecondBar: 1
+  LoadedPages:
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags:
+    - Name: looked_book
+      Value: False
+      VariableType: 0
+      Watch: 0
+      Category: Default
+      Folder: 
+      Table:
+        Columns: []
+        ShowWeights: 0
+        Weights: []
+        WeightModifiers: []
+        Lifetimes: 
+      Values: []
+      EditMode: 0
+    - Name: looked_photo
+      Value: False
+      VariableType: 0
+      Watch: 0
+      Category: Default
+      Folder: 
+      Table:
+        Columns: []
+        ShowWeights: 0
+        Weights: []
+        WeightModifiers: []
+        Lifetimes: 
+      Values: []
+      EditMode: 0
+    - Name: looked_pin
+      Value: False
+      VariableType: 0
+      Watch: 0
+      Category: Default
+      Folder: 
+      Table:
+        Columns: []
+        ShowWeights: 0
+        Weights: []
+        WeightModifiers: []
+        Lifetimes: 
+      Values: []
+      EditMode: 0
+    - Name: memory
+      Value: False
+      VariableType: 0
+      Watch: 0
+      Category: Default
+      Folder: 
+      Table:
+        Columns: []
+        ShowWeights: 0
+        Weights: []
+        WeightModifiers: []
+        Lifetimes: 
+      Values: []
+      EditMode: 0
+    - Name: saw_n06
+      Value: False
+      VariableType: 0
+      Watch: 0
+      Category: Default
+      Folder: 
+      Table:
+        Columns: []
+        ShowWeights: 0
+        Weights: []
+        WeightModifiers: []
+        Lifetimes: 
+      Values: []
+      EditMode: 0
+    - Name: think_more
+      Value: False
+      VariableType: 0
+      Watch: 0
+      Category: Default
+      Folder: 
+      Table:
+        Columns: []
+        ShowWeights: 0
+        Weights: []
+        WeightModifiers: []
+        Lifetimes: 
+      Values: []
+      EditMode: 0
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  IsReadMode: 0
+  PlayingAudio: {fileID: 0}
+  ReverseResponseOrder: 0
+  ShowDialogScripts: 1
+  ShowCustomScripts: 1
+  ShowEndNodes: 0
+  StreamingImages: {fileID: 11400000, guid: 16384e2cde959124ebb1fa6a2867f3d1, type: 2}
+  NodeClipboard: []
+  GameFlagClipboard: []

@@ -1,0 +1,29 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGHappilyAcceptOffer {public IEnumerator Run() {
+
+if (GameFlags.TGOfferNumHappilyFair == 0 && !GameFlags.TGLakWarnedYou)
+{
+     yield return Actions.OpenPopupBlocking("p2_ask_more");// TODO test
+     
+     GameFlags.TGOfferNum -= 1; //from the "make offer" event
+     
+     GameFlags.TGOfferNumHappilyFair -= 1; //from the "make offer" event
+     GameFlags.TGLakWarnedYou = true;
+     
+     yield return Actions.OpenPopupBlocking("p2_let_boy");
+     
+}
+else if (GameFlags.TGOfferNumHappilyFair == 0)
+{
+     yield return Actions.OpenPopupBlocking("p2_willing");
+     yield return GlobalScripts.TGTradeSuccess();
+}
+else if (GameFlags.TGOfferNumHappilyFair >= 1)
+{
+     yield return Actions.OpenPopupBlocking("p2_great_trade");
+     yield return GlobalScripts.TGTradeSuccess();
+}
+
+GameFlags.TGOfferNumHappilyFair += 1;
+GameFlags.TGCurrentOfferRejected = false;
+
+}}

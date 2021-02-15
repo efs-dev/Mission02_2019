@@ -1,0 +1,236 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_OnShowText {public IEnumerator Run() {
+M3.Out("p4 stateShowing script");
+
+Actions.SetHotspotVisible("message_popup", false);
+Actions.SetHotspotVisible("tutorial", false);
+
+Actions.SetHotspotVisible(GameFlags.P4MapStartNode, true);
+Actions.MoveToHotspot("player", GameFlags.P4MapStartNode, 0f, 1.0f, 1.0f);
+
+if (GameFlags.P4SeasonCount == 1)
+	yield return Actions.TurnOnHotspotBlocking("tutorial");
+
+
+// **** NOTE: i'll say it again: the individual dlgs are responsible for upping the supply turn #
+
+
+
+if (M3.GetInt("P4SeasonCount") == 8) {
+	M3.Out("declaration");
+	
+	//GameFlags.SetGameFlagValue("TokenText", M3.declaration);
+	//yield return Actions.TurnOnHotspotBlocking("message_popup");
+	yield return Actions.OpenPopupBlocking(PopupIds.p4_declaration);
+	yield return Actions.OpenPopupBlocking(PopupIds.p4_declaration2);
+	// skip to end
+	//goto EndOnShow;  // nasty!!!
+}
+
+string temp = "";
+
+// if it's turn 24 it is the end of the game
+if (M3.GetInt("P4SupplyTurn") == 24) {
+	M3.Out("game over - win");
+	yield return Actions.OpenPopupBlocking(PopupIds.p4_win);
+	//yield return Actions.OpenPopupBlocking(PopupIds.p4_popups);
+	yield return Actions.EndPart();
+	
+}  else if ((M3.GetInt("P4StarveCount") == 3) && (M3.GetInt("P4SeasonCount") < 7)) {
+	// third starve in a row
+	// also end of the game
+	GameFlags.P4AgencyChoice = true;
+	yield return Actions.OpenPopupBlocking(PopupIds.p4_lose);
+	//yield return Actions.OpenPopupBlocking(PopupIds.p4_popups);
+	
+	yield return Actions.EndPart();
+} else {
+	// it's a NORMAL TURN
+	M3.Out("normal turn");
+	
+	string dest = M3.GetString("P4AutoTrip");
+	// check for auto trip
+	if (dest != "") {
+		
+		// if something is assigned
+		// do autotrip
+		yield return Actions.MoveToHotspotBlocking("player", dest, 3f, 1f, 1f);
+		GameFlags.SetGameFlagValue("P4AutoTrip", "");
+		GameFlags.P4MapStartNode = dest;
+		GameFlags.P4RootNode = "_"+dest;
+		// A bunch of if statements related to setting up descriptions for each and every node.
+		if (dest == "otter_creek"){
+			GameFlags.P4NodeDescr = "beside a spot on Otter Creek";
+		}
+		else if (dest == "agency"){
+			GameFlags.P4NodeDescr = "at the Red Cloud Agency.";
+		}
+		else if (dest == "bighorn"){
+			GameFlags.P4NodeDescr = "in the Bighorn Mountains";
+		}
+		else if (dest == "black_hills"){
+			GameFlags.P4NodeDescr = "among the Black Hills";
+		}
+		else if (dest == "hunting_grounds"){
+			GameFlags.P4NodeDescr = "in the Hunting Grounds Territory";
+			
+		}
+		else if (dest == "little_bighorn"){
+			GameFlags.P4NodeDescr = "along the Little Bighorn River";
+		}
+		else if (dest == "powder_river"){
+			GameFlags.P4NodeDescr = "alongside the Powder River";
+		}
+		else if (dest == "rosebud"){
+			GameFlags.P4NodeDescr = "along Rosebud Creek";
+		}
+		else if (dest == "sioux"){
+			GameFlags.P4NodeDescr = "in the Great Sioux Reservation";
+		}
+		
+		yield return Actions.LoadScene("p4_survival_dlg");
+	} else {
+		M3.Out("no autotrip found");
+		M3.Out("P4SupplyTurn " + M3.GetInt("P4SupplyTurn"));
+		
+		int seasonCount = M3.GetInt("P4SeasonCount");
+		M3.Out("P4SeasonCount: " + seasonCount);
+		
+		if (seasonCount < 3)  {
+			// agency is not available
+			temp = "Choose a camp for the " + GameFlags.GetGameFlagValue<string>("P4Temp") + " season.";
+		} else {
+			temp = "Choose a camp or the agency for the " + GameFlags.GetGameFlagValue<string>("P4Temp") + " season.";
+		}
+		
+		// if player starts at an agency they have the option
+		// to stay there or find a different camp
+		
+		if ((GameFlags.GetGameFlagValue<string>("P4Location").ToLower() == "agency")) {
+			M3.Out("beginning season at agency");
+			
+			if (GameFlags.P4SeasonCount < 8)
+			yield return Actions.DialogOpenBlocking("p4_popups_yn", "agency_stay");
+			//GameFlags.SetGameFlagValue("TokenText", M3.stayAgency);
+			//yield return Actions.OpenPopupBlocking(PopupIds.p4_popups_yn);
+			
+			if (GameFlags.P4PopupConfirm)
+			{
+				// stay
+				GameFlags.SetGameFlagValue("P4AtAgency", "true");
+				
+				// arrival script
+				GameFlags.P4MapStartNode = "agency";  // for next map visit
+				
+				GameFlags.P4NodeDescr = "at the Red Cloud Agency.";
+				
+				GameFlags.P4RootNode = "agency";
+				yield return Actions.LoadScene("p4_survival_dlg");
+				
+			}
+			else
+			{
+				GameFlags.SetGameFlagValue("P4AtAgency", "false");
+				// go
+				if (GameFlags.GetGameFlagValue<bool>("P4Farming"))
+				{
+					yield return Actions.DialogOpenBlocking("p4_popups_yn", "crops");
+					
+					if (GameFlags.P4PopupConfirm)
+					{
+						GameFlags.SetGameFlagValue("P4Farming", "false");
+						if (GameFlags.P4SeasonCount < 8)
+						GlobalScripts.TravelAlert();
+					}
+					else{
+						
+						// stay
+					GameFlags.SetGameFlagValue("P4AtAgency", "true");
+				
+					// arrival script
+					GameFlags.P4MapStartNode = "agency";  // for next map visit
+				
+					GameFlags.P4NodeDescr = "at the Red Cloud Agency.";
+				
+					GameFlags.P4RootNode = "agency";
+					yield return Actions.LoadScene("p4_survival_dlg");
+					}
+				}
+				else
+				{
+				if (GameFlags.P4SeasonCount < 8)
+				GlobalScripts.TravelAlert();
+				}
+			}
+		} else  {
+			M3.Out("beginning season at a camp");
+			// if it's fall let them know about annuity
+			if (M3.GetInt("P4Season") == 4) {
+				Actions.AlertFromId("agency_alert");
+				yield return Actions.BlinkHotspotBlocking("agency", 3);
+				//flashNode("AGENCY")
+			} else {
+				if (GameFlags.P4SeasonCount < 8)
+				GlobalScripts.TravelAlert(); // otherwise tell them to make a choice
+				//flashNode($p3_camp1)
+				//flashNode($p3_camp2)
+				if ( M3.GetString("P4Camp3") == "skip" ) {
+					M3.Out("skipping 3rd winter camp flash");
+				} else {
+					//flashNode($p3_camp3)
+				}
+				
+				if (M3.GetInt("P4SeasonCount") < 3)  {
+					M3.Out("agency is not available");
+				} else {
+					//flashNode("AGENCY")
+				}
+			}
+		}
+	}
+}
+
+EndOnShow:
+M3.Out("survival map EndOnShow");
+
+if (GameFlags.P4SeasonCount == 1)
+{
+	if (GameFlags.P4ShowTutorial)
+	{
+		// blink hotspots, Red, Green, Blue, Alpha values of color.
+		var blinkColor = new Color(1, 0.68f, 0.28f, 0f);
+		Actions.SetHotspotOutline("black_hills", blinkColor, 1.0f);
+		Actions.SetHotspotOutline("otter_creek", blinkColor, 1.0f);
+		Actions.SetHotspotOutline("hunting_grounds", blinkColor, 1.0f);
+		
+		Actions.HotspotOutlineVisible("black_hills", true);
+		Actions.HotspotOutlineVisible("otter_creek", true);
+		Actions.HotspotOutlineVisible("hunting_grounds", true);
+		
+		for (var i = 0; i < 3; i++)
+		{
+			Actions.HotspotOutlineFade("black_hills", 1f, 0.5f);
+			Actions.HotspotOutlineFade("otter_creek", 1f, 0.5f);
+			Actions.HotspotOutlineFade("hunting_grounds", 1f, 0.5f);
+			
+			yield return new WaitForSeconds(0.75f);
+			
+			Actions.HotspotOutlineFade("black_hills", 0f, 0.5f);
+			Actions.HotspotOutlineFade("otter_creek", 0f, 0.5f);
+			Actions.HotspotOutlineFade("hunting_grounds", 0f, 0.5f);
+			
+			yield return new WaitForSeconds(0.75f);
+		}
+		
+		Actions.HotspotOutlineVisible("black_hills", false);
+		Actions.HotspotOutlineVisible("otter_creek", false);
+		Actions.HotspotOutlineVisible("hunting_grounds", false);
+	}
+}
+else
+{
+	var trainSeasonPercent = 1f / 8f;
+	var trainFrom = (GameFlags.P4SeasonCount-1) * trainSeasonPercent;
+	var trainTo = GameFlags.P4SeasonCount * trainSeasonPercent;
+	Actions.MoveOnMotionTween("train", "train_path", 0, 0, 2f, Easings.Functions.QuadraticEaseInOut, trainFrom, trainTo, true);
+}
+}}

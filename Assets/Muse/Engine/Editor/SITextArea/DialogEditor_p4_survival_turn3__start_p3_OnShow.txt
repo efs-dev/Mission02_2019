@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_turn3__start_p3_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4SupplyTurn += 1;
+GameFlags.P4SeasonTurn = 3;
+//setLayer("fg", "")
+GameFlags.P4NewFood = 0;
+}}

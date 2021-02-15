@@ -1,0 +1,19 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGHandleTraderWisdom {public IEnumerator Run() {
+switch (GameFlags.TGDialogResult)
+{
+     case "ACCEPT_OFFER":
+     yield return GlobalScripts.TGAcceptOffer();
+     break;
+     case "DOESNT_ACCEPT_OFFER":
+     yield return GlobalScripts.TGDoesntAcceptOffer();
+     break;
+     case "":
+     // ignore
+     Debug.Log("ignoring");
+     break;
+     default:
+     Debug.LogError("HandleTraderWisdom - Unhandled case: " + GameFlags.TGDialogResult);
+     break;
+}
+yield return null;
+}}

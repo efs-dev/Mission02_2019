@@ -1,0 +1,22 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_trading_OnEnterText {public IEnumerator Run() {
+Actions.SettingsButtonHide();
+Actions.SmartwordsButtonHide();
+Actions.BadgesButtonHide();
+
+// for testing...
+//GameFlags.P1BoughtKnife = true;
+//GameFlags.HasLargeKnife = true;
+//GameFlags.HasMoney = true;
+//GameFlags.P1AskedMoney = true;
+//GameFlags.HasSpyglass = true;
+
+GlobalScripts.TGInit();
+
+Actions.SetHotspotVisible("KNIFE", GameFlags.HasLargeKnife );
+Actions.SetHotspotVisible("MONEY", GameFlags.HasMoney );
+Actions.SetHotspotVisible("SPYGLASS", GameFlags.HasSpyglass );
+  
+Actions.ShowHotspotIcons(false);
+
+
+}}

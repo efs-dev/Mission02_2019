@@ -1,0 +1,25 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TravelAlert {public void Run() {
+if (GameFlags.P4SeasonCount < 3)  {
+     if (GameFlags.P4Season == 1)
+          Actions.AlertFromId("camp_winter");
+     else if (GameFlags.P4Season == 2)
+          Actions.AlertFromId("camp_spring");
+     else if (GameFlags.P4Season == 3)
+          Actions.AlertFromId("camp_summer");
+     else
+          Actions.AlertFromId("camp_fall");
+} else {
+     if (GameFlags.P4Season == 1)
+          Actions.AlertFromId("camp_agency_winter");
+     else if (GameFlags.P4Season == 2)
+          Actions.AlertFromId("camp_agency_spring");
+     else if (GameFlags.P4Season == 3)
+          Actions.AlertFromId("camp_agency_summer");
+     else
+          Actions.AlertFromId("camp_agency_fall");
+}
+
+
+
+
+}}

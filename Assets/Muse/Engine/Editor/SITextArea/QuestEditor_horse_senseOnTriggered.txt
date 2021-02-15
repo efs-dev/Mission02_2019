@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_horse_senseOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tHorseSense == 1)
+IncrementBadgeRank (1, "Your skill riding horses is average.", "horsesense_rank1");
+else if (GameFlags.tHorseSense == 2)
+IncrementBadgeRank (1, "Your skill riding horses is good.", "horsesense_rank2");
+else if (GameFlags.tHorseSense == 3)
+IncrementBadgeRank (1, "Your skill riding horses is excellent", "horsesense_rank3");
+}}

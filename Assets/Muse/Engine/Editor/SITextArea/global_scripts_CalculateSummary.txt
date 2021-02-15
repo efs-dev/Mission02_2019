@@ -1,0 +1,20 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateSummary {public void Run() {
+var populationPreChange = (GameFlags.P4Population); // Tracks old population to prevent newcomers from eating food
+
+GlobalScripts.CalculateHealthUpDown();
+GlobalScripts.CalculateJoiningLeavingStarving(GameFlags.P4Food - GameFlags.P4Population);
+
+GlobalScripts.CalculateSuccessFB();
+GlobalScripts.CalculatePopulationFB();
+GlobalScripts.CalculateGoalFB(populationPreChange);
+
+
+// SG these were commented out
+GlobalScripts.CalculatePersonalFB();
+GlobalScripts.CalculateDetailFB();
+
+
+// unused?
+// reprisal points
+//var rPoints = GameFlags.P4Reprisal;
+}}

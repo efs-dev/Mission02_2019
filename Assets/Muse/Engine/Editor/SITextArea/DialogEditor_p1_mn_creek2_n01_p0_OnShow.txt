@@ -1,0 +1,9 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p1_mn_creek2_n01_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+Actions.AudioPlay("horseowl");
+
+/*//setLayer("bg", "gfx/stills/horses/creek_horses.jpg")
+//?p1_found_ponies = true
+//?p1_search_stream = true
+//playambient("audio/sfx/p1_mn_creek2sfx/creekcricketsamb.mp3")
+//playsfx("audio/sfx/p1_mn_creek2sfx/horseowl.mp3")*/
+}}

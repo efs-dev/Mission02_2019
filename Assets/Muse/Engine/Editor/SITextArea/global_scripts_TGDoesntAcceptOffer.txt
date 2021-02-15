@@ -1,0 +1,89 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGDoesntAcceptOffer {public IEnumerator Run() {
+var requestedItem = "";
+
+var acceptedSweetening = false; //Variable to prevent deals from being called twice when player accepts a sweetener and a new deal is called
+
+if (GlobalScripts.TGTryAsk("spyglass"))
+{
+     yield return Actions.OpenPopupBlocking("p2_sweeten_spyglass");
+     GameFlags.TGSweeteningMode = GameFlags.TGDialogResult == "YES";
+     requestedItem = "spyglass";
+}
+else if (GlobalScripts.TGTryAsk("knife"))
+{
+     yield return Actions.OpenPopupBlocking("p2_sweeten_knife");
+     GameFlags.TGSweeteningMode = GameFlags.TGDialogResult == "YES";
+     requestedItem = "knife";
+}
+else if (GlobalScripts.TGTryAsk("money"))
+{
+     if (GameFlags.P1BoughtKnife)
+     {
+          yield return Actions.OpenPopupBlocking("p2_sweeten_money2");
+          GameFlags.TGSweeteningMode = GameFlags.TGDialogResult == "YES";
+     }
+     else
+     {
+          yield return Actions.OpenPopupBlocking("p2_sweeten_money1");
+          GameFlags.TGSweeteningMode = GameFlags.TGDialogResult == "YES";
+     }
+     requestedItem = "money";
+}
+else if (GameFlags.TGCurrentOfferRejected)
+{
+     yield return Actions.OpenPopupBlocking("p2_not_changed");
+}
+else if (GameFlags.TGOfferNumUnfair == 0)
+{
+     yield return Actions.OpenPopupBlocking("p2_not_accept");
+     GlobalScripts.TGIsFinishedTrading();
+}
+else if (GameFlags.TGOfferNumUnfair == 1)
+{
+     yield return Actions.OpenPopupBlocking("p2_not_quite");
+}
+else
+{
+     yield return Actions.OpenPopupBlocking("p2_less_valuable");
+}
+
+
+if (GameFlags.TGSweeteningMode)
+{
+     Debug.Log("in sweetening mode");
+     GameFlags.TGSweeteningMode = false;
+     
+     if (GameFlags.TGDialogResult =="NO")
+     {
+          int randRoll = UnityEngine.Random.Range(1, 101);
+          Debug.Log("RANDROLL VALUE " + randRoll);
+          
+          if (randRoll >= 70)
+          {
+               yield return Actions.OpenPopupBlocking("p2_sweeten_accept");
+               GlobalScripts.TGTradeSuccess();
+          }
+          else
+          {
+               yield return Actions.OpenPopupBlocking("p2_sweeten_reject");
+          }
+     }
+     else
+     {
+          GameFlags.TGOfferNumUnfair -= 1;
+          acceptedSweetening = true;
+          //Debug.Log("NUM OFFERS DECREMENT FROM SWEETEN");
+          GlobalScripts.TGToggleItem(requestedItem);
+          yield return GlobalScripts.TGAcceptOffer();
+     }
+}
+
+// Because this will happen anyway due to offer being changed to TGAcceptOffer
+if (!acceptedSweetening)
+{
+     yield return GlobalScripts.TGIsFinishedTrading();
+     acceptedSweetening = true;
+}
+GameFlags.TGOfferNumUnfair += 1;
+GameFlags.TGCurrentOfferRejected = true;
+}}

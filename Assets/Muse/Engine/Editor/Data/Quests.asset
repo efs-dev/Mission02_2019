@@ -1,0 +1,489 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Quests
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:Muse.Editors.Quests:QuestEditor2PersistantData
+  SITextAreas: []
+  SelectedTextAreaName: 
+  DrawBackground: 1
+  DrawTopBar: 1
+  DrawSecondBar: 0
+  SelectedIndex: -1
+  Entries:
+  - QuestType: 1
+    Tags: []
+    Id: archery
+    GameFlagTriggers:
+    - tArchery
+    TitleText: return "Archery";
+    ActiveDescriptionText: 'if (GameFlags.tArchery == 0)
+
+      return "You have used a bow since you were a young boy. You can hit a few things,
+      but it is usually as much luck as skill.";
+
+      else if (GameFlags.tArchery == 1)
+
+      return "You can shoot a bow from the back of a horse, although only at close
+      range.";
+
+      else if (GameFlags.tArchery == 2)
+
+      return "You are as good a shot as most warriors. You can also make your own
+      bow and arrows.";
+
+      else
+
+      return "You are among the best warriors when using a bow. You can usually kill
+      a full-grown buffalo with a single arrow.";'
+    CompleteDescriptionText: return "Archery";
+    FailDescriptionText: return "Archery";
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tArchery == 1)
+
+      IncrementBadgeRank (1, "Your skill with the bow is average.", "archery_rank1");
+
+      else if (GameFlags.tArchery == 2)
+
+      IncrementBadgeRank (1, "Your skill with the bow is good.", "archery_rank2");
+
+      else if (GameFlags.tArchery == 3)
+
+      IncrementBadgeRank (1, "Your skill with the bow is excellent", "archery_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 1
+    Tags: []
+    Id: bravery
+    GameFlagTriggers:
+    - tBravery
+    TitleText: return "Bravery";
+    ActiveDescriptionText: return "The dragonfly represents bravery for its daring
+      aerial acrobatics. Brave actions over time will increase your reputation.";
+    CompleteDescriptionText: 
+    FailDescriptionText: 
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tBravery == 1)
+
+      Actions.AlertFromId("bravery_point_tut");
+
+      else if (GameFlags.tBravery < 3)
+
+      Actions.AlertFromId("bravery_point");
+
+      else if (GameFlags.tBravery == 3)
+
+      IncrementBadgeRank (1, "Your bravery is known among your band.", "bravery_rank1");
+
+      else if (GameFlags.tBravery < 6)
+
+      Actions.AlertFromId("bravery_point");
+
+      else if (GameFlags.tBravery == 6)
+
+      IncrementBadgeRank (1, "Your bravery is known among the Northern Cheyenne.",
+      "bravery_rank2");
+
+      else if (GameFlags.tBravery < 9)
+
+      Actions.AlertFromId("bravery_point");
+
+      else if (GameFlags.tBravery == 9)
+
+      IncrementBadgeRank (1, "Your bravery is known among all the People.", "bravery_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 1
+    Tags: []
+    Id: crazy
+    GameFlagTriggers:
+    - tCrazy
+    TitleText: return "Crazy";
+    ActiveDescriptionText: return "Impulsive, crazy actions show our animal natures.
+      Crazy may help warriors' energy, but, like the powerful lightning bolt, can
+      also be destructive. Crazy actions over time will increase your reputation.";
+    CompleteDescriptionText: 
+    FailDescriptionText: 
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tCrazy == 1)
+
+      IncrementBadgeRank (1, "Your craziness is known among your band.", "crazy_rank1");
+
+      else if (GameFlags.tCrazy == 2)
+
+      IncrementBadgeRank (1, "Your craziness is known among the Northern Cheyene.",
+      "crazy_rank2");
+
+      else if (GameFlags.tCrazy == 3)
+
+      IncrementBadgeRank (1, "Your craziness is known among all the People.", "crazy_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 1
+    Tags: []
+    Id: english
+    GameFlagTriggers:
+    - tEnglish
+    TitleText: 'return Rank > 0 ? "English" : "???";'
+    ActiveDescriptionText: 'if (GameFlags.tEnglish == 0)
+
+      return "This is a skill you have not yet encountered or been trained in.";
+
+      else if (GameFlags.tEnglish == 1)
+
+      return "You have learned a few English words and phrases.";
+
+      else if (GameFlags.tEnglish == 2)
+
+      return "You can hold a conversation in English about common topics. You are
+      familiar with the alphabet and can read a little.";
+
+      else
+
+      return "You are almost a fluent speaker of English and can talk about most things.
+      You can read and are starting to write as well.";'
+    CompleteDescriptionText: return "English";
+    FailDescriptionText: return "English";
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tEnglish == 1)
+
+      IncrementBadgeRank (1, "Your skill with English is basic.", "english_rank1");
+
+      else if (GameFlags.tEnglish == 2)
+
+      IncrementBadgeRank (1, "Your skill with English is conversant.", "english_rank2");
+
+      else if (GameFlags.tEnglish == 3)
+
+      IncrementBadgeRank (1, "Your skill with English is fluent.", "english_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 1
+    Tags: []
+    Id: generosity
+    GameFlagTriggers:
+    - tGenerosity
+    TitleText: return "Generosity";
+    ActiveDescriptionText: return "Your people rely on each other to survive. Generosity
+      makes that possible. Hunters always leave meat for the badger spirit, showing
+      their generosity. Generous actions over time will increase your reputation.";
+    CompleteDescriptionText: 
+    FailDescriptionText: 
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tGenerosity == 1)
+
+      Actions.AlertFromId("generosity_point_tut");
+
+      else if (GameFlags.tGenerosity == 2)
+
+      IncrementBadgeRank (1, "Your generosity is known among your band.", "generosity_rank1");
+
+      else if (GameFlags.tGenerosity < 4)
+
+      Actions.AlertFromId("generosity_point");
+
+      else if (GameFlags.tGenerosity == 4)
+
+      IncrementBadgeRank (1, "Your generosity is known among the Northern Cheyenne.",
+      "generosity_rank2");
+
+      else if (GameFlags.tGenerosity < 6)
+
+      Actions.AlertFromId("generosity_point");
+
+      else if (GameFlags.tGenerosity == 6)
+
+      IncrementBadgeRank (1, "Your generosity is known among all the People.", "generosity_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 1
+    Tags: []
+    Id: horse_sense
+    GameFlagTriggers:
+    - tHorseSense
+    TitleText: return "Horse Sense";
+    ActiveDescriptionText: 'if (GameFlags.tHorseSense == 0)
+
+      return "You can easily ride a calm horse and are learning to tame wilder ones.
+      But a warrior will need much more skill.";
+
+      else if (GameFlags.tHorseSense == 1)
+
+      return "You can tame most wild horses and start training them for buffalo hunting.";
+
+      else if (GameFlags.tHorseSense == 2)
+
+      return "You can ride a horse well for both hunting and battle.";
+
+      else
+
+      return "You have a strong bond with horses and can coax them to run more boldly
+      and faster than most other warriors can.";'
+    CompleteDescriptionText: return "Horse Sense";
+    FailDescriptionText: return "Horse Sense";
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tHorseSense == 1)
+
+      IncrementBadgeRank (1, "Your skill riding horses is average.", "horsesense_rank1");
+
+      else if (GameFlags.tHorseSense == 2)
+
+      IncrementBadgeRank (1, "Your skill riding horses is good.", "horsesense_rank2");
+
+      else if (GameFlags.tHorseSense == 3)
+
+      IncrementBadgeRank (1, "Your skill riding horses is excellent", "horsesense_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 1
+    Tags: []
+    Id: riflery
+    GameFlagTriggers:
+    - tRiflery
+    TitleText: return "Riflery";
+    ActiveDescriptionText: 'if (GameFlags.tRiflery == 0)
+
+      return "Your skill in shooting a musket or rifle. You do not yet have any experience
+      and probably could not even load a gun, much less hit anything with it.";
+
+      else if (GameFlags.tRiflery == 1)
+
+      return "You know the basics of using a musket or rifle. You can hit big things
+      that are not too far.";
+
+      else if (GameFlags.tRiflery == 2)
+
+      return "You have shown some skill. You can usually bring down a buffalo in one
+      or two shots.";
+
+      else
+
+      return "You are a crack shot with a gun. Your people admire that you can hit
+      a running rabbit from a far distance.";'
+    CompleteDescriptionText: return "Riflery";
+    FailDescriptionText: return "Riflery";
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tRiflery == 1)
+
+      IncrementBadgeRank (1, "Your skill with rifles is average.", "riflery_rank1");
+
+      else if (GameFlags.tRiflery == 2)
+
+      IncrementBadgeRank (1, "Your skill with rifles is good.", "riflery_rank2");
+
+      else if (GameFlags.tRiflery == 3)
+
+      IncrementBadgeRank (1, "Your skill with rifles is excellent", "riflery_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 2
+    Tags: []
+    Id: train_horse
+    GameFlagTriggers:
+    - P1HorseSuccess
+    - P1HorseFail
+    TitleText: return "Train the new horse.";
+    ActiveDescriptionText: return "Active";
+    CompleteDescriptionText: return "Complete";
+    FailDescriptionText: return "Failed";
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.P1HorseSuccess)
+
+      Complete();
+
+      else if (GameFlags.P1HorseFail)
+
+      Fail();'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 0
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  - QuestType: 1
+    Tags: []
+    Id: wisdom
+    GameFlagTriggers:
+    - tWisdom
+    TitleText: return "Wisdom";
+    ActiveDescriptionText: return "Purposeful action is better than foolish decisions.
+      The bear represents wisdom -- dreaming of one signals an important idea. Wise
+      actions over time will increase your reputation.";
+    CompleteDescriptionText: 
+    FailDescriptionText: 
+    RankDescriptionText: 
+    TitleTextType: 1
+    ActiveDescriptionTextType: 1
+    CompleteDescriptionTextType: 1
+    FailDescriptionTextType: 1
+    RankDescriptionTextType: 0
+    OnTriggeredText: 'if (GameFlags.tWisdom == 1)
+
+      Actions.AlertFromId("wisdom_point_tut");
+
+      else if (GameFlags.tWisdom == 2)
+
+      IncrementBadgeRank (1, "Your wisdom is known among your band.", "wisdom_rank1");
+
+      else if (GameFlags.tWisdom < 4)
+
+      Actions.AlertFromId("wisdom_point");
+
+      else if (GameFlags.tWisdom == 4)
+
+      IncrementBadgeRank (1, "Your wisdom is known among the Northern Cheyenne.",
+      "wisdom_rank2");
+
+      else if (GameFlags.tWisdom < 6)
+
+      Actions.AlertFromId("wisdom_point");
+
+      else if (GameFlags.tWisdom == 6)
+
+      IncrementBadgeRank (1, "Your wisdom is known among all the People.", "wisdom_rank3");'
+    OnActivateText: 
+    OnCompleteText: 
+    OnFailText: 
+    MaxRank: 3
+    OnRankChangeText: 
+    GetProgressText: 
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    ColorTag: 0
+  SelectedFilter: 1

@@ -1,0 +1,21 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_p3_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("dayambprimo", true);
+if (GameFlags.P2MapCount < 3)
+{
+yield return Actions.OpenPopupBlocking(PopupIds.p3_blackmoon_approaches);
+Actions.SetHotspotVisible("blkm", true);
+yield return Actions.DialogOpenBlocking("p3_soc_001");
+GameFlags.P2MapCount = 2;
+yield return Actions.LoadScene("map_p2");
+}
+else
+{
+Actions.SetHotspotVisible("uncle", true);
+if (GameFlags.P2UncHat)
+Actions.SetHotspotVisible("hat", true);
+else
+Actions.SetHotspotVisible("hat", false);
+yield return Actions.DialogOpenBlocking("p2_unc_002", "n10");
+yield return Actions.LoadScene("anim_p3_outro1");
+}
+}}

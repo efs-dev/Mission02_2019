@@ -1,0 +1,152 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_DoBigRaid {public void Run() {
+Debug.Log("doBigRaid()");
+
+var dead = 0;
+var newFood = 0;
+var newSupply = 0;
+var gotGun = false;
+var countedCoup = false;
+var bowUp = false;
+var gunUp = false;
+
+GameFlags.P4BigRaidCount++;  // start at one
+
+int r;
+
+// each warrior 5% chance of being killed
+for (var i = 0; i < GameFlags.P4WarriorCount; i++)
+{
+     r = UnityEngine.Random.Range(1, 100);
+     if (r < 5 * GameFlags.P4BigRaidCount)
+     {
+          Debug.Log("warrior killed");
+          GameFlags.P4WarriorCount -= 1;
+          dead++;
+     }
+}
+
+GlobalScripts.CalculatePopulation();
+
+// each survivor steals 1 - 3 food and
+//50% 1 supply
+for (var i = 0; i < GameFlags.P4WarriorCount; i++)
+{
+     r = UnityEngine.Random.Range(1, 3);
+     newFood += r;
+     
+     r = UnityEngine.Random.Range(1, 100);
+     if (r < 50)
+     {
+          newSupply++;
+     }
+}
+GameFlags.P4Food += newFood;
+GameFlags.P4Supplies += newSupply;
+
+// 20 % repeating rifle GameFlags.P4GunCount++
+r = UnityEngine.Random.Range(1, 100);
+if (r < 20)
+{
+     gotGun = true;
+     GameFlags.P4GunCount++;
+}
+
+//50% count coup
+r = UnityEngine.Random.Range(1, 100);
+if (r < 50)
+{
+     Debug.Log("Counted coup");
+     GameFlags.tBravery++;
+     Actions.Alert("Title", "You acted bravely.");
+     
+     countedCoup = true;
+}
+
+// 50% inc skill
+r = UnityEngine.Random.Range(1, 100);
+if (r < 50)
+{
+     // TODO var bm:BadgeManager = BadgeManager.getInstance();
+     
+     r = UnityEngine.Random.Range(1, 100);
+     if (false /* todo bm.hasBadge("BADGE_ARCHERY3") && bm.hasBadge("BADGE_RIFLERY3") */)
+     {
+          // terrific
+     }
+     else if (r < 50)
+     {
+          bowUp = true;
+          GameFlags.tArchery++;
+     }
+     else
+     {
+          gunUp = true;
+          GameFlags.tRiflery++;
+     }
+     // 50% bow chance unless aT 3 / 50% RIFLE UNLESS AT 3
+     
+}
+
+/*
+* You atk the supply train. while 2 warriors are killed, you take many oxen and cattle (58 food). You
+*
+*/
+var ret = "";
+
+if (countedCoup)
+{
+     if (gunUp)
+     {
+          ret = "You attack the supply train, and count coup on a soldier! Your skill with rifles goes up.";
+     }
+     else if (bowUp)
+     {
+          ret = "You attack the supply train, and count coup on a soldier! Your skill with a bow goes up.";
+     }
+     else
+     {
+          ret = "You attack the supply train, and count coup on a soldier!";
+     }
+}
+else
+{
+     if (gunUp)
+     {
+          ret = "You attack the supply train, and your skill with rifles goes up.";
+     }
+     else if (bowUp)
+     {
+          ret = "You attack the supply train, and your skill with the bow goes up.";
+     }
+     else
+     {
+          ret = "You attack the supply train.";
+     }
+}
+
+if (dead == 1)
+{
+     ret += " Your warriors take many oxen and cattle (" + newFood + " food), but 1 warrior is killed.";
+}
+else if (dead > 1)
+{
+     ret += " Your warriors take many oxen and cattle (" + newFood + " food), but " + dead + " warriors are killed.";
+}
+else
+{
+     ret += " Your warriors take many oxen and cattle (" + newFood + " food), and no warriors are hurt!";
+}
+
+if (newSupply > 1)
+{
+     ret += " You also get some supplies (" + newSupply + ").";
+}
+
+if (gotGun)
+{
+     ret += " Before riding away, you take a repeating rifle from a dead soldier.";
+}
+
+GameFlags.P4RaidResult = ret;
+
+}}

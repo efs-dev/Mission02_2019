@@ -1,0 +1,9 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_night_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("nightamb", true);
+if (!GameFlags.P1LeaveCamp)
+{
+yield return Actions.OpenPopupBlocking(PopupIds.p1_start);
+yield return Actions.OpenPopupBlocking(PopupIds.p1_before_dawn);
+yield return Actions.LoadScene("map_pony");
+}
+}}

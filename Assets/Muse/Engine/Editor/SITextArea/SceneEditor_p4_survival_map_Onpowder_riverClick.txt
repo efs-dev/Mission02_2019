@@ -1,0 +1,18 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_Onpowder_riverClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "powder_river")
+    yield break;
+
+// summer
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "powder_river");
+
+if (GameFlags.P4PopupConfirm)
+ {
+     yield return Actions.MoveToHotspotBlocking("player", "powder_river", 3f, 1f, 1f);
+   
+     // arrival script
+    GameFlags.P4MapStartNode = "powder_river";
+    GameFlags.P4NodeDescr = "alongside the Powder River";
+    GameFlags.P4RootNode = "_powder_river";
+    yield return Actions.LoadScene("p4_survival_dlg");
+  }
+}}

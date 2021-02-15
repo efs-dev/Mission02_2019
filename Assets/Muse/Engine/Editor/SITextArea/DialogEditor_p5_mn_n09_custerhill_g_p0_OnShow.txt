@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p5_mn_n09_custerhill_g_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+/*//setLayer("bg", "gfx/stills/lbh/custer_hill_g.jpg")
+//playambient("audio/sfx/p5_lbh_custerhillsfx/01_LittleBigHorn_4_Large_Mid.mp3")*/
+}}

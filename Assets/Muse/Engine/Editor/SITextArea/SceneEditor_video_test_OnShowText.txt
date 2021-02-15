@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_video_test_OnShowText {public IEnumerator Run() {
+Debug.Log("SceneTimelineBlocking start");
+yield return Actions.SceneTimelineBlocking("video");
+Debug.Log("SceneTimelineBlocking complete");
+}}

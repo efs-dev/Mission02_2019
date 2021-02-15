@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_p2_OnEnterText {public IEnumerator Run() {
+if (GameFlags.P2MapCount == 1)
+Actions.MoveToHotspot("pin_lf", "fort", 0f, 1f, 0.75f);
+else if (GameFlags.P2MapCount == 3)
+Actions.MoveToHotspot("pin_lf", "tipi2", 0f, 1f, 0.75f);
+}}

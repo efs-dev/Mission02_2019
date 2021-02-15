@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_archeryOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tArchery == 1)
+IncrementBadgeRank (1, "Your skill with the bow is average.", "archery_rank1");
+else if (GameFlags.tArchery == 2)
+IncrementBadgeRank (1, "Your skill with the bow is good.", "archery_rank2");
+else if (GameFlags.tArchery == 3)
+IncrementBadgeRank (1, "Your skill with the bow is excellent", "archery_rank3");
+}}

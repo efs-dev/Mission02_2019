@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p1_soc_001_n10c_r0_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P1ArcheryTip = true;
+GameFlags.tArchery ++;
+/*//?p1_archery_tip = true
+//updateMessage("You become better at archery.")
+//#s_archery = #s_archery+1*/
+}}

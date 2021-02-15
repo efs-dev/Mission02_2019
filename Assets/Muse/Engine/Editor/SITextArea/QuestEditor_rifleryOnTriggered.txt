@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_rifleryOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tRiflery == 1)
+IncrementBadgeRank (1, "Your skill with rifles is average.", "riflery_rank1");
+else if (GameFlags.tRiflery == 2)
+IncrementBadgeRank (1, "Your skill with rifles is good.", "riflery_rank2");
+else if (GameFlags.tRiflery == 3)
+IncrementBadgeRank (1, "Your skill with rifles is excellent", "riflery_rank3");
+}}

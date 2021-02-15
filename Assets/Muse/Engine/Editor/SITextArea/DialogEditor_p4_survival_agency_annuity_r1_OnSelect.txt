@@ -1,0 +1,12 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_agency_annuity_r1_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4SkipSeasonChange = true
+;
+GameFlags.P4AutoTrip = "hunting_grounds"
+;
+
+GameFlags.P4SupplyTurn +=1
+;
+GameFlags.P4SeasonTurn = 2
+;
+yield return Actions.LoadScene("p4_survival_map");
+}}

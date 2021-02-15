@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_hunt_good01_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+if (GameFlags.P4HerdSizeString == "XL" || GameFlags.P4HerdSizeString == "L")
+Actions.AudioPlay("buf_lrg");
+else if (GameFlags.P4HerdSizeString == "M")
+Actions.AudioPlay("buf_med");
+else
+Actions.AudioPlay("buf_sml");
+}}

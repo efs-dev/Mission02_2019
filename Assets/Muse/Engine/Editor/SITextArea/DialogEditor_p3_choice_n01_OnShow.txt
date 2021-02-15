@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p3_choice_n01_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+if (GameFlags.P2UncHat)
+Actions.SetHotspotVisible("hat", true);
+else
+Actions.SetHotspotVisible("hat", false);
+}}

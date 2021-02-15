@@ -1,0 +1,11 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p5_mn_n04_renohill_d3a_p0_OnShow {public class _DialogGameFlagsClass {    private bool _chief_gun = false;    public bool chief_gun {        get {            return _chief_gun;        }        set {            _chief_gun = value;        }    }    private bool _gun_wet = false;    public bool gun_wet {        get {            return _gun_wet;        }        set {            _gun_wet = value;        }    }    private bool _reno_onhorse = false;    public bool reno_onhorse {        get {            return _reno_onhorse;        }        set {            _reno_onhorse = value;        }    }    private bool _reno_shot_rifle = false;    public bool reno_shot_rifle {        get {            return _reno_shot_rifle;        }        set {            _reno_shot_rifle = value;        }    }    private bool _soldier_chief = false;    public bool soldier_chief {        get {            return _soldier_chief;        }        set {            _soldier_chief = value;        }    }    private bool _swam_to_horse = false;    public bool swam_to_horse {        get {            return _swam_to_horse;        }        set {            _swam_to_horse = value;        }    }    private bool _swim_to_horse = false;    public bool swim_to_horse {        get {            return _swim_to_horse;        }        set {            _swim_to_horse = value;        }    }}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P5GunWet = true;
+DialogGameFlags.gun_wet = true;
+DialogGameFlags.reno_onhorse = false;
+/*//setLayer("bg", "gfx/stills/lbh/reno_d3a-2.jpg")
+//?p5_gun_wet = true
+//playambient("audio/sfx/p5_lbh_renohillsfx/riveramb.mp3")
+//playsfx("audio/sfx/p5_lbh_renohillsfx/splashneigh.mp3")
+//?p5_reno_onhorse = false*/
+Actions.AudioPlay("splashneigh");
+}}

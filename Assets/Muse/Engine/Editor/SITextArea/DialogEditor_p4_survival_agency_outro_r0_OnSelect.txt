@@ -1,0 +1,37 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_agency_outro_r0_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+if (GameFlags.P4SupplyTurn < 3)
+GameFlags.P4SupplyTurn = 3
+;
+else if (GameFlags.P4SupplyTurn < 6)
+
+GameFlags.P4SupplyTurn = 6
+;
+else if (GameFlags.P4SupplyTurn < 9)
+
+GameFlags.P4SupplyTurn = 9
+;
+else if (GameFlags.P4SupplyTurn < 12)
+GameFlags.P4SupplyTurn = 12;
+else if (GameFlags.P4SupplyTurn < 15)
+
+GameFlags.P4SupplyTurn = 15
+;
+else if (GameFlags.P4SupplyTurn < 18)
+
+GameFlags.P4SupplyTurn = 18
+;
+else if (GameFlags.P4SupplyTurn < 21)
+
+GameFlags.P4SupplyTurn = 21
+;
+else if (GameFlags.P4SupplyTurn < 24)
+
+GameFlags.P4SupplyTurn = 24
+;
+// SG the above seems like a hack to cap supplyturn
+
+GameFlags.P4SkipSeasonChange = false;
+GameFlags.P4AutoTrip = "";
+
+yield return GlobalScripts.EndSeason();
+}}

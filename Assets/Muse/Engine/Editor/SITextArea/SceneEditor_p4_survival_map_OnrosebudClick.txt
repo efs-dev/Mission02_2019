@@ -1,0 +1,18 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_OnrosebudClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "rosebud")
+    yield break;
+
+// summer
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "rosebud");
+
+if (GameFlags.P4PopupConfirm)
+ {
+     yield return Actions.MoveToHotspotBlocking("player", "rosebud", 3f, 1f, 1f);
+   
+     // arrival script
+    GameFlags.P4MapStartNode = "rosebud";//"rosebud_creek";
+GameFlags.P4NodeDescr = "along Rosebud Creek";
+GameFlags.P4RootNode = "_rosebud_creek";
+    yield return Actions.LoadScene("p4_survival_dlg");
+  }
+}}

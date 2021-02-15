@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p5_ravine_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("riveramb", true);
+yield return Actions.DialogOpenBlocking("p5_mn_n10_ravine", GameFlags.P5DialogStartNode);
+}}

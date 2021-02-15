@@ -1,0 +1,144 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateDetailFB {public void Run() {
+string ret = "";
+
+var detailCount = 0;
+
+// 1 - 2 details
+if (GameFlags.P4WhiteBuf)
+{
+     switch (GameFlags.P4Success)
+     {
+          case 3:
+          case 4:
+          ret += "You found a rare and lucky white buffalo. "; break;
+          case 1:
+          case 2:
+          ret += "A bright spot was finding a rare and lucky white buffalo. "; break;
+     }
+     detailCount++;
+}
+
+if (GameFlags.P4Berries != "")
+{
+     switch (GameFlags.P4Success)
+     {
+          case 3:
+          case 4:
+          ret += "The women contributed to the bounty with " + GameFlags.P4Berries + ". "; break;
+          case 1:
+          case 2:
+          ret += "The women, at least, were able to gather " + GameFlags.P4Berries + ". "; break;
+     }
+     GameFlags.P4Berries = ""; // clear it
+     detailCount++;
+}
+
+if (detailCount < 2)
+{  // up to 2 details
+     if (GameFlags.P4ShareFood)
+     {
+          ret += "Another band of Cheyenne shared some food, remembering your earlier generosity. ";
+          GameFlags.P4ShareFood = false; // reset it
+          detailCount++;
+     }
+}
+
+if (detailCount < 2)
+{
+     M3.Out("herdsize string " + GameFlags.P4HerdSizeString);
+     
+     // only comment if didn't find white buffalo
+     if (GameFlags.P4WhiteBuf == false)
+     {
+          if (GameFlags.P4HerdSizeString != "X")
+          {   // if attempted a hunt...
+               switch (GameFlags.P4HerdSizeString)
+               {
+                    case "":
+                    ret += "You tried, but found no buffalo. ";
+                    break;
+                    case "L":
+                    case "XL":
+                    ret += "You found plentiful buffalo. ";
+                    break;
+                    default:
+                    ret += "You found some buffalo.";
+                    break;
+               }
+               GameFlags.P4HerdSizeString = "X"; // reset
+               detailCount++;
+          }
+     }
+}
+
+if (detailCount < 2)
+{
+     if (GameFlags.P4DullKnifeMsg == false)
+     {
+          if (GameFlags.P4DullKnife)
+          {
+               ret += "You camped with Chief Dull Knife and his band. ";  //he gave your band a gift of gun/horse You camped with Crazy Horse and his band.    //and he gave your band a gift of gun/horse
+               GameFlags.P4DullKnifeMsg = true;
+               detailCount++;
+          }
+     }
+}
+
+if (detailCount < 2)
+{
+     if (GameFlags.P4CrazyHorseMsg == false)
+     {
+          if (GameFlags.P4CrazyHorse)
+          {
+               ret += "You camped with Crazy Horse and his band. ";  //he gave your band a gift of gun/horse You camped with Crazy Horse and his band.    //and he gave your band a gift of gun/horse
+               GameFlags.P4CrazyHorseMsg = true;
+               detailCount++;
+          }
+     }
+}
+
+if (detailCount < 2)
+{
+     if (GameFlags.P4LittleWolfMsg == false)
+     {
+          if (GameFlags.P4LittleWolf)
+          {
+               ret += "You camped with Little Wolf and his band. ";  //he gave your band a gift of gun/horse You camped with Crazy Horse and his band.    //and he gave your band a gift of gun/horse
+               GameFlags.P4LittleWolfMsg = true;
+               detailCount++;
+          }
+     }
+}
+
+if (detailCount < 2)
+{
+     if (GameFlags.P4SittingBullMsg == false)
+     {
+          if (GameFlags.P4SittingBull)
+          {
+               ret += "You camped with Sitting Bull and his band. ";  //he gave your band a gift of gun/horse You camped with Crazy Horse and his band.    //and he gave your band a gift of gun/horse
+               GameFlags.P4SittingBullMsg = true;
+               detailCount++;
+          }
+     }
+}
+
+if (detailCount < 2)
+{
+     if (GameFlags.P4Attended)
+     {
+          ret += "You attended a Sun Dance.";
+          GameFlags.P4Attended = false;
+          detailCount++;
+     }
+     else if (GameFlags.P4Hosted)
+     {
+          ret += "You hosted a Sun Dance.";
+          GameFlags.P4Hosted = false;
+          detailCount++;
+     }
+}
+
+
+GameFlags.P4DetailFb = ret;
+}}

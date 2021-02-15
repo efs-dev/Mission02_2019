@@ -1,0 +1,41 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_day_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("dayambprimo", true);
+if (GameFlags.CurrentPart == 1)
+{
+if (GameFlags.P1BlackMoonApproaches)
+{
+GameFlags.P1BlackMoonApproaches = false;
+yield return Actions.DialogOpenBlocking("p1_soc_001", "n00");
+yield return Actions.LoadScene("map_pony2");
+}
+else if (GameFlags.P1FetchedWater)
+{
+Actions.SetHotspotVisible("mnyhrs", true);
+yield return Actions.DialogOpenBlocking("p1_lak_001");
+if (GameFlags.P1CrowCode == 2)
+{
+Actions.SetHotspotVisible("mnyhrs", false);
+Actions.SetHotspotVisible("uncle", true);
+yield return Actions.DialogOpenBlocking("p1_unc_006");
+yield return Actions.LoadScene("loc_race_start");
+}
+else
+yield return Actions.LoadScene("loc_race_start");
+}
+}
+else if (GameFlags.CurrentPart == 2)
+{
+Actions.SetHotspotVisible("uncle", true);
+yield return Actions.DialogOpenBlocking("p2_unc_002");
+Actions.SetHotspotVisible("uncle", false);
+
+if (GameFlags.P2GiveGunCR)
+yield return Actions.OpenPopupBlocking(PopupIds.p2_cr_happy);
+
+if (GameFlags.P2KettleTraded)
+yield return Actions.OpenPopupBlocking(PopupIds.p2_mother_happy);
+
+yield return Actions.EndPart();
+}
+
+}}

@@ -1,0 +1,10 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_horse_senseOnActiveDescription : Quest {public IEnumerator Run() {
+if (GameFlags.tHorseSense == 0)
+return "You can easily ride a calm horse and are learning to tame wilder ones. But a warrior will need much more skill.";
+else if (GameFlags.tHorseSense == 1)
+return "You can tame most wild horses and start training them for buffalo hunting.";
+else if (GameFlags.tHorseSense == 2)
+return "You can ride a horse well for both hunting and battle.";
+else
+return "You have a strong bond with horses and can coax them to run more boldly and faster than most other warriors can.";
+}}

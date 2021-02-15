@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/EngineProject/MissionUS/Scenes/Preloader.unity
+    guid: d80ddb4fad0597a46bdab5c5f4b3b05d
+  - enabled: 1
+    path: Assets/EngineProject/MissionUS/Scenes/Engine.unity
+    guid: 100c8ebaff4c2e74bb531d0efa7e739e
+  - enabled: 1
+    path: Assets/EngineProject/MissionUS/Scenes/menu.unity
+    guid: 0a4967c6faca21348873b1b24bd2f7bd
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/CustomGUI.unity
+    guid: d1df8a1f4fb475342a24592e20609d7a
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/loc_baker_house.unity
+    guid: 117104f56cfc2634a93d92fd48eb019c
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/loc_baker_yard.unity
+    guid: 193aa46d6a6bbd943b0e800a7a96d3f2
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/loc_overlook.unity
+    guid: b681d96d81cb6da45a2bd89379a3838c
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/map_greenwood.unity
+    guid: b700fd48d3deff549bc7b482e0038298
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/map_greenwood_uptown.unity
+    guid: b61087439629bab40b210c6ba8808888
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/_untitled0.unity
+    guid: d812c136465851e4ba08fbe697f050c4
+  m_configObjects: {}

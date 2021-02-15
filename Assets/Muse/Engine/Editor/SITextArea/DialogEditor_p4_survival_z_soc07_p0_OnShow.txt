@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_soc07_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4TradeLimit = SurvivalGame.Random(5);
+GameFlags.P4TradeLimit = GameFlags.P4TradeLimit + 4;
+//log ("trade limit: "+#trade_limit)
+GameFlags.P4FastHorseValue = GameFlags.P4FastHorseValue + 5;
+GameFlags.P4SupplyValue = GameFlags.P4SupplyValue -1;
+}}

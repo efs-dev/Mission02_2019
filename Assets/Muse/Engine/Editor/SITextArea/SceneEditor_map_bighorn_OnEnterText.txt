@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_bighorn_OnEnterText {public IEnumerator Run() {
+Actions.MoveToHotspot("pin_lf", GameFlags.P5CurrentLoc, 0f, 1f, 1f);
+if (GameFlags.P5StartLBH && GameFlags.P5CurrentLoc == "tipi")
+Actions.MoveToHotspot("pin_lf", GameFlags.P5CurrentLoc, 0f, 8f, 0.8f);
+}}

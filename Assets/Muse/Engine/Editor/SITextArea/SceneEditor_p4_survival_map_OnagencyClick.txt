@@ -1,0 +1,28 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_OnagencyClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "agency")
+    yield break;
+
+// the agency is unavailable season 1 and 2
+if (GameFlags.P4SeasonCount < 3)
+{
+yield return Actions.OpenPopupBlocking(PopupIds.agency_construction);
+        }
+        else
+        {
+        yield return Actions.DialogOpenBlocking("p4_popups_yn", "agency");
+
+   if (GameFlags.P4PopupConfirm)
+   {
+     // TODO check if you're already there
+     yield return Actions.MoveToHotspotBlocking("player", "agency", 3f, 1f, 1f);
+   
+     // arrival script
+    GameFlags.P4MapStartNode = "agency";  // for next map visit
+	
+    GameFlags.P4NodeDescr = "at the Red Cloud Agency.";
+		
+    GameFlags.P4RootNode = "agency";
+    yield return Actions.LoadScene("p4_survival_dlg");
+  }
+}
+}}

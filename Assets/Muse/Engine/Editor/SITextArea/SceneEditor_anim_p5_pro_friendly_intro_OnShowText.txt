@@ -1,0 +1,13 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p5_pro_friendly_intro_OnShowText {public IEnumerator Run() {
+if (GameFlags.P4AgencyChoice)
+{
+	Actions.SetHotspotVisible("red_cloud_agency", true);
+	yield return Actions.SceneTimelineBlocking("red_cloud_agency");
+}
+else if (!GameFlags.P4AgencyChoice)
+{
+	Actions.SetHotspotVisible("lakota", true);
+	yield return Actions.SceneTimelineBlocking("lakota");
+}
+
+}}

@@ -1,0 +1,21 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_OnEnterText {public IEnumerator Run() {
+Actions.SetHotspotVisible("Saville", false);
+
+// lower the prompt
+var rt = GuiManager.GetInstance().DialogPlayerPrompt.GetComponent<RectTransform>();
+var pos = rt.anchoredPosition;
+pos.y = -250;
+rt.anchoredPosition = pos;
+
+// lower the alert
+rt = GuiManager.GetInstance().Alert.GetComponent<RectTransform>();
+pos = rt.anchoredPosition;
+pos.y = -350;
+rt.anchoredPosition = pos;
+
+// lower the top right buttons
+rt = GuiManager.GetInstance().TopRightButtons.GetComponent<RectTransform>();
+pos = rt.anchoredPosition;
+pos.y = -976;
+rt.anchoredPosition = pos;
+}}

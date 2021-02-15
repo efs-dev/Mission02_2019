@@ -1,0 +1,4 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_sum_OnShowText {public IEnumerator Run() {
+yield return Actions.OpenPopupBlocking(PopupIds.p4_win);
+yield return Actions.EndPart();
+}}

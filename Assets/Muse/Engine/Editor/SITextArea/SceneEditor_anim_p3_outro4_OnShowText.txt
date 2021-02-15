@@ -1,0 +1,12 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p3_outro4_OnShowText {public IEnumerator Run() {
+if (GameFlags.P2UncHat)
+{
+Actions.SetHotspotVisible("hat", true);
+yield return Actions.SceneTimelineBlocking("hat");
+}
+else if (!GameFlags.P2UncHat)
+{
+Actions.SetHotspotVisible("nohat", true);
+yield return Actions.SceneTimelineBlocking("nohat");
+}
+}}

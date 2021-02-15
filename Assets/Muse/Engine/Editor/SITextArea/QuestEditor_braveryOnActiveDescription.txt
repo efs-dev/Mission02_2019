@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_braveryOnActiveDescription : Quest {public IEnumerator Run() {
+return "The dragonfly represents bravery for its daring aerial acrobatics. Brave actions over time will increase your reputation.";
+}}

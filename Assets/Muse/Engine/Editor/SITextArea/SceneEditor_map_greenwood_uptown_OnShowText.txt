@@ -1,0 +1,5 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_greenwood_uptown_OnShowText {public IEnumerator Run() {
+GlobalScripts.AddTime(22);
+yield return Actions.MoveToHotspotBlocking("player", "w1", 1.0f, 1.0f, 1.0f);
+
+}}

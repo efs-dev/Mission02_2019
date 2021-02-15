@@ -1,0 +1,23 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_ScareMiners {public void Run() {
+var ret = "Your warriors scream their war cries and gallop around the mining camp. Outnumbered, the miners flee. You take their oxen and cattle (";
+
+/* Your warriors scream their war cries and gallop around the mining camp. Outnumbered, the miners flee.
+You take their oxen and cattle (## food) and what tools and supplies you can (## supplies). FAST_HORSE SENTENCE IF APPLICABLE.
+You then make camp a ways upstream.
+*/
+
+GlobalScripts.DoSmallRaid();
+
+ret += GameFlags.P4NewFood;
+ret += " food) and what tools and supplies you can (";
+ret += GameFlags.P4NewSupplies + " supplies). ";
+
+if (GameFlags.P4GotHorse)
+{
+     ret += "You also take a fast-looking horse. ";
+}
+
+ret += "You then make camp a bit upstream.";
+
+GameFlags.P4RaidResult = ret;
+}}

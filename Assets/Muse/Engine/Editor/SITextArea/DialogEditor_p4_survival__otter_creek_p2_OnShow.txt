@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival__otter_creek_p2_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4SupplyTurn += 1;
+GameFlags.P4Berries = "turnips";
+GameFlags.P4GetTurnips = true;
+GameFlags.P4GameBonus = GameFlags.P4GameBonus + 5;
+Actions.AudioPlay("springdayamb", true);
+}}

@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_Tooltip_Item_Fast_Horses_On_OnToolTip {public IEnumerator Run() {
+if (GameFlags.P4HorseCount == 1)
+     return "You have " + GameFlags.P4HorseCount + " fast horse.";
+else
+     return "You have " + GameFlags.P4HorseCount + " fast horses.";
+}}

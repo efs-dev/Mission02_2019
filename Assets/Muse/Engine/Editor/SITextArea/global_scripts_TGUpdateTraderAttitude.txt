@@ -1,0 +1,18 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGUpdateTraderAttitude {public void Run(string tradeType) {
+if (tradeType == "positive")
+{
+     if (GameFlags.TGAttitudeOffset < GameFlags.TGAttitudeOffsetMaxCap)
+     {
+          GameFlags.TGAttitudeOffset += GameFlags.TGOfferModifierFair;
+          GameFlags.TGUnadjustedAttitudeOffset += GameFlags.TGOfferModifierFair;
+     }
+}
+else if (tradeType == "negative")
+{
+     if (GameFlags.TGAttitudeOffset > GameFlags.TGAttitudeOffsetMinCap)
+     {
+          GameFlags.TGAttitudeOffset += GameFlags.TGOfferModifierUnfair;
+          GameFlags.TGUnadjustedAttitudeOffset += GameFlags.TGOfferModifierUnfair;
+     }
+}
+}}

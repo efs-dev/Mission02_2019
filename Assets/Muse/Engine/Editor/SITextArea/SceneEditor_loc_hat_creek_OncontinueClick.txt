@@ -1,0 +1,7 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_hat_creek_OncontinueClick {public IEnumerator Run() {
+Actions.SetHotspotVisible("continue", false);
+Actions.SetHotspotVisible("arrival", false);
+yield return Actions.DialogOpenBlocking("p2_lak_002");
+yield return Actions.LoadScene("anim_p2_trading");
+
+}}

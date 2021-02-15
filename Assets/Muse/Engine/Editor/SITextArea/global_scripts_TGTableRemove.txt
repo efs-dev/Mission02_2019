@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGTableRemove {public void Run(string id) {
+GlobalScripts.TGSetTotalTradeValue();
+
+GameFlags.TGCurrentOfferRejected = false;
+}}

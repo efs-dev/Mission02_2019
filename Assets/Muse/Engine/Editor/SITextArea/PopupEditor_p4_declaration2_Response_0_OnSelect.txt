@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class PopupEditor_p4_declaration2_Response_0_OnSelect {public IEnumerator Run() {
+Actions.ClosePopup();
+yield return Actions.MoveToHotspotBlocking("player", "sioux", 3f, 1f, 1f);
+GameFlags.P4RootNode = "_great_sioux";
+yield return Actions.LoadScene("p4_survival_dlg");
+
+}}

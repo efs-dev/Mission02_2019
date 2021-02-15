@@ -1,0 +1,12 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_GetCondition {public string Run() {
+switch (GameFlags.P4TribeHealth)
+{
+     case -2: return "starving";
+     case -1: return "hungry";
+     case 0: return "surviving";
+     case 1: return "healthy";
+     case 2: return "very healthy";
+}
+
+return "<bad health string>";
+}}

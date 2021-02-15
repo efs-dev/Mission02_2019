@@ -1,0 +1,7 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_uncles_tipi_dawn_OnMomClick {public IEnumerator Run() {
+Actions.SceneCameraPosition("mom");
+yield return Actions.DialogOpenBlocking("p1_mom_001", "n05");
+Actions.QuestActivate("fetch_water");
+GameFlags.P1BlackMoonApproaches = true;
+yield return Actions.LoadScene("loc_camp_day");
+}}

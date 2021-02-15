@@ -1,0 +1,82 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGIsFinishedTrading {public IEnumerator Run() {
+// convert the list of player items into a list of bools (true per item if !item.HasItem or item.IsTraded)
+// and then combine the list of bools into a single bool value, true if all the bools in the list are true
+var areAllPlayerItemsTraded = GameFlags.TGPlayerItems.ConvertAll<bool>(item => !item.HasItem || item.IsTraded).Aggregate((item, nextItem) => item && nextItem);
+
+var areAllTraderItemsTraded = GameFlags.TGTraderItems.ConvertAll<bool>(item => !item.HasItem || item.IsTraded).Aggregate((item, nextItem) => item && nextItem);
+
+
+if (areAllPlayerItemsTraded && areAllTraderItemsTraded)
+{
+     yield return Actions.OpenPopupBlocking("p2_both_traded_all");
+     GameFlags.TGEndGame = true;
+}
+else if (areAllPlayerItemsTraded)
+{
+     yield return Actions.OpenPopupBlocking("p2_fox_none_left");
+     GameFlags.TGEndGame = true;
+}
+else if (areAllTraderItemsTraded)
+{
+     yield return Actions.OpenPopupBlocking("p2_trader_none_left");
+     GameFlags.TGEndGame = true;
+}
+else if  (GameFlags.TGOfferNum >= GameFlags.TGOfferMax && GameFlags.TGMadeTrade)
+{
+     yield return Actions.OpenPopupBlocking("p2_made_enough");
+     GameFlags.TGEndGame = true;
+}
+else if (GameFlags.TGMadeTrade)
+{
+     if (GameFlags.TGOfferNum == 4)
+     {
+          yield return Actions.OpenPopupBlocking("p2_new_trade1");
+     }
+     else if (GameFlags.TGOfferNum == 3)
+     {
+          yield return Actions.OpenPopupBlocking("p2_new_trade2");
+     }
+     else if (GameFlags.TGOfferNum == 2)
+     {
+          yield return Actions.OpenPopupBlocking("p2_new_trade3");
+     }
+     else if (GameFlags.TGOfferNum == 1)
+     {
+          yield return Actions.OpenPopupBlocking("p2_new_trade4");
+     }
+     
+     // HACK:  To fix problem where the minigame ends when the player refuses to sweeten a deal, the below is commented out.
+     
+     //if (DLG_RESULT == "NO") {
+          //END_GAME = true;
+          //}
+     }
+     else if (!GameFlags.TGMadeTrade && GameFlags.TGDialogResult != "YES")
+     {
+          if (GameFlags.TGOfferNum == 4)
+          {
+               yield return Actions.OpenPopupBlocking("p2_new_trade1_nosuccess");
+          }
+          else if (GameFlags.TGOfferNum == 3)
+          {
+               yield return Actions.OpenPopupBlocking("p2_new_trade2_nosuccess");
+          }
+          else if (GameFlags.TGOfferNum == 2)
+          {
+               yield return Actions.OpenPopupBlocking("p2_new_trade3_nosuccess");
+          }
+          else if (GameFlags.TGOfferNum == 1)
+          {
+               yield return Actions.OpenPopupBlocking("p2_new_trade4_nosuccess");
+          }
+          else if  (GameFlags.TGOfferNum > 4)
+          {
+               yield return Actions.OpenPopupBlocking("p2_new_trade_inf");
+          }
+     }
+     else if(GameFlags.TGDialogResult == "sweeten_add_item")
+     {
+          GameFlags.TGDialogResult = "";
+     }
+     
+}}

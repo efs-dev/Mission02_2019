@@ -1,0 +1,18 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony2_OnShowText {public IEnumerator Run() {
+if (!GameFlags.P1ReturningWater && !GameFlags.P1FetchedWater)
+{
+yield return Actions.MoveToHotspotBlocking("pin_lf", "ford", 2f, 1f, 0.75f);
+yield return Actions.Wait(0.5f);
+yield return Actions.LoadScene("loc_beaver_dam");
+}
+else if (GameFlags.P1ReturningWater && !GameFlags.P1FetchedWater)
+{
+yield return Actions.MoveToHotspotBlocking("pin_lf", "camp", 3f, 1f, 0.75f);
+GameFlags.P1FetchedWater = true;
+yield return Actions.Wait(1.0f);
+yield return Actions.OpenPopupBlocking(PopupIds.p1_return_water);
+yield return Actions.MoveToHotspotBlocking("pin_lf", "ponies", 2f, 1f, 0.75f);
+yield return Actions.LoadScene("loc_horses");
+}
+
+}}

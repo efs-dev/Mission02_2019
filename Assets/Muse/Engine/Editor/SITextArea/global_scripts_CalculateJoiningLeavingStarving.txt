@@ -1,0 +1,41 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateJoiningLeavingStarving {public void Run(int food) {
+GameFlags.P4PopulationDown = false;
+GameFlags.P4PopulationUp = false;
+
+if (GameFlags.P4TribeHealth == -1 || GameFlags.P4TribeHealth == -2)
+{
+     // if hungry or starving
+     
+     var shortage = Mathf.Abs(food); // turn shortfall into positive number
+     if (food < 0) food = 0;
+          var shrinkage = 0;
+     
+     for (int i = 0; i < shortage; i++)
+     {
+          shrinkage += GlobalScripts.CheckHungryStarving();
+     }
+}
+else if (GameFlags.P4TribeHealth == 1 || GameFlags.P4TribeHealth == 2)
+{
+     // if healthy or very healthy
+     var bonus = 0;
+     for (var i = 0; i < food; i++)
+     {
+          bonus += CheckBonusPeople();  // check for extra ppl
+     }
+}
+
+// deal with starve count
+if (GameFlags.P4TribeHealth == -2)
+{
+     // keep track of consecutive 'starves'
+     GameFlags.P4StarveCount++;
+}
+else
+{
+     // reset the starve count to break a 'streak'
+     GameFlags.P4StarveCount = 0;
+}
+
+// THIS WAS USING A VARIABLE starveCount, check this!
+}}

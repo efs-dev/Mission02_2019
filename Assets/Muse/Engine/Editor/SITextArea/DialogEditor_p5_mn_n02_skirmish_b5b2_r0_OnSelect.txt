@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p5_mn_n02_skirmish_b5b2_r0_OnSelect {public class _DialogGameFlagsClass {    private bool _look_first = false;    public bool look_first {        get {            return _look_first;        }        set {            _look_first = value;        }    }}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P5NextLoc = "woods";
+GameFlags.P5LoadScene = "p5_woods";
+GameFlags.P5DialogStartNode = "c";
+yield return Actions.LoadScene("map_bighorn");
+}}

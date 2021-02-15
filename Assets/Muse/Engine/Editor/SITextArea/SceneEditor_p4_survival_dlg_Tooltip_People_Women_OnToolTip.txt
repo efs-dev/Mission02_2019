@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_Tooltip_People_Women_OnToolTip {public IEnumerator Run() {
+if (GameFlags.P4FemaleCount > 1)
+    return "There are " + GameFlags.P4FemaleCount + " women in your band.";
+else if (GameFlags.P4FemaleCount == 1)
+    return "There is one woman in your band.";
+else
+    return "There are no women in your band.";
+}}

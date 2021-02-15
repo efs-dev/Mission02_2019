@@ -1,0 +1,21 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_Onblack_hillsClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "black_hills")
+    yield break;
+
+// spring/fall
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "black_hills");
+
+if (GameFlags.P4PopupConfirm)
+ {
+     yield return Actions.MoveToHotspotBlocking("player", "black_hills", 3f, 1f, 1f);
+   
+    // trying to fix turn 1 bug
+    //if(GameFlags.P4SupplyTurn == 0) GameFlags.P4SupplyTurn = 1;
+
+     // arrival script
+    GameFlags.P4MapStartNode = "black_hills";
+    GameFlags.P4NodeDescr = "among the Black Hills";
+    GameFlags.P4RootNode = "_black_hills";
+    yield return Actions.LoadScene("p4_survival_dlg");
+  }
+}}

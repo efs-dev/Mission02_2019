@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_trading_Tooltip_hides_Tooltip_OnToolTip {public IEnumerator Run() {
+Debug.Log ("ROLLOVER");
+return "3 buffalo robes.";
+}}

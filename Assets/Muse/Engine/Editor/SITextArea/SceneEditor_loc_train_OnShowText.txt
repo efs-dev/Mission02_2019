@@ -1,0 +1,4 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_train_OnShowText {public IEnumerator Run() {
+yield return Actions.DialogOpenBlocking("p3_mn_train1");
+yield return Actions.LoadScene("video_test");
+}}

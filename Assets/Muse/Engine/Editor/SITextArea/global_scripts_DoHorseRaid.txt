@@ -1,0 +1,128 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_DoHorseRaid {public void Run() {
+Debug.Log("DoHorseRaid()");
+
+// init stats
+var horsesStolen = 0; // normal horses
+var newFastHorse = 0;
+var hadFight = false;
+var killCount = 0;
+var countedCoup = false;
+
+
+var r = 0;
+//  each warrior  to steal horse
+// each horse  fast
+for (var i = 0; i < GameFlags.P4WarriorCount; i++)
+{
+     r = UnityEngine.Random.Range(1, 100);
+     if (r < GameFlags.P4StealChance)
+     {
+          Debug.Log("stole a horse");
+          r = UnityEngine.Random.Range(1, 100);
+          if (r < GameFlags.P4FastChance)
+          {
+               Debug.Log("...it's FAST!");
+               newFastHorse++;
+               GameFlags.P4HorseCount++;
+          }
+          else
+          {
+               Debug.Log("...it's normal speed");
+               horsesStolen++;
+          }
+     }
+}
+
+
+// 50% have fight
+r = UnityEngine.Random.Range(1, 100);
+if (r < 50)
+{
+     Debug.Log("got into fight");
+     hadFight = true;
+     // 25% warrior killed
+     r = UnityEngine.Random.Range(1, 100);
+     if (r < 25)
+     {
+          Debug.Log("warrior killed");
+          GameFlags.P4WarriorCount -= 1;
+     }
+     
+     // 50% counted coup
+     r = UnityEngine.Random.Range(1, 100);
+     if (r < 50)
+     {
+          Debug.Log("Counted coup");
+          GameFlags.tBravery++;
+          Actions.Alert("Improvement", "You acted bravely.");
+          countedCoup = true;
+     }
+}
+
+GlobalScripts.CalculatePopulation();
+
+if (horsesStolen < 1)
+     horsesStolen = 1;
+
+// calc how many horses up for trade
+GameFlags.P4UpForTrade = (int)Mathf.Ceil(horsesStolen / 2);
+GameFlags.P4FoodTrade = GameFlags.P4UpForTrade * 8; // each horse is worth 8 food
+
+
+var ret = "Your raiding party steals ";
+var totalHorse = horsesStolen + newFastHorse;
+
+// # horses
+if (newFastHorse > 1)
+{
+     ret += "" + totalHorse + " horses, including " + newFastHorse + " fast ones.";
+     
+}
+else if (newFastHorse == 1)
+{
+     ret += "" + totalHorse + " horses, including a fast one.";
+     
+}
+else
+{
+     if (horsesStolen == 1)
+     {
+          ret += "a single horse.";
+     }
+     else
+     {
+          ret += "" + horsesStolen + " horses.";
+     }
+}
+
+// fight?
+if (hadFight)
+{
+     if (killCount > 0)
+     {
+          ret += " You get into a fight with a small band of " + GameFlags.P4RaidInfo + ".";
+          ret += " One of your warriors is killed.";
+     }
+     else
+     {
+          ret += " You get into a fight with a small band of " + GameFlags.P4RaidInfo + ", but luckily no one is hurt.";
+     }
+     
+     if (countedCoup)
+     {
+          ret += " You count coup on an enemy - you acted bravely!";
+          
+     }
+}
+
+// 50% horsesense
+r = UnityEngine.Random.Range(1, 100);
+if (r < 50)
+{
+     Debug.Log("horse sense increase");
+     GameFlags.tHorseSense++;
+     ret += "\nYour skill with horses increases.";
+}
+
+GameFlags.P4RaidResult = ret;
+}}

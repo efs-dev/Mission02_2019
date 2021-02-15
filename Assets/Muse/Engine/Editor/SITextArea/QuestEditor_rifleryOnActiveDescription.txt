@@ -1,0 +1,10 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_rifleryOnActiveDescription : Quest {public IEnumerator Run() {
+if (GameFlags.tRiflery == 0)
+return "Your skill in shooting a musket or rifle. You do not yet have any experience and probably could not even load a gun, much less hit anything with it.";
+else if (GameFlags.tRiflery == 1)
+return "You know the basics of using a musket or rifle. You can hit big things that are not too far.";
+else if (GameFlags.tRiflery == 2)
+return "You have shown some skill. You can usually bring down a buffalo in one or two shots.";
+else
+return "You are a crack shot with a gun. Your people admire that you can hit a running rabbit from a far distance.";
+}}

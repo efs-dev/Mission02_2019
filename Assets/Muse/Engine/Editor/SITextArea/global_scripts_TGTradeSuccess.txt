@@ -1,0 +1,27 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGTradeSuccess {public IEnumerator Run() {
+
+Debug.Log("trade success");
+GameFlags.TGMadeTrade = true;
+
+GlobalScripts.TGUpdateTraderAttitude("positive");
+
+// create a new list which merges the player items and the trader items, then cull it to only the items on the table
+// the list will reference the exact items from those original lists,
+// but the list itself is a different list (so the merge doesnt affect GameFlags.TGPlayerItems or GameFlags.TGTraderItems)
+var allItemsOnTable = GameFlags.TGPlayerItems.Merge(GameFlags.TGTraderItems).FindAll(item=>item.OnTable);
+
+// any item on the table has now been traded
+allItemsOnTable.ForEach(item =>
+{
+     item.IsTraded = true;
+     Actions.SetHotspotVisible(item.Id, false);
+     Actions.SetHotspotVisible(item.Id + "_sold", true);
+});
+
+
+GlobalScripts.TGClearTable();
+
+GameFlags.TGTotalTrade = 0;
+
+yield return GlobalScripts.TGIsFinishedTrading();
+}}

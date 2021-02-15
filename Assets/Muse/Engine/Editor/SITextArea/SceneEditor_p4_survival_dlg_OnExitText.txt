@@ -1,0 +1,21 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_OnExitText {public IEnumerator Run() {
+// raise the prompt
+var rt = GuiManager.GetInstance().DialogPlayerPrompt.GetComponent<RectTransform>();
+var pos = rt.anchoredPosition;
+pos.y = -42;
+rt.anchoredPosition = pos;
+
+// raise the alert
+rt = GuiManager.GetInstance().Alert.GetComponent<RectTransform>();
+pos = rt.anchoredPosition;
+pos.y = -140;
+rt.anchoredPosition = pos;
+
+// raise the top right buttons
+rt = GuiManager.GetInstance().TopRightButtons.GetComponent<RectTransform>();
+pos = rt.anchoredPosition;
+pos.y = -768;
+rt.anchoredPosition = pos;
+
+GameFlags.P4DidBufDance = false;
+}}

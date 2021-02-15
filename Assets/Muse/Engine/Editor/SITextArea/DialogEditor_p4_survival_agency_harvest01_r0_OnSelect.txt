@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_agency_harvest01_r0_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+if (GameFlags.P4AskedMeat) {
+//setLayer("fg", "gfx/smartmap/map_supply/farming/farming1_sheep.jpg")
+} else if (GameFlags.P4AskedMeat == false) {
+//setLayer("fg", "gfx/smartmap/map_supply/farming/farming1.jpg")
+}
+}}

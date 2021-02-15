@@ -1,0 +1,16 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGConsiderOffer {public IEnumerator Run() {
+
+if (GameFlags.TGCurrentOfferRejected == false)
+{
+     GameFlags.TGDialogResult = "";
+     yield return Actions.OpenPopupBlocking("p2_wisdom_exchange");
+     
+     GameFlags.TGOfferWisdom += 1;
+     yield return GlobalScripts.TGHandleTraderWisdom();
+}
+else if (GameFlags.TGCurrentOfferRejected)
+{
+     yield return Actions.OpenPopupBlocking("p2_not_changed");
+     GlobalScripts.TGIsFinishedTrading();
+}
+}}

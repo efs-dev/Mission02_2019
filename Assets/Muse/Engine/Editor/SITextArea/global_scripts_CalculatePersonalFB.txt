@@ -1,0 +1,78 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculatePersonalFB {public void Run() {
+var seasons = new List<List<string>>();
+
+seasons.Add( new List<string>() );
+seasons[0].Add("Your niece is getting bigger. Sometimes she climbs trees and no one can find her.");
+seasons[0].Add("Your niece is getting bigger. She likes to hide in berry bushes and stuff her mouth full.");
+
+seasons.Add( new List<string>() );
+seasons[1].Add("You continue courting Blue Feather. You give a gift of two horses to Blue Feather’s father.");
+
+seasons.Add( new List<string>() );
+var tutor = "You spent time this season teaching the younger men how to";
+
+// TODO badges
+
+// check lev 3's
+if (Quest.GetQuest("horse_sense").Rank == 3)
+{
+     tutor += " ride and train horses.";
+}
+else if (Quest.GetQuest("archery").Rank == 3)
+{
+     tutor += " improve their skill with bow and arrow.";
+}
+else if (Quest.GetQuest("riflery").Rank == 3)
+{
+     tutor += " improve their skill with a rifle.";
+}
+else if (Quest.GetQuest("horse_sense").Rank == 2)
+{
+     tutor += " ride and train horses.";
+}
+else if (Quest.GetQuest("archery").Rank == 2)
+{
+     tutor += " improve their skill with bow and arrow.";
+}
+else if (Quest.GetQuest("riflery").Rank == 2)
+{
+     tutor += " improve their skill with a rifle.";
+}
+else if (Quest.GetQuest("horse_sense").Rank == 1)
+{
+     tutor += " ride and train horses.";
+}
+else if (Quest.GetQuest("archery").Rank == 1)
+{
+     tutor += " improve their skill with bow and arrow.";
+}
+else if (Quest.GetQuest("riflery").Rank == 1)
+{
+     tutor += " improve their skill with a rifle.";
+}
+else
+{
+     tutor += " ride and train horses.";
+}
+seasons[2].Add(tutor);
+
+seasons.Add( new List<string>() );
+seasons[3].Add("You and Crooked Rabbit made a sled out of buffalo ribs and took some of the younger boys sledding.");
+
+seasons.Add( new List<string>() );
+seasons[4].Add("You continue courting Blue Feather. You give a gift to her brother.");
+seasons[4].Add("You see more white people in your lands. Many miners are breaking the treaty.");
+
+seasons.Add( new List<string>() );
+seasons[5].Add("You see more white soldiers than usual. Fort Robinson, near the Red Cloud Agency, is as busy as you’ve ever seen.");
+seasons[5].Add("You hear that huge numbers of white soldiers are exploring the Black Hills in search of gold.");
+
+seasons.Add( new List<string>() );
+seasons[6].Add("Many of our people had burning fevers, but the medicine men healed most of them.");
+seasons[6].Add("You discover that Blue Feather is a better rider than you and she can tame any horse.");
+
+GameFlags.P4PersonalFb = seasons[GameFlags.P4SeasonCount-1].Random(); // get the season's list, and then randomly pick an entry from it.
+
+//THIS WAS IN A TRY CATCH, not sure if we need it or not
+//"Nothing unusual happened to you this season."
+}}

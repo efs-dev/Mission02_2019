@@ -1,0 +1,4 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_overlook_OnEnterText {public IEnumerator Run() {
+Actions.SetHotspotVisible("sis", false);
+Actions.SetHotspotVisible("CrkRbt", false);
+}}

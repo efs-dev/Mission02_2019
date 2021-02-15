@@ -1,0 +1,10 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGSetTotalTradeValue {public void Run() {
+var playerItemsOnTable = GameFlags.TGPlayerItems.FindAll(x=>x.OnTable);
+var traderItemsOnTable = GameFlags.TGTraderItems.FindAll(x=>x.OnTable);
+
+// return 0 if no items on table, otherwise sum all the items
+var totalPlayerValue = playerItemsOnTable.Count == 0 ? 0 : playerItemsOnTable.ConvertAll<int>(x=>x.Value).Aggregate((x,y) => x + y);
+var totalTraderValue = traderItemsOnTable.Count == 0 ? 0 : traderItemsOnTable.ConvertAll<int>(x=>x.Value).Aggregate((x,y) => x + y);
+
+GameFlags.TGTotalTrade = totalPlayerValue - totalTraderValue;
+}}

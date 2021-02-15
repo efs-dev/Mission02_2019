@@ -1,0 +1,5 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p5_littlewolf_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("falldayamb", true);
+yield return Actions.DialogOpenBlocking("p5_lwf_001");
+yield return Actions.LoadScene("p5_sister");
+}}

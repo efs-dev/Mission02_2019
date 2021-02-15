@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_p3_OnEnterText {public IEnumerator Run() {
+Actions.SetHotspotVisible("blkm", false);
+Actions.SetHotspotVisible("uncle", false);
+}}

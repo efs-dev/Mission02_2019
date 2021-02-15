@@ -1,0 +1,3 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p5_reno_hill_OnShowText {public IEnumerator Run() {
+yield return Actions.DialogOpenBlocking("p5_mn_n04_renohill", GameFlags.P5DialogStartNode);
+}}

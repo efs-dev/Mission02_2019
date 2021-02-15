@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_train_horseOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.P1HorseSuccess)
+Complete();
+else if (GameFlags.P1HorseFail)
+Fail();
+}}

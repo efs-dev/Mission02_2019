@@ -1,0 +1,57 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateSuccessFB {public void Run() {
+string ret = "";
+
+
+var foodRatio = GlobalScripts.CalculateFoodRatio();
+if (foodRatio >= 1.33)
+{
+     GameFlags.P4Success = 4;// 1,2,3,4 worst, bad, good, best
+     Debug.Log("best season");
+     ret += "It was the best " + GameFlags.P4SeasonStr + " the elders can remember. Your band got enough food and much extra. ";
+     
+}
+else if (foodRatio >= 1)
+{
+     GameFlags.P4Success = 3;
+     Debug.Log("good");
+     ret += "It was a good " + GameFlags.P4SeasonStr + ". Your band got enough food and some extra. ";
+}
+else if (foodRatio >= .51)
+{
+     GameFlags.P4Success = 2;
+     Debug.Log("bad");
+     ret += "It was a hard " + GameFlags.P4SeasonStr + ". Your band did not get enough food. ";
+     
+}
+else
+{
+     GameFlags.P4Success = 1;
+     Debug.Log("worst");
+     ret += "It was the worst " + GameFlags.P4SeasonStr + " the elders can remember. Your band got very little food. ";
+     
+}
+
+if (GameFlags.P4HealthUp)
+{
+     ret += "The health of your people improves ('" + GlobalScripts.GetCondition() + "'). ";
+}
+else if (GameFlags.P4HealthDown)
+{
+     ret += "The health of your people goes down ('" + GlobalScripts.GetCondition() + "'). ";
+}
+else
+{
+     
+     if (GameFlags.P4StarveCount > 1)
+     {
+          ret += "Your people are still starving! Soon you will be forced to seek rations at the Red Cloud Agency.";
+     }
+     else
+     {
+          ret += "Your people are " + GlobalScripts.GetCondition() + ". ";
+     }
+}
+M3.Out(ret);
+
+GameFlags.P4SuccessFb = ret;
+}}

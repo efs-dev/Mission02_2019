@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_trading_OnExitText {public IEnumerator Run() {
+Actions.SettingsButtonShow();
+Actions.SmartwordsButtonShow();
+Actions.BadgesButtonShow();
+Actions.ShowHotspotIcons(true);
+}}

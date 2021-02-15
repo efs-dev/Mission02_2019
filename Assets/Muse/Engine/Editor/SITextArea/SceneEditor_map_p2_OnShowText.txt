@@ -1,0 +1,27 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_p2_OnShowText {public IEnumerator Run() {
+if (GameFlags.P2MapCount == 0)
+{
+GameFlags.P2MapCount ++;
+yield return Actions.MoveToHotspotBlocking("pin_lf", "fort", 4f, 1f, 0.75f);
+yield return Actions.LoadScene("loc_hat_creek");
+}
+else if (GameFlags.P2MapCount == 1)
+{
+GameFlags.P2MapCount ++;
+yield return Actions.MoveToHotspotBlocking("pin_lf", "tipi1", 4f, 1f, 1f);
+yield return Actions.LoadScene("loc_camp_day");
+}
+else if (GameFlags.P2MapCount == 2)
+{
+Actions.AddWaypoint("waypoint");
+yield return Actions.MoveToHotspotBlocking("pin_lf", "tipi2", 10f, 1f, 0.75f);
+yield return Actions.LoadScene("loc_pre_train");
+}
+else if (GameFlags.P2MapCount == 3)
+{
+Actions.AddWaypoint("waypoint");
+yield return Actions.MoveToHotspotBlocking("pin_lf", "tipi1", 10f, 1f, 0.75f);
+yield return Actions.LoadScene("loc_camp_p3");
+}
+
+}}

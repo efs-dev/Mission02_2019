@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_missing_long_maneOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.P1FoundLongMane)
+Complete();
+if (!GameFlags.P1FoundLongMane && GameFlags.P1FailedLongMane)
+Fail();
+}}

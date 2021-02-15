@@ -1,0 +1,16 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_braveryOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tBravery == 1)
+Actions.AlertFromId("bravery_point_tut");
+else if (GameFlags.tBravery < 3)
+Actions.AlertFromId("bravery_point");
+else if (GameFlags.tBravery == 3)
+IncrementBadgeRank (1, "Your bravery is known among your band.", "bravery_rank1");
+else if (GameFlags.tBravery < 6)
+Actions.AlertFromId("bravery_point");
+else if (GameFlags.tBravery == 6)
+IncrementBadgeRank (1, "Your bravery is known among the Northern Cheyenne.", "bravery_rank2");
+else if (GameFlags.tBravery < 9)
+Actions.AlertFromId("bravery_point");
+else if (GameFlags.tBravery == 9)
+IncrementBadgeRank (1, "Your bravery is known among all the People.", "bravery_rank3");
+}}

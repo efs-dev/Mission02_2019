@@ -1,0 +1,26 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGAngrilyDoesntAcceptOffer {public IEnumerator Run() {
+if (GameFlags.TGCurrentOfferRejected)
+{
+     yield return Actions.OpenPopupBlocking("p2_not_changed");
+}
+else if (GameFlags.TGOfferNumAngrilyUnfair == 0)
+{
+     yield return Actions.OpenPopupBlocking("p2_new_trader");
+     yield return Actions.OpenPopupBlocking("p2_lak_warn");
+}
+else if (GameFlags.TGOfferNumAngrilyUnfair == 1)
+{
+     yield return Actions.OpenPopupBlocking("p2_trader_looking");
+}
+else  // num_angrily > 1
+{
+     yield return Actions.OpenPopupBlocking("p2_trader_cannot");
+}
+
+GameFlags.TGCurrentOfferRejected = true;
+GameFlags.TGOfferNumAngrilyUnfair++;
+
+GlobalScripts.TGUpdateTraderAttitude("negative");
+
+yield return GlobalScripts.TGIsFinishedTrading();
+}}

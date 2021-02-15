@@ -1,0 +1,75 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGMakeOffer {public IEnumerator Run() {
+int adjusted_trade = GameFlags.TGTotalTrade + GameFlags.TGAttitudeOffset;
+
+// Logic to detect if one or both sides of the table have no items
+
+var playerItems = GameFlags.TGPlayerItems;
+var traderItems = GameFlags.TGTraderItems;
+
+var noPlayerItemsOnTable = true;
+var noTraderItemsOnTable = true;
+
+playerItems.ForEach(item =>
+{
+     if (item.OnTable)
+     {
+          noPlayerItemsOnTable = false;
+     }
+});
+
+traderItems.ForEach(item =>
+{
+     if (item.OnTable)
+     {
+          noTraderItemsOnTable = false;
+     }
+});
+
+if (noTraderItemsOnTable && noPlayerItemsOnTable)
+{
+     yield return Actions.OpenPopupBlocking("p2_must_ask_and_offer");
+}
+else if (noPlayerItemsOnTable)
+{
+     yield return Actions.OpenPopupBlocking("p2_must_offer");
+}
+else if (noTraderItemsOnTable)
+{
+     yield return Actions.OpenPopupBlocking("p2_must_ask");
+}
+
+// Having established that this is in fact a trade, Trader can now asesss it
+
+else if (adjusted_trade >= GameFlags.TGTraderHappilyAccepts)
+{
+     // heavily in trader's favor
+     GameFlags.TGOfferNum += 1;
+     yield return GlobalScripts.TGHappilyAcceptOffer();
+}
+else if (adjusted_trade >= GameFlags.TGTraderAccepts)
+{
+     GameFlags.TGOfferNum += 1;
+     yield return GlobalScripts.TGAcceptOffer();
+}
+else if (adjusted_trade < GameFlags.TGTraderAccepts && adjusted_trade >= GameFlags.TGTraderNotAccepts)
+{
+     GameFlags.TGOfferNum += 1;
+     yield return GlobalScripts.TGConsiderOffer();
+}
+else if (adjusted_trade < GameFlags.TGTraderNotAccepts && adjusted_trade >= GameFlags.TGTraderAngrilyNotAccepts)
+{
+     GameFlags.TGOfferNum += 1;
+     yield return GlobalScripts.TGDoesntAcceptOffer();
+}
+else
+{
+     // trader angrily does not accept
+     GameFlags.TGOfferNum += 1;
+     yield return GlobalScripts.TGAngrilyDoesntAcceptOffer();
+}
+SceneResources.FindComponent<TMPro.TextMeshPro>("trade_counter").text = "("+GameFlags.TGOfferNum+"/5)";
+
+GameFlags.TGOfferFinished = true;
+yield return null;
+
+}}

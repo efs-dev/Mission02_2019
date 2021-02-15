@@ -1,0 +1,14 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_wisdomOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tWisdom == 1)
+Actions.AlertFromId("wisdom_point_tut");
+else if (GameFlags.tWisdom == 2)
+IncrementBadgeRank (1, "Your wisdom is known among your band.", "wisdom_rank1");
+else if (GameFlags.tWisdom < 4)
+Actions.AlertFromId("wisdom_point");
+else if (GameFlags.tWisdom == 4)
+IncrementBadgeRank (1, "Your wisdom is known among the Northern Cheyenne.", "wisdom_rank2");
+else if (GameFlags.tWisdom < 6)
+Actions.AlertFromId("wisdom_point");
+else if (GameFlags.tWisdom == 6)
+IncrementBadgeRank (1, "Your wisdom is known among all the People.", "wisdom_rank3");
+}}

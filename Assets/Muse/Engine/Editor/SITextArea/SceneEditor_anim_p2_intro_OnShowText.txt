@@ -1,0 +1,13 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p2_intro_OnShowText {public IEnumerator Run() {
+if (GameFlags.tArchery > 0)
+{
+	Actions.SetHotspotVisible("badge", true);
+	yield return Actions.SceneTimelineBlocking("badge");
+}
+else
+{
+	Actions.SetHotspotVisible("no_badge", true);
+	yield return Actions.SceneTimelineBlocking("no_badge");
+}
+
+}}

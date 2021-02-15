@@ -1,0 +1,16 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_uncles_tipi_dawn_OnEnterText {public IEnumerator Run() {
+if (!GameFlags.P1TalkMother)
+{
+Actions.SetHotspotVisible("Sis", false);
+Actions.SetHotspotVisible("Mom", false);
+Actions.SetHotspotVisible("tipi_focus", false);
+}
+else
+{
+Actions.SetHotspotVisible("Uncle", false);
+if (GameFlags.P1DisplayQuiver)
+Actions.SetHotspotVisible("quiver", true);
+}
+
+//comment
+}}

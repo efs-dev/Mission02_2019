@@ -1,0 +1,10 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class p4_popups_yn_black_hills_VisualData_ImagePath {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+if (GameFlags.P4Season == 1)
+return "travelling_winter";
+else if (GameFlags.P4Season == 2)
+return "travelling_spring";
+else if (GameFlags.P4Season == 3)
+return "travelling_summer";
+else
+return "travelling_fall";
+}}

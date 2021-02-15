@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_greenwood_Onmap_upClick {public IEnumerator Run() {
+yield return Actions.MoveToHotspotBlocking("player", "map_up", 3.0f, 1.0f, 1.0f);
+yield return Actions.LoadScene("map_greenwood_uptown");
+}}

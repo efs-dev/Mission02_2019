@@ -1,0 +1,55 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateHealthUpDown {public void Run() {
+GameFlags.P4HealthUp = false; // needs to become gameflag?
+GameFlags.P4HealthDown = false; // needs to become gameflag?
+
+// CALC HEALTH LEVELS
+// health levs
+// -2, -1, 0, 1, 2
+
+var origHealth = GameFlags.P4TribeHealth;
+var adjHealth = origHealth; // will modify this value and then set GameFlags.P4TribeHealth to this value later, that way if anything listens for the gameflag's change, it will only occur once.
+
+var foodRatio = GlobalScripts.CalculateFoodRatio();
+Debug.Log("CalculateHealthUpDown foodRatio = " + foodRatio);
+if (foodRatio >= 1.26f)
+{
+     adjHealth += 2;
+}
+else if (foodRatio >= 1.06f)
+{
+     if (GameFlags.P4TribeHealth == -2)
+          adjHealth += 2;
+     else if (GameFlags.P4TribeHealth < 1)
+          adjHealth += 1;
+}
+else if (foodRatio >= .90f)
+{
+     if (GameFlags.P4TribeHealth < 0)
+          adjHealth++;
+     else if (GameFlags.P4TribeHealth > 0)
+          adjHealth--;
+}
+else if (foodRatio >= .75f)
+{
+     if (GameFlags.P4TribeHealth == -2)
+          adjHealth++;
+     else if (GameFlags.P4TribeHealth > -1)
+          adjHealth--;
+}
+else
+{
+     adjHealth -= 2;
+}
+
+
+Debug.Log("GameFlags.P4TribeHealth was: " + GameFlags.P4TribeHealth);
+Debug.Log("adjusting health by: " + adjHealth);
+GameFlags.P4TribeHealth = Mathf.Clamp(adjHealth, -2, 2); // clamp the health between -2 and 2
+
+Debug.Log("New GameFlags.P4TribeHealth: " + GameFlags.P4TribeHealth);
+
+if (origHealth > GameFlags.P4TribeHealth)
+     GameFlags.P4HealthDown = true;
+else if (origHealth < GameFlags.P4TribeHealth)
+     GameFlags.P4HealthUp = true;
+}}

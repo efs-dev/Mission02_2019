@@ -1,0 +1,81 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculatePopulationFB {public void Run() {
+string ret = "";
+
+Debug.Log("calc population up/down " + GameFlags.P4PopulationUp + "," + GameFlags.P4PopulationDown);
+
+Debug.Log("... gotWhite buffalo " + GameFlags.P4WhiteBuf);
+
+if (GameFlags.P4WhiteBuf)
+{
+     ret += "5 warriors and their wives join your band because you found a lucky white buffalo! ";
+     GameFlags.P4WarriorCount += 5;
+     GameFlags.P4FemaleCount += 5;
+}
+
+if (GameFlags.P4PopulationUp)
+{
+     if (GameFlags.P4WhiteBuf)
+     {
+          ret += "Additionally, because of your hunting success your band grows in size (+" + GameFlags.P4NewPopulation + "). ";
+     }
+     else
+     {
+          ret += "Because of your hunting success your band grows in size (+" + GameFlags.P4NewPopulation + "). ";
+     }
+     GameFlags.P4NewPopulation = 0;
+     GameFlags.P4PopulationUp = false;
+}
+else if (GameFlags.P4PopulationDown)
+{
+     if (GameFlags.P4WhiteBuf)
+     {
+          if (GameFlags.P4TotalShrink == 1)
+          {
+               ret += "However one person leaves your band to seek food at the Red Cloud Agency. ";
+          }
+          else
+          {
+               ret += "However, your band shrinks in size as some people die and others seek food at the Red Cloud Agency (-" + GameFlags.P4TotalShrink + "). ";
+          }
+     }
+     else
+     {
+          var atAgency = (GameFlags.P4Location == "Agency");
+          var whereSeek = "seek food at the Red Cloud Agency ";
+          if (atAgency){
+               whereSeek = "leave seeking food from other bands ";
+          }
+          Debug.Log(whereSeek);
+          Debug.Log(atAgency);
+          if (GameFlags.P4TotalShrink == 1)
+          {
+               ret += "Your band shrinks slightly as one person leaves, seeking to join another band. ";
+          }
+          else
+          {
+               ret += "Your band shrinks in size as some people die and others " + whereSeek + " (-" + GameFlags.P4TotalShrink + "). ";
+          }
+     }
+     GameFlags.P4TotalShrink = 0;
+     GameFlags.P4PopulationDown = false;
+}
+else
+{
+     if (GameFlags.P4WhiteBuf)
+     {
+          // nothing
+     }
+     else
+     {
+          ret += "Your band stays the same size.";
+     }
+}
+
+// reset no matter what
+GameFlags.P4WhiteBuf = false;
+
+
+Debug.Log(">>" + ret);
+
+GameFlags.P4PopulationFb = ret;
+}}

@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_Tooltip_Season_Icon_OnToolTip {public IEnumerator Run() {
+var year = GameFlags.P4SeasonCount <= 4 ? 1874 : 1875;
+return GameFlags.P4SeasonStr.Capitalize() + " " + year;
+}}

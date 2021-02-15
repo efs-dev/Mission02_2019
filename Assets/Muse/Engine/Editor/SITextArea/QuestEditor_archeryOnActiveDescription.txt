@@ -1,0 +1,10 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_archeryOnActiveDescription : Quest {public IEnumerator Run() {
+if (GameFlags.tArchery == 0)
+return "You have used a bow since you were a young boy. You can hit a few things, but it is usually as much luck as skill.";
+else if (GameFlags.tArchery == 1)
+return "You can shoot a bow from the back of a horse, although only at close range.";
+else if (GameFlags.tArchery == 2)
+return "You are as good a shot as most warriors. You can also make your own bow and arrows.";
+else
+return "You are among the best warriors when using a bow. You can usually kill a full-grown buffalo with a single arrow.";
+}}

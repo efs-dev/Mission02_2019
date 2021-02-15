@@ -1,0 +1,6 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_crow_camp_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("cc_cricketsamb", true, 1f);
+yield return Actions.DialogOpenBlocking("p1_mn_crowcamp");
+yield return Actions.LoadScene("loc_uncles_tipi_dawn");
+// test
+}}

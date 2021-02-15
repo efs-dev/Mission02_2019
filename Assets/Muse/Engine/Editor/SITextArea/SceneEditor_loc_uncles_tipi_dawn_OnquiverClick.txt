@@ -1,0 +1,3 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_uncles_tipi_dawn_OnquiverClick {public IEnumerator Run() {
+yield return Actions.OpenPopupBlocking(PopupIds.quiver);
+}}

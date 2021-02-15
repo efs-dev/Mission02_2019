@@ -1,0 +1,18 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony_Onriver2Click {public IEnumerator Run() {
+if (!GameFlags.P1SearchedCreek2)
+{
+GameFlags.P1SearchedCreek2 = true;
+if (GameFlags.P1PonyQuestStep == 2 && GameFlags.P1WithCR)
+{
+Actions.MoveToHotspot("pin_lf", "river2", 2.5f, 1.0f, 0.75f);
+Actions.MoveToHotspot("pin_cr", "river2", 2.5f, 1.15f, 0.65f);
+yield return Actions.Wait(3.0f);
+}
+else if(GameFlags.P1PonyQuestStep == 2)
+yield return Actions.MoveToHotspotBlocking("pin_lf", "river2", 2.5f, 1.0f, 0.75f);
+//comment
+GameFlags.CurrentPonyMapLoc = "river2"; 
+Actions.SetHotspotVisible("creek_horses", true);
+yield return Actions.DialogOpenBlocking("p1_mn_creek2");
+} 
+}}

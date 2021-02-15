@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class PopupEditor_p2_new_trade1_Response_0_OnSelect {public IEnumerator Run() {
+Actions.ClosePopup();
+}}

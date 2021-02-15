@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p1_mom_002_n10_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+/*//showNpc(false,1)
+//?has_pass = true
+//setLayer("fg", "gfx/stills/slave_pass/slave_pass.swf")
+//setFGXY("5|10")
+//addItem("preston_pass")*/
+}}

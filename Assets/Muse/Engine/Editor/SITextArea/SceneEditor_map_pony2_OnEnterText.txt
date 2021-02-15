@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony2_OnEnterText {public IEnumerator Run() {
+if (GameFlags.P1ReturningWater && !GameFlags.P1FetchedWater)
+Actions.MoveToHotspot("pin_lf", "ford", 0f, 1f, 0.75f);
+}}

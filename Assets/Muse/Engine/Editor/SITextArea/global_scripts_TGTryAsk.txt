@@ -1,0 +1,10 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGTryAsk {public bool Run(string id) {
+var item = GameFlags.TGPlayerItems.Find(x=>x.Id == id);
+var traderAccepts = GameFlags.TGTraderAccepts - GameFlags.TGAttitudeOffset;
+
+var canAsk = item.HasItem && !item.Asked && !item.OnTable && !item.IsTraded && GameFlags.TGTotalTrade + item.Value > traderAccepts;
+if (canAsk)
+     item.Asked = true;
+
+return canAsk;
+}}

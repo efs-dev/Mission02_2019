@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_beaver_dam_OnShowText {public IEnumerator Run() {
+yield return Actions.DialogOpenBlocking("p1_mn_beaver");
+GameFlags.P1ReturningWater = true;
+yield return Actions.LoadScene("map_pony2");
+}}

@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_englishOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tEnglish == 1)
+IncrementBadgeRank (1, "Your skill with English is basic.", "english_rank1");
+else if (GameFlags.tEnglish == 2)
+IncrementBadgeRank (1, "Your skill with English is conversant.", "english_rank2");
+else if (GameFlags.tEnglish == 3)
+IncrementBadgeRank (1, "Your skill with English is fluent.", "english_rank3");
+}}

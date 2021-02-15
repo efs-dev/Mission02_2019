@@ -1,0 +1,5 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival__great_sioux_p2_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4SupplyTurn = 24;
+GameFlags.P4Hostile = false;
+Actions.AudioPlay("winterdayamb", true);
+}}

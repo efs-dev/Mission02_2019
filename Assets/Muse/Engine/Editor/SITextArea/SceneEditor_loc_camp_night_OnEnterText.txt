@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_night_OnEnterText {public IEnumerator Run() {
+Actions.SetHotspotVisible("suitor", GameFlags.P1LeaveCamp);
+Actions.SetHotspotVisible("your_tipi", GameFlags.P1LeaveCamp);
+Actions.SetHotspotVisible("uncles_tipi", GameFlags.P1LeaveCamp);
+}}

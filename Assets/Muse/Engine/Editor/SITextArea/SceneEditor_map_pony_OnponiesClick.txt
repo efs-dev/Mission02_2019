@@ -1,0 +1,12 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony_OnponiesClick {public IEnumerator Run() {
+if (GameFlags.P1PonyQuestStep == 2 && GameFlags.P1WithCR)
+{
+Actions.MoveToHotspot("pin_lf", "ponies", 2.5f, 1.0f, 0.75f);
+Actions.MoveToHotspot("pin_cr", "ponies", 2.5f, 1.15f, 0.65f);
+yield return Actions.Wait(3.0f);
+}
+else if(GameFlags.P1PonyQuestStep == 2)
+yield return Actions.MoveToHotspotBlocking("pin_lf", "ponies", 2.5f, 1.0f, 0.75f);
+
+yield return Actions.LoadScene("loc_horses_night");
+}}

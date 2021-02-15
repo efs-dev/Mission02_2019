@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_epilogue_Onaudio_story2Click {public IEnumerator Run() {
+Actions.AudioStop("epi_story2");
+Actions.AudioPlay("epi_story2");
+}}

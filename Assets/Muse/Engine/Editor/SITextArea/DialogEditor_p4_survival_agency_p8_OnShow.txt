@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_agency_p8_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+Actions.SetHotspotVisible("Saville", true);
+GameFlags.P4SupplyTurn = 24;
+GameFlags.P4Hostile = false;
+GameFlags.P4AgencyChoice = true;
+/* npcTalk("NEUTRAL", true, "audio/dlgs/p3/p3_map/p3_map__agency_p0.mp3", "default") */
+}}

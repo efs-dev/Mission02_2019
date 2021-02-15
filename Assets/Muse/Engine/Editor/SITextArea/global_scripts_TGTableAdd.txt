@@ -1,0 +1,33 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGTableAdd {public void Run(string id) {
+GlobalScripts.TGSetTotalTradeValue();
+
+if (id == "money")
+{
+     if (!GameFlags.TGLakMoneyComment)
+     {
+          GameFlags.TGLakMoneyComment = true;
+          if (GameFlags.P1BoughtKnife)
+               Actions.OpenPopup("p2_lak_money1");
+          else if (GameFlags.TGPlayerItems.Find(x=>x.Id=="money").Asked)
+               Actions.OpenPopup("p2_lak_money2");
+          else
+               Actions.OpenPopup("p2_lak_money3");
+     }
+}
+else if (id == "gun")
+{
+     if (!GameFlags.TGWarnedGun)
+     {
+          Actions.OpenPopup("p2_trader_fine_gun");
+          GameFlags.TGWarnedGun = true;
+     }
+}
+
+if (GameFlags.TGOfferNum == 0 && GameFlags.TGPlayerItems.FindAll(x=>x.OnTable).Count >= 4 && !GameFlags.TGLakWarnedYou2)
+{
+     Actions.OpenPopup("p2_lak_smaller");
+     GameFlags.TGLakWarnedYou2 = true;
+}
+
+GameFlags.TGCurrentOfferRejected = false;
+}}

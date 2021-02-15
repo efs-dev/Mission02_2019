@@ -1,0 +1,19 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CalculateGoalFB {public void Run(int populationPreChange) {
+
+string ret = "";
+
+Debug.Log("calc goal fb");
+
+var food = Mathf.Max(0, GameFlags.P4Food - populationPreChange); // min food can be 0
+
+if (food > 0)
+{
+     var goal = Mathf.Max(0, GameFlags.P4Population - food);
+     ret = "Next season you will only need to hunt and gather " + goal + " food, because you have " + food + " extra from this season.";
+}
+else
+{
+     ret = "Next season you will need to hunt and gather " + GameFlags.P4Population + " food.";
+}
+GameFlags.P4GoalFb = ret;
+}}

@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_pre_train_OnShowText {public IEnumerator Run() {
+Actions.AudioPlay("dayambprimo", true);
+yield return Actions.DialogOpenBlocking("p3_soc_002");
+yield return Actions.LoadScene("loc_train");
+}}

@@ -1,0 +1,15 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_soc04_r4_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4Food = GameFlags.P4Food + GameFlags.P4FastHorseValue;
+M3.SimpleAlert("", "You trade a fast horse for "+GameFlags.P4FastHorseValue+" food.");
+GameFlags.P4FastHorseValue = GameFlags.P4FastHorseValue - 2;
+if (GameFlags.P4FastHorseValue < 5) {
+GameFlags.P4FastHorseValue = 5;
+}
+GameFlags.P4NumTrades = GameFlags.P4NumTrades + 1;
+GameFlags.P4HorseCount = GameFlags.P4HorseCount - 1;
+
+GameFlags.P4WisdomCheck = SurvivalGame.Random(5);
+if (GameFlags.P4WisdomCheck == 1) {
+GameFlags.tWisdom = GameFlags.tWisdom + 1;
+}
+}}

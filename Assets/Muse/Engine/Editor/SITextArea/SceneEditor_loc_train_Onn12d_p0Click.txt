@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_train_Onn12d_p0Click {public IEnumerator Run() {
+
+}}

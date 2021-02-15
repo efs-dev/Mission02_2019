@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_surveyors01_r2_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4Reprisal = GameFlags.P4Reprisal + 1;
+/*setLayer("fg", "gfx/smartmap/map_supply/raid/raid_surveyor.jpg")*/
+GameFlags.P4RaidInfo = "surveyors";
+GlobalScripts.DoSmallRaid();
+}}

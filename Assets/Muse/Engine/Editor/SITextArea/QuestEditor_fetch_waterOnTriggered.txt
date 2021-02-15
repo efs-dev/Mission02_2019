@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_fetch_waterOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.P1FetchedWater)
+Complete();
+}}

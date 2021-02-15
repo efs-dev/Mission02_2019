@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p5_pro_friendly_intro_OnEnterText {public IEnumerator Run() {
+Actions.SetHotspotVisible("lakota", false);
+Actions.SetHotspotVisible("red_cloud_agency", false);
+}}

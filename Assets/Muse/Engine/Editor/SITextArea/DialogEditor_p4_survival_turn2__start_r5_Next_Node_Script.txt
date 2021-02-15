@@ -1,0 +1,9 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_turn2__start_r5_Next_Node_Script {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+if(GlobalScripts.FindHerd() ) {
+//log("good hunt")
+return "z_hunt_good01";
+} else {
+//log("bad hunt")
+return "z_hunt_bad";
+}
+}}

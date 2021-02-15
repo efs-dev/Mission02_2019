@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_pony_Tooltip_camp_Tooltip_OnToolTip {public IEnumerator Run() {
+return ("Your band's current camp");
+}}

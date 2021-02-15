@@ -1,0 +1,18 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_Onhunting_groundsClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "hunting_grounds")
+    yield break;
+
+// spring/fall
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "hunting_grounds");
+
+if (GameFlags.P4PopupConfirm)
+ {
+     yield return Actions.MoveToHotspotBlocking("player", "hunting_grounds", 3f, 1f, 1f);
+   
+     // arrival script
+    GameFlags.P4MapStartNode = "hunting_grounds";
+    GameFlags.P4NodeDescr = "in the Hunting Grounds Territory";
+    GameFlags.P4RootNode = "_hunting_grounds";
+    yield return Actions.LoadScene("p4_survival_dlg");
+  }
+}}

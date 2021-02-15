@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_crazyOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.tCrazy == 1)
+IncrementBadgeRank (1, "Your craziness is known among your band.", "crazy_rank1");
+else if (GameFlags.tCrazy == 2)
+IncrementBadgeRank (1, "Your craziness is known among the Northern Cheyene.", "crazy_rank2");
+else if (GameFlags.tCrazy == 3)
+IncrementBadgeRank (1, "Your craziness is known among all the People.", "crazy_rank3");
+}}

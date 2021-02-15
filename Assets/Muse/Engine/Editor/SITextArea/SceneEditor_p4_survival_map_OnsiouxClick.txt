@@ -1,0 +1,18 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_OnsiouxClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "sioux")
+    yield break;
+
+// winter
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "sioux");
+
+if (GameFlags.P4PopupConfirm)
+ {
+     yield return Actions.MoveToHotspotBlocking("player", "sioux", 3f, 1f, 1f);
+   
+     // arrival script
+    GameFlags.P4MapStartNode = "sioux";//"great_sioux";
+GameFlags.P4NodeDescr = "in the Great Sioux Reservation";
+GameFlags.P4RootNode = "_great_sioux";
+    yield return Actions.LoadScene("p4_survival_dlg");
+  }
+}}

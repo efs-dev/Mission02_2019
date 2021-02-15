@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_find_crowOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.P1FoundCrowClue)
+Complete();
+if (!GameFlags.P1FoundCrowClue && GameFlags.P1FailedCrowClue)
+Fail();
+}}

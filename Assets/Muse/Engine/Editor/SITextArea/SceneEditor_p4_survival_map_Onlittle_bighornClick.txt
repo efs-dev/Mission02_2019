@@ -1,0 +1,18 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_map_Onlittle_bighornClick {public IEnumerator Run() {
+if (GameFlags.P4MapStartNode == "little_bighorn")
+    yield break;
+
+// winter
+yield return Actions.DialogOpenBlocking("p4_popups_yn", "little_bighorn");
+
+if (GameFlags.P4PopupConfirm)
+ {
+     yield return Actions.MoveToHotspotBlocking("player", "little_bighorn", 3f, 1f, 1f);
+   
+     // arrival script
+    GameFlags.P4MapStartNode = "little_bighorn";
+GameFlags.P4NodeDescr = "along the Little Bighorn River";
+GameFlags.P4RootNode = "_little_bighorn";
+    yield return Actions.LoadScene("p4_survival_dlg");
+  }
+}}

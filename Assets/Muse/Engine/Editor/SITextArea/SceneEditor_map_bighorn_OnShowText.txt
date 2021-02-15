@@ -1,0 +1,14 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_map_bighorn_OnShowText {public IEnumerator Run() {
+if (!GameFlags.P5StartLBH)
+{
+GameFlags.P5StartLBH = true;
+yield return Actions.MoveToHotspotBlocking("pin_lf", GameFlags.P5CurrentLoc, 2f, 8f, 0.8f);
+GameFlags.P5DialogStartNode = "a";
+yield return Actions.LoadScene("p5_home");
+}
+else
+{
+yield return Actions.MoveToHotspotBlocking("pin_lf", GameFlags.P5NextLoc, 2f, 1f, 1f);
+yield return Actions.LoadScene(GameFlags.P5LoadScene);
+}
+}}

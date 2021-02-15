@@ -1,0 +1,8 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p5_mn_n01_home_d_niece_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P5ReturnNiece = true;
+GameFlags.tGenerosity ++;
+/*//?p5_return_niece = true
+//#t_generosity = #t_generosity + 2
+//setLayer("bg", "gfx/stills/lbh/home_d_niece.jpg")
+//updateMessage ("You acted very generously.")*/
+}}

@@ -1,0 +1,41 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_CheckHungryStarving {public int Run() {
+
+// if HUNGRY 10%chance, if STARVING 30%
+var chance = GameFlags.P4TribeHealth == -1 ? 10 : 30;
+
+//trace("tribe health", GameFlags.P4TribeHealth);
+//trace("ill effect chance", chance);
+
+var roll = UnityEngine.Random.Range(1, 100);
+if (roll > chance)
+{
+     return 0;
+}
+
+GameFlags.P4PopulationDown = true;
+int rnd = UnityEngine.Random.Range(1, 4);
+switch (rnd)
+{
+     case 1: // child dies
+     GameFlags.P4ChildCount--;
+     GameFlags.P4TotalShrink++;
+     break;
+     case 2: // elder dies
+     GameFlags.P4ElderCount--;
+     GameFlags.P4TotalShrink++;
+     //bad = true;
+     break;
+     case 3: // warrior leaves
+     GameFlags.P4WarriorCount--;
+     GameFlags.P4TotalShrink++;
+     //trace("warrior leaves");
+     break;
+     case 4: // woman leaves
+     GameFlags.P4FemaleCount--;
+     GameFlags.P4TotalShrink++;
+     //trace("female leaves");
+     break;
+}
+
+return 1;
+}}

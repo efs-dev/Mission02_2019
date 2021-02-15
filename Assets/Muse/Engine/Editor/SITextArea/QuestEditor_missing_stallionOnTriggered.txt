@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class QuestEditor_missing_stallionOnTriggered : Quest {public IEnumerator Run() {
+if (GameFlags.P1FoundStallion)
+Complete();
+if (!GameFlags.P1FoundStallion && GameFlags.P1FailedStallion)
+Fail();
+}}

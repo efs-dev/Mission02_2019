@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p5_mn_n07_ridge_e2_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P5MHDead = true;
+/*//setLayer("bg", "gfx/stills/lbh/ridge_e2.jpg")
+//playambient("audio/sfx/p5_lbh_ridgesfx/battle_very_distant.mp3")
+//?p5_mh_dead = true*/
+}}

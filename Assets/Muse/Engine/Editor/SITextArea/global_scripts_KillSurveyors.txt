@@ -1,0 +1,48 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_KillSurveyors {public void Run() {
+var ret = "The surveyors and soldiers put up a brief fight before fleeing. ";
+
+GlobalScripts.DoSmallRaid();
+
+int dead = 0;
+
+//But chance for casualties. Use the 5% per warrior.
+for (var i = 0; i < GameFlags.P4WarriorCount; i++)
+{
+     var r = UnityEngine.Random.Range(1, 100);
+     if (r < 5)
+     {
+          dead++;
+          GameFlags.P4WarriorCount--;
+     }
+}
+
+GlobalScripts.CalculatePopulation();
+
+if (dead == 1)
+{
+     ret += "But they kill 1 warrior.";
+}
+else if (dead > 1)
+{
+     ret += "But they kill " + dead + " warriors.";
+}
+else
+{
+     ret += "Luckily, no warriors are killed.";
+}
+
+ret += " You take their oxen and cattle (";
+
+ret += GameFlags.P4NewFood;
+ret += " food) and what tools and supplies you can (";
+ret += GameFlags.P4NewSupplies + " supplies). ";
+
+if (GameFlags.P4GotHorse)
+{
+     ret += "You also take a fast-looking horse. ";
+}
+
+ret += "You leave the camp to burn, and set up your tipis further upstream.";
+
+GameFlags.P4RaidResult = ret;
+}}

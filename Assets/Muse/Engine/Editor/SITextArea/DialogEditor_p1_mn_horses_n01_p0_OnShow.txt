@@ -1,0 +1,5 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p1_mn_horses_n01_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P1SearchedHorses = true;
+//playsfx("audio/sfx/p1_mn_horsessfx/n01_horsenoises.mp3")
+//playambient("audio/sfx/p1_mn_horsessfx/nightamb.mp3")*/
+}}

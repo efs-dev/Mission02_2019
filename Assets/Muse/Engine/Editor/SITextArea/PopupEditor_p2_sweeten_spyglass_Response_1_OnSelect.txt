@@ -1,0 +1,4 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class PopupEditor_p2_sweeten_spyglass_Response_1_OnSelect {public IEnumerator Run() {
+GameFlags.TGDialogResult ="NO";
+Actions.ClosePopup();
+}}

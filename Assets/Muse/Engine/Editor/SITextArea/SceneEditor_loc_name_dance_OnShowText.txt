@@ -1,0 +1,9 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_name_dance_OnShowText {public IEnumerator Run() {
+if (GameFlags.P2SuitorChoice == "soc")
+GameFlags.tRiflery ++;
+else
+GameFlags.tEnglish ++;
+
+yield return Actions.DialogOpenBlocking("p3_choice");
+yield return Actions.LoadScene("anim_p3_outro5");
+}}

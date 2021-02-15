@@ -1,0 +1,11 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGClearTable {public void Run() {
+var allItems = GameFlags.TGPlayerItems.Merge(GameFlags.TGTraderItems);
+
+allItems.ForEach(item =>
+{
+     if (item.OnTable)
+     {
+          GlobalScripts.TGToggleItem(item.Id);
+     }
+});
+}}

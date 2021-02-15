@@ -1,0 +1,48 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_TGInit {public void Run() {
+GlobalScripts.TGClearTable();
+
+GameFlags.TGAllItems = GameFlags.TGPlayerItems.MergeTable(GameFlags.TGTraderItems);
+
+// reset the gameflags back to their original values
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferNum);
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferMax);
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferNumFair);
+GameFlags.ResetGameFlag(GameFlagIds.TGItemsTradedFor);
+
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferNumHappilyFair);
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferNumUnfair);
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferNumAngrilyUnfair);
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferModifierFair);
+GameFlags.ResetGameFlag(GameFlagIds.TGOfferModifierUnfair);
+GameFlags.ResetGameFlag(GameFlagIds.TGWisdomBonusModifier);
+GameFlags.ResetGameFlag(GameFlagIds.TGTraderHappilyAccepts);
+GameFlags.ResetGameFlag(GameFlagIds.TGTraderAccepts);
+GameFlags.ResetGameFlag(GameFlagIds.TGTraderNotAccepts);
+GameFlags.ResetGameFlag(GameFlagIds.TGTraderAngrilyNotAccepts);
+GameFlags.ResetGameFlag(GameFlagIds.TGAttitudeOffsetMinCap);
+GameFlags.ResetGameFlag(GameFlagIds.TGAttitudeOffsetMaxCap);
+
+GameFlags.TGWisdomOffset = Quest.GetQuest("wisdom").Rank * GameFlags.TGWisdomBonusModifier;
+GameFlags.TGAttitudeOffset = GameFlags.TGWisdomOffset;
+// no idea why this is set to this, since it will always be zero
+GameFlags.TGUnadjustedAttitudeOffset = GameFlags.TGAttitudeOffset - GameFlags.TGWisdomOffset;
+
+GameFlags.ResetGameFlag(GameFlagIds.TGMadeTrade);
+GameFlags.ResetGameFlag(GameFlagIds.TGLakHelped);
+GameFlags.ResetGameFlag(GameFlagIds.TGLakWarnedYou);
+GameFlags.ResetGameFlag(GameFlagIds.TGLakWarnedYou2);
+GameFlags.ResetGameFlag(GameFlagIds.TGAskedSpyglass);
+GameFlags.ResetGameFlag(GameFlagIds.TGAskedKnife);
+GameFlags.ResetGameFlag(GameFlagIds.TGAskedMoney);
+GameFlags.ResetGameFlag(GameFlagIds.TGAcceptedOfferWisdom);
+GameFlags.ResetGameFlag(GameFlagIds.TGWarnedGun);
+GameFlags.ResetGameFlag(GameFlagIds.TGSweeteningMode);
+GameFlags.ResetGameFlag(GameFlagIds.TGLakMoneyComment);
+
+GameFlags.TGPlayerItems.Find(x=>x.Id == "spyglass").HasItem = GameFlags.HasSpyglass;
+GameFlags.TGPlayerItems.Find(x=>x.Id == "knife").HasItem = GameFlags.HasLargeKnife;
+GameFlags.TGPlayerItems.Find(x=>x.Id == "money").HasItem = GameFlags.HasMoney;
+GameFlags.TGPlayerItems.Find(x=>x.Id == "money").Value = GameFlags.P1BoughtKnife ? 25 : 50;
+
+
+}}

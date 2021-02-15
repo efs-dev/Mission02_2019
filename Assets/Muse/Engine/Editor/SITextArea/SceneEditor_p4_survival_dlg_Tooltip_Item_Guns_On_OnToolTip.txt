@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_Tooltip_Item_Guns_On_OnToolTip {public IEnumerator Run() {
+if (GameFlags.P4GunCount == 1)
+     return "You have " + GameFlags.P4GunCount + " gun.";
+else
+     return "You have " + GameFlags.P4GunCount + " guns.";
+}}

@@ -1,0 +1,30 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_NextSeason {public void Run() {
+Debug.Log("NextSeason()");
+
+int curSeason = GameFlags.P4Season;
+
+curSeason++;
+if (curSeason > 4)
+{ // if greater than FALL wrap around to winter
+     curSeason = 1;
+     // winter
+}
+
+Debug.Log("new season: " + curSeason);
+GameFlags.P4Season = curSeason;
+
+GameFlags.P4SeasonCount++;   // inc the absolute season
+
+// reset the season turn
+// every time season changes the #p3_season_turn is reset to 1 (1st turn)
+GameFlags.P4SeasonTurn = 1;
+
+if ( GameFlags.P4SeasonCount > 1 )
+{
+     GameFlags.P4CurrentBuffaloChance -= GameFlags.P4SeasonDrop;
+     Debug.Log("...dropping buffaloChange due to change in season, it's now " + GameFlags.P4CurrentBuffaloChance);
+     GameFlags.P4CurrentBuffaloSizeChance -= GameFlags.P4SeasonDrop;
+}
+
+GameFlags.P4HuntedBufThisSeason = false;  // reset
+}}

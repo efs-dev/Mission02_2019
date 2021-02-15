@@ -1,0 +1,3 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_trading_OnShowText {public IEnumerator Run() {
+yield return Actions.OpenPopupBlocking(PopupIds.p2_trading1);
+}}

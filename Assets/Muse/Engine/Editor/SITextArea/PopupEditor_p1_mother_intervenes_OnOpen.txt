@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class PopupEditor_p1_mother_intervenes_OnOpen {public IEnumerator Run() {
+
+}}

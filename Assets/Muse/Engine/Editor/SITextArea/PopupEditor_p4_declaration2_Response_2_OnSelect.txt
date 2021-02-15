@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class PopupEditor_p4_declaration2_Response_2_OnSelect {public IEnumerator Run() {
+Actions.ClosePopup();
+yield return Actions.MoveToHotspotBlocking("player", "little_bighorn", 3f, 1f, 1f);
+GameFlags.P4RootNode = "_little_bighorn";
+yield return Actions.LoadScene("p4_survival_dlg");
+}}

@@ -1,0 +1,8 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_agency_classes01_r1_OnSelect {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4LessonCount = GameFlags.P4LessonCount + 1;
+GameFlags.P4RefuseCount = 0;
+GameFlags.tEnglish = GameFlags.tEnglish +1;
+if (GameFlags.P4AskSundance) {
+GameFlags.P4StopSundance = true;
+}
+}}

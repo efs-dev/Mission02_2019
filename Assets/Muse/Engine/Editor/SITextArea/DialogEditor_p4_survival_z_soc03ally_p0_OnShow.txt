@@ -1,0 +1,11 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival_z_soc03ally_p0_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+/*       if (GameFlags.P4Season == 1)
+//setLayer("bg","gfx/smartmap/map_supply/camping/camping_brown_winter.jpg")
+elseif (GameFlags.P4Season == 2)
+//setLayer("bg","gfx/smartmap/map_supply/camping/camping_brown_spring.jpg")
+elseif (GameFlags.P4Season == 3)
+//setLayer("bg","gfx/smartmap/map_supply/camping/camping_brown_summer.jpg")
+elseif (GameFlags.P4Season == 4)
+//setLayer("bg", "gfx/smartmap/map_supply/camping/camping_brown_fall.jpg")
+} */
+}}

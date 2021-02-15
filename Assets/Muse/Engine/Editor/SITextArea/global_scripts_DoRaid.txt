@@ -1,0 +1,17 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_DoRaid {public void Run(string target) {
+Debug.Log("doRaid()");
+
+switch (target)
+{
+     case "miners2": // scare
+     ScareMiners(); break;
+     case "miners3":
+     KillMiners(); break;
+     case "surveyors2":
+     KillSurveyors(); break;
+     case "settlers2":
+     KillSettlers(); break;
+     default:
+     Debug.Log("Unrecognized raid type: " + target); break;
+}
+}}

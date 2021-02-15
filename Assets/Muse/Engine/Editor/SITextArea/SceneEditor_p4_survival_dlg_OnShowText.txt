@@ -1,0 +1,23 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p4_survival_dlg_OnShowText {public IEnumerator Run() {
+Actions.SetHotspotVisible("tutorial", GameFlags.P4SeasonCount == 1 && GameFlags.P4ShowTutorial);
+var tutorial = Actions.GetHotspot("tutorial");
+yield return new WaitWhile(() => tutorial.gameObject.activeSelf);
+
+if(GameFlags.P4ReportingSurveyors){
+      GameFlags.P4ReportingSurveyors = false;
+      GameFlags.P4RootNode = "agency_surveyors";
+      Actions.SetHotspotVisible("Saville", true);
+}
+else if(GameFlags.P4ReportingMiners){
+      GameFlags.P4ReportingMiners = false;
+      GameFlags.P4RootNode = "agency_miners";
+      Actions.SetHotspotVisible("Saville", true);
+}
+else if(GameFlags.P4ReportingSettlers){
+      GameFlags.P4ReportingSettlers = false;
+      GameFlags.P4RootNode = "agency_settlers";
+      Actions.SetHotspotVisible("Saville", true);
+}
+
+yield return Actions.DialogOpenBlocking("p4_survival", GameFlags.P4RootNode);
+}}

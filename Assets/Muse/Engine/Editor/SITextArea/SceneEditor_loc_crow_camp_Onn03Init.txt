@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_crow_camp_Onn03Init {public IEnumerator Run() {
+
+}}

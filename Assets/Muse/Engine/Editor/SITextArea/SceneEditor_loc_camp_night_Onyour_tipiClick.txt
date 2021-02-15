@@ -1,0 +1,7 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_loc_camp_night_Onyour_tipiClick {public IEnumerator Run() {
+if (GameFlags.P1SawSuitor)
+yield return Actions.OpenPopupBlocking(PopupIds.p1_your_tipi);
+else
+yield return Actions.OpenPopupBlocking(PopupIds.p1_your_tipi_suitor);
+// test
+}}

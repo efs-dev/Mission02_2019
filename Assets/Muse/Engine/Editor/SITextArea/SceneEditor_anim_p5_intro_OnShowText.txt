@@ -1,0 +1,20 @@
+﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_anim_p5_intro_OnShowText {public IEnumerator Run() {
+if (GameFlags.P4Hostile)
+{
+	Actions.SetHotspotVisible("hostile", true);
+	yield return Actions.SceneTimelineBlocking("hostile");
+}
+else
+{
+	if (GameFlags.P4AgencyChoice)
+	{
+		Actions.SetHotspotVisible("friendly_redcloud", true);
+		yield return Actions.SceneTimelineBlocking("friendly_redcloud");
+	}
+	else
+	{
+		Actions.SetHotspotVisible("friendly_lakota", true);
+		yield return Actions.SceneTimelineBlocking("friendly_lakota");
+	}
+}
+}}

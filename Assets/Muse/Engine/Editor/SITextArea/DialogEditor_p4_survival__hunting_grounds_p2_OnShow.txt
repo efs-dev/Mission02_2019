@@ -1,0 +1,6 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p4_survival__hunting_grounds_p2_OnShow {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
+GameFlags.P4SupplyTurn += 1;
+Actions.AudioPlay("falldayamb", true);
+/*setLayer("fg", "gfx/smartmap/map_supply/white/settlers1.jpg")
+playambient("audio/sfx/p3_map_sfx/falldayamb.mp3")*/
+}}

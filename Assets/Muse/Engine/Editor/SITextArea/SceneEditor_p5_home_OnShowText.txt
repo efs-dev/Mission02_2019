@@ -1,0 +1,3 @@
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class SceneEditor_p5_home_OnShowText {public IEnumerator Run() {
+yield return Actions.DialogOpenBlocking("p5_mn_n01_home", GameFlags.P5DialogStartNode);
+}}
