@@ -90,40 +90,6 @@ MonoBehaviour:
     Tags: []
     SoundTriggers: []
     OriginalId: 
-    Id: _untitled0
-    ModuleId: 
-    Hotspots: []
-    OnEnterText: 
-    OnShowText: 
-    OnExitText: 
-    OnHotspotClickText: []
-    OnHotspotCompleteText: []
-    EditorPosition:
-      serializedVersion: 2
-      x: 400
-      y: 50
-      width: 650
-      height: 150
-    EditorShowData: 0
-    EditorShowHotspots: 1
-    EditorShowCharacters: 1
-    EditorShowCallbacks: 1
-    EditorShowVisuals: 1
-    EditorShowTags: 1
-    EditorShowAudio: 1
-    ModuleIds: []
-    Characters: []
-    CustomScriptsDrawer:
-      Scripts: []
-      ShowScripts: 0
-      Label: 
-      LabelInFoldout: 0
-    AutoSave: 1
-  - ColorTag: 0
-    Delete: 0
-    Tags: []
-    SoundTriggers: []
-    OriginalId: 
     Id: loc_baker_house
     ModuleId: 
     Hotspots: []
@@ -261,6 +227,40 @@ MonoBehaviour:
     SoundTriggers: []
     OriginalId: 
     Id: map_greenwood_uptown
+    ModuleId: 
+    Hotspots: []
+    OnEnterText: 
+    OnShowText: 
+    OnExitText: 
+    OnHotspotClickText: []
+    OnHotspotCompleteText: []
+    EditorPosition:
+      serializedVersion: 2
+      x: 400
+      y: 50
+      width: 650
+      height: 150
+    EditorShowData: 0
+    EditorShowHotspots: 1
+    EditorShowCharacters: 1
+    EditorShowCallbacks: 1
+    EditorShowVisuals: 1
+    EditorShowTags: 1
+    EditorShowAudio: 1
+    ModuleIds: []
+    Characters: []
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+    AutoSave: 1
+  - ColorTag: 0
+    Delete: 0
+    Tags: []
+    SoundTriggers: []
+    OriginalId: 
+    Id: _untitled0
     ModuleId: 
     Hotspots: []
     OnEnterText: 

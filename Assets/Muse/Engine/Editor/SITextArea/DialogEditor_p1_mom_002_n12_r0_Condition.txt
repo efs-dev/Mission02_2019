@@ -1,3 +1,4 @@
 using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class DialogEditor_p1_mom_002_n12_r0_Condition {public class _DialogGameFlagsClass {}private _DialogGameFlagsClass DialogGameFlags = new _DialogGameFlagsClass();public class _DialogScriptsClass {}private _DialogScriptsClass DialogScripts = new _DialogScriptsClass();public IEnumerator Run() {
-
+/*//if (?know_lexington)*/
+return true;
 }}
