@@ -723,6 +723,420 @@ MonoBehaviour:
       ShowScripts: 0
       Label: 
       LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
+  - InactiveNodeSearch: 
+    NodeSearch: 
+    Dialog:
+      IsDeleted: 0
+      Hash: 0
+      OriginalId: 
+      OpenText: 
+      CloseText: 
+      ColorTag: 0
+      Notes: 
+      DefaultNodeId: 
+      DefaultNpc: 
+      LinkToHotspots: 0
+      nextNodeId: 
+    GameFlags: []
+    SelectedNode: -1
+    SelectedResponses: 
+    EditType: 0
+    CustomScriptsDrawer:
+      Scripts: []
+      ShowScripts: 0
+      Label: 
+      LabelInFoldout: 0
   IsReadMode: 0
   PlayingAudio: {fileID: 0}
   ReverseResponseOrder: 0
