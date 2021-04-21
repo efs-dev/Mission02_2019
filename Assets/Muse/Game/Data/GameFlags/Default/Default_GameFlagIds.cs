@@ -71,5 +71,20 @@ public static partial class GameFlagIds {
 
     //PROPERTY MapDisplayMinutes
     public static string MapDisplayMinutes = "MapDisplayMinutes";
+
+    //PROPERTY P1DressFinished
+    public static string P1DressFinished = "P1DressFinished";
+
+    //PROPERTY P1DressPacked
+    public static string P1DressPacked = "P1DressPacked";
+
+    //PROPERTY P1DressQuality
+    public static string P1DressQuality = "P1DressQuality";
+
+    //PROPERTY P1PrimerReturn
+    public static string P1PrimerReturn = "P1PrimerReturn";
+
+    //PROPERTY P1HasPrimer
+    public static string P1HasPrimer = "P1HasPrimer";
 }
 //CLASS_END GameFlagIds

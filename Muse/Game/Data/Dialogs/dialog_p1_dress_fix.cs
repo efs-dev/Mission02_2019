@@ -14,6 +14,124 @@ using Efs.Dialogs;
 public class Dialog_p1_dress_fix {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p1_mag
+        private bool _p1_mag = false;
+
+        //PROPERTY p1_mag
+        public bool p1_mag {
+                get {
+                        ///PROPERTY_GETTER_START p1_mag
+                        return _p1_mag;
+                        ///PROPERTY_GETTER_END p1_mag
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_mag
+                        _p1_mag = value;
+                        ///PROPERTY_SETTER_END p1_mag
+                }
+        }
+
+        //PROPERTY _p1_neckline
+        private bool _p1_neckline = false;
+
+        //PROPERTY p1_neckline
+        public bool p1_neckline {
+                get {
+                        ///PROPERTY_GETTER_START p1_neckline
+                        return _p1_neckline;
+                        ///PROPERTY_GETTER_END p1_neckline
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_neckline
+                        _p1_neckline = value;
+                        ///PROPERTY_SETTER_END p1_neckline
+                }
+        }
+
+        //PROPERTY _p1_rest
+        private bool _p1_rest = false;
+
+        //PROPERTY p1_rest
+        public bool p1_rest {
+                get {
+                        ///PROPERTY_GETTER_START p1_rest
+                        return _p1_rest;
+                        ///PROPERTY_GETTER_END p1_rest
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_rest
+                        _p1_rest = value;
+                        ///PROPERTY_SETTER_END p1_rest
+                }
+        }
+
+        //PROPERTY _p1_sar_task_1
+        private int _p1_sar_task_1 = 0;
+
+        //PROPERTY p1_sar_task_1
+        public int p1_sar_task_1 {
+                get {
+                        ///PROPERTY_GETTER_START p1_sar_task_1
+                        return _p1_sar_task_1;
+                        ///PROPERTY_GETTER_END p1_sar_task_1
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_sar_task_1
+                        _p1_sar_task_1 = value;
+                        ///PROPERTY_SETTER_END p1_sar_task_1
+                }
+        }
+
+        //PROPERTY _p1_sar_task_2
+        private int _p1_sar_task_2 = 0;
+
+        //PROPERTY p1_sar_task_2
+        public int p1_sar_task_2 {
+                get {
+                        ///PROPERTY_GETTER_START p1_sar_task_2
+                        return _p1_sar_task_2;
+                        ///PROPERTY_GETTER_END p1_sar_task_2
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_sar_task_2
+                        _p1_sar_task_2 = value;
+                        ///PROPERTY_SETTER_END p1_sar_task_2
+                }
+        }
+
+        //PROPERTY _p1_sar_task_count
+        private int _p1_sar_task_count = 0;
+
+        //PROPERTY p1_sar_task_count
+        public int p1_sar_task_count {
+                get {
+                        ///PROPERTY_GETTER_START p1_sar_task_count
+                        return _p1_sar_task_count;
+                        ///PROPERTY_GETTER_END p1_sar_task_count
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_sar_task_count
+                        _p1_sar_task_count = value;
+                        ///PROPERTY_SETTER_END p1_sar_task_count
+                }
+        }
+
+        //PROPERTY _p1_sloppy
+        private bool _p1_sloppy = false;
+
+        //PROPERTY p1_sloppy
+        public bool p1_sloppy {
+                get {
+                        ///PROPERTY_GETTER_START p1_sloppy
+                        return _p1_sloppy;
+                        ///PROPERTY_GETTER_END p1_sloppy
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_sloppy
+                        _p1_sloppy = value;
+                        ///PROPERTY_SETTER_END p1_sloppy
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -68,8 +186,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n02
         response.NextNodeId = "n02";
-        response.SetCondition(n01_r5_condition);
-        response.OnSelect(n01_r5_select);
+        response.SetCondition(n01_r0_condition);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -79,7 +197,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n01_r4_select);
+        response.OnSelect(n01_r1_select);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -89,7 +207,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 n04
         response.NextNodeId = "n04";
-        response.OnSelect(n01_r3_select);
+        response.OnSelect(n01_r2_select);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -99,7 +217,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n01_r2_select);
+        response.OnSelect(n01_r3_select);
         
         ///RESPONSE n01 4
         response = node.AddResponse();
@@ -109,7 +227,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 4 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n01_r1_select);
+        response.OnSelect(n01_r4_select);
         
         ///RESPONSE n01 5
         response = node.AddResponse();
@@ -119,7 +237,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 5 n12
         response.NextNodeId = "n12";
-        response.OnSelect(n01_r0_select);
+        response.OnSelect(n01_r5_select);
         
         ///NODE_END n01
         ///NODE_START n02
@@ -148,7 +266,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 0 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n02_r4_select);
+        response.OnSelect(n02_r0_select);
         
         ///RESPONSE n02 1
         response = node.AddResponse();
@@ -158,7 +276,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 1 n04
         response.NextNodeId = "n04";
-        response.OnSelect(n02_r3_select);
+        response.OnSelect(n02_r1_select);
         
         ///RESPONSE n02 2
         response = node.AddResponse();
@@ -178,7 +296,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 3 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n02_r1_select);
+        response.OnSelect(n02_r3_select);
         
         ///RESPONSE n02 4
         response = node.AddResponse();
@@ -188,7 +306,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 4 n12
         response.NextNodeId = "n12";
-        response.OnSelect(n02_r0_select);
+        response.OnSelect(n02_r4_select);
         
         ///NODE_END n02
         ///NODE_START n03
@@ -208,7 +326,7 @@ public class Dialog_p1_dress_fix {
         ///PROMPT_IGNORE_VO n03 0 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n03_p0_condition);
-        prompt.OnShow(n03_p2_show);
+        prompt.OnShow(n03_p0_show);
         
         ///PROMPT n03 1
         prompt = node.AddPrompt();
@@ -226,7 +344,7 @@ public class Dialog_p1_dress_fix {
         ///PROMPT_IGNORE_VO n03 2 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n03_p2_condition);
-        prompt.OnShow(n03_p0_show);
+        prompt.OnShow(n03_p2_show);
         
         ///RESPONSE n03 0
         response = node.AddResponse();
@@ -236,8 +354,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 0 n12
         response.NextNodeId = "n12";
-        response.SetCondition(n03_r6_condition);
-        response.OnSelect(n03_r6_select);
+        response.SetCondition(n03_r0_condition);
+        response.OnSelect(n03_r0_select);
         
         ///RESPONSE n03 1
         response = node.AddResponse();
@@ -247,8 +365,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 1 n11
         response.NextNodeId = "n11";
-        response.SetCondition(n03_r5_condition);
-        response.OnSelect(n03_r5_select);
+        response.SetCondition(n03_r1_condition);
+        response.OnSelect(n03_r1_select);
         
         ///RESPONSE n03 2
         response = node.AddResponse();
@@ -258,8 +376,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 2 n06
         response.NextNodeId = "n06";
-        response.SetCondition(n03_r4_condition);
-        response.OnSelect(n03_r4_select);
+        response.SetCondition(n03_r2_condition);
+        response.OnSelect(n03_r2_select);
         
         ///RESPONSE n03 3
         response = node.AddResponse();
@@ -280,8 +398,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 4 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n03_r2_condition);
-        response.OnSelect(n03_r2_select);
+        response.SetCondition(n03_r4_condition);
+        response.OnSelect(n03_r4_select);
         
         ///RESPONSE n03 5
         response = node.AddResponse();
@@ -291,8 +409,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 5 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n03_r1_condition);
-        response.OnSelect(n03_r1_select);
+        response.SetCondition(n03_r5_condition);
+        response.OnSelect(n03_r5_select);
         
         ///RESPONSE n03 6
         response = node.AddResponse();
@@ -302,8 +420,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 6 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n03_r0_condition);
-        response.OnSelect(n03_r0_select);
+        response.SetCondition(n03_r6_condition);
+        response.OnSelect(n03_r6_select);
         
         ///NODE_END n03
         ///NODE_START n04
@@ -352,7 +470,7 @@ public class Dialog_p1_dress_fix {
         ///PROMPT_IGNORE_VO n05 0 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n05_p0_condition);
-        prompt.OnShow(n05_p1_show);
+        prompt.OnShow(n05_p0_show);
         
         ///PROMPT n05 1
         prompt = node.AddPrompt();
@@ -361,7 +479,7 @@ public class Dialog_p1_dress_fix {
         ///PROMPT_IGNORE_VO n05 1 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n05_p1_condition);
-        prompt.OnShow(n05_p0_show);
+        prompt.OnShow(n05_p1_show);
         
         ///RESPONSE n05 0
         response = node.AddResponse();
@@ -371,8 +489,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 0 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n05_r3_condition);
-        response.OnSelect(n05_r3_select);
+        response.SetCondition(n05_r0_condition);
+        response.OnSelect(n05_r0_select);
         
         ///RESPONSE n05 1
         response = node.AddResponse();
@@ -382,8 +500,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 1 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n05_r2_condition);
-        response.OnSelect(n05_r2_select);
+        response.SetCondition(n05_r1_condition);
+        response.OnSelect(n05_r1_select);
         
         ///RESPONSE n05 2
         response = node.AddResponse();
@@ -393,8 +511,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 2 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n05_r1_condition);
-        response.OnSelect(n05_r1_select);
+        response.SetCondition(n05_r2_condition);
+        response.OnSelect(n05_r2_select);
         
         ///RESPONSE n05 3
         response = node.AddResponse();
@@ -404,8 +522,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 3 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n05_r0_condition);
-        response.OnSelect(n05_r0_select);
+        response.SetCondition(n05_r3_condition);
+        response.OnSelect(n05_r3_select);
         
         ///NODE_END n05
         ///NODE_START n06
@@ -462,7 +580,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n07 0 n08
         response.NextNodeId = "n08";
-        response.OnSelect(n07_r1_select);
+        response.OnSelect(n07_r0_select);
         
         ///RESPONSE n07 1
         response = node.AddResponse();
@@ -472,7 +590,7 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n07 1 n08
         response.NextNodeId = "n08";
-        response.OnSelect(n07_r0_select);
+        response.OnSelect(n07_r1_select);
         
         ///NODE_END n07
         ///NODE_START n08
@@ -520,7 +638,7 @@ public class Dialog_p1_dress_fix {
         ///PROMPT_IGNORE_VO n10 0 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n10_p0_condition);
-        prompt.OnShow(n10_p2_show);
+        prompt.OnShow(n10_p0_show);
         
         ///PROMPT n10 1
         prompt = node.AddPrompt();
@@ -538,7 +656,7 @@ public class Dialog_p1_dress_fix {
         ///PROMPT_IGNORE_VO n10 2 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n10_p2_condition);
-        prompt.OnShow(n10_p0_show);
+        prompt.OnShow(n10_p2_show);
         
         ///RESPONSE n10 0
         response = node.AddResponse();
@@ -576,8 +694,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 0 n06
         response.NextNodeId = "n06";
-        response.SetCondition(n11_r4_condition);
-        response.OnSelect(n11_r4_select);
+        response.SetCondition(n11_r0_condition);
+        response.OnSelect(n11_r0_select);
         
         ///RESPONSE n11 1
         response = node.AddResponse();
@@ -587,8 +705,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 1 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n11_r3_condition);
-        response.OnSelect(n11_r3_select);
+        response.SetCondition(n11_r1_condition);
+        response.OnSelect(n11_r1_select);
         
         ///RESPONSE n11 2
         response = node.AddResponse();
@@ -609,8 +727,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 3 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n11_r1_condition);
-        response.OnSelect(n11_r1_select);
+        response.SetCondition(n11_r3_condition);
+        response.OnSelect(n11_r3_select);
         
         ///RESPONSE n11 4
         response = node.AddResponse();
@@ -620,8 +738,8 @@ public class Dialog_p1_dress_fix {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 4 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n11_r0_condition);
-        response.OnSelect(n11_r0_select);
+        response.SetCondition(n11_r4_condition);
+        response.OnSelect(n11_r4_select);
         
         ///NODE_END n11
         ///NODE_START n12
@@ -729,6 +847,12 @@ public class Dialog_p1_dress_fix {
         //?dress_finished = false
         //?dress_packed = false
         //#dress_quality = 0*/
+        DialogGameFlags.p1_sar_task_1 = 0;
+        DialogGameFlags.p1_sar_task_2 = 0;
+        DialogGameFlags.p1_sar_task_count = 1;
+        GameFlags.P1DressFinished = false;
+        GameFlags.P1DressPacked = false;
+        GameFlags.P1DressQuality = 0;
         ///METHOD_BODY_END n01_p0_show
     }
 
@@ -739,11 +863,11 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n02_p0_show
     }
 
-    ///METHOD n03_p2_show
-    public void n03_p2_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n03_p2_show
+    ///METHOD n03_p0_show
+    public void n03_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n03_p0_show
         /*// #p1_sar_task_count = 2*/
-        ///METHOD_BODY_END n03_p2_show
+        ///METHOD_BODY_END n03_p0_show
     }
 
     ///METHOD n03_p1_show
@@ -753,11 +877,11 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n03_p1_show
     }
 
-    ///METHOD n03_p0_show
-    public void n03_p0_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n03_p0_show
+    ///METHOD n03_p2_show
+    public void n03_p2_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n03_p2_show
         /*// #p1_sar_task_count = 2*/
-        ///METHOD_BODY_END n03_p0_show
+        ///METHOD_BODY_END n03_p2_show
     }
 
     ///METHOD n04_p0_show
@@ -767,20 +891,20 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n04_p0_show
     }
 
-    ///METHOD n05_p1_show
-    public void n05_p1_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n05_p1_show
-        /*//			//hint("Words you can't yet read appear blurry.")
-        //			overlayPopup("literacy_message")*/
-        ///METHOD_BODY_END n05_p1_show
-    }
-
     ///METHOD n05_p0_show
     public void n05_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n05_p0_show
         /*//			//hint("Words you can't yet read appear blurry.")
         //			overlayPopup("literacy_message")*/
         ///METHOD_BODY_END n05_p0_show
+    }
+
+    ///METHOD n05_p1_show
+    public void n05_p1_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n05_p1_show
+        /*//			//hint("Words you can't yet read appear blurry.")
+        //			overlayPopup("literacy_message")*/
+        ///METHOD_BODY_END n05_p1_show
     }
 
     ///METHOD n06_p0_show
@@ -804,11 +928,11 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n08_p0_show
     }
 
-    ///METHOD n10_p2_show
-    public void n10_p2_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n10_p2_show
+    ///METHOD n10_p0_show
+    public void n10_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n10_p0_show
         /*//log("")*/
-        ///METHOD_BODY_END n10_p2_show
+        ///METHOD_BODY_END n10_p0_show
     }
 
     ///METHOD n10_p1_show
@@ -818,11 +942,11 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n10_p1_show
     }
 
-    ///METHOD n10_p0_show
-    public void n10_p0_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n10_p0_show
+    ///METHOD n10_p2_show
+    public void n10_p2_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n10_p2_show
         /*//log("")*/
-        ///METHOD_BODY_END n10_p0_show
+        ///METHOD_BODY_END n10_p2_show
     }
 
     ///METHOD n11_p0_show
@@ -839,60 +963,12 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n12_p0_show
     }
 
-    ///METHOD n01_r5_condition
-    public bool n01_r5_condition (  ) {
-        ///METHOD_BODY_START n01_r5_condition
+    ///METHOD n01_r0_condition
+    public bool n01_r0_condition (  ) {
+        ///METHOD_BODY_START n01_r0_condition
         /*//if( hasItem("PRIMER") )*/
-        return true;
-        ///METHOD_BODY_END n01_r5_condition
-    }
-
-    ///METHOD n03_r6_condition
-    public bool n03_r6_condition (  ) {
-        ///METHOD_BODY_START n03_r6_condition
-        /*//if( #dress_quality = 2 )*/
-        return true;
-        ///METHOD_BODY_END n03_r6_condition
-    }
-
-    ///METHOD n03_r5_condition
-    public bool n03_r5_condition (  ) {
-        ///METHOD_BODY_START n03_r5_condition
-        /*//if( hasItem("PRIMER") )*/
-        return true;
-        ///METHOD_BODY_END n03_r5_condition
-    }
-
-    ///METHOD n03_r4_condition
-    public bool n03_r4_condition (  ) {
-        ///METHOD_BODY_START n03_r4_condition
-        /*//if( ?p1_rest )*/
-        return true;
-        ///METHOD_BODY_END n03_r4_condition
-    }
-
-    ///METHOD n03_r3_condition
-    public bool n03_r3_condition (  ) {
-        ///METHOD_BODY_START n03_r3_condition
-        /*//if( ?p1_rest = false)*/
-        return true;
-        ///METHOD_BODY_END n03_r3_condition
-    }
-
-    ///METHOD n03_r2_condition
-    public bool n03_r2_condition (  ) {
-        ///METHOD_BODY_START n03_r2_condition
-        /*//if( ?p1_mag = false )*/
-        return true;
-        ///METHOD_BODY_END n03_r2_condition
-    }
-
-    ///METHOD n03_r1_condition
-    public bool n03_r1_condition (  ) {
-        ///METHOD_BODY_START n03_r1_condition
-        /*//if( (?p1_neckline = false) AND (?p1_sloppy = false) )*/
-        return true;
-        ///METHOD_BODY_END n03_r1_condition
+        return GameFlags.P1HasPrimer;
+        ///METHOD_BODY_END n01_r0_condition
     }
 
     ///METHOD n03_r0_condition
@@ -903,28 +979,52 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n03_r0_condition
     }
 
-    ///METHOD n05_r3_condition
-    public bool n05_r3_condition (  ) {
-        ///METHOD_BODY_START n05_r3_condition
-        /*//if( #p1_sar_task_count = 2)*/
+    ///METHOD n03_r1_condition
+    public bool n03_r1_condition (  ) {
+        ///METHOD_BODY_START n03_r1_condition
+        /*//if( (?p1_neckline = false) AND (?p1_sloppy = false) )*/
         return true;
-        ///METHOD_BODY_END n05_r3_condition
+        ///METHOD_BODY_END n03_r1_condition
     }
 
-    ///METHOD n05_r2_condition
-    public bool n05_r2_condition (  ) {
-        ///METHOD_BODY_START n05_r2_condition
-        /*//if( (?p1_rest = false) AND ( #p1_sar_task_count = 1) )*/
+    ///METHOD n03_r2_condition
+    public bool n03_r2_condition (  ) {
+        ///METHOD_BODY_START n03_r2_condition
+        /*//if( ?p1_mag = false )*/
         return true;
-        ///METHOD_BODY_END n05_r2_condition
+        ///METHOD_BODY_END n03_r2_condition
     }
 
-    ///METHOD n05_r1_condition
-    public bool n05_r1_condition (  ) {
-        ///METHOD_BODY_START n05_r1_condition
-        /*//if( (?p1_neckline = false) AND ( #p1_sar_task_count = 1) )*/
+    ///METHOD n03_r3_condition
+    public bool n03_r3_condition (  ) {
+        ///METHOD_BODY_START n03_r3_condition
+        /*//if( ?p1_rest = false)*/
         return true;
-        ///METHOD_BODY_END n05_r1_condition
+        ///METHOD_BODY_END n03_r3_condition
+    }
+
+    ///METHOD n03_r4_condition
+    public bool n03_r4_condition (  ) {
+        ///METHOD_BODY_START n03_r4_condition
+        /*//if( ?p1_rest )*/
+        return true;
+        ///METHOD_BODY_END n03_r4_condition
+    }
+
+    ///METHOD n03_r5_condition
+    public bool n03_r5_condition (  ) {
+        ///METHOD_BODY_START n03_r5_condition
+        /*//if( hasItem("PRIMER") )*/
+        return true;
+        ///METHOD_BODY_END n03_r5_condition
+    }
+
+    ///METHOD n03_r6_condition
+    public bool n03_r6_condition (  ) {
+        ///METHOD_BODY_START n03_r6_condition
+        /*//if( #dress_quality = 2 )*/
+        return true;
+        ///METHOD_BODY_END n03_r6_condition
     }
 
     ///METHOD n05_r0_condition
@@ -935,36 +1035,28 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n05_r0_condition
     }
 
-    ///METHOD n11_r4_condition
-    public bool n11_r4_condition (  ) {
-        ///METHOD_BODY_START n11_r4_condition
-        /*//if(?p1_rest = true )*/
+    ///METHOD n05_r1_condition
+    public bool n05_r1_condition (  ) {
+        ///METHOD_BODY_START n05_r1_condition
+        /*//if( (?p1_neckline = false) AND ( #p1_sar_task_count = 1) )*/
         return true;
-        ///METHOD_BODY_END n11_r4_condition
+        ///METHOD_BODY_END n05_r1_condition
     }
 
-    ///METHOD n11_r3_condition
-    public bool n11_r3_condition (  ) {
-        ///METHOD_BODY_START n11_r3_condition
-        /*//if( ?p1_rest = false )*/
+    ///METHOD n05_r2_condition
+    public bool n05_r2_condition (  ) {
+        ///METHOD_BODY_START n05_r2_condition
+        /*//if( (?p1_rest = false) AND ( #p1_sar_task_count = 1) )*/
         return true;
-        ///METHOD_BODY_END n11_r3_condition
+        ///METHOD_BODY_END n05_r2_condition
     }
 
-    ///METHOD n11_r2_condition
-    public bool n11_r2_condition (  ) {
-        ///METHOD_BODY_START n11_r2_condition
-        /*//if( ?p1_mag = false )*/
+    ///METHOD n05_r3_condition
+    public bool n05_r3_condition (  ) {
+        ///METHOD_BODY_START n05_r3_condition
+        /*//if( #p1_sar_task_count = 2)*/
         return true;
-        ///METHOD_BODY_END n11_r2_condition
-    }
-
-    ///METHOD n11_r1_condition
-    public bool n11_r1_condition (  ) {
-        ///METHOD_BODY_START n11_r1_condition
-        /*//if( (?p1_sloppy = false) AND (?p1_neckline = false) )*/
-        return true;
-        ///METHOD_BODY_END n11_r1_condition
+        ///METHOD_BODY_END n05_r3_condition
     }
 
     ///METHOD n11_r0_condition
@@ -975,38 +1067,45 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n11_r0_condition
     }
 
-    ///METHOD n01_r5_select
-    public void n01_r5_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r5_select
-        /*//removeItem( "PRIMER" )
-        //?primer_return = true*/
-        ///METHOD_BODY_END n01_r5_select
+    ///METHOD n11_r1_condition
+    public bool n11_r1_condition (  ) {
+        ///METHOD_BODY_START n11_r1_condition
+        /*//if( (?p1_sloppy = false) AND (?p1_neckline = false) )*/
+        return true;
+        ///METHOD_BODY_END n11_r1_condition
     }
 
-    ///METHOD n01_r4_select
-    public void n01_r4_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r4_select
-        /*//?p1_rest = true
-        //#p1_sar_task_1 = 2*/
-        ///METHOD_BODY_END n01_r4_select
+    ///METHOD n11_r2_condition
+    public bool n11_r2_condition (  ) {
+        ///METHOD_BODY_START n11_r2_condition
+        /*//if( ?p1_mag = false )*/
+        return true;
+        ///METHOD_BODY_END n11_r2_condition
     }
 
-    ///METHOD n01_r3_select
-    public void n01_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r3_select
-        /*//?p1_mag = true
-        //#p1_sar_task_1 = 4*/
-        ///METHOD_BODY_END n01_r3_select
+    ///METHOD n11_r3_condition
+    public bool n11_r3_condition (  ) {
+        ///METHOD_BODY_START n11_r3_condition
+        /*//if( ?p1_rest = false )*/
+        return true;
+        ///METHOD_BODY_END n11_r3_condition
     }
 
-    ///METHOD n01_r2_select
-    public void n01_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r2_select
-        /*//?p1_neckline = true
-        //#p1_sar_task_1 = 3
-        //?dress_finished = true
-        //#dress_quality = 2*/
-        ///METHOD_BODY_END n01_r2_select
+    ///METHOD n11_r4_condition
+    public bool n11_r4_condition (  ) {
+        ///METHOD_BODY_START n11_r4_condition
+        /*//if(?p1_rest = true )*/
+        return true;
+        ///METHOD_BODY_END n11_r4_condition
+    }
+
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
+        /*//#dress_quality=3
+        //?dress_finished = true*/
+        GameFlags.P1PrimerReturn = true;
+        ///METHOD_BODY_END n01_r0_select
     }
 
     ///METHOD n01_r1_select
@@ -1016,41 +1115,63 @@ public class Dialog_p1_dress_fix {
         //#p1_sar_task_1 = 1
         //#dress_quality = 1
         //?dress_finished = true*/
+        DialogGameFlags.p1_rest = true;
+        DialogGameFlags.p1_sar_task_1 = 2;
         ///METHOD_BODY_END n01_r1_select
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
-        /*//#dress_quality=3
-        //?dress_finished = true*/
-        ///METHOD_BODY_END n01_r0_select
-    }
-
-    ///METHOD n02_r4_select
-    public void n02_r4_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n02_r4_select
-        /*//#p1_sar_task_1 = 2
-        //?p1_rest = true*/
-        ///METHOD_BODY_END n02_r4_select
-    }
-
-    ///METHOD n02_r3_select
-    public void n02_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n02_r3_select
-        /*//#p1_sar_task_1 = 4
-        //?p1_mag = true*/
-        ///METHOD_BODY_END n02_r3_select
-    }
-
-    ///METHOD n02_r2_select
-    public void n02_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n02_r2_select
-        /*//#p1_sar_task_1 = 3
-        //?p1_neckline = true
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
+        /*//?p1_neckline = true
+        //#p1_sar_task_1 = 3
         //?dress_finished = true
         //#dress_quality = 2*/
-        ///METHOD_BODY_END n02_r2_select
+        DialogGameFlags.p1_mag = true;
+        DialogGameFlags.p1_sar_task_1 = 4;
+        ///METHOD_BODY_END n01_r2_select
+    }
+
+    ///METHOD n01_r3_select
+    public void n01_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_select
+        /*//?p1_mag = true
+        //#p1_sar_task_1 = 4*/
+        DialogGameFlags.p1_neckline = true;
+        DialogGameFlags.p1_sar_task_1 = 3;
+        ///METHOD_BODY_END n01_r3_select
+    }
+
+    ///METHOD n01_r4_select
+    public void n01_r4_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r4_select
+        /*//?p1_rest = true
+        //#p1_sar_task_1 = 2*/
+        DialogGameFlags.p1_sar_task_1 = 1;
+        GameFlags.P1DressQuality = 1;
+        GameFlags.P1DressFinished = true;
+        DialogGameFlags.p1_sloppy = true;
+        ///METHOD_BODY_END n01_r4_select
+    }
+
+    ///METHOD n01_r5_select
+    public void n01_r5_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r5_select
+        /*//removeItem( "PRIMER" )
+        //?primer_return = true*/
+        GameFlags.P1DressQuality = 3;
+        GameFlags.P1DressFinished = true;
+        ///METHOD_BODY_END n01_r5_select
+    }
+
+    ///METHOD n02_r0_select
+    public void n02_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n02_r0_select
+        /*//#dress_quality = 3
+        //?dress_finished = true*/
+        DialogGameFlags.p1_sar_task_1 = 2;
+        DialogGameFlags.p1_rest = true;
+        ///METHOD_BODY_END n02_r0_select
     }
 
     ///METHOD n02_r1_select
@@ -1060,59 +1181,43 @@ public class Dialog_p1_dress_fix {
         //?p1_sloppy = true
         //?dress_finished = true
         //#dress_quality = 1*/
+        DialogGameFlags.p1_mag = true;
+        DialogGameFlags.p1_sar_task_1 = 4;
         ///METHOD_BODY_END n02_r1_select
     }
 
-    ///METHOD n02_r0_select
-    public void n02_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n02_r0_select
-        /*//#dress_quality = 3
-        //?dress_finished = true*/
-        ///METHOD_BODY_END n02_r0_select
-    }
-
-    ///METHOD n03_r6_select
-    public void n03_r6_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r6_select
-        /*//#dress_quality = 3*/
-        ///METHOD_BODY_END n03_r6_select
-    }
-
-    ///METHOD n03_r5_select
-    public void n03_r5_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r5_select
-        /*//?primer_return = true*/
-        ///METHOD_BODY_END n03_r5_select
-    }
-
-    ///METHOD n03_r4_select
-    public void n03_r4_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r4_select
-        /*//#p1_sar_task_2 = 2*/
-        ///METHOD_BODY_END n03_r4_select
-    }
-
-    ///METHOD n03_r3_select
-    public void n03_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r3_select
-        /*//#p1_sar_task_2 = 2*/
-        ///METHOD_BODY_END n03_r3_select
-    }
-
-    ///METHOD n03_r2_select
-    public void n03_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r2_select
-        /*//#p1_sar_task_2 = 4*/
-        ///METHOD_BODY_END n03_r2_select
-    }
-
-    ///METHOD n03_r1_select
-    public void n03_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r1_select
-        /*//#p1_sar_task_2 = 3
+    ///METHOD n02_r2_select
+    public void n02_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n02_r2_select
+        /*//#p1_sar_task_1 = 3
+        //?p1_neckline = true
         //?dress_finished = true
         //#dress_quality = 2*/
-        ///METHOD_BODY_END n03_r1_select
+        DialogGameFlags.p1_sar_task_1 = 3;
+        DialogGameFlags.p1_neckline = true;
+        ///METHOD_BODY_END n02_r2_select
+    }
+
+    ///METHOD n02_r3_select
+    public void n02_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n02_r3_select
+        /*//#p1_sar_task_1 = 4
+        //?p1_mag = true*/
+        DialogGameFlags.p1_sar_task_1 = 1;
+        DialogGameFlags.p1_sloppy = true;
+        GameFlags.P1DressFinished = true;
+        GameFlags.P1DressQuality = 1;
+        ///METHOD_BODY_END n02_r3_select
+    }
+
+    ///METHOD n02_r4_select
+    public void n02_r4_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n02_r4_select
+        /*//#p1_sar_task_1 = 2
+        //?p1_rest = true*/
+        GameFlags.P1DressQuality = 3;
+        GameFlags.P1DressFinished = true;
+        ///METHOD_BODY_END n02_r4_select
     }
 
     ///METHOD n03_r0_select
@@ -1124,36 +1229,55 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n03_r0_select
     }
 
+    ///METHOD n03_r1_select
+    public void n03_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r1_select
+        /*//#p1_sar_task_2 = 3
+        //?dress_finished = true
+        //#dress_quality = 2*/
+        ///METHOD_BODY_END n03_r1_select
+    }
+
+    ///METHOD n03_r2_select
+    public void n03_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r2_select
+        /*//#p1_sar_task_2 = 4*/
+        ///METHOD_BODY_END n03_r2_select
+    }
+
+    ///METHOD n03_r3_select
+    public void n03_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r3_select
+        /*//#p1_sar_task_2 = 2*/
+        ///METHOD_BODY_END n03_r3_select
+    }
+
+    ///METHOD n03_r4_select
+    public void n03_r4_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r4_select
+        /*//#p1_sar_task_2 = 2*/
+        ///METHOD_BODY_END n03_r4_select
+    }
+
+    ///METHOD n03_r5_select
+    public void n03_r5_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r5_select
+        /*//?primer_return = true*/
+        ///METHOD_BODY_END n03_r5_select
+    }
+
+    ///METHOD n03_r6_select
+    public void n03_r6_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r6_select
+        /*//#dress_quality = 3*/
+        ///METHOD_BODY_END n03_r6_select
+    }
+
     ///METHOD n04_r0_select
     public void n04_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r0_select
         /*//			addItem("INVITATION")			*/
         ///METHOD_BODY_END n04_r0_select
-    }
-
-    ///METHOD n05_r3_select
-    public void n05_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n05_r3_select
-        /*//setLayer("fg", "")*/
-        ///METHOD_BODY_END n05_r3_select
-    }
-
-    ///METHOD n05_r2_select
-    public void n05_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n05_r2_select
-        /*//setLayer("fg", "")
-        //#p1_sar_task_2 = 2*/
-        ///METHOD_BODY_END n05_r2_select
-    }
-
-    ///METHOD n05_r1_select
-    public void n05_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n05_r1_select
-        /*//setLayer("fg", "")
-        //#p1_sar_task_2 = 3
-        //?dress_finished = true
-        //#dress_quality = 2*/
-        ///METHOD_BODY_END n05_r1_select
     }
 
     ///METHOD n05_r0_select
@@ -1166,11 +1290,29 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n05_r0_select
     }
 
-    ///METHOD n07_r1_select
-    public void n07_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n07_r1_select
-        /*//?dress_packed = true*/
-        ///METHOD_BODY_END n07_r1_select
+    ///METHOD n05_r1_select
+    public void n05_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n05_r1_select
+        /*//setLayer("fg", "")
+        //#p1_sar_task_2 = 3
+        //?dress_finished = true
+        //#dress_quality = 2*/
+        ///METHOD_BODY_END n05_r1_select
+    }
+
+    ///METHOD n05_r2_select
+    public void n05_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n05_r2_select
+        /*//setLayer("fg", "")
+        //#p1_sar_task_2 = 2*/
+        ///METHOD_BODY_END n05_r2_select
+    }
+
+    ///METHOD n05_r3_select
+    public void n05_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n05_r3_select
+        /*//setLayer("fg", "")*/
+        ///METHOD_BODY_END n05_r3_select
     }
 
     ///METHOD n07_r0_select
@@ -1180,25 +1322,20 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n07_r0_select
     }
 
-    ///METHOD n11_r4_select
-    public void n11_r4_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n11_r4_select
-        /*//#p1_sar_task_2 = 2*/
-        ///METHOD_BODY_END n11_r4_select
+    ///METHOD n07_r1_select
+    public void n07_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n07_r1_select
+        /*//?dress_packed = true*/
+        ///METHOD_BODY_END n07_r1_select
     }
 
-    ///METHOD n11_r3_select
-    public void n11_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n11_r3_select
-        /*//#p1_sar_task_2 = 2*/
-        ///METHOD_BODY_END n11_r3_select
-    }
-
-    ///METHOD n11_r2_select
-    public void n11_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n11_r2_select
-        /*//#p1_sar_task_2 = 4*/
-        ///METHOD_BODY_END n11_r2_select
+    ///METHOD n11_r0_select
+    public void n11_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n11_r0_select
+        /*//#p1_sar_task_2 = 1
+        //?dress_finished = true
+        //#dress_quality = 1*/
+        ///METHOD_BODY_END n11_r0_select
     }
 
     ///METHOD n11_r1_select
@@ -1210,13 +1347,25 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_END n11_r1_select
     }
 
-    ///METHOD n11_r0_select
-    public void n11_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n11_r0_select
-        /*//#p1_sar_task_2 = 1
-        //?dress_finished = true
-        //#dress_quality = 1*/
-        ///METHOD_BODY_END n11_r0_select
+    ///METHOD n11_r2_select
+    public void n11_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n11_r2_select
+        /*//#p1_sar_task_2 = 4*/
+        ///METHOD_BODY_END n11_r2_select
+    }
+
+    ///METHOD n11_r3_select
+    public void n11_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n11_r3_select
+        /*//#p1_sar_task_2 = 2*/
+        ///METHOD_BODY_END n11_r3_select
+    }
+
+    ///METHOD n11_r4_select
+    public void n11_r4_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n11_r4_select
+        /*//#p1_sar_task_2 = 2*/
+        ///METHOD_BODY_END n11_r4_select
     }
 }
 //CLASS_END Dialog_p1_dress_fix

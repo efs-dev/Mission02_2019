@@ -50,6 +50,16 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER MapHours 
 //USING
 ///GAMEFLAG_FOLDER MapDisplayMinutes 
+//USING
+///GAMEFLAG_FOLDER P1DressFinished 
+//USING
+///GAMEFLAG_FOLDER P1DressPacked 
+//USING
+///GAMEFLAG_FOLDER P1DressQuality 
+//USING
+///GAMEFLAG_FOLDER P1PrimerReturn 
+//USING
+///GAMEFLAG_FOLDER P1HasPrimer 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -505,6 +515,101 @@ GameFlagChanged("MapHours", oldValue, value);
 _MapDisplayMinutes = value;
 GameFlagChanged("MapDisplayMinutes", oldValue, value);
             ///PROPERTY_SETTER_END MapDisplayMinutes
+        }
+    }
+
+    //PROPERTY _P1DressFinished
+    private static bool _P1DressFinished = false;
+
+    //PROPERTY P1DressFinished
+    public static bool P1DressFinished {
+        get {
+            ///PROPERTY_GETTER_START P1DressFinished
+            return _P1DressFinished;
+            ///PROPERTY_GETTER_END P1DressFinished
+        }
+        set {
+            ///PROPERTY_SETTER_START P1DressFinished
+            var oldValue = value;
+_P1DressFinished = value;
+GameFlagChanged("P1DressFinished", oldValue, value);
+            ///PROPERTY_SETTER_END P1DressFinished
+        }
+    }
+
+    //PROPERTY _P1DressPacked
+    private static bool _P1DressPacked = false;
+
+    //PROPERTY P1DressPacked
+    public static bool P1DressPacked {
+        get {
+            ///PROPERTY_GETTER_START P1DressPacked
+            return _P1DressPacked;
+            ///PROPERTY_GETTER_END P1DressPacked
+        }
+        set {
+            ///PROPERTY_SETTER_START P1DressPacked
+            var oldValue = value;
+_P1DressPacked = value;
+GameFlagChanged("P1DressPacked", oldValue, value);
+            ///PROPERTY_SETTER_END P1DressPacked
+        }
+    }
+
+    //PROPERTY _P1DressQuality
+    private static int _P1DressQuality = 0;
+
+    //PROPERTY P1DressQuality
+    public static int P1DressQuality {
+        get {
+            ///PROPERTY_GETTER_START P1DressQuality
+            return _P1DressQuality;
+            ///PROPERTY_GETTER_END P1DressQuality
+        }
+        set {
+            ///PROPERTY_SETTER_START P1DressQuality
+            var oldValue = value;
+_P1DressQuality = value;
+GameFlagChanged("P1DressQuality", oldValue, value);
+            ///PROPERTY_SETTER_END P1DressQuality
+        }
+    }
+
+    //PROPERTY _P1PrimerReturn
+    private static bool _P1PrimerReturn = false;
+
+    //PROPERTY P1PrimerReturn
+    public static bool P1PrimerReturn {
+        get {
+            ///PROPERTY_GETTER_START P1PrimerReturn
+            return _P1PrimerReturn;
+            ///PROPERTY_GETTER_END P1PrimerReturn
+        }
+        set {
+            ///PROPERTY_SETTER_START P1PrimerReturn
+            var oldValue = value;
+_P1PrimerReturn = value;
+GameFlagChanged("P1PrimerReturn", oldValue, value);
+            ///PROPERTY_SETTER_END P1PrimerReturn
+        }
+    }
+
+    //PROPERTY _P1HasPrimer
+    private static bool _P1HasPrimer = false;
+
+    //PROPERTY P1HasPrimer
+    public static bool P1HasPrimer {
+        get {
+            ///PROPERTY_GETTER_START P1HasPrimer
+            return _P1HasPrimer;
+            ///PROPERTY_GETTER_END P1HasPrimer
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasPrimer
+            var oldValue = value;
+_P1HasPrimer = value;
+GameFlagChanged("P1HasPrimer", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasPrimer
         }
     }
 }

@@ -14,6 +14,192 @@ using Efs.Dialogs;
 public class Dialog_p0_rob_sal_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _asksally
+        private bool _asksally = false;
+
+        //PROPERTY asksally
+        public bool asksally {
+                get {
+                        ///PROPERTY_GETTER_START asksally
+                        return _asksally;
+                        ///PROPERTY_GETTER_END asksally
+                }
+                set {
+                        ///PROPERTY_SETTER_START asksally
+                        _asksally = value;
+                        ///PROPERTY_SETTER_END asksally
+                }
+        }
+
+        //PROPERTY _change
+        private bool _change = false;
+
+        //PROPERTY change
+        public bool change {
+                get {
+                        ///PROPERTY_GETTER_START change
+                        return _change;
+                        ///PROPERTY_GETTER_END change
+                }
+                set {
+                        ///PROPERTY_SETTER_START change
+                        _change = value;
+                        ///PROPERTY_SETTER_END change
+                }
+        }
+
+        //PROPERTY _cold
+        private bool _cold = false;
+
+        //PROPERTY cold
+        public bool cold {
+                get {
+                        ///PROPERTY_GETTER_START cold
+                        return _cold;
+                        ///PROPERTY_GETTER_END cold
+                }
+                set {
+                        ///PROPERTY_SETTER_START cold
+                        _cold = value;
+                        ///PROPERTY_SETTER_END cold
+                }
+        }
+
+        //PROPERTY _granddaddy
+        private bool _granddaddy = false;
+
+        //PROPERTY granddaddy
+        public bool granddaddy {
+                get {
+                        ///PROPERTY_GETTER_START granddaddy
+                        return _granddaddy;
+                        ///PROPERTY_GETTER_END granddaddy
+                }
+                set {
+                        ///PROPERTY_SETTER_START granddaddy
+                        _granddaddy = value;
+                        ///PROPERTY_SETTER_END granddaddy
+                }
+        }
+
+        //PROPERTY _heat
+        private bool _heat = false;
+
+        //PROPERTY heat
+        public bool heat {
+                get {
+                        ///PROPERTY_GETTER_START heat
+                        return _heat;
+                        ///PROPERTY_GETTER_END heat
+                }
+                set {
+                        ///PROPERTY_SETTER_START heat
+                        _heat = value;
+                        ///PROPERTY_SETTER_END heat
+                }
+        }
+
+        //PROPERTY _job
+        private bool _job = false;
+
+        //PROPERTY job
+        public bool job {
+                get {
+                        ///PROPERTY_GETTER_START job
+                        return _job;
+                        ///PROPERTY_GETTER_END job
+                }
+                set {
+                        ///PROPERTY_SETTER_START job
+                        _job = value;
+                        ///PROPERTY_SETTER_END job
+                }
+        }
+
+        //PROPERTY _n25
+        private bool _n25 = false;
+
+        //PROPERTY n25
+        public bool n25 {
+                get {
+                        ///PROPERTY_GETTER_START n25
+                        return _n25;
+                        ///PROPERTY_GETTER_END n25
+                }
+                set {
+                        ///PROPERTY_SETTER_START n25
+                        _n25 = value;
+                        ///PROPERTY_SETTER_END n25
+                }
+        }
+
+        //PROPERTY _n26b
+        private bool _n26b = false;
+
+        //PROPERTY n26b
+        public bool n26b {
+                get {
+                        ///PROPERTY_GETTER_START n26b
+                        return _n26b;
+                        ///PROPERTY_GETTER_END n26b
+                }
+                set {
+                        ///PROPERTY_SETTER_START n26b
+                        _n26b = value;
+                        ///PROPERTY_SETTER_END n26b
+                }
+        }
+
+        //PROPERTY _sallyalt
+        private bool _sallyalt = false;
+
+        //PROPERTY sallyalt
+        public bool sallyalt {
+                get {
+                        ///PROPERTY_GETTER_START sallyalt
+                        return _sallyalt;
+                        ///PROPERTY_GETTER_END sallyalt
+                }
+                set {
+                        ///PROPERTY_SETTER_START sallyalt
+                        _sallyalt = value;
+                        ///PROPERTY_SETTER_END sallyalt
+                }
+        }
+
+        //PROPERTY _UNIA
+        private bool _UNIA = false;
+
+        //PROPERTY UNIA
+        public bool UNIA {
+                get {
+                        ///PROPERTY_GETTER_START UNIA
+                        return _UNIA;
+                        ///PROPERTY_GETTER_END UNIA
+                }
+                set {
+                        ///PROPERTY_SETTER_START UNIA
+                        _UNIA = value;
+                        ///PROPERTY_SETTER_END UNIA
+                }
+        }
+
+        //PROPERTY _whitefolks
+        private bool _whitefolks = false;
+
+        //PROPERTY whitefolks
+        public bool whitefolks {
+                get {
+                        ///PROPERTY_GETTER_START whitefolks
+                        return _whitefolks;
+                        ///PROPERTY_GETTER_END whitefolks
+                }
+                set {
+                        ///PROPERTY_SETTER_START whitefolks
+                        _whitefolks = value;
+                        ///PROPERTY_SETTER_END whitefolks
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -755,6 +941,7 @@ public class Dialog_p0_rob_sal_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n25 0 n27
         response.NextNodeId = "n27";
+        response.OnSelect(n25_r0_select);
         
         ///RESPONSE n25 1
         response = node.AddResponse();
@@ -1226,7 +1413,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n03_p1_condition (  ) {
         ///METHOD_BODY_START n03_p1_condition
         /*//heat*/
-        return true;
+        return DialogGameFlags.heat;
         ///METHOD_BODY_END n03_p1_condition
     }
 
@@ -1234,7 +1421,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n05_p1_condition (  ) {
         ///METHOD_BODY_START n05_p1_condition
         /*//cold*/
-        return true;
+        return DialogGameFlags.cold;
         ///METHOD_BODY_END n05_p1_condition
     }
 
@@ -1242,7 +1429,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n08_p1_condition (  ) {
         ///METHOD_BODY_START n08_p1_condition
         /*//white folks*/
-        return true;
+        return DialogGameFlags.whitefolks;
         ///METHOD_BODY_END n08_p1_condition
     }
 
@@ -1250,7 +1437,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n13_p1_condition (  ) {
         ///METHOD_BODY_START n13_p1_condition
         /*//job*/
-        return true;
+        return DialogGameFlags.job;
         ///METHOD_BODY_END n13_p1_condition
     }
 
@@ -1258,7 +1445,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n25_p1_condition (  ) {
         ///METHOD_BODY_START n25_p1_condition
         /*//granddaddy*/
-        return true;
+        return DialogGameFlags.granddaddy;
         ///METHOD_BODY_END n25_p1_condition
     }
 
@@ -1266,7 +1453,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n27_p0_condition (  ) {
         ///METHOD_BODY_START n27_p0_condition
         /*//from n25 or //n26b*/
-        return true;
+        return DialogGameFlags.n26b || DialogGameFlags.n25;
         ///METHOD_BODY_END n27_p0_condition
     }
 
@@ -1282,7 +1469,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n27_p2_condition (  ) {
         ///METHOD_BODY_START n27_p2_condition
         /*//change*/
-        return true;
+        return DialogGameFlags.change;
         ///METHOD_BODY_END n27_p2_condition
     }
 
@@ -1290,7 +1477,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n29_p1_condition (  ) {
         ///METHOD_BODY_START n29_p1_condition
         /*//ask Sally*/
-        return true;
+        return DialogGameFlags.asksally;
         ///METHOD_BODY_END n29_p1_condition
     }
 
@@ -1298,7 +1485,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n30_p1_condition (  ) {
         ///METHOD_BODY_START n30_p1_condition
         /*//from n29b*/
-        return true;
+        return Actions.FromNode("n29b");
         ///METHOD_BODY_END n30_p1_condition
     }
 
@@ -1306,7 +1493,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n24_r2_condition (  ) {
         ///METHOD_BODY_START n24_r2_condition
         /*//If UNIA (?)*/
-        return true;
+        return DialogGameFlags.UNIA;
         ///METHOD_BODY_END n24_r2_condition
     }
 
@@ -1322,7 +1509,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n27_r1_condition (  ) {
         ///METHOD_BODY_START n27_r1_condition
         /*//change*/
-        return true;
+        return DialogGameFlags.change;
         ///METHOD_BODY_END n27_r1_condition
     }
 
@@ -1330,7 +1517,7 @@ public class Dialog_p0_rob_sal_001 {
     public bool n27_r2_condition (  ) {
         ///METHOD_BODY_START n27_r2_condition
         /*//from n25 or //n26b*/
-        return true;
+        return DialogGameFlags.n26b || DialogGameFlags.n25;
         ///METHOD_BODY_END n27_r2_condition
     }
 
@@ -1339,6 +1526,7 @@ public class Dialog_p0_rob_sal_001 {
         ///METHOD_BODY_START n31_r0_condition
         /*//If chose bus route artifact from grandfather*/
         return true;
+        //TODO
         ///METHOD_BODY_END n31_r0_condition
     }
 
@@ -1346,6 +1534,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n02_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r1_select
         /*//heat*/
+        DialogGameFlags.heat = true;
         ///METHOD_BODY_END n02_r1_select
     }
 
@@ -1353,6 +1542,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n04_r3_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r3_select
         /*//cold*/
+        DialogGameFlags.cold = true;
         ///METHOD_BODY_END n04_r3_select
     }
 
@@ -1360,6 +1550,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n07_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r2_select
         /*//white folks*/
+        DialogGameFlags.whitefolks = true;
         ///METHOD_BODY_END n07_r2_select
     }
 
@@ -1367,6 +1558,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n11_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r1_select
         /*//job*/
+        DialogGameFlags.job = true;
         ///METHOD_BODY_END n11_r1_select
     }
 
@@ -1374,6 +1566,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n23_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n23_r0_select
         /*//Sally alt*/
+        DialogGameFlags.sallyalt = true;
         ///METHOD_BODY_END n23_r0_select
     }
 
@@ -1381,13 +1574,22 @@ public class Dialog_p0_rob_sal_001 {
     public void n24_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n24_r2_select
         /*//granddaddy*/
+        DialogGameFlags.granddaddy = true;
         ///METHOD_BODY_END n24_r2_select
+    }
+
+    ///METHOD n25_r0_select
+    public void n25_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n25_r0_select
+        DialogGameFlags.n25 = true;
+        ///METHOD_BODY_END n25_r0_select
     }
 
     ///METHOD n26b_r1_select
     public void n26b_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n26b_r1_select
         /*//change*/
+        DialogGameFlags.change = true;
         ///METHOD_BODY_END n26b_r1_select
     }
 
@@ -1395,6 +1597,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n26d_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n26d_r0_select
         /*>>> see JET article excerpt*/
+        //TODO
         ///METHOD_BODY_END n26d_r0_select
     }
 
@@ -1402,6 +1605,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n26d_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n26d_r1_select
         /*//n26b*/
+        DialogGameFlags.n26b = true;
         ///METHOD_BODY_END n26d_r1_select
     }
 
@@ -1409,6 +1613,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n27_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n27_r0_select
         /*//ask Sally*/
+        DialogGameFlags.asksally = true;
         ///METHOD_BODY_END n27_r0_select
     }
 
@@ -1416,6 +1621,7 @@ public class Dialog_p0_rob_sal_001 {
     public void n31_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n31_r2_select
         /*//change*/
+        DialogGameFlags.change = true;
         ///METHOD_BODY_END n31_r2_select
     }
 }

@@ -1,6 +1,6 @@
 //CLASS DialogIds
 partial class DialogIds {
-    //PROPERTY P4_CHOICE1
-    public const string P4_CHOICE1 = "p4_choice1";
+    //PROPERTY P1_DRESS_FIX
+    public const string P1_DRESS_FIX = "p1_dress_fix";
 }
 //CLASS_END DialogIds
