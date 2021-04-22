@@ -90,8 +90,8 @@ public class Dialog_p1_est_001 {
         ///NODE_VISUAL_DATA~|||~n02~|||~
         ///PROMPT n02 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n02 0 You might get Miss Sarah to talk to Mr. Otis and have him let up on your day's work.
-        prompt.Text = "You might get Miss Sarah to talk to Mr. Otis and have him let up on your day's work.";
+        ///PROMPT_TEXT n02 0 You might get Miss Sarah to talk to Mr. Otis and have him let up on your day's work.\n
+        prompt.Text = "You might get Miss Sarah to talk to Mr. Otis and have him let up on your day's work.\n";
         ///PROMPT_IGNORE_VO n02 0 false
         prompt.IgnoreVO = false;
         

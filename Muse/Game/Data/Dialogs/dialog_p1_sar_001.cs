@@ -767,8 +767,8 @@ public class Dialog_p1_sar_001 {
         ///NODE_VISUAL_DATA~|||~n18~|||~
         ///PROMPT n18 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n18 0 Teaching slaves only causes trouble. I certainly don't see any use in it.  Why, it doesn't help you do the wash better, does it?
-        prompt.Text = "Teaching slaves only causes trouble. I certainly don't see any use in it.  Why, it doesn't help you do the wash better, does it?";
+        ///PROMPT_TEXT n18 0 Teaching slaves only causes trouble. I certainly don't see any use in it.  Why, it doesn't help you do the wash better, does it?\n
+        prompt.Text = "Teaching slaves only causes trouble. I certainly don't see any use in it.  Why, it doesn't help you do the wash better, does it?\n";
         ///PROMPT_IGNORE_VO n18 0 false
         prompt.IgnoreVO = false;
         
@@ -997,8 +997,8 @@ public class Dialog_p1_sar_001 {
         ///NODE_VISUAL_DATA~|||~n25~|||~
         ///PROMPT n25 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n25 0 I'll tell you what. You do a good job on my dress and don't say a word to Mother and I'll let you have that old book while we're away.
-        prompt.Text = "I'll tell you what. You do a good job on my dress and don't say a word to Mother and I'll let you have that old book while we're away.";
+        ///PROMPT_TEXT n25 0 I'll tell you what. You do a good job on my dress and don't say a word to Mother and I'll let you have that old book while we're away.\n
+        prompt.Text = "I'll tell you what. You do a good job on my dress and don't say a word to Mother and I'll let you have that old book while we're away.\n";
         ///PROMPT_IGNORE_VO n25 0 false
         prompt.IgnoreVO = false;
         prompt.OnShow(n25_p0_show);

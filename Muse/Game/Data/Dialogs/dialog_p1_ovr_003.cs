@@ -54,8 +54,8 @@ public class Dialog_p1_ovr_003 {
         ///NODE_VISUAL_DATA~|||~n01~|||~
         ///PROMPT n01 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n01 0 Did you think you could get away with burning your Master's property?
-        prompt.Text = "Did you think you could get away with burning your Master's property?";
+        ///PROMPT_TEXT n01 0 Did you think you could get away with burning your Master's property?\n
+        prompt.Text = "Did you think you could get away with burning your Master's property?\n";
         ///PROMPT_IGNORE_VO n01 0 false
         prompt.IgnoreVO = false;
         

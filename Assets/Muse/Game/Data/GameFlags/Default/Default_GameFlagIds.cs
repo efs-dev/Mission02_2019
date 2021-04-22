@@ -86,5 +86,8 @@ public static partial class GameFlagIds {
 
     //PROPERTY P1HasPrimer
     public static string P1HasPrimer = "P1HasPrimer";
+
+    //PROPERTY P1HasInvitation
+    public static string P1HasInvitation = "P1HasInvitation";
 }
 //CLASS_END GameFlagIds

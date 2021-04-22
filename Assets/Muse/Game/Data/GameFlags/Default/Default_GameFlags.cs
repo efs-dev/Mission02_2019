@@ -60,6 +60,8 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P1PrimerReturn 
 //USING
 ///GAMEFLAG_FOLDER P1HasPrimer 
+//USING
+///GAMEFLAG_FOLDER P1HasInvitation 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -610,6 +612,25 @@ GameFlagChanged("P1PrimerReturn", oldValue, value);
 _P1HasPrimer = value;
 GameFlagChanged("P1HasPrimer", oldValue, value);
             ///PROPERTY_SETTER_END P1HasPrimer
+        }
+    }
+
+    //PROPERTY _P1HasInvitation
+    private static bool _P1HasInvitation = false;
+
+    //PROPERTY P1HasInvitation
+    public static bool P1HasInvitation {
+        get {
+            ///PROPERTY_GETTER_START P1HasInvitation
+            return _P1HasInvitation;
+            ///PROPERTY_GETTER_END P1HasInvitation
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasInvitation
+            var oldValue = value;
+_P1HasInvitation = value;
+GameFlagChanged("P1HasInvitation", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasInvitation
         }
     }
 }

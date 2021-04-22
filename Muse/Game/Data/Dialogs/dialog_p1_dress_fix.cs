@@ -778,7 +778,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_p0_condition (  ) {
         ///METHOD_BODY_START n03_p0_condition
         /*//if( ?p1_neckline )*/
-        return true;
+        return DialogGameFlags.p1_neckline;
         ///METHOD_BODY_END n03_p0_condition
     }
 
@@ -786,7 +786,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_p1_condition (  ) {
         ///METHOD_BODY_START n03_p1_condition
         /*//if( ?p1_sloppy )*/
-        return true;
+        return DialogGameFlags.p1_sloppy;
         ///METHOD_BODY_END n03_p1_condition
     }
 
@@ -794,7 +794,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_p2_condition (  ) {
         ///METHOD_BODY_START n03_p2_condition
         /*//if( ?p1_rest )*/
-        return true;
+        return DialogGameFlags.p1_rest;
         ///METHOD_BODY_END n03_p2_condition
     }
 
@@ -802,7 +802,7 @@ public class Dialog_p1_dress_fix {
     public bool n05_p0_condition (  ) {
         ///METHOD_BODY_START n05_p0_condition
         /*//if( #p1_sar_task_count = 2 )*/
-        return true;
+        return DialogGameFlags.p1_sar_task_count == 2;
         ///METHOD_BODY_END n05_p0_condition
     }
 
@@ -810,7 +810,7 @@ public class Dialog_p1_dress_fix {
     public bool n05_p1_condition (  ) {
         ///METHOD_BODY_START n05_p1_condition
         /*//if( #p1_sar_task_count = 1 )*/
-        return true;
+        return DialogGameFlags.p1_sar_task_count == 1;
         ///METHOD_BODY_END n05_p1_condition
     }
 
@@ -818,7 +818,7 @@ public class Dialog_p1_dress_fix {
     public bool n10_p0_condition (  ) {
         ///METHOD_BODY_START n10_p0_condition
         /*//if( #p1_sar_task_2 = 3 )*/
-        return true;
+        return DialogGameFlags.p1_sar_task_2 == 3;
         ///METHOD_BODY_END n10_p0_condition
     }
 
@@ -826,7 +826,7 @@ public class Dialog_p1_dress_fix {
     public bool n10_p1_condition (  ) {
         ///METHOD_BODY_START n10_p1_condition
         /*//if( #p1_sar_task_2 = 1 )*/
-        return true;
+        return DialogGameFlags.p1_sar_task_2 == 1;
         ///METHOD_BODY_END n10_p1_condition
     }
 
@@ -834,7 +834,7 @@ public class Dialog_p1_dress_fix {
     public bool n10_p2_condition (  ) {
         ///METHOD_BODY_START n10_p2_condition
         /*//if( #p1_sar_task_2 = 2 )*/
-        return true;
+        return DialogGameFlags.p1_sar_task_2 == 2;
         ///METHOD_BODY_END n10_p2_condition
     }
 
@@ -867,6 +867,7 @@ public class Dialog_p1_dress_fix {
     public void n03_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n03_p0_show
         /*// #p1_sar_task_count = 2*/
+        DialogGameFlags.p1_sar_task_count = 2;
         ///METHOD_BODY_END n03_p0_show
     }
 
@@ -874,6 +875,7 @@ public class Dialog_p1_dress_fix {
     public void n03_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n03_p1_show
         /*// #p1_sar_task_count = 2*/
+        DialogGameFlags.p1_sar_task_count = 2;
         ///METHOD_BODY_END n03_p1_show
     }
 
@@ -881,6 +883,7 @@ public class Dialog_p1_dress_fix {
     public void n03_p2_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n03_p2_show
         /*// #p1_sar_task_count = 2*/
+        DialogGameFlags.p1_sar_task_count = 2;
         ///METHOD_BODY_END n03_p2_show
     }
 
@@ -975,7 +978,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
         /*//if( (?p1_sloppy = false) AND (?p1_neckline = false) )*/
-        return true;
+        return GameFlags.P1DressQuality == 2;
         ///METHOD_BODY_END n03_r0_condition
     }
 
@@ -983,7 +986,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
         /*//if( (?p1_neckline = false) AND (?p1_sloppy = false) )*/
-        return true;
+        return GameFlags.P1HasPrimer;
         ///METHOD_BODY_END n03_r1_condition
     }
 
@@ -991,7 +994,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_r2_condition (  ) {
         ///METHOD_BODY_START n03_r2_condition
         /*//if( ?p1_mag = false )*/
-        return true;
+        return DialogGameFlags.p1_rest;
         ///METHOD_BODY_END n03_r2_condition
     }
 
@@ -999,7 +1002,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_r3_condition (  ) {
         ///METHOD_BODY_START n03_r3_condition
         /*//if( ?p1_rest = false)*/
-        return true;
+        return !DialogGameFlags.p1_rest;
         ///METHOD_BODY_END n03_r3_condition
     }
 
@@ -1007,7 +1010,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_r4_condition (  ) {
         ///METHOD_BODY_START n03_r4_condition
         /*//if( ?p1_rest )*/
-        return true;
+        return !DialogGameFlags.p1_mag;
         ///METHOD_BODY_END n03_r4_condition
     }
 
@@ -1015,7 +1018,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_r5_condition (  ) {
         ///METHOD_BODY_START n03_r5_condition
         /*//if( hasItem("PRIMER") )*/
-        return true;
+        return !DialogGameFlags.p1_sloppy && !DialogGameFlags.p1_neckline;
         ///METHOD_BODY_END n03_r5_condition
     }
 
@@ -1023,7 +1026,7 @@ public class Dialog_p1_dress_fix {
     public bool n03_r6_condition (  ) {
         ///METHOD_BODY_START n03_r6_condition
         /*//if( #dress_quality = 2 )*/
-        return true;
+        return !DialogGameFlags.p1_sloppy && !DialogGameFlags.p1_neckline;
         ///METHOD_BODY_END n03_r6_condition
     }
 
@@ -1031,7 +1034,7 @@ public class Dialog_p1_dress_fix {
     public bool n05_r0_condition (  ) {
         ///METHOD_BODY_START n05_r0_condition
         /*//if( (?p1_sloppy = false) AND ( #p1_sar_task_count = 1) )*/
-        return true;
+        return DialogGameFlags.p1_sar_task_count == 2;
         ///METHOD_BODY_END n05_r0_condition
     }
 
@@ -1039,7 +1042,7 @@ public class Dialog_p1_dress_fix {
     public bool n05_r1_condition (  ) {
         ///METHOD_BODY_START n05_r1_condition
         /*//if( (?p1_neckline = false) AND ( #p1_sar_task_count = 1) )*/
-        return true;
+        return !DialogGameFlags.p1_rest && DialogGameFlags.p1_sar_task_count == 1;
         ///METHOD_BODY_END n05_r1_condition
     }
 
@@ -1055,7 +1058,7 @@ public class Dialog_p1_dress_fix {
     public bool n05_r3_condition (  ) {
         ///METHOD_BODY_START n05_r3_condition
         /*//if( #p1_sar_task_count = 2)*/
-        return true;
+        return DialogGameFlags.p1_sar_task_count == 1 && !DialogGameFlags.p1_sloppy;
         ///METHOD_BODY_END n05_r3_condition
     }
 
@@ -1063,7 +1066,7 @@ public class Dialog_p1_dress_fix {
     public bool n11_r0_condition (  ) {
         ///METHOD_BODY_START n11_r0_condition
         /*//if( (?p1_sloppy = false) AND (?p1_neckline = false) )*/
-        return true;
+        return DialogGameFlags.p1_rest;
         ///METHOD_BODY_END n11_r0_condition
     }
 
@@ -1071,7 +1074,7 @@ public class Dialog_p1_dress_fix {
     public bool n11_r1_condition (  ) {
         ///METHOD_BODY_START n11_r1_condition
         /*//if( (?p1_sloppy = false) AND (?p1_neckline = false) )*/
-        return true;
+        return !DialogGameFlags.p1_rest;
         ///METHOD_BODY_END n11_r1_condition
     }
 
@@ -1079,7 +1082,7 @@ public class Dialog_p1_dress_fix {
     public bool n11_r2_condition (  ) {
         ///METHOD_BODY_START n11_r2_condition
         /*//if( ?p1_mag = false )*/
-        return true;
+        return !DialogGameFlags.p1_mag;
         ///METHOD_BODY_END n11_r2_condition
     }
 
@@ -1087,7 +1090,7 @@ public class Dialog_p1_dress_fix {
     public bool n11_r3_condition (  ) {
         ///METHOD_BODY_START n11_r3_condition
         /*//if( ?p1_rest = false )*/
-        return true;
+        return !DialogGameFlags.p1_sloppy && !DialogGameFlags.p1_neckline;
         ///METHOD_BODY_END n11_r3_condition
     }
 
@@ -1095,7 +1098,7 @@ public class Dialog_p1_dress_fix {
     public bool n11_r4_condition (  ) {
         ///METHOD_BODY_START n11_r4_condition
         /*//if(?p1_rest = true )*/
-        return true;
+        return !DialogGameFlags.p1_sloppy && !DialogGameFlags.p1_neckline;
         ///METHOD_BODY_END n11_r4_condition
     }
 
@@ -1226,6 +1229,7 @@ public class Dialog_p1_dress_fix {
         /*//#p1_sar_task_2 = 1
         //?dress_finished = true
         //#dress_quality = 1*/
+        GameFlags.P1DressQuality = 2;
         ///METHOD_BODY_END n03_r0_select
     }
 
@@ -1235,6 +1239,7 @@ public class Dialog_p1_dress_fix {
         /*//#p1_sar_task_2 = 3
         //?dress_finished = true
         //#dress_quality = 2*/
+        GameFlags.P1PrimerReturn = true;
         ///METHOD_BODY_END n03_r1_select
     }
 
@@ -1242,6 +1247,7 @@ public class Dialog_p1_dress_fix {
     public void n03_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r2_select
         /*//#p1_sar_task_2 = 4*/
+        DialogGameFlags.p1_sar_task_2 = 2;
         ///METHOD_BODY_END n03_r2_select
     }
 
@@ -1249,6 +1255,7 @@ public class Dialog_p1_dress_fix {
     public void n03_r3_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r3_select
         /*//#p1_sar_task_2 = 2*/
+        DialogGameFlags.p1_sar_task_2 = 2;
         ///METHOD_BODY_END n03_r3_select
     }
 
@@ -1256,6 +1263,7 @@ public class Dialog_p1_dress_fix {
     public void n03_r4_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r4_select
         /*//#p1_sar_task_2 = 2*/
+        DialogGameFlags.p1_sar_task_2 = 4;
         ///METHOD_BODY_END n03_r4_select
     }
 
@@ -1263,6 +1271,9 @@ public class Dialog_p1_dress_fix {
     public void n03_r5_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r5_select
         /*//?primer_return = true*/
+        DialogGameFlags.p1_sar_task_2 = 3;
+        GameFlags.P1DressFinished = true;
+        GameFlags.P1DressQuality = 2;
         ///METHOD_BODY_END n03_r5_select
     }
 
@@ -1270,6 +1281,9 @@ public class Dialog_p1_dress_fix {
     public void n03_r6_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r6_select
         /*//#dress_quality = 3*/
+        DialogGameFlags.p1_sar_task_2 = 1;
+        GameFlags.P1DressFinished = true;
+        GameFlags.P1DressQuality = 1;
         ///METHOD_BODY_END n03_r6_select
     }
 
@@ -1277,6 +1291,7 @@ public class Dialog_p1_dress_fix {
     public void n04_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r0_select
         /*//			addItem("INVITATION")			*/
+        GameFlags.P1HasInvitation = true;
         ///METHOD_BODY_END n04_r0_select
     }
 
@@ -1297,6 +1312,7 @@ public class Dialog_p1_dress_fix {
         //#p1_sar_task_2 = 3
         //?dress_finished = true
         //#dress_quality = 2*/
+        DialogGameFlags.p1_sar_task_2 = 2;
         ///METHOD_BODY_END n05_r1_select
     }
 
@@ -1305,6 +1321,9 @@ public class Dialog_p1_dress_fix {
         ///METHOD_BODY_START n05_r2_select
         /*//setLayer("fg", "")
         //#p1_sar_task_2 = 2*/
+        DialogGameFlags.p1_sar_task_2 = 3;
+        GameFlags.P1DressFinished = true;
+        GameFlags.P1DressQuality = 2;
         ///METHOD_BODY_END n05_r2_select
     }
 
@@ -1312,6 +1331,9 @@ public class Dialog_p1_dress_fix {
     public void n05_r3_select ( DialogResponse response ) {
         ///METHOD_BODY_START n05_r3_select
         /*//setLayer("fg", "")*/
+        DialogGameFlags.p1_sar_task_2 =1;
+        GameFlags.P1DressFinished = true;
+        GameFlags.P1DressQuality = 1;
         ///METHOD_BODY_END n05_r3_select
     }
 
@@ -1319,6 +1341,7 @@ public class Dialog_p1_dress_fix {
     public void n07_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r0_select
         /*//?dress_packed = false*/
+        GameFlags.P1DressPacked = true;
         ///METHOD_BODY_END n07_r0_select
     }
 
@@ -1326,6 +1349,7 @@ public class Dialog_p1_dress_fix {
     public void n07_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r1_select
         /*//?dress_packed = true*/
+        GameFlags.P1DressPacked = false;
         ///METHOD_BODY_END n07_r1_select
     }
 
@@ -1335,6 +1359,7 @@ public class Dialog_p1_dress_fix {
         /*//#p1_sar_task_2 = 1
         //?dress_finished = true
         //#dress_quality = 1*/
+        DialogGameFlags.p1_sar_task_2 = 2;
         ///METHOD_BODY_END n11_r0_select
     }
 
@@ -1344,6 +1369,7 @@ public class Dialog_p1_dress_fix {
         /*//#p1_sar_task_2 = 3
         //?dress_finished = true
         //#dress_quality = 2*/
+        DialogGameFlags.p1_sar_task_2 = 2;
         ///METHOD_BODY_END n11_r1_select
     }
 
@@ -1351,6 +1377,7 @@ public class Dialog_p1_dress_fix {
     public void n11_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r2_select
         /*//#p1_sar_task_2 = 4*/
+        DialogGameFlags.p1_sar_task_2 = 4;
         ///METHOD_BODY_END n11_r2_select
     }
 
@@ -1358,6 +1385,9 @@ public class Dialog_p1_dress_fix {
     public void n11_r3_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r3_select
         /*//#p1_sar_task_2 = 2*/
+        DialogGameFlags.p1_sar_task_2 = 3;
+        GameFlags.P1DressQuality = 2;
+        GameFlags.P1DressFinished = true;
         ///METHOD_BODY_END n11_r3_select
     }
 
@@ -1365,6 +1395,9 @@ public class Dialog_p1_dress_fix {
     public void n11_r4_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r4_select
         /*//#p1_sar_task_2 = 2*/
+        DialogGameFlags.p1_sar_task_2 = 1;
+        GameFlags.P1DressFinished = true;
+        GameFlags.P1DressQuality = 1;
         ///METHOD_BODY_END n11_r4_select
     }
 }
