@@ -85,7 +85,7 @@ public class Dialog_p2_for_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 
         response.NextNodeId = "";
-        response.OnSelect(n01_r1_select);
+        response.OnSelect(n01_r2_select);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -178,7 +178,7 @@ public class Dialog_p2_for_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID SNEAK 0 CAUGHT
         response.NextNodeId = "CAUGHT";
-        response.SetCondition(SNEAK_r1_condition);
+        response.SetCondition(SNEAK_r0_condition);
         
         ///RESPONSE SNEAK 1
         response = node.AddResponse();
@@ -188,7 +188,7 @@ public class Dialog_p2_for_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID SNEAK 1 SPLITUP
         response.NextNodeId = "SPLITUP";
-        response.SetCondition(SNEAK_r0_condition);
+        response.SetCondition(SNEAK_r1_condition);
         
         ///NODE_END SNEAK
         ///NODE_START CAUGHT
@@ -251,32 +251,32 @@ public class Dialog_p2_for_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD SNEAK_r1_condition
-    public bool SNEAK_r1_condition (  ) {
-        ///METHOD_BODY_START SNEAK_r1_condition
-        /*// if($escape_type = "alone") */
-        return true;
-        ///METHOD_BODY_END SNEAK_r1_condition
-    }
-
     ///METHOD SNEAK_r0_condition
     public bool SNEAK_r0_condition (  ) {
         ///METHOD_BODY_START SNEAK_r0_condition
-        /*// if($escape_type = "henry") */
+        /*// if($escape_type = "alone") */
         return true;
         ///METHOD_BODY_END SNEAK_r0_condition
     }
 
-    ///METHOD n01_r1_select
-    public void n01_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r1_select
+    ///METHOD SNEAK_r1_condition
+    public bool SNEAK_r1_condition (  ) {
+        ///METHOD_BODY_START SNEAK_r1_condition
+        /*// if($escape_type = "henry") */
+        return true;
+        ///METHOD_BODY_END SNEAK_r1_condition
+    }
+
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
         /*//				#rand = random(100)
         //				if( #rand < 30 )
         //					$next_node = "SNEAK"
         //				else
         //					$next_node = "MADEIT"
         //				/if*/
-        ///METHOD_BODY_END n01_r1_select
+        ///METHOD_BODY_END n01_r2_select
     }
 
     ///METHOD MADEIT_r0_select

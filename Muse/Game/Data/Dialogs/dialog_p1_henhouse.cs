@@ -67,7 +67,7 @@ public class Dialog_p1_henhouse {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n02
         response.NextNodeId = "n02";
-        response.OnSelect(n01_r3_select);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -77,7 +77,7 @@ public class Dialog_p1_henhouse {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n02
         response.NextNodeId = "n02";
-        response.OnSelect(n01_r2_select);
+        response.OnSelect(n01_r1_select);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -87,7 +87,7 @@ public class Dialog_p1_henhouse {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 n02
         response.NextNodeId = "n02";
-        response.OnSelect(n01_r1_select);
+        response.OnSelect(n01_r2_select);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -97,7 +97,7 @@ public class Dialog_p1_henhouse {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 n02
         response.NextNodeId = "n02";
-        response.OnSelect(n01_r0_select);
+        response.OnSelect(n01_r3_select);
         
         ///NODE_END n01
         ///NODE_START n02
@@ -139,9 +139,9 @@ public class Dialog_p1_henhouse {
         ///METHOD_BODY_END n02_p0_show
     }
 
-    ///METHOD n01_r3_select
-    public void n01_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r3_select
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
         /*//#egg_code = 4
         //#p1_total_tasks= #p1_total_tasks+2
         //#ptasks_complete= #ptasks_complete+1
@@ -149,27 +149,14 @@ public class Dialog_p1_henhouse {
         //	overlayPopup("resisted_popup")
         ///if
         //#res_points = #res_points + 2*/
-        ///METHOD_BODY_END n01_r3_select
-    }
-
-    ///METHOD n01_r2_select
-    public void n01_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r2_select
-        /*//#egg_code = 3
-        //#p1_total_tasks= #p1_total_tasks+2
-        //#ptasks_complete= #ptasks_complete+1
-        //if(  hasBadge("BADGE_RESISTANCE") = false )
-        //	overlayPopup("resisted_popup")
-        ///if
-        //#res_points = #res_points + 1*/
-        ///METHOD_BODY_END n01_r2_select
+        ///METHOD_BODY_END n01_r0_select
     }
 
     ///METHOD n01_r1_select
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
-        /*//#egg_code = 2
-        //#p1_total_tasks= #p1_total_tasks+3
+        /*//#egg_code = 3
+        //#p1_total_tasks= #p1_total_tasks+2
         //#ptasks_complete= #ptasks_complete+1
         //if(  hasBadge("BADGE_RESISTANCE") = false )
         //	overlayPopup("resisted_popup")
@@ -178,13 +165,26 @@ public class Dialog_p1_henhouse {
         ///METHOD_BODY_END n01_r1_select
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
+        /*//#egg_code = 2
+        //#p1_total_tasks= #p1_total_tasks+3
+        //#ptasks_complete= #ptasks_complete+1
+        //if(  hasBadge("BADGE_RESISTANCE") = false )
+        //	overlayPopup("resisted_popup")
+        ///if
+        //#res_points = #res_points + 1*/
+        ///METHOD_BODY_END n01_r2_select
+    }
+
+    ///METHOD n01_r3_select
+    public void n01_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_select
         /*//#egg_code = 1
         //#p1_total_tasks= #p1_total_tasks+2
         //#ptasks_complete= #ptasks_complete+1*/
-        ///METHOD_BODY_END n01_r0_select
+        ///METHOD_BODY_END n01_r3_select
     }
 }
 //CLASS_END Dialog_p1_henhouse

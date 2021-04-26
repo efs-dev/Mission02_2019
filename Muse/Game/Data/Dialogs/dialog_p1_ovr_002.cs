@@ -67,7 +67,7 @@ public class Dialog_p1_ovr_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n01_r4_condition);
+        response.SetCondition(n01_r0_condition);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -77,7 +77,7 @@ public class Dialog_p1_ovr_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n01_r3_condition);
+        response.SetCondition(n01_r1_condition);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -97,7 +97,7 @@ public class Dialog_p1_ovr_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 n03
         response.NextNodeId = "n03";
-        response.SetCondition(n01_r1_condition);
+        response.SetCondition(n01_r3_condition);
         
         ///RESPONSE n01 4
         response = node.AddResponse();
@@ -107,7 +107,7 @@ public class Dialog_p1_ovr_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 4 n02
         response.NextNodeId = "n02";
-        response.SetCondition(n01_r0_condition);
+        response.SetCondition(n01_r4_condition);
         
         ///NODE_END n01
         ///NODE_START n02
@@ -338,20 +338,20 @@ public class Dialog_p1_ovr_002 {
         ///METHOD_BODY_END n08_p0_show
     }
 
-    ///METHOD n01_r4_condition
-    public bool n01_r4_condition (  ) {
-        ///METHOD_BODY_START n01_r4_condition
+    ///METHOD n01_r0_condition
+    public bool n01_r0_condition (  ) {
+        ///METHOD_BODY_START n01_r0_condition
         /*//if (?hogs_complete AND (#ptasks_complete= 1))*/
         return true;
-        ///METHOD_BODY_END n01_r4_condition
+        ///METHOD_BODY_END n01_r0_condition
     }
 
-    ///METHOD n01_r3_condition
-    public bool n01_r3_condition (  ) {
-        ///METHOD_BODY_START n01_r3_condition
+    ///METHOD n01_r1_condition
+    public bool n01_r1_condition (  ) {
+        ///METHOD_BODY_START n01_r1_condition
         /*//if (?laundry_complete AND (#ptasks_complete = 1))*/
         return true;
-        ///METHOD_BODY_END n01_r3_condition
+        ///METHOD_BODY_END n01_r1_condition
     }
 
     ///METHOD n01_r2_condition
@@ -362,20 +362,20 @@ public class Dialog_p1_ovr_002 {
         ///METHOD_BODY_END n01_r2_condition
     }
 
-    ///METHOD n01_r1_condition
-    public bool n01_r1_condition (  ) {
-        ///METHOD_BODY_START n01_r1_condition
+    ///METHOD n01_r3_condition
+    public bool n01_r3_condition (  ) {
+        ///METHOD_BODY_START n01_r3_condition
         /*//if (#ptasks_complete = 2)*/
         return true;
-        ///METHOD_BODY_END n01_r1_condition
+        ///METHOD_BODY_END n01_r3_condition
     }
 
-    ///METHOD n01_r0_condition
-    public bool n01_r0_condition (  ) {
-        ///METHOD_BODY_START n01_r0_condition
+    ///METHOD n01_r4_condition
+    public bool n01_r4_condition (  ) {
+        ///METHOD_BODY_START n01_r4_condition
         /*//if (#ptasks_complete = 3)*/
         return true;
-        ///METHOD_BODY_END n01_r0_condition
+        ///METHOD_BODY_END n01_r4_condition
     }
 
     ///METHOD n07_r0_select

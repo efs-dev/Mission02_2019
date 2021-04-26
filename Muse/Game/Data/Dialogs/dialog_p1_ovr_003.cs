@@ -67,7 +67,7 @@ public class Dialog_p1_ovr_003 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n09
         response.NextNodeId = "n09";
-        response.SetCondition(n01_r3_condition);
+        response.SetCondition(n01_r0_condition);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -77,7 +77,7 @@ public class Dialog_p1_ovr_003 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n09
         response.NextNodeId = "n09";
-        response.SetCondition(n01_r2_condition);
+        response.SetCondition(n01_r1_condition);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -330,7 +330,7 @@ public class Dialog_p1_ovr_003 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n08 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n08_r1_select);
+        response.OnSelect(n08_r0_select);
         
         ///RESPONSE n08 1
         response = node.AddResponse();
@@ -409,27 +409,27 @@ public class Dialog_p1_ovr_003 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01_r3_condition
-    public bool n01_r3_condition (  ) {
-        ///METHOD_BODY_START n01_r3_condition
+    ///METHOD n01_r0_condition
+    public bool n01_r0_condition (  ) {
+        ///METHOD_BODY_START n01_r0_condition
         /*//if (#res_points > 7)*/
         return true;
-        ///METHOD_BODY_END n01_r3_condition
+        ///METHOD_BODY_END n01_r0_condition
     }
 
-    ///METHOD n01_r2_condition
-    public bool n01_r2_condition (  ) {
-        ///METHOD_BODY_START n01_r2_condition
+    ///METHOD n01_r1_condition
+    public bool n01_r1_condition (  ) {
+        ///METHOD_BODY_START n01_r1_condition
         /*//if (#res_points < 8)*/
         return true;
-        ///METHOD_BODY_END n01_r2_condition
+        ///METHOD_BODY_END n01_r1_condition
     }
 
-    ///METHOD n08_r1_select
-    public void n08_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n08_r1_select
+    ///METHOD n08_r0_select
+    public void n08_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n08_r0_select
         /*//$next_state = "otis_lose1"*/
-        ///METHOD_BODY_END n08_r1_select
+        ///METHOD_BODY_END n08_r0_select
     }
 }
 //CLASS_END Dialog_p1_ovr_003

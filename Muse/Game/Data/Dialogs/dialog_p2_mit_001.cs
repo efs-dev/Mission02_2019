@@ -76,7 +76,7 @@ public class Dialog_p2_mit_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 STEAL
         response.NextNodeId = "STEAL";
-        response.OnSelect(n01_r2_select);
+        response.OnSelect(n01_r1_select);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -186,7 +186,7 @@ public class Dialog_p2_mit_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID STEAL 1 END
         response.NextNodeId = "END";
-        response.OnSelect(STEAL_r0_select);
+        response.OnSelect(STEAL_r1_select);
         
         ///NODE_END STEAL
         ///NODE_START STEAL_H
@@ -223,20 +223,20 @@ public class Dialog_p2_mit_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID STEAL_H 1 END
         response.NextNodeId = "END";
-        response.OnSelect(STEAL_H_r0_select);
+        response.OnSelect(STEAL_H_r1_select);
         
         ///NODE_END STEAL_H
         return dialog;
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01_r2_select
-    public void n01_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r2_select
+    ///METHOD n01_r1_select
+    public void n01_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r1_select
         /*//				if($escape_type = "henry" )
         //					$next_node = "STEAL_H"
         //				/if			*/
-        ///METHOD_BODY_END n01_r2_select
+        ///METHOD_BODY_END n01_r1_select
     }
 
     ///METHOD CELLAR_r0_select
@@ -246,19 +246,19 @@ public class Dialog_p2_mit_001 {
         ///METHOD_BODY_END CELLAR_r0_select
     }
 
-    ///METHOD STEAL_r0_select
-    public void STEAL_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START STEAL_r0_select
+    ///METHOD STEAL_r1_select
+    public void STEAL_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START STEAL_r1_select
         /*//   $pick_result = "ride" */
-        ///METHOD_BODY_END STEAL_r0_select
+        ///METHOD_BODY_END STEAL_r1_select
     }
 
-    ///METHOD STEAL_H_r0_select
-    public void STEAL_H_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START STEAL_H_r0_select
+    ///METHOD STEAL_H_r1_select
+    public void STEAL_H_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START STEAL_H_r1_select
         /*//				$pick_result = "ride"
         //				killHenry()*/
-        ///METHOD_BODY_END STEAL_H_r0_select
+        ///METHOD_BODY_END STEAL_H_r1_select
     }
 }
 //CLASS_END Dialog_p2_mit_001

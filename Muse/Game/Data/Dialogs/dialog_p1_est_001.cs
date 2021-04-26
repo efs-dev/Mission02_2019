@@ -175,7 +175,7 @@ public class Dialog_p1_est_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 1 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n04_r0_select);
+        response.OnSelect(n04_r1_select);
         
         ///NODE_END n04
         ///NODE_START n05
@@ -209,11 +209,11 @@ public class Dialog_p1_est_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n04_r0_select
-    public void n04_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n04_r0_select
+    ///METHOD n04_r1_select
+    public void n04_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n04_r1_select
         /*//set ?cook_warning = true*/
-        ///METHOD_BODY_END n04_r0_select
+        ///METHOD_BODY_END n04_r1_select
     }
 }
 //CLASS_END Dialog_p1_est_001

@@ -94,7 +94,7 @@ public class Dialog_p2_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 n01a
         response.NextNodeId = "n01a";
-        response.OnSelect(n01_r0_select);
+        response.OnSelect(n01_r3_select);
         
         ///NODE_END n01
         ///NODE_START n01a
@@ -140,8 +140,8 @@ public class Dialog_p2_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01a 2 MAKEIT
         response.NextNodeId = "MAKEIT";
-        response.SetCondition(n01a_r1_condition);
-        response.OnSelect(n01a_r1_select);
+        response.SetCondition(n01a_r2_condition);
+        response.OnSelect(n01a_r2_select);
         
         ///RESPONSE n01a 3
         response = node.AddResponse();
@@ -178,7 +178,7 @@ public class Dialog_p2_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01b 0 
         response.NextNodeId = "";
-        response.OnSelect(n01b_r1_select);
+        response.OnSelect(n01b_r0_select);
         
         ///RESPONSE n01b 1
         response = node.AddResponse();
@@ -188,7 +188,7 @@ public class Dialog_p2_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01b 1 
         response.NextNodeId = "";
-        response.OnSelect(n01b_r0_select);
+        response.OnSelect(n01b_r1_select);
         
         ///NODE_END n01b
         ///NODE_START NIGHTFALL
@@ -398,43 +398,43 @@ public class Dialog_p2_par_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01a_r1_condition
-    public bool n01a_r1_condition (  ) {
-        ///METHOD_BODY_START n01a_r1_condition
+    ///METHOD n01a_r2_condition
+    public bool n01a_r2_condition (  ) {
+        ///METHOD_BODY_START n01a_r2_condition
         /*// if( hasItem("CLOTHES") ) */
         return true;
-        ///METHOD_BODY_END n01a_r1_condition
+        ///METHOD_BODY_END n01a_r2_condition
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
+    ///METHOD n01_r3_select
+    public void n01_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_select
         /*//					overlayPopup("paris_poster")
         //					?has_wanted1 = true*/
-        ///METHOD_BODY_END n01_r0_select
+        ///METHOD_BODY_END n01_r3_select
     }
 
-    ///METHOD n01a_r1_select
-    public void n01a_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01a_r1_select
+    ///METHOD n01a_r2_select
+    public void n01a_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01a_r2_select
         /*//				?p2_disguised = true*/
-        ///METHOD_BODY_END n01a_r1_select
-    }
-
-    ///METHOD n01b_r1_select
-    public void n01b_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01b_r1_select
-        /*//				if( $escape_type = "henry" )
-        //					$next_node = "MARKET_H"
-        //				else
-        //					$next_node = "MARKET"
-        //				/if*/
-        ///METHOD_BODY_END n01b_r1_select
+        ///METHOD_BODY_END n01a_r2_select
     }
 
     ///METHOD n01b_r0_select
     public void n01b_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01b_r0_select
+        /*//				if( $escape_type = "henry" )
+        //					$next_node = "MARKET_H"
+        //				else
+        //					$next_node = "MARKET"
+        //				/if*/
+        ///METHOD_BODY_END n01b_r0_select
+    }
+
+    ///METHOD n01b_r1_select
+    public void n01b_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01b_r1_select
         /*//				#rand = random(100)
         //				// decrease chance
         //				if( $escape_type = "henry" )
@@ -447,7 +447,7 @@ public class Dialog_p2_par_001 {
         //				else
         //					$next_node = "SPOTTED"
         //				/if*/
-        ///METHOD_BODY_END n01b_r0_select
+        ///METHOD_BODY_END n01b_r1_select
     }
 
     ///METHOD CURFEW_r0_select

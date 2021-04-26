@@ -76,7 +76,7 @@ public class Dialog_p2_may_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 STEWARD
         response.NextNodeId = "STEWARD";
-        response.SetCondition(n01_r3_condition);
+        response.SetCondition(n01_r1_condition);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -96,7 +96,7 @@ public class Dialog_p2_may_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 LOOKING
         response.NextNodeId = "LOOKING";
-        response.OnSelect(n01_r1_select);
+        response.OnSelect(n01_r3_select);
         
         ///RESPONSE n01 4
         response = node.AddResponse();
@@ -267,12 +267,12 @@ public class Dialog_p2_may_001 {
         ///METHOD_BODY_END STEWARD_p1_condition
     }
 
-    ///METHOD n01_r3_condition
-    public bool n01_r3_condition (  ) {
-        ///METHOD_BODY_START n01_r3_condition
+    ///METHOD n01_r1_condition
+    public bool n01_r1_condition (  ) {
+        ///METHOD_BODY_START n01_r1_condition
         /*// if(?p2_know_steward = true )*/
         return true;
-        ///METHOD_BODY_END n01_r3_condition
+        ///METHOD_BODY_END n01_r1_condition
     }
 
     ///METHOD n01_r2_condition
@@ -283,9 +283,9 @@ public class Dialog_p2_may_001 {
         ///METHOD_BODY_END n01_r2_condition
     }
 
-    ///METHOD n01_r1_select
-    public void n01_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r1_select
+    ///METHOD n01_r3_select
+    public void n01_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_select
         /*//				#rand = random(100)
         //				if( $escape_type = "henry" )
         //					#rand = (#rand - 15)
@@ -296,7 +296,7 @@ public class Dialog_p2_may_001 {
         //				if( #rand > 70 )
         //					$next_node = "TAVERN_HINT"
         //				/if*/
-        ///METHOD_BODY_END n01_r1_select
+        ///METHOD_BODY_END n01_r3_select
     }
 
     ///METHOD STEWARD_r0_select

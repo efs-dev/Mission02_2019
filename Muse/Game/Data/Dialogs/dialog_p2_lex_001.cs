@@ -76,7 +76,7 @@ public class Dialog_p2_lex_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 CHURCH
         response.NextNodeId = "CHURCH";
-        response.SetCondition(n01_r2_condition);
+        response.SetCondition(n01_r1_condition);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -86,7 +86,7 @@ public class Dialog_p2_lex_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 END
         response.NextNodeId = "END";
-        response.OnSelect(n01_r1_select);
+        response.OnSelect(n01_r2_select);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -96,7 +96,7 @@ public class Dialog_p2_lex_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 
         response.NextNodeId = "";
-        response.OnSelect(n01_r0_select);
+        response.OnSelect(n01_r3_select);
         
         ///NODE_END n01
         ///NODE_START STUMBLE
@@ -388,7 +388,7 @@ public class Dialog_p2_lex_001 {
         prompt.Text = "The minister in the church greets you warmly and gives you some food.";
         ///PROMPT_IGNORE_VO CHURCH 0 false
         prompt.IgnoreVO = false;
-        prompt.OnShow(CHURCH_p1_show);
+        prompt.OnShow(CHURCH_p0_show);
         
         ///PROMPT CHURCH 1
         prompt = node.AddPrompt();
@@ -460,7 +460,7 @@ public class Dialog_p2_lex_001 {
         prompt.Text = "He says it's important not to wear the clothes you were last seen in and gives you some old clothes to change into.";
         ///PROMPT_IGNORE_VO DISGUISE 0 false
         prompt.IgnoreVO = false;
-        prompt.OnShow(DISGUISE_p1_show);
+        prompt.OnShow(DISGUISE_p0_show);
         
         ///PROMPT DISGUISE 1
         prompt = node.AddPrompt();
@@ -469,7 +469,7 @@ public class Dialog_p2_lex_001 {
         ///PROMPT_IGNORE_VO DISGUISE 1 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(DISGUISE_p1_condition);
-        prompt.OnShow(DISGUISE_p0_show);
+        prompt.OnShow(DISGUISE_p1_show);
         
         ///RESPONSE DISGUISE 0
         response = node.AddResponse();
@@ -514,7 +514,7 @@ public class Dialog_p2_lex_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID WAGON 0 n05
         response.NextNodeId = "n05";
-        response.SetCondition(WAGON_r2_condition);
+        response.SetCondition(WAGON_r0_condition);
         
         ///RESPONSE WAGON 1
         response = node.AddResponse();
@@ -534,8 +534,8 @@ public class Dialog_p2_lex_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID WAGON 2 n05
         response.NextNodeId = "n05";
-        response.SetCondition(WAGON_r0_condition);
-        response.OnSelect(WAGON_r0_select);
+        response.SetCondition(WAGON_r2_condition);
+        response.OnSelect(WAGON_r2_select);
         
         ///NODE_END WAGON
         ///NODE_START n05
@@ -609,20 +609,12 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_END FOOD_HELP_p0_show
     }
 
-    ///METHOD CHURCH_p1_show
-    public void CHURCH_p1_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START CHURCH_p1_show
+    ///METHOD CHURCH_p0_show
+    public void CHURCH_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START CHURCH_p0_show
         /*//				#food = #food + 2
         //			    updateMessage("You got 2 food.")				*/
-        ///METHOD_BODY_END CHURCH_p1_show
-    }
-
-    ///METHOD DISGUISE_p1_show
-    public void DISGUISE_p1_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START DISGUISE_p1_show
-        /*// ?p2_changed_clothes = true
-        //								?p2_disguised = true				*/
-        ///METHOD_BODY_END DISGUISE_p1_show
+        ///METHOD_BODY_END CHURCH_p0_show
     }
 
     ///METHOD DISGUISE_p0_show
@@ -633,6 +625,14 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_END DISGUISE_p0_show
     }
 
+    ///METHOD DISGUISE_p1_show
+    public void DISGUISE_p1_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START DISGUISE_p1_show
+        /*// ?p2_changed_clothes = true
+        //								?p2_disguised = true				*/
+        ///METHOD_BODY_END DISGUISE_p1_show
+    }
+
     ///METHOD n05_p0_show
     public void n05_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n05_p0_show
@@ -640,20 +640,20 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_END n05_p0_show
     }
 
-    ///METHOD n01_r2_condition
-    public bool n01_r2_condition (  ) {
-        ///METHOD_BODY_START n01_r2_condition
+    ///METHOD n01_r1_condition
+    public bool n01_r1_condition (  ) {
+        ///METHOD_BODY_START n01_r1_condition
         /*//if(?know_lexington = true)*/
         return true;
-        ///METHOD_BODY_END n01_r2_condition
+        ///METHOD_BODY_END n01_r1_condition
     }
 
-    ///METHOD WAGON_r2_condition
-    public bool WAGON_r2_condition (  ) {
-        ///METHOD_BODY_START WAGON_r2_condition
+    ///METHOD WAGON_r0_condition
+    public bool WAGON_r0_condition (  ) {
+        ///METHOD_BODY_START WAGON_r0_condition
         /*//if($escape_type = "alone" )*/
         return true;
-        ///METHOD_BODY_END WAGON_r2_condition
+        ///METHOD_BODY_END WAGON_r0_condition
     }
 
     ///METHOD WAGON_r1_condition
@@ -664,17 +664,17 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_END WAGON_r1_condition
     }
 
-    ///METHOD WAGON_r0_condition
-    public bool WAGON_r0_condition (  ) {
-        ///METHOD_BODY_START WAGON_r0_condition
+    ///METHOD WAGON_r2_condition
+    public bool WAGON_r2_condition (  ) {
+        ///METHOD_BODY_START WAGON_r2_condition
         /*//if($escape_type = "henry" )*/
         return true;
-        ///METHOD_BODY_END WAGON_r0_condition
+        ///METHOD_BODY_END WAGON_r2_condition
     }
 
-    ///METHOD n01_r1_select
-    public void n01_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r1_select
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
         /*//				#rand = random(100)
         //				if( #rand < 35 )
         //					$next_node = "CREEPY"
@@ -683,12 +683,12 @@ public class Dialog_p2_lex_001 {
         //				else
         //					$next_node = "STUMBLE"
         //				/if	*/
-        ///METHOD_BODY_END n01_r1_select
+        ///METHOD_BODY_END n01_r2_select
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
+    ///METHOD n01_r3_select
+    public void n01_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_select
         /*//				#rand = random(100)
         //				if( #rand < 10 )
         //					$next_node = "BAD_HELP"  // busted
@@ -701,7 +701,7 @@ public class Dialog_p2_lex_001 {
         //					// directed to church
         //					$next_node = "GOOD_HELP"
         //				/if			*/
-        ///METHOD_BODY_END n01_r0_select
+        ///METHOD_BODY_END n01_r3_select
     }
 
     ///METHOD CAUGHT_r0_select
@@ -711,12 +711,12 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_END CAUGHT_r0_select
     }
 
-    ///METHOD WAGON_r0_select
-    public void WAGON_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START WAGON_r0_select
+    ///METHOD WAGON_r2_select
+    public void WAGON_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START WAGON_r2_select
         /*//				#p2_henry_code = 30
         //				killHenry()*/
-        ///METHOD_BODY_END WAGON_r0_select
+        ///METHOD_BODY_END WAGON_r2_select
     }
 }
 //CLASS_END Dialog_p2_lex_001

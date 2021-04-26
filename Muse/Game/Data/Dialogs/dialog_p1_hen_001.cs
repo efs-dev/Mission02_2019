@@ -364,7 +364,7 @@ public class Dialog_p1_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n08 1 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n08_r2_condition);
+        response.SetCondition(n08_r1_condition);
         
         ///RESPONSE n08 2
         response = node.AddResponse();
@@ -374,7 +374,7 @@ public class Dialog_p1_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n08 2 n09
         response.NextNodeId = "n09";
-        response.SetCondition(n08_r1_condition);
+        response.SetCondition(n08_r2_condition);
         
         ///RESPONSE n08 3
         response = node.AddResponse();
@@ -538,7 +538,7 @@ public class Dialog_p1_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n13 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n13_r2_select);
+        response.OnSelect(n13_r0_select);
         
         ///RESPONSE n13 1
         response = node.AddResponse();
@@ -584,7 +584,7 @@ public class Dialog_p1_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n14 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n14_r2_select);
+        response.OnSelect(n14_r0_select);
         
         ///RESPONSE n14 1
         response = node.AddResponse();
@@ -639,7 +639,7 @@ public class Dialog_p1_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n15 1 n17
         response.NextNodeId = "n17";
-        response.SetCondition(n15_r0_condition);
+        response.SetCondition(n15_r1_condition);
         
         ///NODE_END n15
         ///NODE_START n16
@@ -766,28 +766,28 @@ public class Dialog_p1_hen_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n08_r2_condition
-    public bool n08_r2_condition (  ) {
-        ///METHOD_BODY_START n08_r2_condition
-        /*//if (?know_lexington)*/
-        return true;
-        ///METHOD_BODY_END n08_r2_condition
-    }
-
     ///METHOD n08_r1_condition
     public bool n08_r1_condition (  ) {
         ///METHOD_BODY_START n08_r1_condition
-        /*//if (hasItem("invitation"))*/
+        /*//if (?know_lexington)*/
         return true;
         ///METHOD_BODY_END n08_r1_condition
     }
 
-    ///METHOD n15_r0_condition
-    public bool n15_r0_condition (  ) {
-        ///METHOD_BODY_START n15_r0_condition
+    ///METHOD n08_r2_condition
+    public bool n08_r2_condition (  ) {
+        ///METHOD_BODY_START n08_r2_condition
+        /*//if (hasItem("invitation"))*/
+        return true;
+        ///METHOD_BODY_END n08_r2_condition
+    }
+
+    ///METHOD n15_r1_condition
+    public bool n15_r1_condition (  ) {
+        ///METHOD_BODY_START n15_r1_condition
         /*//if (?know_king_time)*/
         return true;
-        ///METHOD_BODY_END n15_r0_condition
+        ///METHOD_BODY_END n15_r1_condition
     }
 
     ///METHOD n12_r0_select
@@ -798,20 +798,20 @@ public class Dialog_p1_hen_001 {
         ///METHOD_BODY_END n12_r0_select
     }
 
-    ///METHOD n13_r2_select
-    public void n13_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n13_r2_select
+    ///METHOD n13_r0_select
+    public void n13_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n13_r0_select
         /*//set $escape_type = "alone"
         //wait(2000)*/
-        ///METHOD_BODY_END n13_r2_select
+        ///METHOD_BODY_END n13_r0_select
     }
 
-    ///METHOD n14_r2_select
-    public void n14_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n14_r2_select
+    ///METHOD n14_r0_select
+    public void n14_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n14_r0_select
         /*//set $escape_type = "alone"
         //wait(2000)*/
-        ///METHOD_BODY_END n14_r2_select
+        ///METHOD_BODY_END n14_r0_select
     }
 
     ///METHOD n16_r0_select

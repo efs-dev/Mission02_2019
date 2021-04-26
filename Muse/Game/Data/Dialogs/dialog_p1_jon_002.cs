@@ -256,7 +256,7 @@ public class Dialog_p1_jon_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n08 0 n12
         response.NextNodeId = "n12";
-        response.OnSelect(n08_r2_select);
+        response.OnSelect(n08_r0_select);
         
         ///RESPONSE n08 1
         response = node.AddResponse();
@@ -276,7 +276,7 @@ public class Dialog_p1_jon_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n08 2 n12
         response.NextNodeId = "n12";
-        response.OnSelect(n08_r0_select);
+        response.OnSelect(n08_r2_select);
         
         ///NODE_END n08
         ///NODE_START n09
@@ -391,11 +391,11 @@ public class Dialog_p1_jon_002 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n08_r2_select
-    public void n08_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n08_r2_select
+    ///METHOD n08_r0_select
+    public void n08_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n08_r0_select
         /*//$jonah_promise = "family"*/
-        ///METHOD_BODY_END n08_r2_select
+        ///METHOD_BODY_END n08_r0_select
     }
 
     ///METHOD n08_r1_select
@@ -405,11 +405,11 @@ public class Dialog_p1_jon_002 {
         ///METHOD_BODY_END n08_r1_select
     }
 
-    ///METHOD n08_r0_select
-    public void n08_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n08_r0_select
+    ///METHOD n08_r2_select
+    public void n08_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n08_r2_select
         /*//$jonah_promise = "secret"*/
-        ///METHOD_BODY_END n08_r0_select
+        ///METHOD_BODY_END n08_r2_select
     }
 }
 //CLASS_END Dialog_p1_jon_002

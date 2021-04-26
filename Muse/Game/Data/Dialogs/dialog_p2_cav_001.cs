@@ -268,8 +268,8 @@ public class Dialog_p2_cav_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID COLD 0 END
         response.NextNodeId = "END";
-        response.SetCondition(COLD_r1_condition);
-        response.OnSelect(COLD_r1_select);
+        response.SetCondition(COLD_r0_condition);
+        response.OnSelect(COLD_r0_select);
         
         ///RESPONSE COLD 1
         response = node.AddResponse();
@@ -279,8 +279,8 @@ public class Dialog_p2_cav_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID COLD 1 END
         response.NextNodeId = "END";
-        response.SetCondition(COLD_r0_condition);
-        response.OnSelect(COLD_r0_select);
+        response.SetCondition(COLD_r1_condition);
+        response.OnSelect(COLD_r1_select);
         
         ///NODE_END COLD
         ///NODE_START BEAR
@@ -395,20 +395,20 @@ public class Dialog_p2_cav_001 {
         ///METHOD_BODY_END COLD_p2_condition
     }
 
-    ///METHOD COLD_r1_condition
-    public bool COLD_r1_condition (  ) {
-        ///METHOD_BODY_START COLD_r1_condition
-        /*//if( (hasItem("BLANKET") = false) AND (hasItem("SHAWL")  = false) ) */
-        return true;
-        ///METHOD_BODY_END COLD_r1_condition
-    }
-
     ///METHOD COLD_r0_condition
     public bool COLD_r0_condition (  ) {
         ///METHOD_BODY_START COLD_r0_condition
-        /*//if( hasItem("BLANKET")  OR hasItem("SHAWL")  ) */
+        /*//if( (hasItem("BLANKET") = false) AND (hasItem("SHAWL")  = false) ) */
         return true;
         ///METHOD_BODY_END COLD_r0_condition
+    }
+
+    ///METHOD COLD_r1_condition
+    public bool COLD_r1_condition (  ) {
+        ///METHOD_BODY_START COLD_r1_condition
+        /*//if( hasItem("BLANKET")  OR hasItem("SHAWL")  ) */
+        return true;
+        ///METHOD_BODY_END COLD_r1_condition
     }
 
     ///METHOD n01_r1_select
@@ -464,24 +464,24 @@ public class Dialog_p2_cav_001 {
         ///METHOD_BODY_END WARM_r0_select
     }
 
-    ///METHOD COLD_r1_select
-    public void COLD_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START COLD_r1_select
+    ///METHOD COLD_r0_select
+    public void COLD_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START COLD_r0_select
         /*//				#lucy_health = #lucy_health - 1
         //				#henry_health = #henry_health - 1
         //				updateMessage("Your health goes down.")
         //				post("reportHealth", "")*/
-        ///METHOD_BODY_END COLD_r1_select
+        ///METHOD_BODY_END COLD_r0_select
     }
 
-    ///METHOD COLD_r0_select
-    public void COLD_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START COLD_r0_select
+    ///METHOD COLD_r1_select
+    public void COLD_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START COLD_r1_select
         /*//				#lucy_health = #lucy_health + 1
         //				#henry_health = #henry_health + 1
         //				updateMessage("Your health improves.")
         //				post("reportHealth", "")*/
-        ///METHOD_BODY_END COLD_r0_select
+        ///METHOD_BODY_END COLD_r1_select
     }
 
     ///METHOD RUN_r0_select

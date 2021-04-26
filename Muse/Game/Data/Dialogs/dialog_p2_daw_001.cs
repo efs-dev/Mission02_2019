@@ -122,7 +122,7 @@ public class Dialog_p2_daw_001 {
         prompt.Text = "Just as you're leaving Esther says, \"I heard from the wagon driver there's a steward on the morning ferry from Maysville who helps runaways get across. Jackson's his name.\"";
         ///PROMPT_IGNORE_VO HINT 0 false
         prompt.IgnoreVO = false;
-        prompt.OnShow(HINT_p1_show);
+        prompt.OnShow(HINT_p0_show);
         
         ///PROMPT HINT 1
         prompt = node.AddPrompt();
@@ -131,7 +131,7 @@ public class Dialog_p2_daw_001 {
         ///PROMPT_IGNORE_VO HINT 1 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(HINT_p1_condition);
-        prompt.OnShow(HINT_p0_show);
+        prompt.OnShow(HINT_p1_show);
         
         ///RESPONSE HINT 0
         response = node.AddResponse();
@@ -218,18 +218,18 @@ public class Dialog_p2_daw_001 {
         ///METHOD_BODY_END HOME_p0_show
     }
 
-    ///METHOD HINT_p1_show
-    public void HINT_p1_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START HINT_p1_show
-        /*// ?p2_know_steward = true*/
-        ///METHOD_BODY_END HINT_p1_show
-    }
-
     ///METHOD HINT_p0_show
     public void HINT_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START HINT_p0_show
-        /*// ?know_tavern = true*/
+        /*// ?p2_know_steward = true*/
         ///METHOD_BODY_END HINT_p0_show
+    }
+
+    ///METHOD HINT_p1_show
+    public void HINT_p1_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START HINT_p1_show
+        /*// ?know_tavern = true*/
+        ///METHOD_BODY_END HINT_p1_show
     }
 
     ///METHOD STAY_p0_show

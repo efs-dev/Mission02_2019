@@ -67,8 +67,8 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n05
         response.NextNodeId = "n05";
-        response.SetCondition(n01_r4_condition);
-        response.OnSelect(n01_r4_select);
+        response.SetCondition(n01_r0_condition);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -78,7 +78,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n01_r3_condition);
+        response.SetCondition(n01_r1_condition);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -98,7 +98,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 n03
         response.NextNodeId = "n03";
-        response.SetCondition(n01_r1_condition);
+        response.SetCondition(n01_r3_condition);
         
         ///RESPONSE n01 4
         response = node.AddResponse();
@@ -108,7 +108,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 4 n02
         response.NextNodeId = "n02";
-        response.SetCondition(n01_r0_condition);
+        response.SetCondition(n01_r4_condition);
         
         ///NODE_END n01
         ///NODE_START n02
@@ -136,7 +136,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 0 END
         response.NextNodeId = "END";
-        response.SetCondition(n02_r3_condition);
+        response.SetCondition(n02_r0_condition);
         
         ///RESPONSE n02 1
         response = node.AddResponse();
@@ -146,7 +146,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 1 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n02_r2_condition);
+        response.SetCondition(n02_r1_condition);
         
         ///RESPONSE n02 2
         response = node.AddResponse();
@@ -156,7 +156,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 2 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n02_r1_condition);
+        response.SetCondition(n02_r2_condition);
         
         ///RESPONSE n02 3
         response = node.AddResponse();
@@ -194,7 +194,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 0 END
         response.NextNodeId = "END";
-        response.SetCondition(n03_r2_condition);
+        response.SetCondition(n03_r0_condition);
         
         ///RESPONSE n03 1
         response = node.AddResponse();
@@ -214,7 +214,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 2 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n03_r0_condition);
+        response.SetCondition(n03_r2_condition);
         
         ///NODE_END n03
         ///NODE_START n04
@@ -242,7 +242,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 0 END
         response.NextNodeId = "END";
-        response.SetCondition(n04_r2_condition);
+        response.SetCondition(n04_r0_condition);
         
         ///RESPONSE n04 1
         response = node.AddResponse();
@@ -262,7 +262,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 2 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n04_r0_condition);
+        response.SetCondition(n04_r2_condition);
         
         ///NODE_END n04
         ///NODE_START n05
@@ -289,7 +289,7 @@ public class Dialog_p1_sar_002 {
         ///PROMPT_IGNORE_VO n05 1 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n05_p1_condition);
-        prompt.OnShow(n05_p0_show);
+        prompt.OnShow(n05_p1_show);
         
         ///RESPONSE n05 0
         response = node.AddResponse();
@@ -318,7 +318,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 2 END
         response.NextNodeId = "END";
-        response.OnSelect(n05_r0_select);
+        response.OnSelect(n05_r2_select);
         
         ///NODE_END n05
         ///NODE_START n06
@@ -347,7 +347,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n06 0 END
         response.NextNodeId = "END";
-        response.SetCondition(n06_r2_condition);
+        response.SetCondition(n06_r0_condition);
         
         ///RESPONSE n06 1
         response = node.AddResponse();
@@ -367,7 +367,7 @@ public class Dialog_p1_sar_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n06 2 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n06_r0_condition);
+        response.SetCondition(n06_r2_condition);
         
         ///NODE_END n06
         ///NODE_START n07
@@ -387,7 +387,7 @@ public class Dialog_p1_sar_002 {
         ///PROMPT_IGNORE_VO n07 0 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n07_p0_condition);
-        prompt.OnShow(n07_p1_show);
+        prompt.OnShow(n07_p0_show);
         
         ///PROMPT n07 1
         prompt = node.AddPrompt();
@@ -396,7 +396,7 @@ public class Dialog_p1_sar_002 {
         ///PROMPT_IGNORE_VO n07 1 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n07_p1_condition);
-        prompt.OnShow(n07_p0_show);
+        prompt.OnShow(n07_p1_show);
         
         ///RESPONSE n07 0
         response = node.AddResponse();
@@ -443,11 +443,11 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n03_p0_show
     }
 
-    ///METHOD n05_p0_show
-    public void n05_p0_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n05_p0_show
+    ///METHOD n05_p1_show
+    public void n05_p1_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n05_p1_show
         /*//addItem("primer")*/
-        ///METHOD_BODY_END n05_p0_show
+        ///METHOD_BODY_END n05_p1_show
     }
 
     ///METHOD n06_p0_show
@@ -457,13 +457,6 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n06_p0_show
     }
 
-    ///METHOD n07_p1_show
-    public void n07_p1_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n07_p1_show
-        /*//addItem ("primer")*/
-        ///METHOD_BODY_END n07_p1_show
-    }
-
     ///METHOD n07_p0_show
     public void n07_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n07_p0_show
@@ -471,20 +464,27 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n07_p0_show
     }
 
-    ///METHOD n01_r4_condition
-    public bool n01_r4_condition (  ) {
-        ///METHOD_BODY_START n01_r4_condition
-        /*//if (?dress_finished = false)*/
-        return true;
-        ///METHOD_BODY_END n01_r4_condition
+    ///METHOD n07_p1_show
+    public void n07_p1_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n07_p1_show
+        /*//addItem ("primer")*/
+        ///METHOD_BODY_END n07_p1_show
     }
 
-    ///METHOD n01_r3_condition
-    public bool n01_r3_condition (  ) {
-        ///METHOD_BODY_START n01_r3_condition
+    ///METHOD n01_r0_condition
+    public bool n01_r0_condition (  ) {
+        ///METHOD_BODY_START n01_r0_condition
+        /*//if (?dress_finished = false)*/
+        return true;
+        ///METHOD_BODY_END n01_r0_condition
+    }
+
+    ///METHOD n01_r1_condition
+    public bool n01_r1_condition (  ) {
+        ///METHOD_BODY_START n01_r1_condition
         /*//if (?dress_finished = false AND (?dress_packed))*/
         return true;
-        ///METHOD_BODY_END n01_r3_condition
+        ///METHOD_BODY_END n01_r1_condition
     }
 
     ///METHOD n01_r2_condition
@@ -495,52 +495,52 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n01_r2_condition
     }
 
-    ///METHOD n01_r1_condition
-    public bool n01_r1_condition (  ) {
-        ///METHOD_BODY_START n01_r1_condition
+    ///METHOD n01_r3_condition
+    public bool n01_r3_condition (  ) {
+        ///METHOD_BODY_START n01_r3_condition
         /*//if (?dress_finished AND (?dress_packed = false))*/
         return true;
-        ///METHOD_BODY_END n01_r1_condition
+        ///METHOD_BODY_END n01_r3_condition
     }
 
-    ///METHOD n01_r0_condition
-    public bool n01_r0_condition (  ) {
-        ///METHOD_BODY_START n01_r0_condition
+    ///METHOD n01_r4_condition
+    public bool n01_r4_condition (  ) {
+        ///METHOD_BODY_START n01_r4_condition
         /*//if (?dress_finished AND (?dress_packed = false))*/
         return true;
-        ///METHOD_BODY_END n01_r0_condition
+        ///METHOD_BODY_END n01_r4_condition
     }
 
-    ///METHOD n02_r3_condition
-    public bool n02_r3_condition (  ) {
-        ///METHOD_BODY_START n02_r3_condition
+    ///METHOD n02_r0_condition
+    public bool n02_r0_condition (  ) {
+        ///METHOD_BODY_START n02_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
         return true;
-        ///METHOD_BODY_END n02_r3_condition
-    }
-
-    ///METHOD n02_r2_condition
-    public bool n02_r2_condition (  ) {
-        ///METHOD_BODY_START n02_r2_condition
-        /*//if (?primer_promise = false AND (?primer_return))*/
-        return true;
-        ///METHOD_BODY_END n02_r2_condition
+        ///METHOD_BODY_END n02_r0_condition
     }
 
     ///METHOD n02_r1_condition
     public bool n02_r1_condition (  ) {
         ///METHOD_BODY_START n02_r1_condition
-        /*//if (?primer_promise AND (?primer_return))*/
+        /*//if (?primer_promise = false AND (?primer_return))*/
         return true;
         ///METHOD_BODY_END n02_r1_condition
     }
 
-    ///METHOD n03_r2_condition
-    public bool n03_r2_condition (  ) {
-        ///METHOD_BODY_START n03_r2_condition
+    ///METHOD n02_r2_condition
+    public bool n02_r2_condition (  ) {
+        ///METHOD_BODY_START n02_r2_condition
+        /*//if (?primer_promise AND (?primer_return))*/
+        return true;
+        ///METHOD_BODY_END n02_r2_condition
+    }
+
+    ///METHOD n03_r0_condition
+    public bool n03_r0_condition (  ) {
+        ///METHOD_BODY_START n03_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
         return true;
-        ///METHOD_BODY_END n03_r2_condition
+        ///METHOD_BODY_END n03_r0_condition
     }
 
     ///METHOD n03_r1_condition
@@ -551,20 +551,20 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n03_r1_condition
     }
 
-    ///METHOD n03_r0_condition
-    public bool n03_r0_condition (  ) {
-        ///METHOD_BODY_START n03_r0_condition
+    ///METHOD n03_r2_condition
+    public bool n03_r2_condition (  ) {
+        ///METHOD_BODY_START n03_r2_condition
         /*//if (?primer_promise AND (?primer_return))*/
         return true;
-        ///METHOD_BODY_END n03_r0_condition
+        ///METHOD_BODY_END n03_r2_condition
     }
 
-    ///METHOD n04_r2_condition
-    public bool n04_r2_condition (  ) {
-        ///METHOD_BODY_START n04_r2_condition
+    ///METHOD n04_r0_condition
+    public bool n04_r0_condition (  ) {
+        ///METHOD_BODY_START n04_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
         return true;
-        ///METHOD_BODY_END n04_r2_condition
+        ///METHOD_BODY_END n04_r0_condition
     }
 
     ///METHOD n04_r1_condition
@@ -575,12 +575,12 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n04_r1_condition
     }
 
-    ///METHOD n04_r0_condition
-    public bool n04_r0_condition (  ) {
-        ///METHOD_BODY_START n04_r0_condition
+    ///METHOD n04_r2_condition
+    public bool n04_r2_condition (  ) {
+        ///METHOD_BODY_START n04_r2_condition
         /*//if (?primer_promise AND (?primer_return))*/
         return true;
-        ///METHOD_BODY_END n04_r0_condition
+        ///METHOD_BODY_END n04_r2_condition
     }
 
     ///METHOD n05_r1_condition
@@ -591,12 +591,12 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n05_r1_condition
     }
 
-    ///METHOD n06_r2_condition
-    public bool n06_r2_condition (  ) {
-        ///METHOD_BODY_START n06_r2_condition
+    ///METHOD n06_r0_condition
+    public bool n06_r0_condition (  ) {
+        ///METHOD_BODY_START n06_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
         return true;
-        ///METHOD_BODY_END n06_r2_condition
+        ///METHOD_BODY_END n06_r0_condition
     }
 
     ///METHOD n06_r1_condition
@@ -607,26 +607,26 @@ public class Dialog_p1_sar_002 {
         ///METHOD_BODY_END n06_r1_condition
     }
 
-    ///METHOD n06_r0_condition
-    public bool n06_r0_condition (  ) {
-        ///METHOD_BODY_START n06_r0_condition
+    ///METHOD n06_r2_condition
+    public bool n06_r2_condition (  ) {
+        ///METHOD_BODY_START n06_r2_condition
         /*//if (?primer_promise AND (?primer_return))*/
         return true;
-        ///METHOD_BODY_END n06_r0_condition
+        ///METHOD_BODY_END n06_r2_condition
     }
 
-    ///METHOD n01_r4_select
-    public void n01_r4_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r4_select
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
         /*//set ?sar_mad = true*/
-        ///METHOD_BODY_END n01_r4_select
+        ///METHOD_BODY_END n01_r0_select
     }
 
-    ///METHOD n05_r0_select
-    public void n05_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n05_r0_select
+    ///METHOD n05_r2_select
+    public void n05_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n05_r2_select
         /*//$next_state = "lose_sar"*/
-        ///METHOD_BODY_END n05_r0_select
+        ///METHOD_BODY_END n05_r2_select
     }
 }
 //CLASS_END Dialog_p1_sar_002

@@ -67,7 +67,7 @@ public class Dialog_p2_dov_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 STEAL_NIGHT
         response.NextNodeId = "STEAL_NIGHT";
-        response.OnSelect(n01_r2_select);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -230,9 +230,9 @@ public class Dialog_p2_dov_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01_r2_select
-    public void n01_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r2_select
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
         /*//				#rand = random(100)
         //				#rand = #rand + (#escape_attempt * 20)
         //				if( #rand > 100 )
@@ -245,7 +245,7 @@ public class Dialog_p2_dov_001 {
         //				elseif( hasItem("AXE") )
         //					$next_node = "AXE_NO_BOAT"
         //				/if*/
-        ///METHOD_BODY_END n01_r2_select
+        ///METHOD_BODY_END n01_r0_select
     }
 
     ///METHOD AXE_BOAT_r0_select

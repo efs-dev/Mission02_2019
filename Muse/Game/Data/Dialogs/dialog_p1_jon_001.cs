@@ -338,7 +338,7 @@ public class Dialog_p1_jon_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n09 2 n12
         response.NextNodeId = "n12";
-        response.OnSelect(n09_r0_select);
+        response.OnSelect(n09_r2_select);
         
         ///NODE_END n09
         ///NODE_START n10
@@ -376,7 +376,7 @@ public class Dialog_p1_jon_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 1 n11
         response.NextNodeId = "n11";
-        response.OnSelect(n10_r0_select);
+        response.OnSelect(n10_r1_select);
         
         ///NODE_END n10
         ///NODE_START n11
@@ -505,18 +505,18 @@ public class Dialog_p1_jon_001 {
         ///METHOD_BODY_END n09_r1_select
     }
 
-    ///METHOD n09_r0_select
-    public void n09_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n09_r0_select
+    ///METHOD n09_r2_select
+    public void n09_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n09_r2_select
         /*//set ?book_hidden = true*/
-        ///METHOD_BODY_END n09_r0_select
+        ///METHOD_BODY_END n09_r2_select
     }
 
-    ///METHOD n10_r0_select
-    public void n10_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n10_r0_select
+    ///METHOD n10_r1_select
+    public void n10_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n10_r1_select
         /*//set ?practice_promise = true*/
-        ///METHOD_BODY_END n10_r0_select
+        ///METHOD_BODY_END n10_r1_select
     }
 }
 //CLASS_END Dialog_p1_jon_001

@@ -139,7 +139,7 @@ public class Dialog_p1_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 0 n05
         response.NextNodeId = "n05";
-        response.OnSelect(n02_r1_select);
+        response.OnSelect(n02_r0_select);
         
         ///RESPONSE n02 1
         response = node.AddResponse();
@@ -428,7 +428,7 @@ public class Dialog_p1_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n09 0 n11
         response.NextNodeId = "n11";
-        response.OnSelect(n09_r1_select);
+        response.OnSelect(n09_r0_select);
         
         ///RESPONSE n09 1
         response = node.AddResponse();
@@ -573,7 +573,7 @@ public class Dialog_p1_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n14 0 n08
         response.NextNodeId = "n08";
-        response.SetCondition(n14_r2_condition);
+        response.SetCondition(n14_r0_condition);
         
         ///RESPONSE n14 1
         response = node.AddResponse();
@@ -686,7 +686,7 @@ public class Dialog_p1_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n16 1 n20
         response.NextNodeId = "n20";
-        response.OnSelect(n16_r2_select);
+        response.OnSelect(n16_r1_select);
         
         ///RESPONSE n16 2
         response = node.AddResponse();
@@ -880,7 +880,7 @@ public class Dialog_p1_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n21 0 n22
         response.NextNodeId = "n22";
-        response.OnSelect(n21_r1_select);
+        response.OnSelect(n21_r0_select);
         
         ///RESPONSE n21 1
         response = node.AddResponse();
@@ -954,7 +954,7 @@ public class Dialog_p1_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n23 1 n24
         response.NextNodeId = "n24";
-        response.OnSelect(n23_r0_select);
+        response.OnSelect(n23_r1_select);
         
         ///NODE_END n23
         ///NODE_START n24
@@ -1011,8 +1011,8 @@ public class Dialog_p1_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n25 0 n26
         response.NextNodeId = "n26";
-        response.SetCondition(n25_r1_condition);
-        response.OnSelect(n25_r1_select);
+        response.SetCondition(n25_r0_condition);
+        response.OnSelect(n25_r0_select);
         
         ///RESPONSE n25 1
         response = node.AddResponse();
@@ -1249,12 +1249,12 @@ public class Dialog_p1_sar_001 {
         ///METHOD_BODY_END n26_p0_show
     }
 
-    ///METHOD n14_r2_condition
-    public bool n14_r2_condition (  ) {
-        ///METHOD_BODY_START n14_r2_condition
+    ///METHOD n14_r0_condition
+    public bool n14_r0_condition (  ) {
+        ///METHOD_BODY_START n14_r0_condition
         /*//if (#sar_mood = 0)*/
         return true;
-        ///METHOD_BODY_END n14_r2_condition
+        ///METHOD_BODY_END n14_r0_condition
     }
 
     ///METHOD n14_r1_condition
@@ -1265,26 +1265,26 @@ public class Dialog_p1_sar_001 {
         ///METHOD_BODY_END n14_r1_condition
     }
 
-    ///METHOD n25_r1_condition
-    public bool n25_r1_condition (  ) {
-        ///METHOD_BODY_START n25_r1_condition
+    ///METHOD n25_r0_condition
+    public bool n25_r0_condition (  ) {
+        ///METHOD_BODY_START n25_r0_condition
         /*//if (hasItem ("primer"))*/
         return true;
-        ///METHOD_BODY_END n25_r1_condition
+        ///METHOD_BODY_END n25_r0_condition
     }
 
-    ///METHOD n02_r1_select
-    public void n02_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n02_r1_select
+    ///METHOD n02_r0_select
+    public void n02_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n02_r0_select
         /*//set #sar_mood  =1*/
-        ///METHOD_BODY_END n02_r1_select
+        ///METHOD_BODY_END n02_r0_select
     }
 
-    ///METHOD n09_r1_select
-    public void n09_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n09_r1_select
+    ///METHOD n09_r0_select
+    public void n09_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n09_r0_select
         /*//set #sar_mood  =1*/
-        ///METHOD_BODY_END n09_r1_select
+        ///METHOD_BODY_END n09_r0_select
     }
 
     ///METHOD n15a_r0_select
@@ -1301,13 +1301,13 @@ public class Dialog_p1_sar_001 {
         ///METHOD_BODY_END n15b_r0_select
     }
 
-    ///METHOD n16_r2_select
-    public void n16_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n16_r2_select
+    ///METHOD n16_r1_select
+    public void n16_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n16_r1_select
         /*//if (#sar_mood > 0)
         //set #sar_mood -=1
         ///if*/
-        ///METHOD_BODY_END n16_r2_select
+        ///METHOD_BODY_END n16_r1_select
     }
 
     ///METHOD n16a_r0_select
@@ -1318,26 +1318,26 @@ public class Dialog_p1_sar_001 {
         ///METHOD_BODY_END n16a_r0_select
     }
 
-    ///METHOD n21_r1_select
-    public void n21_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n21_r1_select
+    ///METHOD n21_r0_select
+    public void n21_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n21_r0_select
         /*//?p1_persuade = true*/
-        ///METHOD_BODY_END n21_r1_select
+        ///METHOD_BODY_END n21_r0_select
     }
 
-    ///METHOD n23_r0_select
-    public void n23_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n23_r0_select
+    ///METHOD n23_r1_select
+    public void n23_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n23_r1_select
         /*//?p1_persuade = true*/
-        ///METHOD_BODY_END n23_r0_select
+        ///METHOD_BODY_END n23_r1_select
     }
 
-    ///METHOD n25_r1_select
-    public void n25_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n25_r1_select
+    ///METHOD n25_r0_select
+    public void n25_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n25_r0_select
         /*//removeItem ("primer")
         //set ?primer_return = true*/
-        ///METHOD_BODY_END n25_r1_select
+        ///METHOD_BODY_END n25_r0_select
     }
 }
 //CLASS_END Dialog_p1_sar_001

@@ -67,7 +67,6 @@ public class Dialog_p2_brk_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 DETOUR
         response.NextNodeId = "DETOUR";
-        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -97,6 +96,7 @@ public class Dialog_p2_brk_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 n01a
         response.NextNodeId = "n01a";
+        response.OnSelect(n01_r3_select);
         
         ///NODE_END n01
         ///NODE_START n01a
@@ -124,7 +124,6 @@ public class Dialog_p2_brk_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01a 0 DETOUR
         response.NextNodeId = "DETOUR";
-        response.OnSelect(n01a_r0_select);
         
         ///RESPONSE n01a 1
         response = node.AddResponse();
@@ -134,6 +133,7 @@ public class Dialog_p2_brk_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01a 1 HURRY1
         response.NextNodeId = "HURRY1";
+        response.SetCondition(n01a_r1_condition);
         response.OnSelect(n01a_r1_select);
         
         ///RESPONSE n01a 2
@@ -144,7 +144,6 @@ public class Dialog_p2_brk_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01a 2 
         response.NextNodeId = "";
-        response.SetCondition(n01a_r2_condition);
         response.OnSelect(n01a_r2_select);
         
         ///RESPONSE n01a 3
@@ -155,6 +154,7 @@ public class Dialog_p2_brk_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01a 3 
         response.NextNodeId = "";
+        response.OnSelect(n01a_r3_select);
         
         ///NODE_END n01a
         ///NODE_START DETOUR
@@ -300,35 +300,21 @@ public class Dialog_p2_brk_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01a_r2_condition
-    public bool n01a_r2_condition (  ) {
-        ///METHOD_BODY_START n01a_r2_condition
+    ///METHOD n01a_r1_condition
+    public bool n01a_r1_condition (  ) {
+        ///METHOD_BODY_START n01a_r1_condition
         /*//				if( hasItem("CLOTHES") AND (?p2_disguised = false) ) */
         return true;
-        ///METHOD_BODY_END n01a_r2_condition
-    }
-
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
-        /*//					overlayPopup("brooksville_poster")
-        //					?has_wanted2 = true*/
-        ///METHOD_BODY_END n01_r0_select
+        ///METHOD_BODY_END n01a_r1_condition
     }
 
     ///METHOD n01_r1_select
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
-        /*//				#rand = random(100)
-        //				// decrease chance
-        //				if( $escape_type = "henry" )
-        //					#rand = #rand - 15
-        //				/if
-        //				#rand = #rand + (15 * #escape_attempt)
-        //				if( #rand > 40 )
-        //					$next_node = "HURRY1"
+        /*//				if( $escape_type = "henry" )
+        //					$next_node = "NIGHTFALL_H"
         //				else
-        //					$next_node = "HURRY2"
+        //					$next_node = "NIGHTFALL"
         //				/if*/
         ///METHOD_BODY_END n01_r1_select
     }
@@ -336,17 +322,6 @@ public class Dialog_p2_brk_001 {
     ///METHOD n01_r2_select
     public void n01_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r2_select
-        /*//				if( $escape_type = "henry" )
-        //					$next_node = "NIGHTFALL_H"
-        //				else
-        //					$next_node = "NIGHTFALL"
-        //				/if*/
-        ///METHOD_BODY_END n01_r2_select
-    }
-
-    ///METHOD n01a_r0_select
-    public void n01a_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01a_r0_select
         /*//				#rand = random(100)
         //				// decrease chance
         //				if( $escape_type = "henry" )
@@ -358,25 +333,50 @@ public class Dialog_p2_brk_001 {
         //				else
         //					$next_node = "HURRY2"
         //				/if*/
-        ///METHOD_BODY_END n01a_r0_select
+        ///METHOD_BODY_END n01_r2_select
+    }
+
+    ///METHOD n01_r3_select
+    public void n01_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_select
+        /*//					overlayPopup("brooksville_poster")
+        //					?has_wanted2 = true*/
+        ///METHOD_BODY_END n01_r3_select
     }
 
     ///METHOD n01a_r1_select
     public void n01a_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01a_r1_select
-        /*//				if( $escape_type = "henry" )
-        //					$next_node = "NIGHTFALL_H"
-        //				else
-        //					$next_node = "NIGHTFALL"
-        //				/if*/
+        /*//				?p2_disguised = true*/
         ///METHOD_BODY_END n01a_r1_select
     }
 
     ///METHOD n01a_r2_select
     public void n01a_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01a_r2_select
-        /*//				?p2_disguised = true*/
+        /*//				if( $escape_type = "henry" )
+        //					$next_node = "NIGHTFALL_H"
+        //				else
+        //					$next_node = "NIGHTFALL"
+        //				/if*/
         ///METHOD_BODY_END n01a_r2_select
+    }
+
+    ///METHOD n01a_r3_select
+    public void n01a_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01a_r3_select
+        /*//				#rand = random(100)
+        //				// decrease chance
+        //				if( $escape_type = "henry" )
+        //					#rand = #rand - 15
+        //				/if
+        //				#rand = #rand + (15 * #escape_attempt)
+        //				if( #rand > 40 )
+        //					$next_node = "HURRY1"
+        //				else
+        //					$next_node = "HURRY2"
+        //				/if*/
+        ///METHOD_BODY_END n01a_r3_select
     }
 
     ///METHOD DETOUR_r0_select

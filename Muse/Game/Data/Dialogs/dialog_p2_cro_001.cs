@@ -67,7 +67,6 @@ public class Dialog_p2_cro_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -87,6 +86,7 @@ public class Dialog_p2_cro_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 END
         response.NextNodeId = "END";
+        response.OnSelect(n01_r2_select);
         
         ///NODE_END n01
         ///NODE_START misstep
@@ -233,9 +233,20 @@ public class Dialog_p2_cro_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
+    ///METHOD n01_r1_select
+    public void n01_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r1_select
+        /*//				if( $escape_type = "henry" )
+        //					$next_node = "LOG_H"
+        //				else
+        //					$next_node = "LOG"
+        //				/if*/
+        ///METHOD_BODY_END n01_r1_select
+    }
+
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
         /*//				#rand = random(100)
         //				if( $escape_type = "henry" )
         //					$next_node = "misstep"
@@ -247,18 +258,7 @@ public class Dialog_p2_cro_001 {
         //					/if
         //				/if
         //			$pick_result = "okay" */
-        ///METHOD_BODY_END n01_r0_select
-    }
-
-    ///METHOD n01_r1_select
-    public void n01_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r1_select
-        /*//				if( $escape_type = "henry" )
-        //					$next_node = "LOG_H"
-        //				else
-        //					$next_node = "LOG"
-        //				/if*/
-        ///METHOD_BODY_END n01_r1_select
+        ///METHOD_BODY_END n01_r2_select
     }
 
     ///METHOD misstep_r0_select

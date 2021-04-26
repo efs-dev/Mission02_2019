@@ -67,7 +67,7 @@ public class Dialog_p1_hogs {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n04
         response.NextNodeId = "n04";
-        response.OnSelect(n01_r2_select);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -87,7 +87,7 @@ public class Dialog_p1_hogs {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 n02
         response.NextNodeId = "n02";
-        response.OnSelect(n01_r0_select);
+        response.OnSelect(n01_r2_select);
         
         ///NODE_END n01
         ///NODE_START n02
@@ -175,9 +175,9 @@ public class Dialog_p1_hogs {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01_r2_select
-    public void n01_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r2_select
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
         /*//#hog_code = 3
         //#p1_total_tasks= #p1_total_tasks+2
         //#ptasks_complete= #ptasks_complete+1
@@ -185,7 +185,7 @@ public class Dialog_p1_hogs {
         //	overlayPopup("resisted_popup")
         ///if
         //#res_points = #res_points + 2*/
-        ///METHOD_BODY_END n01_r2_select
+        ///METHOD_BODY_END n01_r0_select
     }
 
     ///METHOD n01_r1_select
@@ -201,13 +201,13 @@ public class Dialog_p1_hogs {
         ///METHOD_BODY_END n01_r1_select
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
         /*//#hog_code = 1
         //#p1_total_tasks= #p1_total_tasks+2
         //#ptasks_complete= #ptasks_complete+1*/
-        ///METHOD_BODY_END n01_r0_select
+        ///METHOD_BODY_END n01_r2_select
     }
 }
 //CLASS_END Dialog_p1_hogs

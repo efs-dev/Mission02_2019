@@ -121,7 +121,7 @@ public class Dialog_p2_ran_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 1 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n02_r0_select);
+        response.OnSelect(n02_r1_select);
         
         ///NODE_END n02
         ///NODE_START n03
@@ -185,7 +185,7 @@ public class Dialog_p2_ran_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 0 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n04_r1_condition);
+        response.SetCondition(n04_r0_condition);
         
         ///RESPONSE n04 1
         response = node.AddResponse();
@@ -195,7 +195,7 @@ public class Dialog_p2_ran_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 1 n03
         response.NextNodeId = "n03";
-        response.SetCondition(n04_r0_condition);
+        response.SetCondition(n04_r1_condition);
         
         ///NODE_END n04
         ///NODE_START n05
@@ -454,27 +454,27 @@ public class Dialog_p2_ran_001 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n04_r1_condition
-    public bool n04_r1_condition (  ) {
-        ///METHOD_BODY_START n04_r1_condition
-        /*//if (?name_stated_ran)*/
-        return true;
-        ///METHOD_BODY_END n04_r1_condition
-    }
-
     ///METHOD n04_r0_condition
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
-        /*//if (?name_stated_ran = false)*/
+        /*//if (?name_stated_ran)*/
         return true;
         ///METHOD_BODY_END n04_r0_condition
     }
 
-    ///METHOD n02_r0_select
-    public void n02_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n02_r0_select
+    ///METHOD n04_r1_condition
+    public bool n04_r1_condition (  ) {
+        ///METHOD_BODY_START n04_r1_condition
+        /*//if (?name_stated_ran = false)*/
+        return true;
+        ///METHOD_BODY_END n04_r1_condition
+    }
+
+    ///METHOD n02_r1_select
+    public void n02_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n02_r1_select
         /*//?name_stated_ran = true*/
-        ///METHOD_BODY_END n02_r0_select
+        ///METHOD_BODY_END n02_r1_select
     }
 }
 //CLASS_END Dialog_p2_ran_001

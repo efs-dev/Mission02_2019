@@ -130,7 +130,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 1 n06
         response.NextNodeId = "n06";
-        response.SetCondition(n03_r2_condition);
+        response.SetCondition(n03_r1_condition);
         
         ///RESPONSE n03 2
         response = node.AddResponse();
@@ -140,7 +140,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 2 n06
         response.NextNodeId = "n06";
-        response.SetCondition(n03_r1_condition);
+        response.SetCondition(n03_r2_condition);
         
         ///RESPONSE n03 3
         response = node.AddResponse();
@@ -177,7 +177,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 0 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n04_r3_condition);
+        response.SetCondition(n04_r0_condition);
         
         ///RESPONSE n04 1
         response = node.AddResponse();
@@ -187,7 +187,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 1 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n04_r2_condition);
+        response.SetCondition(n04_r1_condition);
         
         ///RESPONSE n04 2
         response = node.AddResponse();
@@ -233,7 +233,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 0 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n05_r2_condition);
+        response.SetCondition(n05_r0_condition);
         
         ///RESPONSE n05 1
         response = node.AddResponse();
@@ -353,7 +353,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n08 0 n10b
         response.NextNodeId = "n10b";
-        response.SetCondition(n08_r2_condition);
+        response.SetCondition(n08_r0_condition);
         
         ///RESPONSE n08 1
         response = node.AddResponse();
@@ -400,7 +400,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n09 0 n10b
         response.NextNodeId = "n10b";
-        response.SetCondition(n09_r1_condition);
+        response.SetCondition(n09_r0_condition);
         
         ///RESPONSE n09 1
         response = node.AddResponse();
@@ -410,7 +410,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n09 1 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n09_r0_condition);
+        response.SetCondition(n09_r1_condition);
         
         ///NODE_END n09
         ///NODE_START n10
@@ -439,8 +439,8 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 0 n16
         response.NextNodeId = "n16";
-        response.SetCondition(n10_r3_condition);
-        response.OnSelect(n10_r3_select);
+        response.SetCondition(n10_r0_condition);
+        response.OnSelect(n10_r0_select);
         
         ///RESPONSE n10 1
         response = node.AddResponse();
@@ -450,7 +450,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 1 n14
         response.NextNodeId = "n14";
-        response.OnSelect(n10_r2_select);
+        response.OnSelect(n10_r1_select);
         
         ///RESPONSE n10 2
         response = node.AddResponse();
@@ -460,7 +460,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 2 n13
         response.NextNodeId = "n13";
-        response.OnSelect(n10_r1_select);
+        response.OnSelect(n10_r2_select);
         
         ///RESPONSE n10 3
         response = node.AddResponse();
@@ -470,7 +470,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 3 n12
         response.NextNodeId = "n12";
-        response.OnSelect(n10_r0_select);
+        response.OnSelect(n10_r3_select);
         
         ///NODE_END n10
         ///NODE_START n10b
@@ -561,7 +561,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n12 0 n16
         response.NextNodeId = "n16";
-        response.SetCondition(n12_r1_condition);
+        response.SetCondition(n12_r0_condition);
         
         ///RESPONSE n12 1
         response = node.AddResponse();
@@ -598,7 +598,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n13 0 n16
         response.NextNodeId = "n16";
-        response.SetCondition(n13_r1_condition);
+        response.SetCondition(n13_r0_condition);
         
         ///RESPONSE n13 1
         response = node.AddResponse();
@@ -743,7 +743,7 @@ public class Dialog_p1_mom_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n18 0 n06
         response.NextNodeId = "n06";
-        response.SetCondition(n18_r2_condition);
+        response.SetCondition(n18_r0_condition);
         
         ///RESPONSE n18 1
         response = node.AddResponse();
@@ -841,44 +841,44 @@ public class Dialog_p1_mom_002 {
         ///METHOD_BODY_END n10_p0_show
     }
 
-    ///METHOD n03_r2_condition
-    public bool n03_r2_condition (  ) {
-        ///METHOD_BODY_START n03_r2_condition
-        /*//if ($escape_type = "alone")*/
-        return true;
-        ///METHOD_BODY_END n03_r2_condition
-    }
-
     ///METHOD n03_r1_condition
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
-        /*//if ($escape_type = "henry")*/
+        /*//if ($escape_type = "alone")*/
         return true;
         ///METHOD_BODY_END n03_r1_condition
     }
 
-    ///METHOD n04_r3_condition
-    public bool n04_r3_condition (  ) {
-        ///METHOD_BODY_START n04_r3_condition
-        /*//if ($escape_type = "alone")*/
-        return true;
-        ///METHOD_BODY_END n04_r3_condition
-    }
-
-    ///METHOD n04_r2_condition
-    public bool n04_r2_condition (  ) {
-        ///METHOD_BODY_START n04_r2_condition
+    ///METHOD n03_r2_condition
+    public bool n03_r2_condition (  ) {
+        ///METHOD_BODY_START n03_r2_condition
         /*//if ($escape_type = "henry")*/
         return true;
-        ///METHOD_BODY_END n04_r2_condition
+        ///METHOD_BODY_END n03_r2_condition
     }
 
-    ///METHOD n05_r2_condition
-    public bool n05_r2_condition (  ) {
-        ///METHOD_BODY_START n05_r2_condition
+    ///METHOD n04_r0_condition
+    public bool n04_r0_condition (  ) {
+        ///METHOD_BODY_START n04_r0_condition
         /*//if ($escape_type = "alone")*/
         return true;
-        ///METHOD_BODY_END n05_r2_condition
+        ///METHOD_BODY_END n04_r0_condition
+    }
+
+    ///METHOD n04_r1_condition
+    public bool n04_r1_condition (  ) {
+        ///METHOD_BODY_START n04_r1_condition
+        /*//if ($escape_type = "henry")*/
+        return true;
+        ///METHOD_BODY_END n04_r1_condition
+    }
+
+    ///METHOD n05_r0_condition
+    public bool n05_r0_condition (  ) {
+        ///METHOD_BODY_START n05_r0_condition
+        /*//if ($escape_type = "alone")*/
+        return true;
+        ///METHOD_BODY_END n05_r0_condition
     }
 
     ///METHOD n05_r1_condition
@@ -889,12 +889,12 @@ public class Dialog_p1_mom_002 {
         ///METHOD_BODY_END n05_r1_condition
     }
 
-    ///METHOD n08_r2_condition
-    public bool n08_r2_condition (  ) {
-        ///METHOD_BODY_START n08_r2_condition
+    ///METHOD n08_r0_condition
+    public bool n08_r0_condition (  ) {
+        ///METHOD_BODY_START n08_r0_condition
         /*//if(?pass_taken)*/
         return true;
-        ///METHOD_BODY_END n08_r2_condition
+        ///METHOD_BODY_END n08_r0_condition
     }
 
     ///METHOD n08_r1_condition
@@ -905,52 +905,52 @@ public class Dialog_p1_mom_002 {
         ///METHOD_BODY_END n08_r1_condition
     }
 
-    ///METHOD n09_r1_condition
-    public bool n09_r1_condition (  ) {
-        ///METHOD_BODY_START n09_r1_condition
-        /*//if(?pass_taken)*/
-        return true;
-        ///METHOD_BODY_END n09_r1_condition
-    }
-
     ///METHOD n09_r0_condition
     public bool n09_r0_condition (  ) {
         ///METHOD_BODY_START n09_r0_condition
-        /*//if(?pass_taken=false)*/
+        /*//if(?pass_taken)*/
         return true;
         ///METHOD_BODY_END n09_r0_condition
     }
 
-    ///METHOD n10_r3_condition
-    public bool n10_r3_condition (  ) {
-        ///METHOD_BODY_START n10_r3_condition
-        /*//if (?know_lexington)*/
+    ///METHOD n09_r1_condition
+    public bool n09_r1_condition (  ) {
+        ///METHOD_BODY_START n09_r1_condition
+        /*//if(?pass_taken=false)*/
         return true;
-        ///METHOD_BODY_END n10_r3_condition
+        ///METHOD_BODY_END n09_r1_condition
     }
 
-    ///METHOD n12_r1_condition
-    public bool n12_r1_condition (  ) {
-        ///METHOD_BODY_START n12_r1_condition
+    ///METHOD n10_r0_condition
+    public bool n10_r0_condition (  ) {
+        ///METHOD_BODY_START n10_r0_condition
         /*//if (?know_lexington)*/
         return true;
-        ///METHOD_BODY_END n12_r1_condition
+        ///METHOD_BODY_END n10_r0_condition
     }
 
-    ///METHOD n13_r1_condition
-    public bool n13_r1_condition (  ) {
-        ///METHOD_BODY_START n13_r1_condition
+    ///METHOD n12_r0_condition
+    public bool n12_r0_condition (  ) {
+        ///METHOD_BODY_START n12_r0_condition
         /*//if (?know_lexington)*/
         return true;
-        ///METHOD_BODY_END n13_r1_condition
+        ///METHOD_BODY_END n12_r0_condition
     }
 
-    ///METHOD n18_r2_condition
-    public bool n18_r2_condition (  ) {
-        ///METHOD_BODY_START n18_r2_condition
+    ///METHOD n13_r0_condition
+    public bool n13_r0_condition (  ) {
+        ///METHOD_BODY_START n13_r0_condition
+        /*//if (?know_lexington)*/
+        return true;
+        ///METHOD_BODY_END n13_r0_condition
+    }
+
+    ///METHOD n18_r0_condition
+    public bool n18_r0_condition (  ) {
+        ///METHOD_BODY_START n18_r0_condition
         /*//if ($escape_type = "alone")*/
         return true;
-        ///METHOD_BODY_END n18_r2_condition
+        ///METHOD_BODY_END n18_r0_condition
     }
 
     ///METHOD n18_r1_condition
@@ -961,20 +961,12 @@ public class Dialog_p1_mom_002 {
         ///METHOD_BODY_END n18_r1_condition
     }
 
-    ///METHOD n10_r3_select
-    public void n10_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n10_r3_select
+    ///METHOD n10_r0_select
+    public void n10_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n10_r0_select
         /*//showNpc(true,1)
         //setLayer("fg", "")*/
-        ///METHOD_BODY_END n10_r3_select
-    }
-
-    ///METHOD n10_r2_select
-    public void n10_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n10_r2_select
-        /*//showNpc(true,1)
-        //setLayer("fg", "")*/
-        ///METHOD_BODY_END n10_r2_select
+        ///METHOD_BODY_END n10_r0_select
     }
 
     ///METHOD n10_r1_select
@@ -985,12 +977,20 @@ public class Dialog_p1_mom_002 {
         ///METHOD_BODY_END n10_r1_select
     }
 
-    ///METHOD n10_r0_select
-    public void n10_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n10_r0_select
+    ///METHOD n10_r2_select
+    public void n10_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n10_r2_select
         /*//showNpc(true,1)
         //setLayer("fg", "")*/
-        ///METHOD_BODY_END n10_r0_select
+        ///METHOD_BODY_END n10_r2_select
+    }
+
+    ///METHOD n10_r3_select
+    public void n10_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n10_r3_select
+        /*//showNpc(true,1)
+        //setLayer("fg", "")*/
+        ///METHOD_BODY_END n10_r3_select
     }
 }
 //CLASS_END Dialog_p1_mom_002
