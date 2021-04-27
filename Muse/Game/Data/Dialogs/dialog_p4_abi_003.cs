@@ -275,7 +275,7 @@ public class Dialog_p4_abi_003 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n07 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n07_r1_select);
+        response.OnSelect(n07_r0_select);
         
         ///RESPONSE n07 1
         response = node.AddResponse();
@@ -285,7 +285,7 @@ public class Dialog_p4_abi_003 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n07 1 END
         response.NextNodeId = "END";
-        response.OnSelect(n07_r0_select);
+        response.OnSelect(n07_r1_select);
         
         ///NODE_END n07
         ///NODE_START n08
@@ -327,18 +327,18 @@ public class Dialog_p4_abi_003 {
         ///METHOD_BODY_END n01_p0_show
     }
 
-    ///METHOD n07_r1_select
-    public void n07_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n07_r1_select
-        /*//#p4_lucy_canada = 0*/
-        ///METHOD_BODY_END n07_r1_select
-    }
-
     ///METHOD n07_r0_select
     public void n07_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r0_select
         /*//#p4_lucy_canada = 0*/
         ///METHOD_BODY_END n07_r0_select
+    }
+
+    ///METHOD n07_r1_select
+    public void n07_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n07_r1_select
+        /*//#p4_lucy_canada = 0*/
+        ///METHOD_BODY_END n07_r1_select
     }
 
     ///METHOD n08_r0_select

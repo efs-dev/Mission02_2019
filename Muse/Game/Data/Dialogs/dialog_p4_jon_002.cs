@@ -94,7 +94,7 @@ public class Dialog_p4_jon_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 0 n05
         response.NextNodeId = "n05";
-        response.SetCondition(n02_r1_condition);
+        response.SetCondition(n02_r0_condition);
         
         ///RESPONSE n02 1
         response = node.AddResponse();
@@ -104,7 +104,7 @@ public class Dialog_p4_jon_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 1 n03
         response.NextNodeId = "n03";
-        response.SetCondition(n02_r0_condition);
+        response.SetCondition(n02_r1_condition);
         
         ///NODE_END n02
         ///NODE_START n03
@@ -167,20 +167,20 @@ public class Dialog_p4_jon_002 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n02_r1_condition
-    public bool n02_r1_condition (  ) {
-        ///METHOD_BODY_START n02_r1_condition
-        /*//if (#p4_lucy_canada = 0)*/
-        return true;
-        ///METHOD_BODY_END n02_r1_condition
-    }
-
     ///METHOD n02_r0_condition
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
-        /*//if (#p4_lucy_canada = 2)*/
+        /*//if (#p4_lucy_canada = 0)*/
         return true;
         ///METHOD_BODY_END n02_r0_condition
+    }
+
+    ///METHOD n02_r1_condition
+    public bool n02_r1_condition (  ) {
+        ///METHOD_BODY_START n02_r1_condition
+        /*//if (#p4_lucy_canada = 2)*/
+        return true;
+        ///METHOD_BODY_END n02_r1_condition
     }
 
     ///METHOD n03_r0_select

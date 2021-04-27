@@ -67,8 +67,8 @@ public class Dialog_p4_choice_witness2 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID one_more 0 END
         response.NextNodeId = "END";
-        response.SetCondition(one_more_r1_condition);
-        response.OnSelect(one_more_r1_select);
+        response.SetCondition(one_more_r0_condition);
+        response.OnSelect(one_more_r0_select);
         
         ///RESPONSE one_more 1
         response = node.AddResponse();
@@ -78,7 +78,7 @@ public class Dialog_p4_choice_witness2 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID one_more 1 END
         response.NextNodeId = "END";
-        response.OnSelect(one_more_r0_select);
+        response.OnSelect(one_more_r1_select);
         
         ///NODE_END one_more
         ///NODE_START finished
@@ -113,27 +113,27 @@ public class Dialog_p4_choice_witness2 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD one_more_r1_condition
-    public bool one_more_r1_condition (  ) {
-        ///METHOD_BODY_START one_more_r1_condition
+    ///METHOD one_more_r0_condition
+    public bool one_more_r0_condition (  ) {
+        ///METHOD_BODY_START one_more_r0_condition
         /*//					if( (#telegraph_time = 0) AND (?P3_TELEGRAPH)  )*/
         return true;
-        ///METHOD_BODY_END one_more_r1_condition
-    }
-
-    ///METHOD one_more_r1_select
-    public void one_more_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START one_more_r1_select
-        /*//				endState("telegraph", "CROSSFADE")	*/
-        ///METHOD_BODY_END one_more_r1_select
+        ///METHOD_BODY_END one_more_r0_condition
     }
 
     ///METHOD one_more_r0_select
     public void one_more_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START one_more_r0_select
+        /*//				endState("telegraph", "CROSSFADE")	*/
+        ///METHOD_BODY_END one_more_r0_select
+    }
+
+    ///METHOD one_more_r1_select
+    public void one_more_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START one_more_r1_select
         /*//				// first ambush
         //				endState("ambush", "CROSSFADE")*/
-        ///METHOD_BODY_END one_more_r0_select
+        ///METHOD_BODY_END one_more_r1_select
     }
 
     ///METHOD finished_r0_select

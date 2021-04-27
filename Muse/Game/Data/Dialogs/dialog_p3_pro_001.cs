@@ -95,7 +95,7 @@ public class Dialog_p3_pro_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 0 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n02_r1_condition);
+        response.SetCondition(n02_r0_condition);
         
         ///RESPONSE n02 1
         response = node.AddResponse();
@@ -150,7 +150,7 @@ public class Dialog_p3_pro_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 2 n05
         response.NextNodeId = "n05";
-        response.OnSelect(n03_r0_select);
+        response.OnSelect(n03_r2_select);
         
         ///NODE_END n03
         ///NODE_START n04
@@ -281,19 +281,19 @@ public class Dialog_p3_pro_001 {
         ///METHOD_BODY_END n04_p0_show
     }
 
-    ///METHOD n02_r1_condition
-    public bool n02_r1_condition (  ) {
-        ///METHOD_BODY_START n02_r1_condition
+    ///METHOD n02_r0_condition
+    public bool n02_r0_condition (  ) {
+        ///METHOD_BODY_START n02_r0_condition
         /*//if (?p3_know_morgan_cin = true)*/
         return true;
-        ///METHOD_BODY_END n02_r1_condition
+        ///METHOD_BODY_END n02_r0_condition
     }
 
-    ///METHOD n03_r0_select
-    public void n03_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r0_select
+    ///METHOD n03_r2_select
+    public void n03_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r2_select
         /*//?p3_persuader = true*/
-        ///METHOD_BODY_END n03_r0_select
+        ///METHOD_BODY_END n03_r2_select
     }
 
     ///METHOD n08_r0_select

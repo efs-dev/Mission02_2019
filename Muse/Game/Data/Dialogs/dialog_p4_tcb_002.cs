@@ -112,7 +112,7 @@ public class Dialog_p4_tcb_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 0 n09
         response.NextNodeId = "n09";
-        response.SetCondition(n02_r4_condition);
+        response.SetCondition(n02_r0_condition);
         
         ///RESPONSE n02 1
         response = node.AddResponse();
@@ -140,7 +140,7 @@ public class Dialog_p4_tcb_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 3 n08
         response.NextNodeId = "n08";
-        response.SetCondition(n02_r1_condition);
+        response.SetCondition(n02_r3_condition);
         
         ///RESPONSE n02 4
         response = node.AddResponse();
@@ -480,20 +480,20 @@ public class Dialog_p4_tcb_002 {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n02_r4_condition
-    public bool n02_r4_condition (  ) {
-        ///METHOD_BODY_START n02_r4_condition
+    ///METHOD n02_r0_condition
+    public bool n02_r0_condition (  ) {
+        ///METHOD_BODY_START n02_r0_condition
         /*//if (?p4_jon_canada = true)*/
         return true;
-        ///METHOD_BODY_END n02_r4_condition
+        ///METHOD_BODY_END n02_r0_condition
     }
 
-    ///METHOD n02_r1_condition
-    public bool n02_r1_condition (  ) {
-        ///METHOD_BODY_START n02_r1_condition
+    ///METHOD n02_r3_condition
+    public bool n02_r3_condition (  ) {
+        ///METHOD_BODY_START n02_r3_condition
         /*//if (?p4_jon_ripley = true)*/
         return true;
-        ///METHOD_BODY_END n02_r1_condition
+        ///METHOD_BODY_END n02_r3_condition
     }
 }
 //CLASS_END Dialog_p4_tcb_002

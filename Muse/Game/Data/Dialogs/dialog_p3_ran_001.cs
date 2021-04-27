@@ -220,7 +220,7 @@ public class Dialog_p3_ran_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n06 0 n08
         response.NextNodeId = "n08";
-        response.SetCondition(n06_r2_condition);
+        response.SetCondition(n06_r0_condition);
         
         ///RESPONSE n06 1
         response = node.AddResponse();
@@ -268,7 +268,7 @@ public class Dialog_p3_ran_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n07 0 n08
         response.NextNodeId = "n08";
-        response.SetCondition(n07_r2_condition);
+        response.SetCondition(n07_r0_condition);
         
         ///RESPONSE n07 1
         response = node.AddResponse();
@@ -342,7 +342,7 @@ public class Dialog_p3_ran_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 0 n11
         response.NextNodeId = "n11";
-        response.SetCondition(n10_r2_condition);
+        response.SetCondition(n10_r0_condition);
         
         ///RESPONSE n10 1
         response = node.AddResponse();
@@ -485,12 +485,12 @@ public class Dialog_p3_ran_001 {
         ///METHOD_BODY_END n07_p0_show
     }
 
-    ///METHOD n06_r2_condition
-    public bool n06_r2_condition (  ) {
-        ///METHOD_BODY_START n06_r2_condition
+    ///METHOD n06_r0_condition
+    public bool n06_r0_condition (  ) {
+        ///METHOD_BODY_START n06_r0_condition
         /*//if (?p3_know_parker_free = true)*/
         return true;
-        ///METHOD_BODY_END n06_r2_condition
+        ///METHOD_BODY_END n06_r0_condition
     }
 
     ///METHOD n06_r1_condition
@@ -501,12 +501,12 @@ public class Dialog_p3_ran_001 {
         ///METHOD_BODY_END n06_r1_condition
     }
 
-    ///METHOD n07_r2_condition
-    public bool n07_r2_condition (  ) {
-        ///METHOD_BODY_START n07_r2_condition
+    ///METHOD n07_r0_condition
+    public bool n07_r0_condition (  ) {
+        ///METHOD_BODY_START n07_r0_condition
         /*//if (?p3_know_parker_free = true)*/
         return true;
-        ///METHOD_BODY_END n07_r2_condition
+        ///METHOD_BODY_END n07_r0_condition
     }
 
     ///METHOD n07_r1_condition
@@ -517,12 +517,12 @@ public class Dialog_p3_ran_001 {
         ///METHOD_BODY_END n07_r1_condition
     }
 
-    ///METHOD n10_r2_condition
-    public bool n10_r2_condition (  ) {
-        ///METHOD_BODY_START n10_r2_condition
+    ///METHOD n10_r0_condition
+    public bool n10_r0_condition (  ) {
+        ///METHOD_BODY_START n10_r0_condition
         /*//if (?p3_know_parker_free = true)*/
         return true;
-        ///METHOD_BODY_END n10_r2_condition
+        ///METHOD_BODY_END n10_r0_condition
     }
 
     ///METHOD n11_r0_select

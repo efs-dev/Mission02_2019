@@ -208,7 +208,7 @@ public class Dialog_p3_ran_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 2 n06
         response.NextNodeId = "n06";
-        response.SetCondition(n05_r0_condition);
+        response.SetCondition(n05_r2_condition);
         
         ///NODE_END n05
         ///NODE_START n06
@@ -330,7 +330,7 @@ public class Dialog_p3_ran_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n09 1 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n09_r0_condition);
+        response.SetCondition(n09_r1_condition);
         
         ///NODE_END n09
         ///NODE_START n10
@@ -709,7 +709,7 @@ public class Dialog_p3_ran_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n21 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n21_r1_select);
+        response.OnSelect(n21_r0_select);
         
         ///RESPONSE n21 1
         response = node.AddResponse();
@@ -975,27 +975,27 @@ public class Dialog_p3_ran_002 {
         ///METHOD_BODY_END n05_r1_condition
     }
 
-    ///METHOD n05_r0_condition
-    public bool n05_r0_condition (  ) {
-        ///METHOD_BODY_START n05_r0_condition
+    ///METHOD n05_r2_condition
+    public bool n05_r2_condition (  ) {
+        ///METHOD_BODY_START n05_r2_condition
         /*//if ((?p3_tc_ask_parker = true) AND (?p3_ask_tc = true))*/
         return true;
-        ///METHOD_BODY_END n05_r0_condition
+        ///METHOD_BODY_END n05_r2_condition
     }
 
-    ///METHOD n09_r0_condition
-    public bool n09_r0_condition (  ) {
-        ///METHOD_BODY_START n09_r0_condition
+    ///METHOD n09_r1_condition
+    public bool n09_r1_condition (  ) {
+        ///METHOD_BODY_START n09_r1_condition
         /*//if (?p3_ask_funds = false)*/
         return true;
-        ///METHOD_BODY_END n09_r0_condition
+        ///METHOD_BODY_END n09_r1_condition
     }
 
-    ///METHOD n21_r1_select
-    public void n21_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n21_r1_select
+    ///METHOD n21_r0_select
+    public void n21_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n21_r0_select
         /*//$next_state = "LOSE_RAN_002"*/
-        ///METHOD_BODY_END n21_r1_select
+        ///METHOD_BODY_END n21_r0_select
     }
 }
 //CLASS_END Dialog_p3_ran_002

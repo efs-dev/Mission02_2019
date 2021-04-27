@@ -67,7 +67,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n03
         response.NextNodeId = "n03";
-        response.SetCondition(n01_r1_condition);
+        response.SetCondition(n01_r0_condition);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -132,8 +132,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 0 n05
         response.NextNodeId = "n05";
-        response.SetCondition(n03_r1_condition);
-        response.OnSelect(n03_r1_select);
+        response.SetCondition(n03_r0_condition);
+        response.OnSelect(n03_r0_select);
         
         ///RESPONSE n03 1
         response = node.AddResponse();
@@ -143,7 +143,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 1 n04
         response.NextNodeId = "n04";
-        response.OnSelect(n03_r0_select);
+        response.OnSelect(n03_r1_select);
         
         ///NODE_END n03
         ///NODE_START n04
@@ -171,7 +171,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 0 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n04_r2_condition);
+        response.SetCondition(n04_r0_condition);
         
         ///RESPONSE n04 1
         response = node.AddResponse();
@@ -191,7 +191,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 2 n07
         response.NextNodeId = "n07";
-        response.SetCondition(n04_r0_condition);
+        response.SetCondition(n04_r2_condition);
         
         ///NODE_END n04
         ///NODE_START n05
@@ -220,7 +220,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 0 n09
         response.NextNodeId = "n09";
-        response.OnSelect(n05_r1_select);
+        response.OnSelect(n05_r0_select);
         
         ///RESPONSE n05 1
         response = node.AddResponse();
@@ -230,8 +230,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 1 n08
         response.NextNodeId = "n08";
-        response.SetCondition(n05_r0_condition);
-        response.OnSelect(n05_r0_select);
+        response.SetCondition(n05_r1_condition);
+        response.OnSelect(n05_r1_select);
         
         ///NODE_END n05
         ///NODE_START n06
@@ -276,7 +276,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n06 0 n22
         response.NextNodeId = "n22";
-        response.OnSelect(n06_r1_select);
+        response.OnSelect(n06_r0_select);
         
         ///RESPONSE n06 1
         response = node.AddResponse();
@@ -286,7 +286,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n06 1 n20
         response.NextNodeId = "n20";
-        response.OnSelect(n06_r0_select);
+        response.OnSelect(n06_r1_select);
         
         ///NODE_END n06
         ///NODE_START n07
@@ -413,8 +413,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 0 n11
         response.NextNodeId = "n11";
-        response.SetCondition(n10_r1_condition);
-        response.OnSelect(n10_r1_select);
+        response.SetCondition(n10_r0_condition);
+        response.OnSelect(n10_r0_select);
         
         ///RESPONSE n10 1
         response = node.AddResponse();
@@ -424,8 +424,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 1 n11
         response.NextNodeId = "n11";
-        response.SetCondition(n10_r0_condition);
-        response.OnSelect(n10_r0_select);
+        response.SetCondition(n10_r1_condition);
+        response.OnSelect(n10_r1_select);
         
         ///NODE_END n10
         ///NODE_START n11
@@ -461,8 +461,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 0 n17
         response.NextNodeId = "n17";
-        response.SetCondition(n11_r5_condition);
-        response.OnSelect(n11_r5_select);
+        response.SetCondition(n11_r0_condition);
+        response.OnSelect(n11_r0_select);
         
         ///RESPONSE n11 1
         response = node.AddResponse();
@@ -472,8 +472,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 1 n16
         response.NextNodeId = "n16";
-        response.SetCondition(n11_r4_condition);
-        response.OnSelect(n11_r4_select);
+        response.SetCondition(n11_r1_condition);
+        response.OnSelect(n11_r1_select);
         
         ///RESPONSE n11 2
         response = node.AddResponse();
@@ -483,8 +483,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 2 n05
         response.NextNodeId = "n05";
-        response.SetCondition(n11_r3_condition);
-        response.OnSelect(n11_r3_select);
+        response.SetCondition(n11_r2_condition);
+        response.OnSelect(n11_r2_select);
         
         ///RESPONSE n11 3
         response = node.AddResponse();
@@ -494,7 +494,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 3 n14
         response.NextNodeId = "n14";
-        response.SetCondition(n11_r2_condition);
+        response.SetCondition(n11_r3_condition);
         
         ///RESPONSE n11 4
         response = node.AddResponse();
@@ -504,7 +504,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 4 n14
         response.NextNodeId = "n14";
-        response.SetCondition(n11_r1_condition);
+        response.SetCondition(n11_r4_condition);
         
         ///RESPONSE n11 5
         response = node.AddResponse();
@@ -514,8 +514,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 5 n13
         response.NextNodeId = "n13";
-        response.SetCondition(n11_r0_condition);
-        response.OnSelect(n11_r0_select);
+        response.SetCondition(n11_r5_condition);
+        response.OnSelect(n11_r5_select);
         
         ///NODE_END n11
         ///NODE_START n12
@@ -552,7 +552,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n12 1 n15
         response.NextNodeId = "n15";
-        response.SetCondition(n12_r0_condition);
+        response.SetCondition(n12_r1_condition);
         
         ///NODE_END n12
         ///NODE_START n13
@@ -580,8 +580,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n13 0 n05
         response.NextNodeId = "n05";
-        response.SetCondition(n13_r1_condition);
-        response.OnSelect(n13_r1_select);
+        response.SetCondition(n13_r0_condition);
+        response.OnSelect(n13_r0_select);
         
         ///RESPONSE n13 1
         response = node.AddResponse();
@@ -591,8 +591,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n13 1 n05
         response.NextNodeId = "n05";
-        response.SetCondition(n13_r0_condition);
-        response.OnSelect(n13_r0_select);
+        response.SetCondition(n13_r1_condition);
+        response.OnSelect(n13_r1_select);
         
         ///NODE_END n13
         ///NODE_START n14
@@ -620,7 +620,7 @@ public class Dialog_p3_par_001 {
         ///PROMPT_IGNORE_VO n14 1 false
         prompt.IgnoreVO = false;
         prompt.SetCondition(n14_p1_condition);
-        prompt.OnShow(n14_p0_show);
+        prompt.OnShow(n14_p1_show);
         
         ///RESPONSE n14 0
         response = node.AddResponse();
@@ -639,7 +639,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n14 1 n15
         response.NextNodeId = "n15";
-        response.SetCondition(n14_r0_condition);
+        response.SetCondition(n14_r1_condition);
         
         ///NODE_END n14
         ///NODE_START n15
@@ -703,8 +703,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n16 1 n17
         response.NextNodeId = "n17";
-        response.SetCondition(n16_r0_condition);
-        response.OnSelect(n16_r0_select);
+        response.SetCondition(n16_r1_condition);
+        response.OnSelect(n16_r1_select);
         
         ///NODE_END n16
         ///NODE_START n17
@@ -742,8 +742,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n17 1 n16
         response.NextNodeId = "n16";
-        response.SetCondition(n17_r0_condition);
-        response.OnSelect(n17_r0_select);
+        response.SetCondition(n17_r1_condition);
+        response.OnSelect(n17_r1_select);
         
         ///NODE_END n17
         ///NODE_START n18
@@ -780,7 +780,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n18 1 n15
         response.NextNodeId = "n15";
-        response.SetCondition(n18_r0_condition);
+        response.SetCondition(n18_r1_condition);
         
         ///NODE_END n18
         ///NODE_START n20
@@ -808,7 +808,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n20 0 n37
         response.NextNodeId = "n37";
-        response.SetCondition(n20_r2_condition);
+        response.SetCondition(n20_r0_condition);
         
         ///RESPONSE n20 1
         response = node.AddResponse();
@@ -829,7 +829,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n20 2 n23
         response.NextNodeId = "n23";
-        response.SetCondition(n20_r0_condition);
+        response.SetCondition(n20_r2_condition);
         
         ///NODE_END n20
         ///NODE_START n21
@@ -857,7 +857,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n21 0 n13
         response.NextNodeId = "n13";
-        response.SetCondition(n21_r2_condition);
+        response.SetCondition(n21_r0_condition);
         
         ///RESPONSE n21 1
         response = node.AddResponse();
@@ -878,7 +878,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n21 2 n24
         response.NextNodeId = "n24";
-        response.SetCondition(n21_r0_condition);
+        response.SetCondition(n21_r2_condition);
         
         ///NODE_END n21
         ///NODE_START n22
@@ -934,7 +934,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n23 0 n25
         response.NextNodeId = "n25";
-        response.OnSelect(n23_r1_select);
+        response.OnSelect(n23_r0_select);
         
         ///RESPONSE n23 1
         response = node.AddResponse();
@@ -944,7 +944,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n23 1 n26
         response.NextNodeId = "n26";
-        response.OnSelect(n23_r0_select);
+        response.OnSelect(n23_r1_select);
         
         ///NODE_END n23
         ///NODE_START n24
@@ -999,7 +999,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n25 0 n27
         response.NextNodeId = "n27";
-        response.OnSelect(n25_r1_select);
+        response.OnSelect(n25_r0_select);
         
         ///RESPONSE n25 1
         response = node.AddResponse();
@@ -1036,7 +1036,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n26 0 n27
         response.NextNodeId = "n27";
-        response.OnSelect(n26_r1_select);
+        response.OnSelect(n26_r0_select);
         
         ///RESPONSE n26 1
         response = node.AddResponse();
@@ -1073,7 +1073,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n27 0 n28
         response.NextNodeId = "n28";
-        response.OnSelect(n27_r1_select);
+        response.OnSelect(n27_r0_select);
         
         ///RESPONSE n27 1
         response = node.AddResponse();
@@ -1126,7 +1126,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n28 0 n31
         response.NextNodeId = "n31";
-        response.SetCondition(n28_r1_condition);
+        response.SetCondition(n28_r0_condition);
         
         ///RESPONSE n28 1
         response = node.AddResponse();
@@ -1163,7 +1163,7 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n30 0 n33
         response.NextNodeId = "n33";
-        response.OnSelect(n30_r1_select);
+        response.OnSelect(n30_r0_select);
         
         ///RESPONSE n30 1
         response = node.AddResponse();
@@ -1282,8 +1282,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n34 0 n35
         response.NextNodeId = "n35";
-        response.SetCondition(n34_r1_condition);
-        response.OnSelect(n34_r1_select);
+        response.SetCondition(n34_r0_condition);
+        response.OnSelect(n34_r0_select);
         
         ///RESPONSE n34 1
         response = node.AddResponse();
@@ -1293,8 +1293,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n34 1 n35
         response.NextNodeId = "n35";
-        response.SetCondition(n34_r0_condition);
-        response.OnSelect(n34_r0_select);
+        response.SetCondition(n34_r1_condition);
+        response.OnSelect(n34_r1_select);
         
         ///NODE_END n34
         ///NODE_START n35
@@ -1322,8 +1322,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n35 0 n17
         response.NextNodeId = "n17";
-        response.SetCondition(n35_r2_condition);
-        response.OnSelect(n35_r2_select);
+        response.SetCondition(n35_r0_condition);
+        response.OnSelect(n35_r0_select);
         
         ///RESPONSE n35 1
         response = node.AddResponse();
@@ -1344,8 +1344,8 @@ public class Dialog_p3_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n35 2 n05
         response.NextNodeId = "n05";
-        response.SetCondition(n35_r0_condition);
-        response.OnSelect(n35_r0_select);
+        response.SetCondition(n35_r2_condition);
+        response.OnSelect(n35_r2_select);
         
         ///NODE_END n35
         ///NODE_START n36
@@ -1532,11 +1532,11 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n05_p0_show
     }
 
-    ///METHOD n14_p0_show
-    public void n14_p0_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n14_p0_show
+    ///METHOD n14_p1_show
+    public void n14_p1_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n14_p1_show
         /*//set ?p3_disgust_tc = true*/
-        ///METHOD_BODY_END n14_p0_show
+        ///METHOD_BODY_END n14_p1_show
     }
 
     ///METHOD n17_p0_show
@@ -1563,28 +1563,28 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n36_p0_show
     }
 
-    ///METHOD n01_r1_condition
-    public bool n01_r1_condition (  ) {
-        ///METHOD_BODY_START n01_r1_condition
+    ///METHOD n01_r0_condition
+    public bool n01_r0_condition (  ) {
+        ///METHOD_BODY_START n01_r0_condition
         /*//if ((?p3_know_parker_resourceful = true) OR (?p3_know_parker_resourceful_mil = true))*/
         return true;
-        ///METHOD_BODY_END n01_r1_condition
+        ///METHOD_BODY_END n01_r0_condition
     }
 
-    ///METHOD n03_r1_condition
-    public bool n03_r1_condition (  ) {
-        ///METHOD_BODY_START n03_r1_condition
+    ///METHOD n03_r0_condition
+    public bool n03_r0_condition (  ) {
+        ///METHOD_BODY_START n03_r0_condition
         /*//if (?p3_have_aff = true)*/
         return true;
-        ///METHOD_BODY_END n03_r1_condition
+        ///METHOD_BODY_END n03_r0_condition
     }
 
-    ///METHOD n04_r2_condition
-    public bool n04_r2_condition (  ) {
-        ///METHOD_BODY_START n04_r2_condition
+    ///METHOD n04_r0_condition
+    public bool n04_r0_condition (  ) {
+        ///METHOD_BODY_START n04_r0_condition
         /*//if ((?p3_know_parker_resourceful_mil = true) AND (?p3_know_parker_resourceful = true))*/
         return true;
-        ///METHOD_BODY_END n04_r2_condition
+        ///METHOD_BODY_END n04_r0_condition
     }
 
     ///METHOD n04_r1_condition
@@ -1595,148 +1595,148 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n04_r1_condition
     }
 
-    ///METHOD n04_r0_condition
-    public bool n04_r0_condition (  ) {
-        ///METHOD_BODY_START n04_r0_condition
+    ///METHOD n04_r2_condition
+    public bool n04_r2_condition (  ) {
+        ///METHOD_BODY_START n04_r2_condition
         /*//if ((?p3_know_parker_resourceful_mil = false) AND (?p3_know_parker_resourceful = true))*/
         return true;
-        ///METHOD_BODY_END n04_r0_condition
+        ///METHOD_BODY_END n04_r2_condition
     }
 
-    ///METHOD n05_r0_condition
-    public bool n05_r0_condition (  ) {
-        ///METHOD_BODY_START n05_r0_condition
+    ///METHOD n05_r1_condition
+    public bool n05_r1_condition (  ) {
+        ///METHOD_BODY_START n05_r1_condition
         /*//if ((?p3_know_henry_aff = false) AND (?p3_hen_discussed = false))*/
         return true;
-        ///METHOD_BODY_END n05_r0_condition
-    }
-
-    ///METHOD n10_r1_condition
-    public bool n10_r1_condition (  ) {
-        ///METHOD_BODY_START n10_r1_condition
-        /*//if ($escape_type = "alone")*/
-        return true;
-        ///METHOD_BODY_END n10_r1_condition
+        ///METHOD_BODY_END n05_r1_condition
     }
 
     ///METHOD n10_r0_condition
     public bool n10_r0_condition (  ) {
         ///METHOD_BODY_START n10_r0_condition
-        /*//if ($escape_type = "henry")*/
+        /*//if ($escape_type = "alone")*/
         return true;
         ///METHOD_BODY_END n10_r0_condition
     }
 
-    ///METHOD n11_r5_condition
-    public bool n11_r5_condition (  ) {
-        ///METHOD_BODY_START n11_r5_condition
-        /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
+    ///METHOD n10_r1_condition
+    public bool n10_r1_condition (  ) {
+        ///METHOD_BODY_START n10_r1_condition
+        /*//if ($escape_type = "henry")*/
         return true;
-        ///METHOD_BODY_END n11_r5_condition
-    }
-
-    ///METHOD n11_r4_condition
-    public bool n11_r4_condition (  ) {
-        ///METHOD_BODY_START n11_r4_condition
-        /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
-        return true;
-        ///METHOD_BODY_END n11_r4_condition
-    }
-
-    ///METHOD n11_r3_condition
-    public bool n11_r3_condition (  ) {
-        ///METHOD_BODY_START n11_r3_condition
-        /*//if ((?p3_ask_tc = false) AND (?p3_have_aff = true) AND (?p3_aff_read = false))*/
-        return true;
-        ///METHOD_BODY_END n11_r3_condition
-    }
-
-    ///METHOD n11_r2_condition
-    public bool n11_r2_condition (  ) {
-        ///METHOD_BODY_START n11_r2_condition
-        /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = true) AND (?p3_disgust_tc = true))*/
-        return true;
-        ///METHOD_BODY_END n11_r2_condition
-    }
-
-    ///METHOD n11_r1_condition
-    public bool n11_r1_condition (  ) {
-        ///METHOD_BODY_START n11_r1_condition
-        /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = true) AND (?p3_disgust_tc = false))*/
-        return true;
-        ///METHOD_BODY_END n11_r1_condition
+        ///METHOD_BODY_END n10_r1_condition
     }
 
     ///METHOD n11_r0_condition
     public bool n11_r0_condition (  ) {
         ///METHOD_BODY_START n11_r0_condition
-        /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = false))*/
+        /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
         return true;
         ///METHOD_BODY_END n11_r0_condition
     }
 
-    ///METHOD n12_r0_condition
-    public bool n12_r0_condition (  ) {
-        ///METHOD_BODY_START n12_r0_condition
-        /*//if (?p3_ask_par_family = true)*/
+    ///METHOD n11_r1_condition
+    public bool n11_r1_condition (  ) {
+        ///METHOD_BODY_START n11_r1_condition
+        /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
         return true;
-        ///METHOD_BODY_END n12_r0_condition
+        ///METHOD_BODY_END n11_r1_condition
     }
 
-    ///METHOD n13_r1_condition
-    public bool n13_r1_condition (  ) {
-        ///METHOD_BODY_START n13_r1_condition
-        /*//if ((?p3_aff_read = false) AND (?p3_have_aff = true) AND (?p3_hen_discussed = false))*/
+    ///METHOD n11_r2_condition
+    public bool n11_r2_condition (  ) {
+        ///METHOD_BODY_START n11_r2_condition
+        /*//if ((?p3_ask_tc = false) AND (?p3_have_aff = true) AND (?p3_aff_read = false))*/
         return true;
-        ///METHOD_BODY_END n13_r1_condition
+        ///METHOD_BODY_END n11_r2_condition
+    }
+
+    ///METHOD n11_r3_condition
+    public bool n11_r3_condition (  ) {
+        ///METHOD_BODY_START n11_r3_condition
+        /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = true) AND (?p3_disgust_tc = true))*/
+        return true;
+        ///METHOD_BODY_END n11_r3_condition
+    }
+
+    ///METHOD n11_r4_condition
+    public bool n11_r4_condition (  ) {
+        ///METHOD_BODY_START n11_r4_condition
+        /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = true) AND (?p3_disgust_tc = false))*/
+        return true;
+        ///METHOD_BODY_END n11_r4_condition
+    }
+
+    ///METHOD n11_r5_condition
+    public bool n11_r5_condition (  ) {
+        ///METHOD_BODY_START n11_r5_condition
+        /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = false))*/
+        return true;
+        ///METHOD_BODY_END n11_r5_condition
+    }
+
+    ///METHOD n12_r1_condition
+    public bool n12_r1_condition (  ) {
+        ///METHOD_BODY_START n12_r1_condition
+        /*//if (?p3_ask_par_family = true)*/
+        return true;
+        ///METHOD_BODY_END n12_r1_condition
     }
 
     ///METHOD n13_r0_condition
     public bool n13_r0_condition (  ) {
         ///METHOD_BODY_START n13_r0_condition
-        /*//if ((?p3_aff_read = false) AND (?p3_have_aff = true) AND (?p3_hen_discussed = true))*/
+        /*//if ((?p3_aff_read = false) AND (?p3_have_aff = true) AND (?p3_hen_discussed = false))*/
         return true;
         ///METHOD_BODY_END n13_r0_condition
     }
 
-    ///METHOD n14_r0_condition
-    public bool n14_r0_condition (  ) {
-        ///METHOD_BODY_START n14_r0_condition
-        /*//if (?p3_ask_par_family = true)*/
+    ///METHOD n13_r1_condition
+    public bool n13_r1_condition (  ) {
+        ///METHOD_BODY_START n13_r1_condition
+        /*//if ((?p3_aff_read = false) AND (?p3_have_aff = true) AND (?p3_hen_discussed = true))*/
         return true;
-        ///METHOD_BODY_END n14_r0_condition
+        ///METHOD_BODY_END n13_r1_condition
     }
 
-    ///METHOD n16_r0_condition
-    public bool n16_r0_condition (  ) {
-        ///METHOD_BODY_START n16_r0_condition
+    ///METHOD n14_r1_condition
+    public bool n14_r1_condition (  ) {
+        ///METHOD_BODY_START n14_r1_condition
+        /*//if (?p3_ask_par_family = true)*/
+        return true;
+        ///METHOD_BODY_END n14_r1_condition
+    }
+
+    ///METHOD n16_r1_condition
+    public bool n16_r1_condition (  ) {
+        ///METHOD_BODY_START n16_r1_condition
         /*//if (?p3_ask_help_hen = false)*/
         return true;
-        ///METHOD_BODY_END n16_r0_condition
+        ///METHOD_BODY_END n16_r1_condition
     }
 
-    ///METHOD n17_r0_condition
-    public bool n17_r0_condition (  ) {
-        ///METHOD_BODY_START n17_r0_condition
+    ///METHOD n17_r1_condition
+    public bool n17_r1_condition (  ) {
+        ///METHOD_BODY_START n17_r1_condition
         /*//if (?p3_ask_see_hen = false)*/
         return true;
-        ///METHOD_BODY_END n17_r0_condition
+        ///METHOD_BODY_END n17_r1_condition
     }
 
-    ///METHOD n18_r0_condition
-    public bool n18_r0_condition (  ) {
-        ///METHOD_BODY_START n18_r0_condition
+    ///METHOD n18_r1_condition
+    public bool n18_r1_condition (  ) {
+        ///METHOD_BODY_START n18_r1_condition
         /*//if (?p3_ask_par_family = true)*/
         return true;
-        ///METHOD_BODY_END n18_r0_condition
+        ///METHOD_BODY_END n18_r1_condition
     }
 
-    ///METHOD n20_r2_condition
-    public bool n20_r2_condition (  ) {
-        ///METHOD_BODY_START n20_r2_condition
+    ///METHOD n20_r0_condition
+    public bool n20_r0_condition (  ) {
+        ///METHOD_BODY_START n20_r0_condition
         /*//if ((?p3_ask_tc=true) AND (?p3_disgust_tc = true))*/
         return true;
-        ///METHOD_BODY_END n20_r2_condition
+        ///METHOD_BODY_END n20_r0_condition
     }
 
     ///METHOD n20_r1_condition
@@ -1747,20 +1747,20 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n20_r1_condition
     }
 
-    ///METHOD n20_r0_condition
-    public bool n20_r0_condition (  ) {
-        ///METHOD_BODY_START n20_r0_condition
+    ///METHOD n20_r2_condition
+    public bool n20_r2_condition (  ) {
+        ///METHOD_BODY_START n20_r2_condition
         /*//if (?p3_ask_tc=false)*/
         return true;
-        ///METHOD_BODY_END n20_r0_condition
+        ///METHOD_BODY_END n20_r2_condition
     }
 
-    ///METHOD n21_r2_condition
-    public bool n21_r2_condition (  ) {
-        ///METHOD_BODY_START n21_r2_condition
+    ///METHOD n21_r0_condition
+    public bool n21_r0_condition (  ) {
+        ///METHOD_BODY_START n21_r0_condition
         /*//if ((?p3_ask_tc=true) AND (?p3_disgust_tc = true))*/
         return true;
-        ///METHOD_BODY_END n21_r2_condition
+        ///METHOD_BODY_END n21_r0_condition
     }
 
     ///METHOD n21_r1_condition
@@ -1771,44 +1771,44 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n21_r1_condition
     }
 
-    ///METHOD n21_r0_condition
-    public bool n21_r0_condition (  ) {
-        ///METHOD_BODY_START n21_r0_condition
+    ///METHOD n21_r2_condition
+    public bool n21_r2_condition (  ) {
+        ///METHOD_BODY_START n21_r2_condition
         /*//if (?p3_ask_tc=false)*/
         return true;
-        ///METHOD_BODY_END n21_r0_condition
+        ///METHOD_BODY_END n21_r2_condition
     }
 
-    ///METHOD n28_r1_condition
-    public bool n28_r1_condition (  ) {
-        ///METHOD_BODY_START n28_r1_condition
+    ///METHOD n28_r0_condition
+    public bool n28_r0_condition (  ) {
+        ///METHOD_BODY_START n28_r0_condition
         /*//if (?p3_lucy_screams = true)*/
         return true;
-        ///METHOD_BODY_END n28_r1_condition
-    }
-
-    ///METHOD n34_r1_condition
-    public bool n34_r1_condition (  ) {
-        ///METHOD_BODY_START n34_r1_condition
-        /*//if ($escape_type = "alone")*/
-        return true;
-        ///METHOD_BODY_END n34_r1_condition
+        ///METHOD_BODY_END n28_r0_condition
     }
 
     ///METHOD n34_r0_condition
     public bool n34_r0_condition (  ) {
         ///METHOD_BODY_START n34_r0_condition
-        /*//if ($escape_type = "henry")*/
+        /*//if ($escape_type = "alone")*/
         return true;
         ///METHOD_BODY_END n34_r0_condition
     }
 
-    ///METHOD n35_r2_condition
-    public bool n35_r2_condition (  ) {
-        ///METHOD_BODY_START n35_r2_condition
+    ///METHOD n34_r1_condition
+    public bool n34_r1_condition (  ) {
+        ///METHOD_BODY_START n34_r1_condition
+        /*//if ($escape_type = "henry")*/
+        return true;
+        ///METHOD_BODY_END n34_r1_condition
+    }
+
+    ///METHOD n35_r0_condition
+    public bool n35_r0_condition (  ) {
+        ///METHOD_BODY_START n35_r0_condition
         /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
         return true;
-        ///METHOD_BODY_END n35_r2_condition
+        ///METHOD_BODY_END n35_r0_condition
     }
 
     ///METHOD n35_r1_condition
@@ -1819,12 +1819,12 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n35_r1_condition
     }
 
-    ///METHOD n35_r0_condition
-    public bool n35_r0_condition (  ) {
-        ///METHOD_BODY_START n35_r0_condition
+    ///METHOD n35_r2_condition
+    public bool n35_r2_condition (  ) {
+        ///METHOD_BODY_START n35_r2_condition
         /*//if ((?p3_ask_tc = false) AND (?p3_have_aff = true) AND (?p3_aff_read = false))*/
         return true;
-        ///METHOD_BODY_END n35_r0_condition
+        ///METHOD_BODY_END n35_r2_condition
     }
 
     ///METHOD n02_r0_select
@@ -1836,50 +1836,50 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n02_r0_select
     }
 
-    ///METHOD n03_r1_select
-    public void n03_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r1_select
-        /*//set ?p3_aff_read = true
-        //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
-        ///METHOD_BODY_END n03_r1_select
-    }
-
     ///METHOD n03_r0_select
     public void n03_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r0_select
-        /*//set ?p3_ask_par_family = true
+        /*//set ?p3_aff_read = true
         //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
         ///METHOD_BODY_END n03_r0_select
     }
 
-    ///METHOD n05_r1_select
-    public void n05_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n05_r1_select
-        /*//setLayer("fg", "")*/
-        ///METHOD_BODY_END n05_r1_select
+    ///METHOD n03_r1_select
+    public void n03_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r1_select
+        /*//set ?p3_ask_par_family = true
+        //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
+        ///METHOD_BODY_END n03_r1_select
     }
 
     ///METHOD n05_r0_select
     public void n05_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n05_r0_select
-        /*//set ?p3_know_henry_aff = true
-        //setLayer("fg", "")*/
+        /*//setLayer("fg", "")*/
         ///METHOD_BODY_END n05_r0_select
     }
 
-    ///METHOD n06_r1_select
-    public void n06_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n06_r1_select
-        /*//setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside1.swf")*/
-        ///METHOD_BODY_END n06_r1_select
+    ///METHOD n05_r1_select
+    public void n05_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n05_r1_select
+        /*//set ?p3_know_henry_aff = true
+        //setLayer("fg", "")*/
+        ///METHOD_BODY_END n05_r1_select
     }
 
     ///METHOD n06_r0_select
     public void n06_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n06_r0_select
+        /*//setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside1.swf")*/
+        ///METHOD_BODY_END n06_r0_select
+    }
+
+    ///METHOD n06_r1_select
+    public void n06_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n06_r1_select
         /*//showNpc(true,1)
         //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_outside2.swf")*/
-        ///METHOD_BODY_END n06_r0_select
+        ///METHOD_BODY_END n06_r1_select
     }
 
     ///METHOD n08_r0_select
@@ -1889,55 +1889,48 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n08_r0_select
     }
 
-    ///METHOD n10_r1_select
-    public void n10_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n10_r1_select
-        /*//set ?p3_hen_discussed = true
-        //set ?p3_from_n10 = false*/
-        ///METHOD_BODY_END n10_r1_select
-    }
-
     ///METHOD n10_r0_select
     public void n10_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r0_select
         /*//set ?p3_hen_discussed = true
-        //set ?p3_from_n10 = true*/
+        //set ?p3_from_n10 = false*/
         ///METHOD_BODY_END n10_r0_select
     }
 
-    ///METHOD n11_r5_select
-    public void n11_r5_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n11_r5_select
-        /*//set ?p3_ask_help_hen = true*/
-        ///METHOD_BODY_END n11_r5_select
-    }
-
-    ///METHOD n11_r4_select
-    public void n11_r4_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n11_r4_select
-        /*//set ?p3_ask_see_hen = true*/
-        ///METHOD_BODY_END n11_r4_select
-    }
-
-    ///METHOD n11_r3_select
-    public void n11_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n11_r3_select
-        /*//set ?p3_aff_read = true*/
-        ///METHOD_BODY_END n11_r3_select
+    ///METHOD n10_r1_select
+    public void n10_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n10_r1_select
+        /*//set ?p3_hen_discussed = true
+        //set ?p3_from_n10 = true*/
+        ///METHOD_BODY_END n10_r1_select
     }
 
     ///METHOD n11_r0_select
     public void n11_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r0_select
-        /*//set ?p3_disgust_tc = true*/
+        /*//set ?p3_ask_help_hen = true*/
         ///METHOD_BODY_END n11_r0_select
     }
 
-    ///METHOD n13_r1_select
-    public void n13_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n13_r1_select
+    ///METHOD n11_r1_select
+    public void n11_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n11_r1_select
+        /*//set ?p3_ask_see_hen = true*/
+        ///METHOD_BODY_END n11_r1_select
+    }
+
+    ///METHOD n11_r2_select
+    public void n11_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n11_r2_select
         /*//set ?p3_aff_read = true*/
-        ///METHOD_BODY_END n13_r1_select
+        ///METHOD_BODY_END n11_r2_select
+    }
+
+    ///METHOD n11_r5_select
+    public void n11_r5_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n11_r5_select
+        /*//set ?p3_disgust_tc = true*/
+        ///METHOD_BODY_END n11_r5_select
     }
 
     ///METHOD n13_r0_select
@@ -1947,18 +1940,25 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n13_r0_select
     }
 
-    ///METHOD n16_r0_select
-    public void n16_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n16_r0_select
-        /*//set ?p3_ask_help_hen = true*/
-        ///METHOD_BODY_END n16_r0_select
+    ///METHOD n13_r1_select
+    public void n13_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n13_r1_select
+        /*//set ?p3_aff_read = true*/
+        ///METHOD_BODY_END n13_r1_select
     }
 
-    ///METHOD n17_r0_select
-    public void n17_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n17_r0_select
+    ///METHOD n16_r1_select
+    public void n16_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n16_r1_select
+        /*//set ?p3_ask_help_hen = true*/
+        ///METHOD_BODY_END n16_r1_select
+    }
+
+    ///METHOD n17_r1_select
+    public void n17_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n17_r1_select
         /*//set ?p3_ask_see_hen = true*/
-        ///METHOD_BODY_END n17_r0_select
+        ///METHOD_BODY_END n17_r1_select
     }
 
     ///METHOD n20_r1_select
@@ -1983,54 +1983,47 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n22_r0_select
     }
 
-    ///METHOD n23_r1_select
-    public void n23_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n23_r1_select
-        /*//set ?p3_lucy_resist_par = true
-        //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
-        ///METHOD_BODY_END n23_r1_select
-    }
-
     ///METHOD n23_r0_select
     public void n23_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n23_r0_select
-        /*//setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
+        /*//set ?p3_lucy_resist_par = true
+        //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
         ///METHOD_BODY_END n23_r0_select
     }
 
-    ///METHOD n25_r1_select
-    public void n25_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n25_r1_select
-        /*//set ?p3_lucy_screams = true*/
-        ///METHOD_BODY_END n25_r1_select
+    ///METHOD n23_r1_select
+    public void n23_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n23_r1_select
+        /*//setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
+        ///METHOD_BODY_END n23_r1_select
     }
 
-    ///METHOD n26_r1_select
-    public void n26_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n26_r1_select
+    ///METHOD n25_r0_select
+    public void n25_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n25_r0_select
         /*//set ?p3_lucy_screams = true*/
-        ///METHOD_BODY_END n26_r1_select
+        ///METHOD_BODY_END n25_r0_select
     }
 
-    ///METHOD n27_r1_select
-    public void n27_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n27_r1_select
+    ///METHOD n26_r0_select
+    public void n26_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n26_r0_select
+        /*//set ?p3_lucy_screams = true*/
+        ///METHOD_BODY_END n26_r0_select
+    }
+
+    ///METHOD n27_r0_select
+    public void n27_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n27_r0_select
         /*//?p3_fighting_spirit = true*/
-        ///METHOD_BODY_END n27_r1_select
+        ///METHOD_BODY_END n27_r0_select
     }
 
-    ///METHOD n30_r1_select
-    public void n30_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n30_r1_select
+    ///METHOD n30_r0_select
+    public void n30_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n30_r0_select
         /*//set ?p3_ask_par_family = true*/
-        ///METHOD_BODY_END n30_r1_select
-    }
-
-    ///METHOD n34_r1_select
-    public void n34_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n34_r1_select
-        /*//set ?p3_hen_discussed = true*/
-        ///METHOD_BODY_END n34_r1_select
+        ///METHOD_BODY_END n30_r0_select
     }
 
     ///METHOD n34_r0_select
@@ -2040,11 +2033,18 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n34_r0_select
     }
 
-    ///METHOD n35_r2_select
-    public void n35_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n35_r2_select
+    ///METHOD n34_r1_select
+    public void n34_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n34_r1_select
+        /*//set ?p3_hen_discussed = true*/
+        ///METHOD_BODY_END n34_r1_select
+    }
+
+    ///METHOD n35_r0_select
+    public void n35_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n35_r0_select
         /*//set ?p3_ask_help_hen = true*/
-        ///METHOD_BODY_END n35_r2_select
+        ///METHOD_BODY_END n35_r0_select
     }
 
     ///METHOD n35_r1_select
@@ -2054,11 +2054,11 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_END n35_r1_select
     }
 
-    ///METHOD n35_r0_select
-    public void n35_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n35_r0_select
+    ///METHOD n35_r2_select
+    public void n35_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n35_r2_select
         /*//set ?p3_aff_read = true*/
-        ///METHOD_BODY_END n35_r0_select
+        ///METHOD_BODY_END n35_r2_select
     }
 
     ///METHOD n37_r0_select

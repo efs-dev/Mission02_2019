@@ -104,8 +104,8 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n20
         response.NextNodeId = "n20";
-        response.SetCondition(n01_r1_condition);
-        response.OnSelect(n01_r1_select);
+        response.SetCondition(n01_r0_condition);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -115,7 +115,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n02
         response.NextNodeId = "n02";
-        response.SetCondition(n01_r0_condition);
+        response.SetCondition(n01_r1_condition);
         
         ///NODE_END n01
         ///NODE_START n02
@@ -143,7 +143,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 0 n04
         response.NextNodeId = "n04";
-        response.OnSelect(n02_r1_select);
+        response.OnSelect(n02_r0_select);
         
         ///RESPONSE n02 1
         response = node.AddResponse();
@@ -153,7 +153,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 1 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n02_r0_select);
+        response.OnSelect(n02_r1_select);
         
         ///NODE_END n02
         ///NODE_START n03
@@ -181,7 +181,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 0 n09
         response.NextNodeId = "n09";
-        response.SetCondition(n03_r1_condition);
+        response.SetCondition(n03_r0_condition);
         
         ///RESPONSE n03 1
         response = node.AddResponse();
@@ -191,8 +191,8 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n03 1 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n03_r0_condition);
-        response.OnSelect(n03_r0_select);
+        response.SetCondition(n03_r1_condition);
+        response.OnSelect(n03_r1_select);
         
         ///NODE_END n03
         ///NODE_START n04
@@ -220,7 +220,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 0 n09
         response.NextNodeId = "n09";
-        response.SetCondition(n04_r1_condition);
+        response.SetCondition(n04_r0_condition);
         
         ///RESPONSE n04 1
         response = node.AddResponse();
@@ -230,8 +230,8 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n04 1 n03
         response.NextNodeId = "n03";
-        response.SetCondition(n04_r0_condition);
-        response.OnSelect(n04_r0_select);
+        response.SetCondition(n04_r1_condition);
+        response.OnSelect(n04_r1_select);
         
         ///NODE_END n04
         ///NODE_START n05
@@ -259,7 +259,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 0 n07
         response.NextNodeId = "n07";
-        response.OnSelect(n05_r1_select);
+        response.OnSelect(n05_r0_select);
         
         ///RESPONSE n05 1
         response = node.AddResponse();
@@ -597,7 +597,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n25 1 n26
         response.NextNodeId = "n26";
-        response.OnSelect(n25_r3_select);
+        response.OnSelect(n25_r1_select);
         
         ///RESPONSE n25 2
         response = node.AddResponse();
@@ -616,7 +616,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n25 3 n27
         response.NextNodeId = "n27";
-        response.OnSelect(n25_r1_select);
+        response.OnSelect(n25_r3_select);
         
         ///RESPONSE n25 4
         response = node.AddResponse();
@@ -626,7 +626,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n25 4 n30
         response.NextNodeId = "n30";
-        response.OnSelect(n25_r0_select);
+        response.OnSelect(n25_r4_select);
         
         ///NODE_END n25
         ///NODE_START n26
@@ -798,7 +798,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n30 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n30_r1_select);
+        response.OnSelect(n30_r0_select);
         
         ///RESPONSE n30 1
         response = node.AddResponse();
@@ -880,7 +880,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n32 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n32_r1_select);
+        response.OnSelect(n32_r0_select);
         
         ///RESPONSE n32 1
         response = node.AddResponse();
@@ -936,7 +936,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n33 2 n40
         response.NextNodeId = "n40";
-        response.SetCondition(n33_r0_condition);
+        response.SetCondition(n33_r2_condition);
         
         ///NODE_END n33
         ///NODE_START n34
@@ -1045,7 +1045,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n36 0 n38
         response.NextNodeId = "n38";
-        response.OnSelect(n36_r1_select);
+        response.OnSelect(n36_r0_select);
         
         ///RESPONSE n36 1
         response = node.AddResponse();
@@ -1055,7 +1055,7 @@ public class Dialog_p3_par_002 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n36 1 n37
         response.NextNodeId = "n37";
-        response.OnSelect(n36_r0_select);
+        response.OnSelect(n36_r1_select);
         
         ///NODE_END n36
         ///NODE_START n37
@@ -1187,52 +1187,52 @@ public class Dialog_p3_par_002 {
         ///METHOD_BODY_END n21_p0_show
     }
 
-    ///METHOD n01_r1_condition
-    public bool n01_r1_condition (  ) {
-        ///METHOD_BODY_START n01_r1_condition
-        /*//if (?p3_aff_read = false)*/
-        return true;
-        ///METHOD_BODY_END n01_r1_condition
-    }
-
     ///METHOD n01_r0_condition
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
-        /*//if (?p3_aff_read = true)*/
+        /*//if (?p3_aff_read = false)*/
         return true;
         ///METHOD_BODY_END n01_r0_condition
     }
 
-    ///METHOD n03_r1_condition
-    public bool n03_r1_condition (  ) {
-        ///METHOD_BODY_START n03_r1_condition
-        /*//if (?p3_ask_cart = true)*/
+    ///METHOD n01_r1_condition
+    public bool n01_r1_condition (  ) {
+        ///METHOD_BODY_START n01_r1_condition
+        /*//if (?p3_aff_read = true)*/
         return true;
-        ///METHOD_BODY_END n03_r1_condition
+        ///METHOD_BODY_END n01_r1_condition
     }
 
     ///METHOD n03_r0_condition
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
-        /*//if (?p3_ask_cart = false)*/
+        /*//if (?p3_ask_cart = true)*/
         return true;
         ///METHOD_BODY_END n03_r0_condition
     }
 
-    ///METHOD n04_r1_condition
-    public bool n04_r1_condition (  ) {
-        ///METHOD_BODY_START n04_r1_condition
-        /*//if (?p3_ask_paper = true)*/
+    ///METHOD n03_r1_condition
+    public bool n03_r1_condition (  ) {
+        ///METHOD_BODY_START n03_r1_condition
+        /*//if (?p3_ask_cart = false)*/
         return true;
-        ///METHOD_BODY_END n04_r1_condition
+        ///METHOD_BODY_END n03_r1_condition
     }
 
     ///METHOD n04_r0_condition
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
-        /*//if (?p3_ask_paper = false)*/
+        /*//if (?p3_ask_paper = true)*/
         return true;
         ///METHOD_BODY_END n04_r0_condition
+    }
+
+    ///METHOD n04_r1_condition
+    public bool n04_r1_condition (  ) {
+        ///METHOD_BODY_START n04_r1_condition
+        /*//if (?p3_ask_paper = false)*/
+        return true;
+        ///METHOD_BODY_END n04_r1_condition
     }
 
     ///METHOD n33_r1_condition
@@ -1243,59 +1243,59 @@ public class Dialog_p3_par_002 {
         ///METHOD_BODY_END n33_r1_condition
     }
 
-    ///METHOD n33_r0_condition
-    public bool n33_r0_condition (  ) {
-        ///METHOD_BODY_START n33_r0_condition
+    ///METHOD n33_r2_condition
+    public bool n33_r2_condition (  ) {
+        ///METHOD_BODY_START n33_r2_condition
         /*//if (?p2_lucy_escape_lex = true)*/
         return true;
-        ///METHOD_BODY_END n33_r0_condition
+        ///METHOD_BODY_END n33_r2_condition
     }
 
-    ///METHOD n01_r1_select
-    public void n01_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r1_select
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
         /*//#par_points = #par_points + 1
         //updateMessage ("This helps earn the Parker's Ally Badge.")*/
-        ///METHOD_BODY_END n01_r1_select
-    }
-
-    ///METHOD n02_r1_select
-    public void n02_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n02_r1_select
-        /*//set ?p3_ask_cart = true*/
-        ///METHOD_BODY_END n02_r1_select
+        ///METHOD_BODY_END n01_r0_select
     }
 
     ///METHOD n02_r0_select
     public void n02_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r0_select
-        /*//set ?p3_ask_paper = true*/
+        /*//set ?p3_ask_cart = true*/
         ///METHOD_BODY_END n02_r0_select
     }
 
-    ///METHOD n03_r0_select
-    public void n03_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n03_r0_select
-        /*//set ?p3_ask_cart = true*/
-        ///METHOD_BODY_END n03_r0_select
-    }
-
-    ///METHOD n04_r0_select
-    public void n04_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n04_r0_select
+    ///METHOD n02_r1_select
+    public void n02_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n02_r1_select
         /*//set ?p3_ask_paper = true*/
-        ///METHOD_BODY_END n04_r0_select
+        ///METHOD_BODY_END n02_r1_select
     }
 
-    ///METHOD n05_r1_select
-    public void n05_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n05_r1_select
+    ///METHOD n03_r1_select
+    public void n03_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n03_r1_select
+        /*//set ?p3_ask_cart = true*/
+        ///METHOD_BODY_END n03_r1_select
+    }
+
+    ///METHOD n04_r1_select
+    public void n04_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n04_r1_select
+        /*//set ?p3_ask_paper = true*/
+        ///METHOD_BODY_END n04_r1_select
+    }
+
+    ///METHOD n05_r0_select
+    public void n05_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n05_r0_select
         /*//set ?p3_lucy_cautious=true
         //#par_points = #par_points + 1
         //#mil_points = #mil_points + 1
         //updateMessage ("Parker's opinion of you improves.")
         //updateMessage ("Millie's opinion of you improves.")*/
-        ///METHOD_BODY_END n05_r1_select
+        ///METHOD_BODY_END n05_r0_select
     }
 
     ///METHOD n22_r0_select
@@ -1305,60 +1305,60 @@ public class Dialog_p3_par_002 {
         ///METHOD_BODY_END n22_r0_select
     }
 
-    ///METHOD n25_r3_select
-    public void n25_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n25_r3_select
-        /*//#mil_points = #mil_points + 1
-        //updateMessage ("Millie's opinion of you improves.")*/
-        ///METHOD_BODY_END n25_r3_select
-    }
-
     ///METHOD n25_r1_select
     public void n25_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n25_r1_select
-        /*//#par_points = #par_points + 1
-        //updateMessage ("Parker's opinion of you improves.")*/
+        /*//#mil_points = #mil_points + 1
+        //updateMessage ("Millie's opinion of you improves.")*/
         ///METHOD_BODY_END n25_r1_select
     }
 
-    ///METHOD n25_r0_select
-    public void n25_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n25_r0_select
+    ///METHOD n25_r3_select
+    public void n25_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n25_r3_select
+        /*//#par_points = #par_points + 1
+        //updateMessage ("Parker's opinion of you improves.")*/
+        ///METHOD_BODY_END n25_r3_select
+    }
+
+    ///METHOD n25_r4_select
+    public void n25_r4_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n25_r4_select
         /*//?p3_lucy_self_reliant = true*/
-        ///METHOD_BODY_END n25_r0_select
+        ///METHOD_BODY_END n25_r4_select
     }
 
-    ///METHOD n30_r1_select
-    public void n30_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n30_r1_select
+    ///METHOD n30_r0_select
+    public void n30_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n30_r0_select
         /*//$next_state = "LOSE_PAR_002"*/
-        ///METHOD_BODY_END n30_r1_select
+        ///METHOD_BODY_END n30_r0_select
     }
 
-    ///METHOD n32_r1_select
-    public void n32_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n32_r1_select
+    ///METHOD n32_r0_select
+    public void n32_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n32_r0_select
         /*//$next_state = "LOSE_PAR_002"*/
-        ///METHOD_BODY_END n32_r1_select
-    }
-
-    ///METHOD n36_r1_select
-    public void n36_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n36_r1_select
-        /*//#mil_points = #mil_points + 1
-        //?p3_choose_reading = true
-        //updateMessage ("Millie's opinion of you improves.")
-        //updateMessage ("This helps improve your reading.")*/
-        ///METHOD_BODY_END n36_r1_select
+        ///METHOD_BODY_END n32_r0_select
     }
 
     ///METHOD n36_r0_select
     public void n36_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n36_r0_select
+        /*//#mil_points = #mil_points + 1
+        //?p3_choose_reading = true
+        //updateMessage ("Millie's opinion of you improves.")
+        //updateMessage ("This helps improve your reading.")*/
+        ///METHOD_BODY_END n36_r0_select
+    }
+
+    ///METHOD n36_r1_select
+    public void n36_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n36_r1_select
         /*//?p3_parkers_promise = true
         //#par_points = #par_points + 1
         //updateMessage ("Parker's opinion of you improves.")*/
-        ///METHOD_BODY_END n36_r0_select
+        ///METHOD_BODY_END n36_r1_select
     }
 }
 //CLASS_END Dialog_p3_par_002

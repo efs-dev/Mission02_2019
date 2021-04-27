@@ -58,7 +58,7 @@ public class Dialog_p3_hen_001 {
         prompt.Text = "Lucy. You are a sight to see. I helped save you and now you helped save me.\n";
         ///PROMPT_IGNORE_VO n01 0 false
         prompt.IgnoreVO = false;
-        prompt.OnShow(n01_p1_show);
+        prompt.OnShow(n01_p0_show);
         
         ///PROMPT n01 1
         prompt = node.AddPrompt();
@@ -66,7 +66,7 @@ public class Dialog_p3_hen_001 {
         prompt.Text = "Lucy. You are a sight to see. You made it. Your mama was right.\n";
         ///PROMPT_IGNORE_VO n01 1 false
         prompt.IgnoreVO = false;
-        prompt.OnShow(n01_p0_show);
+        prompt.OnShow(n01_p1_show);
         
         ///RESPONSE n01 0
         response = node.AddResponse();
@@ -361,7 +361,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n09 0 n22
         response.NextNodeId = "n22";
-        response.OnSelect(n09_r2_select);
+        response.OnSelect(n09_r0_select);
         
         ///RESPONSE n09 1
         response = node.AddResponse();
@@ -381,7 +381,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n09 2 n20
         response.NextNodeId = "n20";
-        response.OnSelect(n09_r0_select);
+        response.OnSelect(n09_r2_select);
         
         ///NODE_END n09
         ///NODE_START n13
@@ -472,7 +472,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n15 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n15_r1_select);
+        response.OnSelect(n15_r0_select);
         
         ///RESPONSE n15 1
         response = node.AddResponse();
@@ -536,7 +536,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n17 0 END
         response.NextNodeId = "END";
-        response.OnSelect(n17_r2_select);
+        response.OnSelect(n17_r0_select);
         
         ///RESPONSE n17 1
         response = node.AddResponse();
@@ -555,7 +555,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n17 2 END
         response.NextNodeId = "END";
-        response.OnSelect(n17_r0_select);
+        response.OnSelect(n17_r2_select);
         
         ///NODE_END n17
         ///NODE_START n18
@@ -637,7 +637,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n20 0 n16
         response.NextNodeId = "n16";
-        response.SetCondition(n20_r2_condition);
+        response.SetCondition(n20_r0_condition);
         
         ///RESPONSE n20 1
         response = node.AddResponse();
@@ -658,8 +658,8 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n20 2 n22
         response.NextNodeId = "n22";
-        response.SetCondition(n20_r0_condition);
-        response.OnSelect(n20_r0_select);
+        response.SetCondition(n20_r2_condition);
+        response.OnSelect(n20_r2_select);
         
         ///NODE_END n20
         ///NODE_START n21
@@ -687,7 +687,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n21 0 n16
         response.NextNodeId = "n16";
-        response.OnSelect(n21_r1_select);
+        response.OnSelect(n21_r0_select);
         
         ///RESPONSE n21 1
         response = node.AddResponse();
@@ -697,8 +697,8 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n21 1 n22
         response.NextNodeId = "n22";
-        response.SetCondition(n21_r0_condition);
-        response.OnSelect(n21_r0_select);
+        response.SetCondition(n21_r1_condition);
+        response.OnSelect(n21_r1_select);
         
         ///NODE_END n21
         ///NODE_START n22
@@ -735,8 +735,8 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n22 1 n20
         response.NextNodeId = "n20";
-        response.SetCondition(n22_r0_condition);
-        response.OnSelect(n22_r0_select);
+        response.SetCondition(n22_r1_condition);
+        response.OnSelect(n22_r1_select);
         
         ///NODE_END n22
         ///NODE_START n23
@@ -764,8 +764,8 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n23 0 n20
         response.NextNodeId = "n20";
-        response.SetCondition(n23_r1_condition);
-        response.OnSelect(n23_r1_select);
+        response.SetCondition(n23_r0_condition);
+        response.OnSelect(n23_r0_select);
         
         ///RESPONSE n23 1
         response = node.AddResponse();
@@ -775,7 +775,7 @@ public class Dialog_p3_hen_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n23 1 n16
         response.NextNodeId = "n16";
-        response.OnSelect(n23_r0_select);
+        response.OnSelect(n23_r1_select);
         
         ///NODE_END n23
         return dialog;
@@ -806,13 +806,6 @@ public class Dialog_p3_hen_001 {
         ///METHOD_BODY_END n02_p3_condition
     }
 
-    ///METHOD n01_p1_show
-    public void n01_p1_show ( DialogPrompt prompt ) {
-        ///METHOD_BODY_START n01_p1_show
-        /*//showNpc( true, 1)*/
-        ///METHOD_BODY_END n01_p1_show
-    }
-
     ///METHOD n01_p0_show
     public void n01_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n01_p0_show
@@ -820,12 +813,19 @@ public class Dialog_p3_hen_001 {
         ///METHOD_BODY_END n01_p0_show
     }
 
-    ///METHOD n20_r2_condition
-    public bool n20_r2_condition (  ) {
-        ///METHOD_BODY_START n20_r2_condition
+    ///METHOD n01_p1_show
+    public void n01_p1_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n01_p1_show
+        /*//showNpc( true, 1)*/
+        ///METHOD_BODY_END n01_p1_show
+    }
+
+    ///METHOD n20_r0_condition
+    public bool n20_r0_condition (  ) {
+        ///METHOD_BODY_START n20_r0_condition
         /*//if ((?p3_mama_where = true) AND (?p3_mama_jonah = true))*/
         return true;
-        ///METHOD_BODY_END n20_r2_condition
+        ///METHOD_BODY_END n20_r0_condition
     }
 
     ///METHOD n20_r1_condition
@@ -836,43 +836,43 @@ public class Dialog_p3_hen_001 {
         ///METHOD_BODY_END n20_r1_condition
     }
 
-    ///METHOD n20_r0_condition
-    public bool n20_r0_condition (  ) {
-        ///METHOD_BODY_START n20_r0_condition
+    ///METHOD n20_r2_condition
+    public bool n20_r2_condition (  ) {
+        ///METHOD_BODY_START n20_r2_condition
         /*//if (?p3_mama_where = false)*/
         return true;
-        ///METHOD_BODY_END n20_r0_condition
+        ///METHOD_BODY_END n20_r2_condition
     }
 
-    ///METHOD n21_r0_condition
-    public bool n21_r0_condition (  ) {
-        ///METHOD_BODY_START n21_r0_condition
+    ///METHOD n21_r1_condition
+    public bool n21_r1_condition (  ) {
+        ///METHOD_BODY_START n21_r1_condition
         /*//if (?p3_mama_where = false)*/
         return true;
-        ///METHOD_BODY_END n21_r0_condition
+        ///METHOD_BODY_END n21_r1_condition
     }
 
-    ///METHOD n22_r0_condition
-    public bool n22_r0_condition (  ) {
-        ///METHOD_BODY_START n22_r0_condition
+    ///METHOD n22_r1_condition
+    public bool n22_r1_condition (  ) {
+        ///METHOD_BODY_START n22_r1_condition
         /*//if (?p3_mama_time = false)*/
         return true;
-        ///METHOD_BODY_END n22_r0_condition
+        ///METHOD_BODY_END n22_r1_condition
     }
 
-    ///METHOD n23_r1_condition
-    public bool n23_r1_condition (  ) {
-        ///METHOD_BODY_START n23_r1_condition
+    ///METHOD n23_r0_condition
+    public bool n23_r0_condition (  ) {
+        ///METHOD_BODY_START n23_r0_condition
         /*//if (?p3_mama_time = false)*/
         return true;
-        ///METHOD_BODY_END n23_r1_condition
+        ///METHOD_BODY_END n23_r0_condition
     }
 
-    ///METHOD n09_r2_select
-    public void n09_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n09_r2_select
+    ///METHOD n09_r0_select
+    public void n09_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n09_r0_select
         /*//set ?p3_mama_where = true*/
-        ///METHOD_BODY_END n09_r2_select
+        ///METHOD_BODY_END n09_r0_select
     }
 
     ///METHOD n09_r1_select
@@ -882,33 +882,33 @@ public class Dialog_p3_hen_001 {
         ///METHOD_BODY_END n09_r1_select
     }
 
-    ///METHOD n09_r0_select
-    public void n09_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n09_r0_select
+    ///METHOD n09_r2_select
+    public void n09_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n09_r2_select
         /*//set ?p3_mama_time = true*/
-        ///METHOD_BODY_END n09_r0_select
+        ///METHOD_BODY_END n09_r2_select
     }
 
-    ///METHOD n15_r1_select
-    public void n15_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n15_r1_select
+    ///METHOD n15_r0_select
+    public void n15_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n15_r0_select
         /*//set ?p3_lucy_rejects_henry = true*/
-        ///METHOD_BODY_END n15_r1_select
-    }
-
-    ///METHOD n17_r2_select
-    public void n17_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n17_r2_select
-        /*//set ?p3_lucy_rejects_henry = true*/
-        ///METHOD_BODY_END n17_r2_select
+        ///METHOD_BODY_END n15_r0_select
     }
 
     ///METHOD n17_r0_select
     public void n17_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n17_r0_select
+        /*//set ?p3_lucy_rejects_henry = true*/
+        ///METHOD_BODY_END n17_r0_select
+    }
+
+    ///METHOD n17_r2_select
+    public void n17_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n17_r2_select
         /*//?p3_oh_henry = true
         //wait(2000)*/
-        ///METHOD_BODY_END n17_r0_select
+        ///METHOD_BODY_END n17_r2_select
     }
 
     ///METHOD n20_r1_select
@@ -918,46 +918,46 @@ public class Dialog_p3_hen_001 {
         ///METHOD_BODY_END n20_r1_select
     }
 
-    ///METHOD n20_r0_select
-    public void n20_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n20_r0_select
+    ///METHOD n20_r2_select
+    public void n20_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n20_r2_select
         /*//set ?p3_mama_where = true*/
-        ///METHOD_BODY_END n20_r0_select
-    }
-
-    ///METHOD n21_r1_select
-    public void n21_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n21_r1_select
-        /*//set ?p3_lucy_save_jonah = true*/
-        ///METHOD_BODY_END n21_r1_select
+        ///METHOD_BODY_END n20_r2_select
     }
 
     ///METHOD n21_r0_select
     public void n21_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n21_r0_select
-        /*//set ?p3_mama_where = true*/
+        /*//set ?p3_lucy_save_jonah = true*/
         ///METHOD_BODY_END n21_r0_select
     }
 
-    ///METHOD n22_r0_select
-    public void n22_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n22_r0_select
-        /*//set ?p3_mama_time = true*/
-        ///METHOD_BODY_END n22_r0_select
+    ///METHOD n21_r1_select
+    public void n21_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n21_r1_select
+        /*//set ?p3_mama_where = true*/
+        ///METHOD_BODY_END n21_r1_select
     }
 
-    ///METHOD n23_r1_select
-    public void n23_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n23_r1_select
+    ///METHOD n22_r1_select
+    public void n22_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n22_r1_select
         /*//set ?p3_mama_time = true*/
-        ///METHOD_BODY_END n23_r1_select
+        ///METHOD_BODY_END n22_r1_select
     }
 
     ///METHOD n23_r0_select
     public void n23_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n23_r0_select
-        /*//set ?p3_lucy_save_jonah = true*/
+        /*//set ?p3_mama_time = true*/
         ///METHOD_BODY_END n23_r0_select
+    }
+
+    ///METHOD n23_r1_select
+    public void n23_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n23_r1_select
+        /*//set ?p3_lucy_save_jonah = true*/
+        ///METHOD_BODY_END n23_r1_select
     }
 }
 //CLASS_END Dialog_p3_hen_001

@@ -67,8 +67,8 @@ public class Dialog_p4_choice1 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 END
         response.NextNodeId = "END";
-        response.SetCondition(n01_r2_condition);
-        response.OnSelect(n01_r2_select);
+        response.SetCondition(n01_r0_condition);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -88,26 +88,26 @@ public class Dialog_p4_choice1 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 END
         response.NextNodeId = "END";
-        response.OnSelect(n01_r0_select);
+        response.OnSelect(n01_r2_select);
         
         ///NODE_END n01
         return dialog;
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD n01_r2_condition
-    public bool n01_r2_condition (  ) {
-        ///METHOD_BODY_START n01_r2_condition
+    ///METHOD n01_r0_condition
+    public bool n01_r0_condition (  ) {
+        ///METHOD_BODY_START n01_r0_condition
         /*//					if( ?P3_TELEGRAPH  )*/
         return true;
-        ///METHOD_BODY_END n01_r2_condition
+        ///METHOD_BODY_END n01_r0_condition
     }
 
-    ///METHOD n01_r2_select
-    public void n01_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r2_select
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
         /*//				endState("telegraph", "CROSSFADE")	*/
-        ///METHOD_BODY_END n01_r2_select
+        ///METHOD_BODY_END n01_r0_select
     }
 
     ///METHOD n01_r1_select
@@ -117,11 +117,11 @@ public class Dialog_p4_choice1 {
         ///METHOD_BODY_END n01_r1_select
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
         /*//					endState("witness", "CROSSFADE")*/
-        ///METHOD_BODY_END n01_r0_select
+        ///METHOD_BODY_END n01_r2_select
     }
 }
 //CLASS_END Dialog_p4_choice1

@@ -68,7 +68,7 @@ public class Dialog_p4_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n01_r2_condition);
+        response.SetCondition(n01_r0_condition);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -315,7 +315,7 @@ public class Dialog_p4_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n08 0 n11
         response.NextNodeId = "n11";
-        response.OnSelect(n08_r1_select);
+        response.OnSelect(n08_r0_select);
         
         ///RESPONSE n08 1
         response = node.AddResponse();
@@ -370,7 +370,7 @@ public class Dialog_p4_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 2 n11
         response.NextNodeId = "n11";
-        response.SetCondition(n10_r0_condition);
+        response.SetCondition(n10_r2_condition);
         
         ///NODE_END n10
         ///NODE_START n11
@@ -398,7 +398,7 @@ public class Dialog_p4_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 0 n10
         response.NextNodeId = "n10";
-        response.SetCondition(n11_r2_condition);
+        response.SetCondition(n11_r0_condition);
         
         ///RESPONSE n11 1
         response = node.AddResponse();
@@ -418,7 +418,7 @@ public class Dialog_p4_par_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 2 n12
         response.NextNodeId = "n12";
-        response.SetCondition(n11_r0_condition);
+        response.SetCondition(n11_r2_condition);
         
         ///NODE_END n11
         ///NODE_START n12
@@ -539,12 +539,12 @@ public class Dialog_p4_par_001 {
         ///METHOD_BODY_END n13_p0_show
     }
 
-    ///METHOD n01_r2_condition
-    public bool n01_r2_condition (  ) {
-        ///METHOD_BODY_START n01_r2_condition
+    ///METHOD n01_r0_condition
+    public bool n01_r0_condition (  ) {
+        ///METHOD_BODY_START n01_r0_condition
         /*//if (?p4_talk_millie = true)*/
         return true;
-        ///METHOD_BODY_END n01_r2_condition
+        ///METHOD_BODY_END n01_r0_condition
     }
 
     ///METHOD n01_r1_condition
@@ -555,20 +555,20 @@ public class Dialog_p4_par_001 {
         ///METHOD_BODY_END n01_r1_condition
     }
 
-    ///METHOD n10_r0_condition
-    public bool n10_r0_condition (  ) {
-        ///METHOD_BODY_START n10_r0_condition
+    ///METHOD n10_r2_condition
+    public bool n10_r2_condition (  ) {
+        ///METHOD_BODY_START n10_r2_condition
         /*//if (?p4_parker_doing = false)*/
         return true;
-        ///METHOD_BODY_END n10_r0_condition
+        ///METHOD_BODY_END n10_r2_condition
     }
 
-    ///METHOD n11_r2_condition
-    public bool n11_r2_condition (  ) {
-        ///METHOD_BODY_START n11_r2_condition
+    ///METHOD n11_r0_condition
+    public bool n11_r0_condition (  ) {
+        ///METHOD_BODY_START n11_r0_condition
         /*//if (?p4_parker_doing = true)*/
         return true;
-        ///METHOD_BODY_END n11_r2_condition
+        ///METHOD_BODY_END n11_r0_condition
     }
 
     ///METHOD n11_r1_condition
@@ -579,12 +579,12 @@ public class Dialog_p4_par_001 {
         ///METHOD_BODY_END n11_r1_condition
     }
 
-    ///METHOD n11_r0_condition
-    public bool n11_r0_condition (  ) {
-        ///METHOD_BODY_START n11_r0_condition
+    ///METHOD n11_r2_condition
+    public bool n11_r2_condition (  ) {
+        ///METHOD_BODY_START n11_r2_condition
         /*//if (?p4_parker_doing = false)*/
         return true;
-        ///METHOD_BODY_END n11_r0_condition
+        ///METHOD_BODY_END n11_r2_condition
     }
 
     ///METHOD n01_r1_select
@@ -594,11 +594,11 @@ public class Dialog_p4_par_001 {
         ///METHOD_BODY_END n01_r1_select
     }
 
-    ///METHOD n08_r1_select
-    public void n08_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n08_r1_select
+    ///METHOD n08_r0_select
+    public void n08_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n08_r0_select
         /*//?p4_parker_doing = true*/
-        ///METHOD_BODY_END n08_r1_select
+        ///METHOD_BODY_END n08_r0_select
     }
 }
 //CLASS_END Dialog_p4_par_001

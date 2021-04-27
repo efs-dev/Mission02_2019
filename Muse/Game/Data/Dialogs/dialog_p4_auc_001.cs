@@ -67,7 +67,7 @@ public class Dialog_p4_auc_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 0 n05
         response.NextNodeId = "n05";
-        response.OnSelect(n01_r3_select);
+        response.OnSelect(n01_r0_select);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -77,7 +77,7 @@ public class Dialog_p4_auc_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n04
         response.NextNodeId = "n04";
-        response.OnSelect(n01_r2_select);
+        response.OnSelect(n01_r1_select);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -87,7 +87,7 @@ public class Dialog_p4_auc_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 n03
         response.NextNodeId = "n03";
-        response.OnSelect(n01_r1_select);
+        response.OnSelect(n01_r2_select);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -97,7 +97,7 @@ public class Dialog_p4_auc_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 3 n02
         response.NextNodeId = "n02";
-        response.OnSelect(n01_r0_select);
+        response.OnSelect(n01_r3_select);
         
         ///NODE_END n01
         ///NODE_START n02
@@ -283,32 +283,32 @@ public class Dialog_p4_auc_001 {
         ///METHOD_BODY_END n02_p1_condition
     }
 
-    ///METHOD n01_r3_select
-    public void n01_r3_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r3_select
+    ///METHOD n01_r0_select
+    public void n01_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_select
         /*//?p4_auction_faith = true*/
-        ///METHOD_BODY_END n01_r3_select
-    }
-
-    ///METHOD n01_r2_select
-    public void n01_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r2_select
-        /*//?p4_auction_resistance = true*/
-        ///METHOD_BODY_END n01_r2_select
+        ///METHOD_BODY_END n01_r0_select
     }
 
     ///METHOD n01_r1_select
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
-        /*//?p4_auction_community = true*/
+        /*//?p4_auction_resistance = true*/
         ///METHOD_BODY_END n01_r1_select
     }
 
-    ///METHOD n01_r0_select
-    public void n01_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n01_r0_select
+    ///METHOD n01_r2_select
+    public void n01_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_select
+        /*//?p4_auction_community = true*/
+        ///METHOD_BODY_END n01_r2_select
+    }
+
+    ///METHOD n01_r3_select
+    public void n01_r3_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_select
         /*//?p4_auction_family = true*/
-        ///METHOD_BODY_END n01_r0_select
+        ///METHOD_BODY_END n01_r3_select
     }
 
     ///METHOD n04_r0_select

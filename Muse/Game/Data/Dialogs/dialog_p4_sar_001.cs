@@ -77,7 +77,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n04
         response.NextNodeId = "n04";
-        response.SetCondition(n01_r2_condition);
+        response.SetCondition(n01_r1_condition);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -87,7 +87,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 n03
         response.NextNodeId = "n03";
-        response.SetCondition(n01_r1_condition);
+        response.SetCondition(n01_r2_condition);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -142,7 +142,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n02 2 n14
         response.NextNodeId = "n14";
-        response.SetCondition(n02_r1_condition);
+        response.SetCondition(n02_r2_condition);
         
         ///RESPONSE n02 3
         response = node.AddResponse();
@@ -296,7 +296,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n06 0 n14
         response.NextNodeId = "n14";
-        response.SetCondition(n06_r1_condition);
+        response.SetCondition(n06_r0_condition);
         
         ///RESPONSE n06 1
         response = node.AddResponse();
@@ -451,7 +451,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n10 2 n11
         response.NextNodeId = "n11";
-        response.SetCondition(n10_r0_condition);
+        response.SetCondition(n10_r2_condition);
         
         ///NODE_END n10
         ///NODE_START n11
@@ -496,7 +496,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n11 1 n13
         response.NextNodeId = "n13";
-        response.SetCondition(n11_r0_condition);
+        response.SetCondition(n11_r1_condition);
         
         ///NODE_END n11
         ///NODE_START n12
@@ -524,7 +524,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n12 0 n14
         response.NextNodeId = "n14";
-        response.SetCondition(n12_r1_condition);
+        response.SetCondition(n12_r0_condition);
         
         ///RESPONSE n12 1
         response = node.AddResponse();
@@ -626,7 +626,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n15 0 n20
         response.NextNodeId = "n20";
-        response.OnSelect(n15_r1_select);
+        response.OnSelect(n15_r0_select);
         
         ///RESPONSE n15 1
         response = node.AddResponse();
@@ -672,7 +672,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n16 1 n15
         response.NextNodeId = "n15";
-        response.SetCondition(n16_r0_condition);
+        response.SetCondition(n16_r1_condition);
         
         ///NODE_END n16
         ///NODE_START n17
@@ -790,7 +790,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n20 0 n25
         response.NextNodeId = "n25";
-        response.SetCondition(n20_r1_condition);
+        response.SetCondition(n20_r0_condition);
         
         ///RESPONSE n20 1
         response = node.AddResponse();
@@ -800,7 +800,7 @@ public class Dialog_p4_sar_001 {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n20 1 n21
         response.NextNodeId = "n21";
-        response.SetCondition(n20_r0_condition);
+        response.SetCondition(n20_r1_condition);
         
         ///NODE_END n20
         ///NODE_START n21
@@ -982,28 +982,28 @@ public class Dialog_p4_sar_001 {
         ///METHOD_BODY_END n07_p0_show
     }
 
-    ///METHOD n01_r2_condition
-    public bool n01_r2_condition (  ) {
-        ///METHOD_BODY_START n01_r2_condition
-        /*//if (#dress_quality < 3)*/
-        return true;
-        ///METHOD_BODY_END n01_r2_condition
-    }
-
     ///METHOD n01_r1_condition
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
-        /*//if (#dress_quality = 3)*/
+        /*//if (#dress_quality < 3)*/
         return true;
         ///METHOD_BODY_END n01_r1_condition
     }
 
-    ///METHOD n02_r1_condition
-    public bool n02_r1_condition (  ) {
-        ///METHOD_BODY_START n02_r1_condition
+    ///METHOD n01_r2_condition
+    public bool n01_r2_condition (  ) {
+        ///METHOD_BODY_START n01_r2_condition
+        /*//if (#dress_quality = 3)*/
+        return true;
+        ///METHOD_BODY_END n01_r2_condition
+    }
+
+    ///METHOD n02_r2_condition
+    public bool n02_r2_condition (  ) {
+        ///METHOD_BODY_START n02_r2_condition
         /*//if (#p4_lucy_canada = 0)*/
         return true;
-        ///METHOD_BODY_END n02_r1_condition
+        ///METHOD_BODY_END n02_r2_condition
     }
 
     ///METHOD n04_r1_condition
@@ -1014,36 +1014,36 @@ public class Dialog_p4_sar_001 {
         ///METHOD_BODY_END n04_r1_condition
     }
 
-    ///METHOD n06_r1_condition
-    public bool n06_r1_condition (  ) {
-        ///METHOD_BODY_START n06_r1_condition
+    ///METHOD n06_r0_condition
+    public bool n06_r0_condition (  ) {
+        ///METHOD_BODY_START n06_r0_condition
         /*//if (#p4_lucy_canada = 0)*/
         return true;
-        ///METHOD_BODY_END n06_r1_condition
+        ///METHOD_BODY_END n06_r0_condition
     }
 
-    ///METHOD n10_r0_condition
-    public bool n10_r0_condition (  ) {
-        ///METHOD_BODY_START n10_r0_condition
+    ///METHOD n10_r2_condition
+    public bool n10_r2_condition (  ) {
+        ///METHOD_BODY_START n10_r2_condition
         /*//if (?p1_yankee_gentlemen = true)*/
         return true;
-        ///METHOD_BODY_END n10_r0_condition
+        ///METHOD_BODY_END n10_r2_condition
     }
 
-    ///METHOD n11_r0_condition
-    public bool n11_r0_condition (  ) {
-        ///METHOD_BODY_START n11_r0_condition
+    ///METHOD n11_r1_condition
+    public bool n11_r1_condition (  ) {
+        ///METHOD_BODY_START n11_r1_condition
         /*//if (#p4_lucy_canada = 0)*/
         return true;
-        ///METHOD_BODY_END n11_r0_condition
+        ///METHOD_BODY_END n11_r1_condition
     }
 
-    ///METHOD n12_r1_condition
-    public bool n12_r1_condition (  ) {
-        ///METHOD_BODY_START n12_r1_condition
+    ///METHOD n12_r0_condition
+    public bool n12_r0_condition (  ) {
+        ///METHOD_BODY_START n12_r0_condition
         /*//if (#p4_lucy_canada = 0)*/
         return true;
-        ///METHOD_BODY_END n12_r1_condition
+        ///METHOD_BODY_END n12_r0_condition
     }
 
     ///METHOD n13_r0_condition
@@ -1054,28 +1054,28 @@ public class Dialog_p4_sar_001 {
         ///METHOD_BODY_END n13_r0_condition
     }
 
-    ///METHOD n16_r0_condition
-    public bool n16_r0_condition (  ) {
-        ///METHOD_BODY_START n16_r0_condition
+    ///METHOD n16_r1_condition
+    public bool n16_r1_condition (  ) {
+        ///METHOD_BODY_START n16_r1_condition
         /*//if (#p4_lucy_canada = 0)*/
         return true;
-        ///METHOD_BODY_END n16_r0_condition
-    }
-
-    ///METHOD n20_r1_condition
-    public bool n20_r1_condition (  ) {
-        ///METHOD_BODY_START n20_r1_condition
-        /*//if (?p4_plea_works = false)*/
-        return true;
-        ///METHOD_BODY_END n20_r1_condition
+        ///METHOD_BODY_END n16_r1_condition
     }
 
     ///METHOD n20_r0_condition
     public bool n20_r0_condition (  ) {
         ///METHOD_BODY_START n20_r0_condition
-        /*//if (?p4_plea_works = true)*/
+        /*//if (?p4_plea_works = false)*/
         return true;
         ///METHOD_BODY_END n20_r0_condition
+    }
+
+    ///METHOD n20_r1_condition
+    public bool n20_r1_condition (  ) {
+        ///METHOD_BODY_START n20_r1_condition
+        /*//if (?p4_plea_works = true)*/
+        return true;
+        ///METHOD_BODY_END n20_r1_condition
     }
 
     ///METHOD n13_r0_select
@@ -1085,11 +1085,11 @@ public class Dialog_p4_sar_001 {
         ///METHOD_BODY_END n13_r0_select
     }
 
-    ///METHOD n15_r1_select
-    public void n15_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START n15_r1_select
+    ///METHOD n15_r0_select
+    public void n15_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START n15_r0_select
         /*//set ?p4_plea_works = true*/
-        ///METHOD_BODY_END n15_r1_select
+        ///METHOD_BODY_END n15_r0_select
     }
 
     ///METHOD n24_r0_select

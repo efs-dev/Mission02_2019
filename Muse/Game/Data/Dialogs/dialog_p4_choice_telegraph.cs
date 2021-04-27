@@ -67,8 +67,8 @@ public class Dialog_p4_choice_telegraph {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID three_more 0 END
         response.NextNodeId = "END";
-        response.SetCondition(three_more_r2_condition);
-        response.OnSelect(three_more_r2_select);
+        response.SetCondition(three_more_r0_condition);
+        response.OnSelect(three_more_r0_select);
         
         ///RESPONSE three_more 1
         response = node.AddResponse();
@@ -88,7 +88,7 @@ public class Dialog_p4_choice_telegraph {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID three_more 2 END
         response.NextNodeId = "END";
-        response.OnSelect(three_more_r0_select);
+        response.OnSelect(three_more_r2_select);
         
         ///NODE_END three_more
         ///NODE_START two_more
@@ -116,8 +116,8 @@ public class Dialog_p4_choice_telegraph {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID two_more 0 END
         response.NextNodeId = "END";
-        response.SetCondition(two_more_r1_condition);
-        response.OnSelect(two_more_r1_select);
+        response.SetCondition(two_more_r0_condition);
+        response.OnSelect(two_more_r0_select);
         
         ///RESPONSE two_more 1
         response = node.AddResponse();
@@ -127,8 +127,8 @@ public class Dialog_p4_choice_telegraph {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID two_more 1 END
         response.NextNodeId = "END";
-        response.SetCondition(two_more_r0_condition);
-        response.OnSelect(two_more_r0_select);
+        response.SetCondition(two_more_r1_condition);
+        response.OnSelect(two_more_r1_select);
         
         ///NODE_END two_more
         ///NODE_START one_more
@@ -156,8 +156,8 @@ public class Dialog_p4_choice_telegraph {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID one_more 0 END
         response.NextNodeId = "END";
-        response.SetCondition(one_more_r1_condition);
-        response.OnSelect(one_more_r1_select);
+        response.SetCondition(one_more_r0_condition);
+        response.OnSelect(one_more_r0_select);
         
         ///RESPONSE one_more 1
         response = node.AddResponse();
@@ -167,8 +167,8 @@ public class Dialog_p4_choice_telegraph {
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID one_more 1 END
         response.NextNodeId = "END";
-        response.SetCondition(one_more_r0_condition);
-        response.OnSelect(one_more_r0_select);
+        response.SetCondition(one_more_r1_condition);
+        response.OnSelect(one_more_r1_select);
         
         ///NODE_END one_more
         ///NODE_START finished
@@ -203,51 +203,51 @@ public class Dialog_p4_choice_telegraph {
         ///METHOD_BODY_END CreateDialog
     }
 
-    ///METHOD three_more_r2_condition
-    public bool three_more_r2_condition (  ) {
-        ///METHOD_BODY_START three_more_r2_condition
+    ///METHOD three_more_r0_condition
+    public bool three_more_r0_condition (  ) {
+        ///METHOD_BODY_START three_more_r0_condition
         /*//					if( ?P3_TELEGRAPH  )*/
         return true;
-        ///METHOD_BODY_END three_more_r2_condition
-    }
-
-    ///METHOD two_more_r1_condition
-    public bool two_more_r1_condition (  ) {
-        ///METHOD_BODY_START two_more_r1_condition
-        /*//				if( (visitCount("ambush2") = 0)  )*/
-        return true;
-        ///METHOD_BODY_END two_more_r1_condition
+        ///METHOD_BODY_END three_more_r0_condition
     }
 
     ///METHOD two_more_r0_condition
     public bool two_more_r0_condition (  ) {
         ///METHOD_BODY_START two_more_r0_condition
-        /*//				if( (visitCount("witness2") = 0)  )*/
+        /*//				if( (visitCount("ambush2") = 0)  )*/
         return true;
         ///METHOD_BODY_END two_more_r0_condition
     }
 
-    ///METHOD one_more_r1_condition
-    public bool one_more_r1_condition (  ) {
-        ///METHOD_BODY_START one_more_r1_condition
-        /*//				if( (visitCount("ambush2") = 0)  )*/
+    ///METHOD two_more_r1_condition
+    public bool two_more_r1_condition (  ) {
+        ///METHOD_BODY_START two_more_r1_condition
+        /*//				if( (visitCount("witness2") = 0)  )*/
         return true;
-        ///METHOD_BODY_END one_more_r1_condition
+        ///METHOD_BODY_END two_more_r1_condition
     }
 
     ///METHOD one_more_r0_condition
     public bool one_more_r0_condition (  ) {
         ///METHOD_BODY_START one_more_r0_condition
-        /*//				if( (visitCount("witness2") = 0)  )*/
+        /*//				if( (visitCount("ambush2") = 0)  )*/
         return true;
         ///METHOD_BODY_END one_more_r0_condition
     }
 
-    ///METHOD three_more_r2_select
-    public void three_more_r2_select ( DialogResponse response ) {
-        ///METHOD_BODY_START three_more_r2_select
+    ///METHOD one_more_r1_condition
+    public bool one_more_r1_condition (  ) {
+        ///METHOD_BODY_START one_more_r1_condition
+        /*//				if( (visitCount("witness2") = 0)  )*/
+        return true;
+        ///METHOD_BODY_END one_more_r1_condition
+    }
+
+    ///METHOD three_more_r0_select
+    public void three_more_r0_select ( DialogResponse response ) {
+        ///METHOD_BODY_START three_more_r0_select
         /*//				endState("telegraph", "CROSSFADE")	*/
-        ///METHOD_BODY_END three_more_r2_select
+        ///METHOD_BODY_END three_more_r0_select
     }
 
     ///METHOD three_more_r1_select
@@ -257,49 +257,49 @@ public class Dialog_p4_choice_telegraph {
         ///METHOD_BODY_END three_more_r1_select
     }
 
-    ///METHOD three_more_r0_select
-    public void three_more_r0_select ( DialogResponse response ) {
-        ///METHOD_BODY_START three_more_r0_select
+    ///METHOD three_more_r2_select
+    public void three_more_r2_select ( DialogResponse response ) {
+        ///METHOD_BODY_START three_more_r2_select
         /*//					endState("witness", "CROSSFADE")*/
-        ///METHOD_BODY_END three_more_r0_select
-    }
-
-    ///METHOD two_more_r1_select
-    public void two_more_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START two_more_r1_select
-        /*//				// 1st ambush
-        //				endState("ambush", "CROSSFADE")				*/
-        ///METHOD_BODY_END two_more_r1_select
+        ///METHOD_BODY_END three_more_r2_select
     }
 
     ///METHOD two_more_r0_select
     public void two_more_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START two_more_r0_select
-        /*//					// first witness
-        //					endState("witness", "CROSSFADE")					*/
+        /*//				// 1st ambush
+        //				endState("ambush", "CROSSFADE")				*/
         ///METHOD_BODY_END two_more_r0_select
     }
 
-    ///METHOD one_more_r1_select
-    public void one_more_r1_select ( DialogResponse response ) {
-        ///METHOD_BODY_START one_more_r1_select
-        /*//				if( visitCount("ambush") = 0)
-        //					endState("ambush", "CROSSFADE")
-        //				else
-        //					endState("ambush2", "")
-        //				/if*/
-        ///METHOD_BODY_END one_more_r1_select
+    ///METHOD two_more_r1_select
+    public void two_more_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START two_more_r1_select
+        /*//					// first witness
+        //					endState("witness", "CROSSFADE")					*/
+        ///METHOD_BODY_END two_more_r1_select
     }
 
     ///METHOD one_more_r0_select
     public void one_more_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START one_more_r0_select
+        /*//				if( visitCount("ambush") = 0)
+        //					endState("ambush", "CROSSFADE")
+        //				else
+        //					endState("ambush2", "")
+        //				/if*/
+        ///METHOD_BODY_END one_more_r0_select
+    }
+
+    ///METHOD one_more_r1_select
+    public void one_more_r1_select ( DialogResponse response ) {
+        ///METHOD_BODY_START one_more_r1_select
         /*//					if( visitCount("witness") = 0)
         //						endState("witness", "CROSSFADE")
         //					else
         //						endState("witness2", "")
         //					/if*/
-        ///METHOD_BODY_END one_more_r0_select
+        ///METHOD_BODY_END one_more_r1_select
     }
 
     ///METHOD finished_r0_select
