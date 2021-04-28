@@ -89,5 +89,41 @@ public static partial class GameFlagIds {
 
     //PROPERTY P1HasInvitation
     public static string P1HasInvitation = "P1HasInvitation";
+
+    //PROPERTY P1CookWarning
+    public static string P1CookWarning = "P1CookWarning";
+
+    //PROPERTY P1SarMad
+    public static string P1SarMad = "P1SarMad";
+
+    //PROPERTY P1HasAuctionPoster
+    public static string P1HasAuctionPoster = "P1HasAuctionPoster";
+
+    //PROPERTY P1FirstDoc
+    public static string P1FirstDoc = "P1FirstDoc";
+
+    //PROPERTY P1ComfreyComplete
+    public static string P1ComfreyComplete = "P1ComfreyComplete";
+
+    //PROPERTY P1ComfreyTried
+    public static string P1ComfreyTried = "P1ComfreyTried";
+
+    //PROPERTY P1EstComfrey
+    public static string P1EstComfrey = "P1EstComfrey";
+
+    //PROPERTY P1HasComfrey
+    public static string P1HasComfrey = "P1HasComfrey";
+
+    //PROPERTY P1KnowLexington
+    public static string P1KnowLexington = "P1KnowLexington";
+
+    //PROPERTY P1KnowEstDawsons
+    public static string P1KnowEstDawsons = "P1KnowEstDawsons";
+
+    //PROPERTY P2EscapeType
+    public static string P2EscapeType = "P2EscapeType";
+
+    //PROPERTY P1KnowKingTime
+    public static string P1KnowKingTime = "P1KnowKingTime";
 }
 //CLASS_END GameFlagIds

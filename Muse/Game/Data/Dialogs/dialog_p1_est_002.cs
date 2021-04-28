@@ -54,8 +54,8 @@ public class Dialog_p1_est_002 {
         ///NODE_VISUAL_DATA~|||~n01~|||~
         ///PROMPT n01 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n01 0 How were things with Miss Sarah?\n
-        prompt.Text = "How were things with Miss Sarah?\n";
+        ///PROMPT_TEXT n01 0 How were things with Miss Sarah?
+        prompt.Text = "How were things with Miss Sarah?";
         ///PROMPT_IGNORE_VO n01 0 false
         prompt.IgnoreVO = false;
         
@@ -71,8 +71,8 @@ public class Dialog_p1_est_002 {
         
         ///RESPONSE n01 1
         response = node.AddResponse();
-        ///RESPONSE_TEXT n01 1 I took care of everything.\n
-        response.Text = "I took care of everything.\n";
+        ///RESPONSE_TEXT n01 1 I took care of everything.
+        response.Text = "I took care of everything.";
         ///RESPONSE_NEXT_NODE_TYPE n01 1 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 1 n03
@@ -81,8 +81,8 @@ public class Dialog_p1_est_002 {
         
         ///RESPONSE n01 2
         response = node.AddResponse();
-        ///RESPONSE_TEXT n01 2 You were right. Miss Sarah is not my friend.\n
-        response.Text = "You were right. Miss Sarah is not my friend.\n";
+        ///RESPONSE_TEXT n01 2 You were right. Miss Sarah is not my friend.
+        response.Text = "You were right. Miss Sarah is not my friend.";
         ///RESPONSE_NEXT_NODE_TYPE n01 2 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n01 2 n02
@@ -102,8 +102,8 @@ public class Dialog_p1_est_002 {
         ///NODE_VISUAL_DATA~|||~n02~|||~
         ///PROMPT n02 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n02 0 I'm sorry Lucy. There's something you have to see.\n
-        prompt.Text = "I'm sorry Lucy. There's something you have to see.\n";
+        ///PROMPT_TEXT n02 0 I'm sorry Lucy. There's something you have to see.
+        prompt.Text = "I'm sorry Lucy. There's something you have to see.";
         ///PROMPT_IGNORE_VO n02 0 false
         prompt.IgnoreVO = false;
         
@@ -129,8 +129,8 @@ public class Dialog_p1_est_002 {
         ///NODE_VISUAL_DATA~|||~n03~|||~
         ///PROMPT n03 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n03 0 Good. I have something to show you.\n
-        prompt.Text = "Good. I have something to show you.\n";
+        ///PROMPT_TEXT n03 0 Good. I have something to show you.
+        prompt.Text = "Good. I have something to show you.";
         ///PROMPT_IGNORE_VO n03 0 false
         prompt.IgnoreVO = false;
         
@@ -156,8 +156,8 @@ public class Dialog_p1_est_002 {
         ///NODE_VISUAL_DATA~|||~n04~|||~
         ///PROMPT n04 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n04 0 I saw Master King and Mister Otis talking and looking at this poster.\n
-        prompt.Text = "I saw Master King and Mister Otis talking and looking at this poster.\n";
+        ///PROMPT_TEXT n04 0 I saw Master King and Mister Otis talking and looking at this poster.
+        prompt.Text = "I saw Master King and Mister Otis talking and looking at this poster.";
         ///PROMPT_IGNORE_VO n04 0 false
         prompt.IgnoreVO = false;
         
@@ -183,8 +183,8 @@ public class Dialog_p1_est_002 {
         ///NODE_VISUAL_DATA~|||~n05~|||~
         ///PROMPT n05 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n05 0 It's about a slave auction. I can't read it but I think they're planning to sell some of us.\n
-        prompt.Text = "It's about a slave auction. I can't read it but I think they're planning to sell some of us.\n";
+        ///PROMPT_TEXT n05 0 It's about a slave auction. I can't read it but I think they're planning to sell some of us.
+        prompt.Text = "It's about a slave auction. I can't read it but I think they're planning to sell some of us.";
         ///PROMPT_IGNORE_VO n05 0 false
         prompt.IgnoreVO = false;
         prompt.OnShow(n05_p0_show);
@@ -202,8 +202,8 @@ public class Dialog_p1_est_002 {
         
         ///RESPONSE n05 1
         response = node.AddResponse();
-        ///RESPONSE_TEXT n05 1 Who are they going to sell?\n
-        response.Text = "Who are they going to sell?\n";
+        ///RESPONSE_TEXT n05 1 Who are they going to sell?
+        response.Text = "Who are they going to sell?";
         ///RESPONSE_NEXT_NODE_TYPE n05 1 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 1 n07
@@ -212,8 +212,8 @@ public class Dialog_p1_est_002 {
         
         ///RESPONSE n05 2
         response = node.AddResponse();
-        ///RESPONSE_TEXT n05 2 Why would they do that?\n
-        response.Text = "Why would they do that?\n";
+        ///RESPONSE_TEXT n05 2 Why would they do that?
+        response.Text = "Why would they do that?";
         ///RESPONSE_NEXT_NODE_TYPE n05 2 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n05 2 n06
@@ -250,8 +250,8 @@ public class Dialog_p1_est_002 {
         
         ///RESPONSE n06 1
         response = node.AddResponse();
-        ///RESPONSE_TEXT n06 1 Who are they going to sell?\n
-        response.Text = "Who are they going to sell?\n";
+        ///RESPONSE_TEXT n06 1 Who are they going to sell?
+        response.Text = "Who are they going to sell?";
         ///RESPONSE_NEXT_NODE_TYPE n06 1 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n06 1 n07
@@ -270,15 +270,15 @@ public class Dialog_p1_est_002 {
         ///NODE_VISUAL_DATA~|||~n07~|||~
         ///PROMPT n07 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT n07 0 I don't know. But I think Henry might be the first to go. Mister Otis don't like him.\n
-        prompt.Text = "I don't know. But I think Henry might be the first to go. Mister Otis don't like him.\n";
+        ///PROMPT_TEXT n07 0 I don't know. But I think Henry might be the first to go. Mister Otis don't like him.
+        prompt.Text = "I don't know. But I think Henry might be the first to go. Mister Otis don't like him.";
         ///PROMPT_IGNORE_VO n07 0 false
         prompt.IgnoreVO = false;
         
         ///RESPONSE n07 0
         response = node.AddResponse();
-        ///RESPONSE_TEXT n07 0 Should we warn Henry?\n
-        response.Text = "Should we warn Henry?\n";
+        ///RESPONSE_TEXT n07 0 Should we warn Henry?
+        response.Text = "Should we warn Henry?";
         ///RESPONSE_NEXT_NODE_TYPE n07 0 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n07 0 n09
@@ -286,8 +286,8 @@ public class Dialog_p1_est_002 {
         
         ///RESPONSE n07 1
         response = node.AddResponse();
-        ///RESPONSE_TEXT n07 1 Henry said this morning he's thinking about running.\n
-        response.Text = "Henry said this morning he's thinking about running.\n";
+        ///RESPONSE_TEXT n07 1 Henry said this morning he's thinking about running.
+        response.Text = "Henry said this morning he's thinking about running.";
         ///RESPONSE_NEXT_NODE_TYPE n07 1 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID n07 1 n08
@@ -777,6 +777,10 @@ public class Dialog_p1_est_002 {
         //if( ?first_doc)
         //   ?first_doc = false
         ///if*/
+        GameFlags.P1HasAuctionPoster = true;
+        if (GameFlags.P1FirstDoc){
+        GameFlags.P1FirstDoc = false;
+        }
         ///METHOD_BODY_END n05_p0_show
     }
 
@@ -784,6 +788,7 @@ public class Dialog_p1_est_002 {
     public void n16_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n16_p0_show
         /*//set ?know_lexington = true*/
+        GameFlags.P1KnowLexington = true;
         ///METHOD_BODY_END n16_p0_show
     }
 
@@ -791,6 +796,7 @@ public class Dialog_p1_est_002 {
     public void n18_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n18_p0_show
         /*//set ?know_est_dawsons = true*/
+        GameFlags.P1KnowEstDawsons = true;
         ///METHOD_BODY_END n18_p0_show
     }
 
@@ -798,7 +804,7 @@ public class Dialog_p1_est_002 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (?sar_mad)*/
-        return true;
+        return GameFlags.P1SarMad;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -806,7 +812,7 @@ public class Dialog_p1_est_002 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?sar_mad = false)*/
-        return true;
+        return !GameFlags.P1SarMad;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -814,7 +820,7 @@ public class Dialog_p1_est_002 {
     public bool n01_r2_condition (  ) {
         ///METHOD_BODY_START n01_r2_condition
         /*//if (?cook_warning)*/
-        return true;
+        return GameFlags.P1CookWarning;
         ///METHOD_BODY_END n01_r2_condition
     }
 
@@ -822,7 +828,7 @@ public class Dialog_p1_est_002 {
     public bool n05_r0_condition (  ) {
         ///METHOD_BODY_START n05_r0_condition
         /*//if (?sar_mad)*/
-        return true;
+        return GameFlags.P1SarMad;
         ///METHOD_BODY_END n05_r0_condition
     }
 
@@ -830,7 +836,7 @@ public class Dialog_p1_est_002 {
     public bool n06_r0_condition (  ) {
         ///METHOD_BODY_START n06_r0_condition
         /*//if (?sar_mad)*/
-        return true;
+        return GameFlags.P1SarMad;
         ///METHOD_BODY_END n06_r0_condition
     }
 
@@ -838,7 +844,7 @@ public class Dialog_p1_est_002 {
     public bool n11_r0_condition (  ) {
         ///METHOD_BODY_START n11_r0_condition
         /*//if (?comfrey_complete = false AND (?comfrey_tried = false))*/
-        return true;
+        return !GameFlags.P1ComfreyTried && !GameFlags.P1ComfreyComplete;
         ///METHOD_BODY_END n11_r0_condition
     }
 
@@ -846,7 +852,7 @@ public class Dialog_p1_est_002 {
     public bool n11_r1_condition (  ) {
         ///METHOD_BODY_START n11_r1_condition
         /*//if (?comfrey_complete = false AND (?comfrey_tried))*/
-        return true;
+        return !GameFlags.P1ComfreyComplete && GameFlags.P1ComfreyTried;
         ///METHOD_BODY_END n11_r1_condition
     }
 
@@ -854,7 +860,7 @@ public class Dialog_p1_est_002 {
     public bool n11_r2_condition (  ) {
         ///METHOD_BODY_START n11_r2_condition
         /*//if (?comfrey_complete)*/
-        return true;
+        return GameFlags.P1ComfreyComplete;
         ///METHOD_BODY_END n11_r2_condition
     }
 
@@ -862,7 +868,7 @@ public class Dialog_p1_est_002 {
     public bool n20_r0_condition (  ) {
         ///METHOD_BODY_START n20_r0_condition
         /*//if (?know_est_dawsons = false)*/
-        return true;
+        return !GameFlags.P1KnowEstDawsons;
         ///METHOD_BODY_END n20_r0_condition
     }
 
@@ -870,7 +876,7 @@ public class Dialog_p1_est_002 {
     public bool n20_r1_condition (  ) {
         ///METHOD_BODY_START n20_r1_condition
         /*//if (?know_est_dawsons)*/
-        return true;
+        return GameFlags.P1KnowEstDawsons;
         ///METHOD_BODY_END n20_r1_condition
     }
 
@@ -903,6 +909,8 @@ public class Dialog_p1_est_002 {
         ///METHOD_BODY_START n12_r0_select
         /*//?p1_est_comfrey = true
         //addItem("COMFREY2")*/
+        GameFlags.P1EstComfrey = true;
+        GameFlags.P1HasComfrey = true;
         ///METHOD_BODY_END n12_r0_select
     }
 }

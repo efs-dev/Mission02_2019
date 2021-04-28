@@ -48,7 +48,7 @@ MonoBehaviour:
     SelectedTab: 0
   SelectedTab: 0
   TabToDraw:
-    Id: Dialog
+    Id: 
     ScrollPos: {x: 0, y: 0}
     Tabs: []
     SelectedTab: 0

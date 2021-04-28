@@ -770,7 +770,7 @@ public class Dialog_p1_hen_001 {
     public bool n08_r1_condition (  ) {
         ///METHOD_BODY_START n08_r1_condition
         /*//if (?know_lexington)*/
-        return true;
+        return GameFlags.P1KnowLexington;
         ///METHOD_BODY_END n08_r1_condition
     }
 
@@ -778,7 +778,7 @@ public class Dialog_p1_hen_001 {
     public bool n08_r2_condition (  ) {
         ///METHOD_BODY_START n08_r2_condition
         /*//if (hasItem("invitation"))*/
-        return true;
+        return GameFlags.P1HasInvitation;
         ///METHOD_BODY_END n08_r2_condition
     }
 
@@ -786,7 +786,7 @@ public class Dialog_p1_hen_001 {
     public bool n15_r1_condition (  ) {
         ///METHOD_BODY_START n15_r1_condition
         /*//if (?know_king_time)*/
-        return true;
+        return GameFlags.P1KnowKingTime;
         ///METHOD_BODY_END n15_r1_condition
     }
 
@@ -795,6 +795,7 @@ public class Dialog_p1_hen_001 {
         ///METHOD_BODY_START n12_r0_select
         /*//set $escape_type = "alone"
         //wait(2000)*/
+        GameFlags.P2EscapeType = "alone";
         ///METHOD_BODY_END n12_r0_select
     }
 
@@ -803,6 +804,7 @@ public class Dialog_p1_hen_001 {
         ///METHOD_BODY_START n13_r0_select
         /*//set $escape_type = "alone"
         //wait(2000)*/
+        GameFlags.P2EscapeType = "alone";
         ///METHOD_BODY_END n13_r0_select
     }
 
@@ -811,6 +813,7 @@ public class Dialog_p1_hen_001 {
         ///METHOD_BODY_START n14_r0_select
         /*//set $escape_type = "alone"
         //wait(2000)*/
+        GameFlags.P2EscapeType = "alone";
         ///METHOD_BODY_END n14_r0_select
     }
 
@@ -818,6 +821,7 @@ public class Dialog_p1_hen_001 {
     public void n16_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n16_r0_select
         /*//set $escape_type = "henry"*/
+        GameFlags.P2EscapeType = "henry";
         ///METHOD_BODY_END n16_r0_select
     }
 
@@ -826,6 +830,7 @@ public class Dialog_p1_hen_001 {
         ///METHOD_BODY_START n18_r0_select
         /*//set $escape_type = "alone"
         //wait(2000)*/
+        GameFlags.P2EscapeType = "alone";
         ///METHOD_BODY_END n18_r0_select
     }
 
@@ -834,6 +839,7 @@ public class Dialog_p1_hen_001 {
         ///METHOD_BODY_START n19_r0_select
         /*//set $escape_type = "alone"
         //wait(2000)*/
+        GameFlags.P2EscapeType = "alone";
         ///METHOD_BODY_END n19_r0_select
     }
 }

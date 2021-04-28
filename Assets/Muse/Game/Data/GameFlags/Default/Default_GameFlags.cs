@@ -62,6 +62,30 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P1HasPrimer 
 //USING
 ///GAMEFLAG_FOLDER P1HasInvitation 
+//USING
+///GAMEFLAG_FOLDER P1CookWarning 
+//USING
+///GAMEFLAG_FOLDER P1SarMad 
+//USING
+///GAMEFLAG_FOLDER P1HasAuctionPoster 
+//USING
+///GAMEFLAG_FOLDER P1FirstDoc 
+//USING
+///GAMEFLAG_FOLDER P1ComfreyComplete 
+//USING
+///GAMEFLAG_FOLDER P1ComfreyTried 
+//USING
+///GAMEFLAG_FOLDER P1EstComfrey 
+//USING
+///GAMEFLAG_FOLDER P1HasComfrey 
+//USING
+///GAMEFLAG_FOLDER P1KnowLexington 
+//USING
+///GAMEFLAG_FOLDER P1KnowEstDawsons 
+//USING
+///GAMEFLAG_FOLDER P2EscapeType 
+//USING
+///GAMEFLAG_FOLDER P1KnowKingTime 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -631,6 +655,234 @@ GameFlagChanged("P1HasPrimer", oldValue, value);
 _P1HasInvitation = value;
 GameFlagChanged("P1HasInvitation", oldValue, value);
             ///PROPERTY_SETTER_END P1HasInvitation
+        }
+    }
+
+    //PROPERTY _P1CookWarning
+    private static bool _P1CookWarning = false;
+
+    //PROPERTY P1CookWarning
+    public static bool P1CookWarning {
+        get {
+            ///PROPERTY_GETTER_START P1CookWarning
+            return _P1CookWarning;
+            ///PROPERTY_GETTER_END P1CookWarning
+        }
+        set {
+            ///PROPERTY_SETTER_START P1CookWarning
+            var oldValue = value;
+_P1CookWarning = value;
+GameFlagChanged("P1CookWarning", oldValue, value);
+            ///PROPERTY_SETTER_END P1CookWarning
+        }
+    }
+
+    //PROPERTY _P1SarMad
+    private static bool _P1SarMad = false;
+
+    //PROPERTY P1SarMad
+    public static bool P1SarMad {
+        get {
+            ///PROPERTY_GETTER_START P1SarMad
+            return _P1SarMad;
+            ///PROPERTY_GETTER_END P1SarMad
+        }
+        set {
+            ///PROPERTY_SETTER_START P1SarMad
+            var oldValue = value;
+_P1SarMad = value;
+GameFlagChanged("P1SarMad", oldValue, value);
+            ///PROPERTY_SETTER_END P1SarMad
+        }
+    }
+
+    //PROPERTY _P1HasAuctionPoster
+    private static bool _P1HasAuctionPoster = false;
+
+    //PROPERTY P1HasAuctionPoster
+    public static bool P1HasAuctionPoster {
+        get {
+            ///PROPERTY_GETTER_START P1HasAuctionPoster
+            return _P1HasAuctionPoster;
+            ///PROPERTY_GETTER_END P1HasAuctionPoster
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasAuctionPoster
+            var oldValue = value;
+_P1HasAuctionPoster = value;
+GameFlagChanged("P1HasAuctionPoster", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasAuctionPoster
+        }
+    }
+
+    //PROPERTY _P1FirstDoc
+    private static bool _P1FirstDoc = true;
+
+    //PROPERTY P1FirstDoc
+    public static bool P1FirstDoc {
+        get {
+            ///PROPERTY_GETTER_START P1FirstDoc
+            return _P1FirstDoc;
+            ///PROPERTY_GETTER_END P1FirstDoc
+        }
+        set {
+            ///PROPERTY_SETTER_START P1FirstDoc
+            var oldValue = value;
+_P1FirstDoc = value;
+GameFlagChanged("P1FirstDoc", oldValue, value);
+            ///PROPERTY_SETTER_END P1FirstDoc
+        }
+    }
+
+    //PROPERTY _P1ComfreyComplete
+    private static bool _P1ComfreyComplete = false;
+
+    //PROPERTY P1ComfreyComplete
+    public static bool P1ComfreyComplete {
+        get {
+            ///PROPERTY_GETTER_START P1ComfreyComplete
+            return _P1ComfreyComplete;
+            ///PROPERTY_GETTER_END P1ComfreyComplete
+        }
+        set {
+            ///PROPERTY_SETTER_START P1ComfreyComplete
+            var oldValue = value;
+_P1ComfreyComplete = value;
+GameFlagChanged("P1ComfreyComplete", oldValue, value);
+            ///PROPERTY_SETTER_END P1ComfreyComplete
+        }
+    }
+
+    //PROPERTY _P1ComfreyTried
+    private static bool _P1ComfreyTried = false;
+
+    //PROPERTY P1ComfreyTried
+    public static bool P1ComfreyTried {
+        get {
+            ///PROPERTY_GETTER_START P1ComfreyTried
+            return _P1ComfreyTried;
+            ///PROPERTY_GETTER_END P1ComfreyTried
+        }
+        set {
+            ///PROPERTY_SETTER_START P1ComfreyTried
+            var oldValue = value;
+_P1ComfreyTried = value;
+GameFlagChanged("P1ComfreyTried", oldValue, value);
+            ///PROPERTY_SETTER_END P1ComfreyTried
+        }
+    }
+
+    //PROPERTY _P1EstComfrey
+    private static bool _P1EstComfrey = false;
+
+    //PROPERTY P1EstComfrey
+    public static bool P1EstComfrey {
+        get {
+            ///PROPERTY_GETTER_START P1EstComfrey
+            return _P1EstComfrey;
+            ///PROPERTY_GETTER_END P1EstComfrey
+        }
+        set {
+            ///PROPERTY_SETTER_START P1EstComfrey
+            var oldValue = value;
+_P1EstComfrey = value;
+GameFlagChanged("P1EstComfrey", oldValue, value);
+            ///PROPERTY_SETTER_END P1EstComfrey
+        }
+    }
+
+    //PROPERTY _P1HasComfrey
+    private static bool _P1HasComfrey = false;
+
+    //PROPERTY P1HasComfrey
+    public static bool P1HasComfrey {
+        get {
+            ///PROPERTY_GETTER_START P1HasComfrey
+            return _P1HasComfrey;
+            ///PROPERTY_GETTER_END P1HasComfrey
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasComfrey
+            var oldValue = value;
+_P1HasComfrey = value;
+GameFlagChanged("P1HasComfrey", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasComfrey
+        }
+    }
+
+    //PROPERTY _P1KnowLexington
+    private static bool _P1KnowLexington = false;
+
+    //PROPERTY P1KnowLexington
+    public static bool P1KnowLexington {
+        get {
+            ///PROPERTY_GETTER_START P1KnowLexington
+            return _P1KnowLexington;
+            ///PROPERTY_GETTER_END P1KnowLexington
+        }
+        set {
+            ///PROPERTY_SETTER_START P1KnowLexington
+            var oldValue = value;
+_P1KnowLexington = value;
+GameFlagChanged("P1KnowLexington", oldValue, value);
+            ///PROPERTY_SETTER_END P1KnowLexington
+        }
+    }
+
+    //PROPERTY _P1KnowEstDawsons
+    private static bool _P1KnowEstDawsons = false;
+
+    //PROPERTY P1KnowEstDawsons
+    public static bool P1KnowEstDawsons {
+        get {
+            ///PROPERTY_GETTER_START P1KnowEstDawsons
+            return _P1KnowEstDawsons;
+            ///PROPERTY_GETTER_END P1KnowEstDawsons
+        }
+        set {
+            ///PROPERTY_SETTER_START P1KnowEstDawsons
+            var oldValue = value;
+_P1KnowEstDawsons = value;
+GameFlagChanged("P1KnowEstDawsons", oldValue, value);
+            ///PROPERTY_SETTER_END P1KnowEstDawsons
+        }
+    }
+
+    //PROPERTY _P2EscapeType
+    private static string _P2EscapeType = "";
+
+    //PROPERTY P2EscapeType
+    public static string P2EscapeType {
+        get {
+            ///PROPERTY_GETTER_START P2EscapeType
+            return _P2EscapeType;
+            ///PROPERTY_GETTER_END P2EscapeType
+        }
+        set {
+            ///PROPERTY_SETTER_START P2EscapeType
+            var oldValue = value;
+_P2EscapeType = value;
+GameFlagChanged("P2EscapeType", oldValue, value);
+            ///PROPERTY_SETTER_END P2EscapeType
+        }
+    }
+
+    //PROPERTY _P1KnowKingTime
+    private static bool _P1KnowKingTime = false;
+
+    //PROPERTY P1KnowKingTime
+    public static bool P1KnowKingTime {
+        get {
+            ///PROPERTY_GETTER_START P1KnowKingTime
+            return _P1KnowKingTime;
+            ///PROPERTY_GETTER_END P1KnowKingTime
+        }
+        set {
+            ///PROPERTY_SETTER_START P1KnowKingTime
+            var oldValue = value;
+_P1KnowKingTime = value;
+GameFlagChanged("P1KnowKingTime", oldValue, value);
+            ///PROPERTY_SETTER_END P1KnowKingTime
         }
     }
 }
