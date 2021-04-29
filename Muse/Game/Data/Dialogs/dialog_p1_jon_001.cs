@@ -495,6 +495,7 @@ public class Dialog_p1_jon_001 {
     public void n10_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n10_p0_show
         /*//addItem ("primer")*/
+        GameFlags.P1HasPrimer = true;
         ///METHOD_BODY_END n10_p0_show
     }
 
@@ -502,6 +503,7 @@ public class Dialog_p1_jon_001 {
     public void n09_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n09_r1_select
         /*//set ?jon_trouble = true*/
+        GameFlags.P1JonTrouble = true;
         ///METHOD_BODY_END n09_r1_select
     }
 
@@ -509,6 +511,7 @@ public class Dialog_p1_jon_001 {
     public void n09_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n09_r2_select
         /*//set ?book_hidden = true*/
+        GameFlags.P1BookHidden = true;
         ///METHOD_BODY_END n09_r2_select
     }
 
@@ -516,6 +519,7 @@ public class Dialog_p1_jon_001 {
     public void n10_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r1_select
         /*//set ?practice_promise = true*/
+        GameFlags.P1PracticePromise = true;
         ///METHOD_BODY_END n10_r1_select
     }
 }

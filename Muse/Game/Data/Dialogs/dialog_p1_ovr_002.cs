@@ -328,6 +328,7 @@ public class Dialog_p1_ovr_002 {
     public void n04_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n04_p0_show
         /*//?pass_taken = true*/
+        GameFlags.P1PassTaken = true;
         ///METHOD_BODY_END n04_p0_show
     }
 
@@ -335,6 +336,7 @@ public class Dialog_p1_ovr_002 {
     public void n08_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n08_p0_show
         /*//?pass_taken = true*/
+        GameFlags.P1PassTaken = true;
         ///METHOD_BODY_END n08_p0_show
     }
 
@@ -342,7 +344,7 @@ public class Dialog_p1_ovr_002 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (?hogs_complete AND (#ptasks_complete= 1))*/
-        return true;
+        return GameFlags.P1HogsComplete && GameFlags.P1TasksComplete == 1;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -350,7 +352,7 @@ public class Dialog_p1_ovr_002 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?laundry_complete AND (#ptasks_complete = 1))*/
-        return true;
+        return GameFlags.P1LaundryComplete && GameFlags.P1TasksComplete == 1;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -358,7 +360,7 @@ public class Dialog_p1_ovr_002 {
     public bool n01_r2_condition (  ) {
         ///METHOD_BODY_START n01_r2_condition
         /*//if (?eggs_complete AND (#ptasks_complete = 1))*/
-        return true;
+        return GameFlags.P1EggsComplete && GameFlags.P1TasksComplete == 1;
         ///METHOD_BODY_END n01_r2_condition
     }
 
@@ -366,7 +368,7 @@ public class Dialog_p1_ovr_002 {
     public bool n01_r3_condition (  ) {
         ///METHOD_BODY_START n01_r3_condition
         /*//if (#ptasks_complete = 2)*/
-        return true;
+        return GameFlags.P1TasksComplete == 2;
         ///METHOD_BODY_END n01_r3_condition
     }
 
@@ -374,7 +376,7 @@ public class Dialog_p1_ovr_002 {
     public bool n01_r4_condition (  ) {
         ///METHOD_BODY_START n01_r4_condition
         /*//if (#ptasks_complete = 3)*/
-        return true;
+        return GameFlags.P1TasksComplete >= 3;
         ///METHOD_BODY_END n01_r4_condition
     }
 
@@ -382,6 +384,7 @@ public class Dialog_p1_ovr_002 {
     public void n07_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r0_select
         /*//addItem("smokehouse_key")*/
+        GameFlags.P1HasSmokehouseKey = true;
         ///METHOD_BODY_END n07_r0_select
     }
 }

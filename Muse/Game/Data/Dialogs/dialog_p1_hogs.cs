@@ -58,6 +58,7 @@ public class Dialog_p1_hogs {
         prompt.Text = "[You go to the kitchen and get the slop bucket of food scraps.]";
         ///PROMPT_IGNORE_VO n01 0 false
         prompt.IgnoreVO = false;
+        prompt.OnShow(n01_p0_show);
         
         ///RESPONSE n01 0
         response = node.AddResponse();
@@ -175,6 +176,13 @@ public class Dialog_p1_hogs {
         ///METHOD_BODY_END CreateDialog
     }
 
+    ///METHOD n01_p0_show
+    public void n01_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n01_p0_show
+        GameFlags.P1HogsComplete = true;
+        ///METHOD_BODY_END n01_p0_show
+    }
+
     ///METHOD n01_r0_select
     public void n01_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r0_select
@@ -185,6 +193,10 @@ public class Dialog_p1_hogs {
         //	overlayPopup("resisted_popup")
         ///if
         //#res_points = #res_points + 2*/
+        GameFlags.P1HogCode = 3;
+        GameFlags.P1TotalTasks += 2;
+        GameFlags.P1TasksComplete++;
+        GameFlags.P1ResistancePoints+=2;
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -198,6 +210,10 @@ public class Dialog_p1_hogs {
         //	overlayPopup("resisted_popup")
         ///if
         //#res_points = #res_points + 1*/
+        GameFlags.P1HogCode = 2;
+        GameFlags.P1TotalTasks += 3;
+        GameFlags.P1TasksComplete++;
+        GameFlags.P1ResistancePoints++;
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -207,6 +223,9 @@ public class Dialog_p1_hogs {
         /*//#hog_code = 1
         //#p1_total_tasks= #p1_total_tasks+2
         //#ptasks_complete= #ptasks_complete+1*/
+        GameFlags.P1HogCode = 1;
+        GameFlags.P1TotalTasks += 2;
+        GameFlags.P1TasksComplete++;
         ///METHOD_BODY_END n01_r2_select
     }
 }

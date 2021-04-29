@@ -395,6 +395,7 @@ public class Dialog_p1_jon_002 {
     public void n08_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r0_select
         /*//$jonah_promise = "family"*/
+        GameFlags.P1JonahPromise = "family";
         ///METHOD_BODY_END n08_r0_select
     }
 
@@ -402,6 +403,7 @@ public class Dialog_p1_jon_002 {
     public void n08_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r1_select
         /*//$jonah_promise = "reading"*/
+        GameFlags.P1JonahPromise = "reading";
         ///METHOD_BODY_END n08_r1_select
     }
 
@@ -409,6 +411,7 @@ public class Dialog_p1_jon_002 {
     public void n08_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r2_select
         /*//$jonah_promise = "secret"*/
+        GameFlags.P1JonahPromise = "secret";
         ///METHOD_BODY_END n08_r2_select
     }
 }

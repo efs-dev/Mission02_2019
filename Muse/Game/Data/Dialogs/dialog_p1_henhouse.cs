@@ -58,6 +58,7 @@ public class Dialog_p1_henhouse {
         prompt.Text = "[There is an empty basket just inside the door.]";
         ///PROMPT_IGNORE_VO n01 0 false
         prompt.IgnoreVO = false;
+        prompt.OnShow(n01_p0_show);
         
         ///RESPONSE n01 0
         response = node.AddResponse();
@@ -132,6 +133,13 @@ public class Dialog_p1_henhouse {
         ///METHOD_BODY_END CreateDialog
     }
 
+    ///METHOD n01_p0_show
+    public void n01_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n01_p0_show
+        GameFlags.P1EggsComplete = true;
+        ///METHOD_BODY_END n01_p0_show
+    }
+
     ///METHOD n02_p0_show
     public void n02_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n02_p0_show
@@ -149,6 +157,10 @@ public class Dialog_p1_henhouse {
         //	overlayPopup("resisted_popup")
         ///if
         //#res_points = #res_points + 2*/
+        GameFlags.P1TotalTasks +=2;
+        GameFlags.P1EggCode = 4;
+        GameFlags.P1TasksComplete++;
+        GameFlags.P1ResistancePoints += 2;
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -162,6 +174,10 @@ public class Dialog_p1_henhouse {
         //	overlayPopup("resisted_popup")
         ///if
         //#res_points = #res_points + 1*/
+        GameFlags.P1TotalTasks +=2;
+        GameFlags.P1EggCode = 3;
+        GameFlags.P1TasksComplete++;
+        GameFlags.P1ResistancePoints++;
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -175,6 +191,10 @@ public class Dialog_p1_henhouse {
         //	overlayPopup("resisted_popup")
         ///if
         //#res_points = #res_points + 1*/
+        GameFlags.P1TotalTasks +=3;
+        GameFlags.P1TasksComplete++;
+        GameFlags.P1EggCode = 2;
+        GameFlags.P1ResistancePoints++;
         ///METHOD_BODY_END n01_r2_select
     }
 
@@ -184,7 +204,9 @@ public class Dialog_p1_henhouse {
         /*//#egg_code = 1
         //#p1_total_tasks= #p1_total_tasks+2
         //#ptasks_complete= #ptasks_complete+1*/
-        
+        GameFlags.P1TotalTasks +=2;
+        GameFlags.P1TasksComplete++;
+        GameFlags.P1EggCode = 1;
         ///METHOD_BODY_END n01_r3_select
     }
 }

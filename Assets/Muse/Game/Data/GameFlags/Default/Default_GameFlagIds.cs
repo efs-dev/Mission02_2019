@@ -125,5 +125,68 @@ public static partial class GameFlagIds {
 
     //PROPERTY P1KnowKingTime
     public static string P1KnowKingTime = "P1KnowKingTime";
+
+    //PROPERTY P1TotalTasks
+    public static string P1TotalTasks = "P1TotalTasks";
+
+    //PROPERTY P1TasksComplete
+    public static string P1TasksComplete = "P1TasksComplete";
+
+    //PROPERTY P1EggCode
+    public static string P1EggCode = "P1EggCode";
+
+    //PROPERTY P1ResistancePoints
+    public static string P1ResistancePoints = "P1ResistancePoints";
+
+    //PROPERTY P1HogCode
+    public static string P1HogCode = "P1HogCode";
+
+    //PROPERTY P1BookHidden
+    public static string P1BookHidden = "P1BookHidden";
+
+    //PROPERTY P1JonTrouble
+    public static string P1JonTrouble = "P1JonTrouble";
+
+    //PROPERTY P1PracticePromise
+    public static string P1PracticePromise = "P1PracticePromise";
+
+    //PROPERTY P1JonahPromise
+    public static string P1JonahPromise = "P1JonahPromise";
+
+    //PROPERTY P1HasBlanket
+    public static string P1HasBlanket = "P1HasBlanket";
+
+    //PROPERTY P1PassTaken
+    public static string P1PassTaken = "P1PassTaken";
+
+    //PROPERTY P1EggsComplete
+    public static string P1EggsComplete = "P1EggsComplete";
+
+    //PROPERTY P1LaundryComplete
+    public static string P1LaundryComplete = "P1LaundryComplete";
+
+    //PROPERTY P1HogsComplete
+    public static string P1HogsComplete = "P1HogsComplete";
+
+    //PROPERTY P1HasSmokehouseKey
+    public static string P1HasSmokehouseKey = "P1HasSmokehouseKey";
+
+    //PROPERTY P1HasPass
+    public static string P1HasPass = "P1HasPass";
+
+    //PROPERTY P1SarMood
+    public static string P1SarMood = "P1SarMood";
+
+    //PROPERTY P1HasShawl
+    public static string P1HasShawl = "P1HasShawl";
+
+    //PROPERTY P1Persuade
+    public static string P1Persuade = "P1Persuade";
+
+    //PROPERTY P1NegotiateSar
+    public static string P1NegotiateSar = "P1NegotiateSar";
+
+    //PROPERTY P1PrimerPromise
+    public static string P1PrimerPromise = "P1PrimerPromise";
 }
 //CLASS_END GameFlagIds

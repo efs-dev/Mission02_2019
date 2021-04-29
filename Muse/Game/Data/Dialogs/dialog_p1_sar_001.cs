@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p1_sar_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p1_yankee_gentlemen
+        private bool _p1_yankee_gentlemen = false;
+
+        //PROPERTY p1_yankee_gentlemen
+        public bool p1_yankee_gentlemen {
+                get {
+                        ///PROPERTY_GETTER_START p1_yankee_gentlemen
+                        return _p1_yankee_gentlemen;
+                        ///PROPERTY_GETTER_END p1_yankee_gentlemen
+                }
+                set {
+                        ///PROPERTY_SETTER_START p1_yankee_gentlemen
+                        _p1_yankee_gentlemen = value;
+                        ///PROPERTY_SETTER_END p1_yankee_gentlemen
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -1203,7 +1219,7 @@ public class Dialog_p1_sar_001 {
     public bool n30_p1_condition (  ) {
         ///METHOD_BODY_START n30_p1_condition
         /*//if (#sar_mood >0)*/
-        return true;
+        return GameFlags.P1SarMood > 0;
         ///METHOD_BODY_END n30_p1_condition
     }
 
@@ -1211,6 +1227,7 @@ public class Dialog_p1_sar_001 {
     public void n15b_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n15b_p0_show
         /*//			?p1_yankee_gentlemen = true*/
+        DialogGameFlags.p1_yankee_gentlemen = true;
         ///METHOD_BODY_END n15b_p0_show
     }
 
@@ -1218,6 +1235,7 @@ public class Dialog_p1_sar_001 {
     public void n20_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n20_p0_show
         /*//addItem ("shawl")*/
+        GameFlags.P1HasShawl = true;
         ///METHOD_BODY_END n20_p0_show
     }
 
@@ -1225,6 +1243,7 @@ public class Dialog_p1_sar_001 {
     public void n22_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n22_p0_show
         /*//set ?negotiate_sar = true*/
+        GameFlags.P1NegotiateSar = true;
         ///METHOD_BODY_END n22_p0_show
     }
 
@@ -1232,6 +1251,7 @@ public class Dialog_p1_sar_001 {
     public void n24_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n24_p0_show
         /*//set ?negotiate_sar = true*/
+        GameFlags.P1NegotiateSar = true;
         ///METHOD_BODY_END n24_p0_show
     }
 
@@ -1239,6 +1259,7 @@ public class Dialog_p1_sar_001 {
     public void n25_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n25_p0_show
         /*//set ?primer_promise = true*/
+        GameFlags.P1PrimerPromise = true;
         ///METHOD_BODY_END n25_p0_show
     }
 
@@ -1246,6 +1267,7 @@ public class Dialog_p1_sar_001 {
     public void n26_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n26_p0_show
         /*//set #sar_mood = 1*/
+        GameFlags.P1SarMood = 1;
         ///METHOD_BODY_END n26_p0_show
     }
 
@@ -1253,7 +1275,7 @@ public class Dialog_p1_sar_001 {
     public bool n14_r0_condition (  ) {
         ///METHOD_BODY_START n14_r0_condition
         /*//if (#sar_mood = 0)*/
-        return true;
+        return GameFlags.P1SarMood == 0;
         ///METHOD_BODY_END n14_r0_condition
     }
 
@@ -1261,7 +1283,7 @@ public class Dialog_p1_sar_001 {
     public bool n14_r1_condition (  ) {
         ///METHOD_BODY_START n14_r1_condition
         /*//if (#sar_mood > 0)*/
-        return true;
+        return GameFlags.P1SarMood > 0;
         ///METHOD_BODY_END n14_r1_condition
     }
 
@@ -1269,7 +1291,7 @@ public class Dialog_p1_sar_001 {
     public bool n25_r0_condition (  ) {
         ///METHOD_BODY_START n25_r0_condition
         /*//if (hasItem ("primer"))*/
-        return true;
+        return GameFlags.P1HasPrimer;
         ///METHOD_BODY_END n25_r0_condition
     }
 
@@ -1277,6 +1299,7 @@ public class Dialog_p1_sar_001 {
     public void n02_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r0_select
         /*//set #sar_mood  =1*/
+        GameFlags.P1SarMood = 1;
         ///METHOD_BODY_END n02_r0_select
     }
 
@@ -1284,6 +1307,7 @@ public class Dialog_p1_sar_001 {
     public void n09_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n09_r0_select
         /*//set #sar_mood  =1*/
+        GameFlags.P1SarMood = 1;
         ///METHOD_BODY_END n09_r0_select
     }
 
@@ -1307,6 +1331,9 @@ public class Dialog_p1_sar_001 {
         /*//if (#sar_mood > 0)
         //set #sar_mood -=1
         ///if*/
+        if (GameFlags.P1SarMood > 0){
+        	GameFlags.P1SarMood--;
+        }
         ///METHOD_BODY_END n16_r1_select
     }
 
@@ -1322,6 +1349,7 @@ public class Dialog_p1_sar_001 {
     public void n21_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n21_r0_select
         /*//?p1_persuade = true*/
+        GameFlags.P1Persuade = true;
         ///METHOD_BODY_END n21_r0_select
     }
 
@@ -1329,6 +1357,7 @@ public class Dialog_p1_sar_001 {
     public void n23_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n23_r1_select
         /*//?p1_persuade = true*/
+        GameFlags.P1Persuade = true;
         ///METHOD_BODY_END n23_r1_select
     }
 
@@ -1337,6 +1366,8 @@ public class Dialog_p1_sar_001 {
         ///METHOD_BODY_START n25_r0_select
         /*//removeItem ("primer")
         //set ?primer_return = true*/
+        GameFlags.P1HasPrimer = false;
+        GameFlags.P1PrimerReturn = true;
         ///METHOD_BODY_END n25_r0_select
     }
 }

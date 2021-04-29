@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p1_map_goldbergs {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _selected_shoe
+        private string _selected_shoe = "";
+
+        //PROPERTY selected_shoe
+        public string selected_shoe {
+                get {
+                        ///PROPERTY_GETTER_START selected_shoe
+                        return _selected_shoe;
+                        ///PROPERTY_GETTER_END selected_shoe
+                }
+                set {
+                        ///PROPERTY_SETTER_START selected_shoe
+                        _selected_shoe = value;
+                        ///PROPERTY_SETTER_END selected_shoe
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -60,6 +76,7 @@ public class Dialog_p1_map_goldbergs {
         prompt.Text = "[Sign] Goldberg's .... The Complete Shoe Store";
         ///PROMPT_IGNORE_VO n01 0 false
         prompt.IgnoreVO = false;
+        prompt.OnShow(n01_p0_show);
         
         ///RESPONSE n01 0
         response = node.AddResponse();
@@ -982,6 +999,13 @@ public class Dialog_p1_map_goldbergs {
         ///METHOD_BODY_END CreateDialog
     }
 
+    ///METHOD n01_p0_show
+    public void n01_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n01_p0_show
+        DialogGameFlags.selected_shoe = "";
+        ///METHOD_BODY_END n01_p0_show
+    }
+
     ///METHOD n20_r0_condition
     public bool n20_r0_condition (  ) {
         ///METHOD_BODY_START n20_r0_condition
@@ -1002,7 +1026,7 @@ public class Dialog_p1_map_goldbergs {
     public bool n21_r0_condition (  ) {
         ///METHOD_BODY_START n21_r0_condition
         /*//if selected shoe*/
-        return true;
+        return DialogGameFlags.selected_shoe != "";
         ///METHOD_BODY_END n21_r0_condition
     }
 
@@ -1010,7 +1034,7 @@ public class Dialog_p1_map_goldbergs {
     public bool n21_r1_condition (  ) {
         ///METHOD_BODY_START n21_r1_condition
         /*//if no shoe selected*/
-        return true;
+        return DialogGameFlags.selected_shoe == "";
         ///METHOD_BODY_END n21_r1_condition
     }
 }

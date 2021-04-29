@@ -827,6 +827,7 @@ public class Dialog_p1_mom_002 {
     public void n08_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n08_p0_show
         /*//addItem("blanket")*/
+        GameFlags.P1HasBlanket = true;
         ///METHOD_BODY_END n08_p0_show
     }
 
@@ -838,6 +839,9 @@ public class Dialog_p1_mom_002 {
         //setLayer("fg", "gfx/stills/slave_pass/slave_pass.swf")
         //setFGXY("5|10")
         //addItem("preston_pass")*/
+        
+        // has_pass and "preston pass" don't seem to be used
+        GameFlags.P1HasPass = true;
         ///METHOD_BODY_END n10_p0_show
     }
 
@@ -845,7 +849,7 @@ public class Dialog_p1_mom_002 {
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
         /*//if ($escape_type = "alone")*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END n03_r1_condition
     }
 
@@ -853,7 +857,7 @@ public class Dialog_p1_mom_002 {
     public bool n03_r2_condition (  ) {
         ///METHOD_BODY_START n03_r2_condition
         /*//if ($escape_type = "henry")*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END n03_r2_condition
     }
 
@@ -861,7 +865,7 @@ public class Dialog_p1_mom_002 {
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
         /*//if ($escape_type = "alone")*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END n04_r0_condition
     }
 
@@ -869,7 +873,7 @@ public class Dialog_p1_mom_002 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if ($escape_type = "henry")*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -877,7 +881,7 @@ public class Dialog_p1_mom_002 {
     public bool n05_r0_condition (  ) {
         ///METHOD_BODY_START n05_r0_condition
         /*//if ($escape_type = "alone")*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END n05_r0_condition
     }
 
@@ -885,7 +889,7 @@ public class Dialog_p1_mom_002 {
     public bool n05_r1_condition (  ) {
         ///METHOD_BODY_START n05_r1_condition
         /*//if ($escape_type = "henry")*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END n05_r1_condition
     }
 
@@ -893,7 +897,7 @@ public class Dialog_p1_mom_002 {
     public bool n08_r0_condition (  ) {
         ///METHOD_BODY_START n08_r0_condition
         /*//if(?pass_taken)*/
-        return true;
+        return GameFlags.P1PassTaken;
         ///METHOD_BODY_END n08_r0_condition
     }
 
@@ -901,7 +905,7 @@ public class Dialog_p1_mom_002 {
     public bool n08_r1_condition (  ) {
         ///METHOD_BODY_START n08_r1_condition
         /*//if(?pass_taken=false)*/
-        return true;
+        return !GameFlags.P1PassTaken;
         ///METHOD_BODY_END n08_r1_condition
     }
 
@@ -909,7 +913,7 @@ public class Dialog_p1_mom_002 {
     public bool n09_r0_condition (  ) {
         ///METHOD_BODY_START n09_r0_condition
         /*//if(?pass_taken)*/
-        return true;
+        return GameFlags.P1PassTaken;
         ///METHOD_BODY_END n09_r0_condition
     }
 
@@ -917,7 +921,7 @@ public class Dialog_p1_mom_002 {
     public bool n09_r1_condition (  ) {
         ///METHOD_BODY_START n09_r1_condition
         /*//if(?pass_taken=false)*/
-        return true;
+        return !GameFlags.P1PassTaken;
         ///METHOD_BODY_END n09_r1_condition
     }
 
@@ -925,7 +929,7 @@ public class Dialog_p1_mom_002 {
     public bool n10_r0_condition (  ) {
         ///METHOD_BODY_START n10_r0_condition
         /*//if (?know_lexington)*/
-        return true;
+        return GameFlags.P1KnowLexington;
         ///METHOD_BODY_END n10_r0_condition
     }
 
@@ -933,7 +937,7 @@ public class Dialog_p1_mom_002 {
     public bool n12_r0_condition (  ) {
         ///METHOD_BODY_START n12_r0_condition
         /*//if (?know_lexington)*/
-        return true;
+        return GameFlags.P1KnowLexington;
         ///METHOD_BODY_END n12_r0_condition
     }
 
@@ -941,7 +945,7 @@ public class Dialog_p1_mom_002 {
     public bool n13_r0_condition (  ) {
         ///METHOD_BODY_START n13_r0_condition
         /*//if (?know_lexington)*/
-        return true;
+        return GameFlags.P1KnowLexington;
         ///METHOD_BODY_END n13_r0_condition
     }
 

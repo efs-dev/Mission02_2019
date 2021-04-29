@@ -4,4 +4,7 @@ using UnityEngine;using System.Linq;using System.Collections;using System.Collec
 //setLayer("fg", "gfx/stills/slave_pass/slave_pass.swf")
 //setFGXY("5|10")
 //addItem("preston_pass")*/
+
+// has_pass and "preston pass" don't seem to be used
+GameFlags.P1PassTaken = true;
 }}

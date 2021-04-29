@@ -86,6 +86,48 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P2EscapeType 
 //USING
 ///GAMEFLAG_FOLDER P1KnowKingTime 
+//USING
+///GAMEFLAG_FOLDER P1TotalTasks 
+//USING
+///GAMEFLAG_FOLDER P1TasksComplete 
+//USING
+///GAMEFLAG_FOLDER P1EggCode 
+//USING
+///GAMEFLAG_FOLDER P1ResistancePoints 
+//USING
+///GAMEFLAG_FOLDER P1HogCode 
+//USING
+///GAMEFLAG_FOLDER P1BookHidden 
+//USING
+///GAMEFLAG_FOLDER P1JonTrouble 
+//USING
+///GAMEFLAG_FOLDER P1PracticePromise 
+//USING
+///GAMEFLAG_FOLDER P1JonahPromise 
+//USING
+///GAMEFLAG_FOLDER P1HasBlanket 
+//USING
+///GAMEFLAG_FOLDER P1PassTaken 
+//USING
+///GAMEFLAG_FOLDER P1EggsComplete 
+//USING
+///GAMEFLAG_FOLDER P1LaundryComplete 
+//USING
+///GAMEFLAG_FOLDER P1HogsComplete 
+//USING
+///GAMEFLAG_FOLDER P1HasSmokehouseKey 
+//USING
+///GAMEFLAG_FOLDER P1HasPass 
+//USING
+///GAMEFLAG_FOLDER P1SarMood 
+//USING
+///GAMEFLAG_FOLDER P1HasShawl 
+//USING
+///GAMEFLAG_FOLDER P1Persuade 
+//USING
+///GAMEFLAG_FOLDER P1NegotiateSar 
+//USING
+///GAMEFLAG_FOLDER P1PrimerPromise 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -883,6 +925,405 @@ GameFlagChanged("P2EscapeType", oldValue, value);
 _P1KnowKingTime = value;
 GameFlagChanged("P1KnowKingTime", oldValue, value);
             ///PROPERTY_SETTER_END P1KnowKingTime
+        }
+    }
+
+    //PROPERTY _P1TotalTasks
+    private static int _P1TotalTasks = 0;
+
+    //PROPERTY P1TotalTasks
+    public static int P1TotalTasks {
+        get {
+            ///PROPERTY_GETTER_START P1TotalTasks
+            return _P1TotalTasks;
+            ///PROPERTY_GETTER_END P1TotalTasks
+        }
+        set {
+            ///PROPERTY_SETTER_START P1TotalTasks
+            var oldValue = value;
+_P1TotalTasks = value;
+GameFlagChanged("P1TotalTasks", oldValue, value);
+            ///PROPERTY_SETTER_END P1TotalTasks
+        }
+    }
+
+    //PROPERTY _P1TasksComplete
+    private static int _P1TasksComplete = 0;
+
+    //PROPERTY P1TasksComplete
+    public static int P1TasksComplete {
+        get {
+            ///PROPERTY_GETTER_START P1TasksComplete
+            return _P1TasksComplete;
+            ///PROPERTY_GETTER_END P1TasksComplete
+        }
+        set {
+            ///PROPERTY_SETTER_START P1TasksComplete
+            var oldValue = value;
+_P1TasksComplete = value;
+GameFlagChanged("P1TasksComplete", oldValue, value);
+            ///PROPERTY_SETTER_END P1TasksComplete
+        }
+    }
+
+    //PROPERTY _P1EggCode
+    private static int _P1EggCode = 0;
+
+    //PROPERTY P1EggCode
+    public static int P1EggCode {
+        get {
+            ///PROPERTY_GETTER_START P1EggCode
+            return _P1EggCode;
+            ///PROPERTY_GETTER_END P1EggCode
+        }
+        set {
+            ///PROPERTY_SETTER_START P1EggCode
+            var oldValue = value;
+_P1EggCode = value;
+GameFlagChanged("P1EggCode", oldValue, value);
+            ///PROPERTY_SETTER_END P1EggCode
+        }
+    }
+
+    //PROPERTY _P1ResistancePoints
+    private static int _P1ResistancePoints = 0;
+
+    //PROPERTY P1ResistancePoints
+    public static int P1ResistancePoints {
+        get {
+            ///PROPERTY_GETTER_START P1ResistancePoints
+            return _P1ResistancePoints;
+            ///PROPERTY_GETTER_END P1ResistancePoints
+        }
+        set {
+            ///PROPERTY_SETTER_START P1ResistancePoints
+            var oldValue = value;
+_P1ResistancePoints = value;
+GameFlagChanged("P1ResistancePoints", oldValue, value);
+            ///PROPERTY_SETTER_END P1ResistancePoints
+        }
+    }
+
+    //PROPERTY _P1HogCode
+    private static int _P1HogCode = 0;
+
+    //PROPERTY P1HogCode
+    public static int P1HogCode {
+        get {
+            ///PROPERTY_GETTER_START P1HogCode
+            return _P1HogCode;
+            ///PROPERTY_GETTER_END P1HogCode
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HogCode
+            var oldValue = value;
+_P1HogCode = value;
+GameFlagChanged("P1HogCode", oldValue, value);
+            ///PROPERTY_SETTER_END P1HogCode
+        }
+    }
+
+    //PROPERTY _P1BookHidden
+    private static bool _P1BookHidden = false;
+
+    //PROPERTY P1BookHidden
+    public static bool P1BookHidden {
+        get {
+            ///PROPERTY_GETTER_START P1BookHidden
+            return _P1BookHidden;
+            ///PROPERTY_GETTER_END P1BookHidden
+        }
+        set {
+            ///PROPERTY_SETTER_START P1BookHidden
+            var oldValue = value;
+_P1BookHidden = value;
+GameFlagChanged("P1BookHidden", oldValue, value);
+            ///PROPERTY_SETTER_END P1BookHidden
+        }
+    }
+
+    //PROPERTY _P1JonTrouble
+    private static bool _P1JonTrouble = false;
+
+    //PROPERTY P1JonTrouble
+    public static bool P1JonTrouble {
+        get {
+            ///PROPERTY_GETTER_START P1JonTrouble
+            return _P1JonTrouble;
+            ///PROPERTY_GETTER_END P1JonTrouble
+        }
+        set {
+            ///PROPERTY_SETTER_START P1JonTrouble
+            var oldValue = value;
+_P1JonTrouble = value;
+GameFlagChanged("P1JonTrouble", oldValue, value);
+            ///PROPERTY_SETTER_END P1JonTrouble
+        }
+    }
+
+    //PROPERTY _P1PracticePromise
+    private static bool _P1PracticePromise = false;
+
+    //PROPERTY P1PracticePromise
+    public static bool P1PracticePromise {
+        get {
+            ///PROPERTY_GETTER_START P1PracticePromise
+            return _P1PracticePromise;
+            ///PROPERTY_GETTER_END P1PracticePromise
+        }
+        set {
+            ///PROPERTY_SETTER_START P1PracticePromise
+            var oldValue = value;
+_P1PracticePromise = value;
+GameFlagChanged("P1PracticePromise", oldValue, value);
+            ///PROPERTY_SETTER_END P1PracticePromise
+        }
+    }
+
+    //PROPERTY _P1JonahPromise
+    private static string _P1JonahPromise = "";
+
+    //PROPERTY P1JonahPromise
+    public static string P1JonahPromise {
+        get {
+            ///PROPERTY_GETTER_START P1JonahPromise
+            return _P1JonahPromise;
+            ///PROPERTY_GETTER_END P1JonahPromise
+        }
+        set {
+            ///PROPERTY_SETTER_START P1JonahPromise
+            var oldValue = value;
+_P1JonahPromise = value;
+GameFlagChanged("P1JonahPromise", oldValue, value);
+            ///PROPERTY_SETTER_END P1JonahPromise
+        }
+    }
+
+    //PROPERTY _P1HasBlanket
+    private static bool _P1HasBlanket = false;
+
+    //PROPERTY P1HasBlanket
+    public static bool P1HasBlanket {
+        get {
+            ///PROPERTY_GETTER_START P1HasBlanket
+            return _P1HasBlanket;
+            ///PROPERTY_GETTER_END P1HasBlanket
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasBlanket
+            var oldValue = value;
+_P1HasBlanket = value;
+GameFlagChanged("P1HasBlanket", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasBlanket
+        }
+    }
+
+    //PROPERTY _P1PassTaken
+    private static bool _P1PassTaken = false;
+
+    //PROPERTY P1PassTaken
+    public static bool P1PassTaken {
+        get {
+            ///PROPERTY_GETTER_START P1PassTaken
+            return _P1PassTaken;
+            ///PROPERTY_GETTER_END P1PassTaken
+        }
+        set {
+            ///PROPERTY_SETTER_START P1PassTaken
+            var oldValue = value;
+_P1PassTaken = value;
+GameFlagChanged("P1PassTaken", oldValue, value);
+            ///PROPERTY_SETTER_END P1PassTaken
+        }
+    }
+
+    //PROPERTY _P1EggsComplete
+    private static bool _P1EggsComplete = false;
+
+    //PROPERTY P1EggsComplete
+    public static bool P1EggsComplete {
+        get {
+            ///PROPERTY_GETTER_START P1EggsComplete
+            return _P1EggsComplete;
+            ///PROPERTY_GETTER_END P1EggsComplete
+        }
+        set {
+            ///PROPERTY_SETTER_START P1EggsComplete
+            var oldValue = value;
+_P1EggsComplete = value;
+GameFlagChanged("P1EggsComplete", oldValue, value);
+            ///PROPERTY_SETTER_END P1EggsComplete
+        }
+    }
+
+    //PROPERTY _P1LaundryComplete
+    private static bool _P1LaundryComplete = false;
+
+    //PROPERTY P1LaundryComplete
+    public static bool P1LaundryComplete {
+        get {
+            ///PROPERTY_GETTER_START P1LaundryComplete
+            return _P1LaundryComplete;
+            ///PROPERTY_GETTER_END P1LaundryComplete
+        }
+        set {
+            ///PROPERTY_SETTER_START P1LaundryComplete
+            var oldValue = value;
+_P1LaundryComplete = value;
+GameFlagChanged("P1LaundryComplete", oldValue, value);
+            ///PROPERTY_SETTER_END P1LaundryComplete
+        }
+    }
+
+    //PROPERTY _P1HogsComplete
+    private static bool _P1HogsComplete = false;
+
+    //PROPERTY P1HogsComplete
+    public static bool P1HogsComplete {
+        get {
+            ///PROPERTY_GETTER_START P1HogsComplete
+            return _P1HogsComplete;
+            ///PROPERTY_GETTER_END P1HogsComplete
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HogsComplete
+            var oldValue = value;
+_P1HogsComplete = value;
+GameFlagChanged("P1HogsComplete", oldValue, value);
+            ///PROPERTY_SETTER_END P1HogsComplete
+        }
+    }
+
+    //PROPERTY _P1HasSmokehouseKey
+    private static bool _P1HasSmokehouseKey = false;
+
+    //PROPERTY P1HasSmokehouseKey
+    public static bool P1HasSmokehouseKey {
+        get {
+            ///PROPERTY_GETTER_START P1HasSmokehouseKey
+            return _P1HasSmokehouseKey;
+            ///PROPERTY_GETTER_END P1HasSmokehouseKey
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasSmokehouseKey
+            var oldValue = value;
+_P1HasSmokehouseKey = value;
+GameFlagChanged("P1HasSmokehouseKey", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasSmokehouseKey
+        }
+    }
+
+    //PROPERTY _P1HasPass
+    private static bool _P1HasPass = false;
+
+    //PROPERTY P1HasPass
+    public static bool P1HasPass {
+        get {
+            ///PROPERTY_GETTER_START P1HasPass
+            return _P1HasPass;
+            ///PROPERTY_GETTER_END P1HasPass
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasPass
+            var oldValue = value;
+_P1HasPass = value;
+GameFlagChanged("P1HasPass", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasPass
+        }
+    }
+
+    //PROPERTY _P1SarMood
+    private static int _P1SarMood = 0;
+
+    //PROPERTY P1SarMood
+    public static int P1SarMood {
+        get {
+            ///PROPERTY_GETTER_START P1SarMood
+            return _P1SarMood;
+            ///PROPERTY_GETTER_END P1SarMood
+        }
+        set {
+            ///PROPERTY_SETTER_START P1SarMood
+            var oldValue = value;
+_P1SarMood = value;
+GameFlagChanged("P1SarMood", oldValue, value);
+            ///PROPERTY_SETTER_END P1SarMood
+        }
+    }
+
+    //PROPERTY _P1HasShawl
+    private static bool _P1HasShawl = false;
+
+    //PROPERTY P1HasShawl
+    public static bool P1HasShawl {
+        get {
+            ///PROPERTY_GETTER_START P1HasShawl
+            return _P1HasShawl;
+            ///PROPERTY_GETTER_END P1HasShawl
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasShawl
+            var oldValue = value;
+_P1HasShawl = value;
+GameFlagChanged("P1HasShawl", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasShawl
+        }
+    }
+
+    //PROPERTY _P1Persuade
+    private static bool _P1Persuade = false;
+
+    //PROPERTY P1Persuade
+    public static bool P1Persuade {
+        get {
+            ///PROPERTY_GETTER_START P1Persuade
+            return _P1Persuade;
+            ///PROPERTY_GETTER_END P1Persuade
+        }
+        set {
+            ///PROPERTY_SETTER_START P1Persuade
+            var oldValue = value;
+_P1Persuade = value;
+GameFlagChanged("P1Persuade", oldValue, value);
+            ///PROPERTY_SETTER_END P1Persuade
+        }
+    }
+
+    //PROPERTY _P1NegotiateSar
+    private static bool _P1NegotiateSar = false;
+
+    //PROPERTY P1NegotiateSar
+    public static bool P1NegotiateSar {
+        get {
+            ///PROPERTY_GETTER_START P1NegotiateSar
+            return _P1NegotiateSar;
+            ///PROPERTY_GETTER_END P1NegotiateSar
+        }
+        set {
+            ///PROPERTY_SETTER_START P1NegotiateSar
+            var oldValue = value;
+_P1NegotiateSar = value;
+GameFlagChanged("P1NegotiateSar", oldValue, value);
+            ///PROPERTY_SETTER_END P1NegotiateSar
+        }
+    }
+
+    //PROPERTY _P1PrimerPromise
+    private static bool _P1PrimerPromise = false;
+
+    //PROPERTY P1PrimerPromise
+    public static bool P1PrimerPromise {
+        get {
+            ///PROPERTY_GETTER_START P1PrimerPromise
+            return _P1PrimerPromise;
+            ///PROPERTY_GETTER_END P1PrimerPromise
+        }
+        set {
+            ///PROPERTY_SETTER_START P1PrimerPromise
+            var oldValue = value;
+_P1PrimerPromise = value;
+GameFlagChanged("P1PrimerPromise", oldValue, value);
+            ///PROPERTY_SETTER_END P1PrimerPromise
         }
     }
 }

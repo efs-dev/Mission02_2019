@@ -413,7 +413,7 @@ public class Dialog_p1_ovr_003 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (#res_points > 7)*/
-        return true;
+        return GameFlags.P1ResistancePoints > 8;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -421,7 +421,7 @@ public class Dialog_p1_ovr_003 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (#res_points < 8)*/
-        return true;
+        return GameFlags.P1ResistancePoints < 8;
         ///METHOD_BODY_END n01_r1_condition
     }
 
