@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_cav_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -72,11 +88,12 @@ public class Dialog_p2_cav_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 1 Stay the night inside.
         response.Text = "Stay the night inside.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 1 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01 1 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01 1 
         response.NextNodeId = "";
         response.OnSelect(n01_r1_select);
+        response.OnSelectNextNodeId(n01_r1_nextnodeid);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -137,11 +154,12 @@ public class Dialog_p2_cav_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT FIRE 0 Go to sleep.
         response.Text = "Go to sleep.";
-        ///RESPONSE_NEXT_NODE_TYPE FIRE 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID FIRE 0 END
-        response.NextNodeId = "END";
+        ///RESPONSE_NEXT_NODE_TYPE FIRE 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID FIRE 0 
+        response.NextNodeId = "";
         response.OnSelect(FIRE_r0_select);
+        response.OnSelectNextNodeId(FIRE_r0_nextnodeid);
         
         ///NODE_END FIRE
         ///NODE_START CAUGHT
@@ -383,7 +401,7 @@ public class Dialog_p2_cav_001 {
     public bool COLD_p1_condition (  ) {
         ///METHOD_BODY_START COLD_p1_condition
         /*//if( hasItem("SHAWL") ) */
-        return true;
+        return GameFlags.P1HasShawl;
         ///METHOD_BODY_END COLD_p1_condition
     }
 
@@ -391,7 +409,7 @@ public class Dialog_p2_cav_001 {
     public bool COLD_p2_condition (  ) {
         ///METHOD_BODY_START COLD_p2_condition
         /*//if( hasItem("BLANKET") ) */
-        return true;
+        return GameFlags.P1HasBlanket;
         ///METHOD_BODY_END COLD_p2_condition
     }
 
@@ -399,7 +417,7 @@ public class Dialog_p2_cav_001 {
     public bool COLD_r0_condition (  ) {
         ///METHOD_BODY_START COLD_r0_condition
         /*//if( (hasItem("BLANKET") = false) AND (hasItem("SHAWL")  = false) ) */
-        return true;
+        return !GameFlags.P1HasBlanket && !GameFlags.P1HasShawl;
         ///METHOD_BODY_END COLD_r0_condition
     }
 
@@ -407,7 +425,7 @@ public class Dialog_p2_cav_001 {
     public bool COLD_r1_condition (  ) {
         ///METHOD_BODY_START COLD_r1_condition
         /*//if( hasItem("BLANKET")  OR hasItem("SHAWL")  ) */
-        return true;
+        return GameFlags.P1HasBlanket || GameFlags.P1HasShawl;
         ///METHOD_BODY_END COLD_r1_condition
     }
 
@@ -420,6 +438,13 @@ public class Dialog_p2_cav_001 {
         //				else
         //					$next_node = "COLD"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 25){
+        DialogGameFlags.next_node = "BEAR";
+        }
+        else{
+        DialogGameFlags.next_node = "COLD";
+        }
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -430,6 +455,8 @@ public class Dialog_p2_cav_001 {
         //				#henry_health = #henry_health - 1
         //				updateMessage("Your health goes down")
         //				post("reportHealth", "")*/
+        GameFlags.P2LucyHealth --;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END FORCE_r0_select
     }
 
@@ -444,6 +471,16 @@ public class Dialog_p2_cav_001 {
         //				else
         //					$next_node = "WARM"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 20){
+        DialogGameFlags.next_node = "CAUGHT";
+        }
+        else if (rand < 50){
+        DialogGameFlags.next_node = "ANIMAL";
+        }
+        else{
+        DialogGameFlags.next_node = "WARM";
+        }
         ///METHOD_BODY_END FIRE_r0_select
     }
 
@@ -451,6 +488,7 @@ public class Dialog_p2_cav_001 {
     public void CAUGHT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START CAUGHT_r0_select
         /*//				endState("escape_end", "")*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END CAUGHT_r0_select
     }
 
@@ -461,6 +499,8 @@ public class Dialog_p2_cav_001 {
         //				#henry_health = #henry_health + 1
         //				updateMessage("Your health improves.")
         //				post("reportHealth()", "")*/
+        GameFlags.P2LucyHealth++;
+        GameFlags.P2HenryHealth++;
         ///METHOD_BODY_END WARM_r0_select
     }
 
@@ -471,6 +511,8 @@ public class Dialog_p2_cav_001 {
         //				#henry_health = #henry_health - 1
         //				updateMessage("Your health goes down.")
         //				post("reportHealth", "")*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END COLD_r0_select
     }
 
@@ -481,6 +523,8 @@ public class Dialog_p2_cav_001 {
         //				#henry_health = #henry_health + 1
         //				updateMessage("Your health improves.")
         //				post("reportHealth", "")*/
+        GameFlags.P2LucyHealth++;
+        GameFlags.P2HenryHealth++;
         ///METHOD_BODY_END COLD_r1_select
     }
 
@@ -488,6 +532,7 @@ public class Dialog_p2_cav_001 {
     public void RUN_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START RUN_r0_select
         /*//				endState("escape_end", "")*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END RUN_r0_select
     }
 
@@ -495,7 +540,22 @@ public class Dialog_p2_cav_001 {
     public void SLOW_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START SLOW_r0_select
         /*//				loseFood( 2 )*/
+        GameFlags.P2LucyFood -= 2;
         ///METHOD_BODY_END SLOW_r0_select
+    }
+
+    ///METHOD n01_r1_nextnodeid
+    public string n01_r1_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r1_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r1_nextnodeid
+    }
+
+    ///METHOD FIRE_r0_nextnodeid
+    public string FIRE_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START FIRE_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END FIRE_r0_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_cav_001

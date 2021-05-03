@@ -128,6 +128,26 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P1NegotiateSar 
 //USING
 ///GAMEFLAG_FOLDER P1PrimerPromise 
+//USING
+///GAMEFLAG_FOLDER P1HasClothes 
+//USING
+///GAMEFLAG_FOLDER P2Disguised 
+//USING
+///GAMEFLAG_FOLDER P2EscapeAttempts 
+//USING
+///GAMEFLAG_FOLDER P2LucyHealth 
+//USING
+///GAMEFLAG_FOLDER P2LucyFood 
+//USING
+///GAMEFLAG_FOLDER P2HenryCode 
+//USING
+///GAMEFLAG_FOLDER P2HenryHealth 
+//USING
+///GAMEFLAG_FOLDER P2KnowTavern 
+//USING
+///GAMEFLAG_FOLDER P2KnowSteward 
+//USING
+///GAMEFLAG_FOLDER P2DaysPassed 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -1324,6 +1344,196 @@ GameFlagChanged("P1NegotiateSar", oldValue, value);
 _P1PrimerPromise = value;
 GameFlagChanged("P1PrimerPromise", oldValue, value);
             ///PROPERTY_SETTER_END P1PrimerPromise
+        }
+    }
+
+    //PROPERTY _P1HasClothes
+    private static bool _P1HasClothes = false;
+
+    //PROPERTY P1HasClothes
+    public static bool P1HasClothes {
+        get {
+            ///PROPERTY_GETTER_START P1HasClothes
+            return _P1HasClothes;
+            ///PROPERTY_GETTER_END P1HasClothes
+        }
+        set {
+            ///PROPERTY_SETTER_START P1HasClothes
+            var oldValue = value;
+_P1HasClothes = value;
+GameFlagChanged("P1HasClothes", oldValue, value);
+            ///PROPERTY_SETTER_END P1HasClothes
+        }
+    }
+
+    //PROPERTY _P2Disguised
+    private static bool _P2Disguised = false;
+
+    //PROPERTY P2Disguised
+    public static bool P2Disguised {
+        get {
+            ///PROPERTY_GETTER_START P2Disguised
+            return _P2Disguised;
+            ///PROPERTY_GETTER_END P2Disguised
+        }
+        set {
+            ///PROPERTY_SETTER_START P2Disguised
+            var oldValue = value;
+_P2Disguised = value;
+GameFlagChanged("P2Disguised", oldValue, value);
+            ///PROPERTY_SETTER_END P2Disguised
+        }
+    }
+
+    //PROPERTY _P2EscapeAttempts
+    private static int _P2EscapeAttempts = 0;
+
+    //PROPERTY P2EscapeAttempts
+    public static int P2EscapeAttempts {
+        get {
+            ///PROPERTY_GETTER_START P2EscapeAttempts
+            return _P2EscapeAttempts;
+            ///PROPERTY_GETTER_END P2EscapeAttempts
+        }
+        set {
+            ///PROPERTY_SETTER_START P2EscapeAttempts
+            var oldValue = value;
+_P2EscapeAttempts = value;
+GameFlagChanged("P2EscapeAttempts", oldValue, value);
+            ///PROPERTY_SETTER_END P2EscapeAttempts
+        }
+    }
+
+    //PROPERTY _P2LucyHealth
+    private static int _P2LucyHealth = 0;
+
+    //PROPERTY P2LucyHealth
+    public static int P2LucyHealth {
+        get {
+            ///PROPERTY_GETTER_START P2LucyHealth
+            return _P2LucyHealth;
+            ///PROPERTY_GETTER_END P2LucyHealth
+        }
+        set {
+            ///PROPERTY_SETTER_START P2LucyHealth
+            var oldValue = value;
+_P2LucyHealth = value;
+GameFlagChanged("P2LucyHealth", oldValue, value);
+            ///PROPERTY_SETTER_END P2LucyHealth
+        }
+    }
+
+    //PROPERTY _P2LucyFood
+    private static int _P2LucyFood = 0;
+
+    //PROPERTY P2LucyFood
+    public static int P2LucyFood {
+        get {
+            ///PROPERTY_GETTER_START P2LucyFood
+            return _P2LucyFood;
+            ///PROPERTY_GETTER_END P2LucyFood
+        }
+        set {
+            ///PROPERTY_SETTER_START P2LucyFood
+            var oldValue = value;
+_P2LucyFood = value;
+GameFlagChanged("P2LucyFood", oldValue, value);
+            ///PROPERTY_SETTER_END P2LucyFood
+        }
+    }
+
+    //PROPERTY _P2HenryCode
+    private static int _P2HenryCode = 0;
+
+    //PROPERTY P2HenryCode
+    public static int P2HenryCode {
+        get {
+            ///PROPERTY_GETTER_START P2HenryCode
+            return _P2HenryCode;
+            ///PROPERTY_GETTER_END P2HenryCode
+        }
+        set {
+            ///PROPERTY_SETTER_START P2HenryCode
+            var oldValue = value;
+_P2HenryCode = value;
+GameFlagChanged("P2HenryCode", oldValue, value);
+            ///PROPERTY_SETTER_END P2HenryCode
+        }
+    }
+
+    //PROPERTY _P2HenryHealth
+    private static int _P2HenryHealth = 0;
+
+    //PROPERTY P2HenryHealth
+    public static int P2HenryHealth {
+        get {
+            ///PROPERTY_GETTER_START P2HenryHealth
+            return _P2HenryHealth;
+            ///PROPERTY_GETTER_END P2HenryHealth
+        }
+        set {
+            ///PROPERTY_SETTER_START P2HenryHealth
+            var oldValue = value;
+_P2HenryHealth = value;
+GameFlagChanged("P2HenryHealth", oldValue, value);
+            ///PROPERTY_SETTER_END P2HenryHealth
+        }
+    }
+
+    //PROPERTY _P2KnowTavern
+    private static bool _P2KnowTavern = false;
+
+    //PROPERTY P2KnowTavern
+    public static bool P2KnowTavern {
+        get {
+            ///PROPERTY_GETTER_START P2KnowTavern
+            return _P2KnowTavern;
+            ///PROPERTY_GETTER_END P2KnowTavern
+        }
+        set {
+            ///PROPERTY_SETTER_START P2KnowTavern
+            var oldValue = value;
+_P2KnowTavern = value;
+GameFlagChanged("P2KnowTavern", oldValue, value);
+            ///PROPERTY_SETTER_END P2KnowTavern
+        }
+    }
+
+    //PROPERTY _P2KnowSteward
+    private static bool _P2KnowSteward = false;
+
+    //PROPERTY P2KnowSteward
+    public static bool P2KnowSteward {
+        get {
+            ///PROPERTY_GETTER_START P2KnowSteward
+            return _P2KnowSteward;
+            ///PROPERTY_GETTER_END P2KnowSteward
+        }
+        set {
+            ///PROPERTY_SETTER_START P2KnowSteward
+            var oldValue = value;
+_P2KnowSteward = value;
+GameFlagChanged("P2KnowSteward", oldValue, value);
+            ///PROPERTY_SETTER_END P2KnowSteward
+        }
+    }
+
+    //PROPERTY _P2DaysPassed
+    private static int _P2DaysPassed = 0;
+
+    //PROPERTY P2DaysPassed
+    public static int P2DaysPassed {
+        get {
+            ///PROPERTY_GETTER_START P2DaysPassed
+            return _P2DaysPassed;
+            ///PROPERTY_GETTER_END P2DaysPassed
+        }
+        set {
+            ///PROPERTY_SETTER_START P2DaysPassed
+            var oldValue = value;
+_P2DaysPassed = value;
+GameFlagChanged("P2DaysPassed", oldValue, value);
+            ///PROPERTY_SETTER_END P2DaysPassed
         }
     }
 }

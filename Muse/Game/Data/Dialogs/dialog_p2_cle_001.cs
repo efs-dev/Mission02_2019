@@ -153,6 +153,9 @@ public class Dialog_p2_cle_001 {
         //				#henry_health = #henry_health + 1
         //				doDays()
         //				post("reportHealth", "")*/
+        GameFlags.P2LucyHealth++;
+        GameFlags.P2HenryHealth++;
+        GlobalScripts.DoDays();
         ///METHOD_BODY_END REST_p0_show
     }
 }

@@ -23,7 +23,7 @@ public static partial class GlobalScripts {
         MapDisplayHours = GameFlags.MapHours;
         
         if (MapDisplayHours > 12)
-        MapDisplayHours = MapDisplayHours - 12;
+             MapDisplayHours = MapDisplayHours - 12;
         
         GameFlags.MapDisplayMinutes = GameFlags.MapMinutes % 60;
         

@@ -188,5 +188,35 @@ public static partial class GameFlagIds {
 
     //PROPERTY P1PrimerPromise
     public static string P1PrimerPromise = "P1PrimerPromise";
+
+    //PROPERTY P1HasClothes
+    public static string P1HasClothes = "P1HasClothes";
+
+    //PROPERTY P2Disguised
+    public static string P2Disguised = "P2Disguised";
+
+    //PROPERTY P2EscapeAttempts
+    public static string P2EscapeAttempts = "P2EscapeAttempts";
+
+    //PROPERTY P2LucyHealth
+    public static string P2LucyHealth = "P2LucyHealth";
+
+    //PROPERTY P2LucyFood
+    public static string P2LucyFood = "P2LucyFood";
+
+    //PROPERTY P2HenryCode
+    public static string P2HenryCode = "P2HenryCode";
+
+    //PROPERTY P2HenryHealth
+    public static string P2HenryHealth = "P2HenryHealth";
+
+    //PROPERTY P2KnowTavern
+    public static string P2KnowTavern = "P2KnowTavern";
+
+    //PROPERTY P2KnowSteward
+    public static string P2KnowSteward = "P2KnowSteward";
+
+    //PROPERTY P2DaysPassed
+    public static string P2DaysPassed = "P2DaysPassed";
 }
 //CLASS_END GameFlagIds

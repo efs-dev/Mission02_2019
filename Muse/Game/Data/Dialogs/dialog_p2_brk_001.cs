@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_brk_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -72,21 +88,23 @@ public class Dialog_p2_brk_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 1 Wait until nightfall.
         response.Text = "Wait until nightfall.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 1 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01 1 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01 1 
         response.NextNodeId = "";
         response.OnSelect(n01_r1_select);
+        response.OnSelectNextNodeId(n01_r1_nextnodeid);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 2 Hurry through town.
         response.Text = "Hurry through town.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 2 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01 2 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01 2 
         response.NextNodeId = "";
         response.OnSelect(n01_r2_select);
+        response.OnSelectNextNodeId(n01_r2_nextnodeid);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -140,21 +158,23 @@ public class Dialog_p2_brk_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01a 2 Wait until nightfall.
         response.Text = "Wait until nightfall.";
-        ///RESPONSE_NEXT_NODE_TYPE n01a 2 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01a 2 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01a 2 
         response.NextNodeId = "";
         response.OnSelect(n01a_r2_select);
+        response.OnSelectNextNodeId(n01a_r2_nextnodeid);
         
         ///RESPONSE n01a 3
         response = node.AddResponse();
         ///RESPONSE_TEXT n01a 3 Hurry through town.
         response.Text = "Hurry through town.";
-        ///RESPONSE_NEXT_NODE_TYPE n01a 3 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01a 3 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01a 3 
         response.NextNodeId = "";
         response.OnSelect(n01a_r3_select);
+        response.OnSelectNextNodeId(n01a_r3_nextnodeid);
         
         ///NODE_END n01a
         ///NODE_START DETOUR
@@ -304,7 +324,7 @@ public class Dialog_p2_brk_001 {
     public bool n01a_r1_condition (  ) {
         ///METHOD_BODY_START n01a_r1_condition
         /*//				if( hasItem("CLOTHES") AND (?p2_disguised = false) ) */
-        return true;
+        return GameFlags.P1HasClothes && !GameFlags.P2Disguised;
         ///METHOD_BODY_END n01a_r1_condition
     }
 
@@ -316,6 +336,12 @@ public class Dialog_p2_brk_001 {
         //				else
         //					$next_node = "NIGHTFALL"
         //				/if*/
+        if (GameFlags.P2EscapeType == "henry"){
+        	DialogGameFlags.next_node = "NIGHTFALL_H";
+        }
+        else{
+        	DialogGameFlags.next_node = "NIGHTFALL";
+        }
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -333,6 +359,18 @@ public class Dialog_p2_brk_001 {
         //				else
         //					$next_node = "HURRY2"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (GameFlags.P2EscapeType == "henry"){
+        	rand -= 15;
+        }
+        rand += GameFlags.P2EscapeAttempts * 15;
+        
+        if (rand > 40){
+        	DialogGameFlags.next_node = "HURRY1";
+        }
+        else{
+        	DialogGameFlags.next_node = "HURRY2";
+        }
         ///METHOD_BODY_END n01_r2_select
     }
 
@@ -348,6 +386,7 @@ public class Dialog_p2_brk_001 {
     public void n01a_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01a_r1_select
         /*//				?p2_disguised = true*/
+        GameFlags.P2Disguised = true;
         ///METHOD_BODY_END n01a_r1_select
     }
 
@@ -359,6 +398,12 @@ public class Dialog_p2_brk_001 {
         //				else
         //					$next_node = "NIGHTFALL"
         //				/if*/
+        if (GameFlags.P2EscapeType == "henry"){
+        	DialogGameFlags.next_node = "NIGHTFALL_H";
+        }
+        else{
+        	DialogGameFlags.next_node = "NIGHTFALL";
+        }
         ///METHOD_BODY_END n01a_r2_select
     }
 
@@ -376,6 +421,18 @@ public class Dialog_p2_brk_001 {
         //				else
         //					$next_node = "HURRY2"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (GameFlags.P2EscapeType == "henry"){
+        	rand -= 15;
+        }
+        rand += GameFlags.P2EscapeAttempts * 15;
+        
+        if (rand > 40){
+        	DialogGameFlags.next_node = "HURRY1";
+        }
+        else{
+        	DialogGameFlags.next_node = "HURRY2";
+        }
         ///METHOD_BODY_END n01a_r3_select
     }
 
@@ -383,6 +440,7 @@ public class Dialog_p2_brk_001 {
     public void DETOUR_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START DETOUR_r0_select
         /*//				doFood()*/
+        GameFlags.P2LucyFood--;
         ///METHOD_BODY_END DETOUR_r0_select
     }
 
@@ -390,6 +448,7 @@ public class Dialog_p2_brk_001 {
     public void HURRY2_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START HURRY2_r0_select
         /*//				endState("escape_end","")			*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END HURRY2_r0_select
     }
 
@@ -397,6 +456,7 @@ public class Dialog_p2_brk_001 {
     public void NIGHTFALL_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START NIGHTFALL_r0_select
         /*//				endState("escape_end", "")*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END NIGHTFALL_r0_select
     }
 
@@ -407,7 +467,38 @@ public class Dialog_p2_brk_001 {
         //				#p2_henry_code = 20
         //				#lucy_health = #lucy_health - 1
         //				post("reportHealth", "")*/
+        GlobalScripts.KillHenry();
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryCode = 20;
         ///METHOD_BODY_END NIGHTFALL_H_r0_select
+    }
+
+    ///METHOD n01_r1_nextnodeid
+    public string n01_r1_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r1_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r1_nextnodeid
+    }
+
+    ///METHOD n01_r2_nextnodeid
+    public string n01_r2_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r2_nextnodeid
+    }
+
+    ///METHOD n01a_r2_nextnodeid
+    public string n01a_r2_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01a_r2_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01a_r2_nextnodeid
+    }
+
+    ///METHOD n01a_r3_nextnodeid
+    public string n01a_r3_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01a_r3_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01a_r3_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_brk_001

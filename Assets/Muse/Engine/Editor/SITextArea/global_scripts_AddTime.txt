@@ -1,4 +1,4 @@
-﻿using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_AddTime {public void Run(int minutes) {
+using UnityEngine;using System.Linq;using System.Collections;using System.Collections.Generic;public class global_scripts_AddTime {public void Run(int minutes) {
 var MapDisplayHours = 0;
 
 GameFlags.MapMinutes = GameFlags.MapMinutes + minutes;
@@ -7,7 +7,7 @@ GameFlags.MapHours = GameFlags.MapMinutes/60;
 MapDisplayHours = GameFlags.MapHours;
 
 if (MapDisplayHours > 12)
-MapDisplayHours = MapDisplayHours - 12;
+     MapDisplayHours = MapDisplayHours - 12;
 
 GameFlags.MapDisplayMinutes = GameFlags.MapMinutes % 60;
 

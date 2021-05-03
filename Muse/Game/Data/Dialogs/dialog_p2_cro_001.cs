@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_cro_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -72,21 +88,23 @@ public class Dialog_p2_cro_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 1 Try to float across on a log.
         response.Text = "Try to float across on a log.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 1 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01 1 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01 1 
         response.NextNodeId = "";
         response.OnSelect(n01_r1_select);
+        response.OnSelectNextNodeId(n01_r1_nextnodeid);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 2 Try to wade across.
         response.Text = "Try to wade across.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 2 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID n01 2 END
-        response.NextNodeId = "END";
+        ///RESPONSE_NEXT_NODE_TYPE n01 2 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID n01 2 
+        response.NextNodeId = "";
         response.OnSelect(n01_r2_select);
+        response.OnSelectNextNodeId(n01_r2_nextnodeid);
         
         ///NODE_END n01
         ///NODE_START misstep
@@ -241,6 +259,12 @@ public class Dialog_p2_cro_001 {
         //				else
         //					$next_node = "LOG"
         //				/if*/
+        if (GameFlags.P2EscapeType == "henry"){
+        	DialogGameFlags.next_node = "LOG_H";
+        }
+        else{
+        	DialogGameFlags.next_node = "LOG";
+        }
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -258,6 +282,16 @@ public class Dialog_p2_cro_001 {
         //					/if
         //				/if
         //			$pick_result = "okay" */
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (GameFlags.P2EscapeType == "henry"){
+        	DialogGameFlags.next_node = "misstep";
+        }
+        else if (rand > 35){
+        	DialogGameFlags.next_node = "madeit";
+        }
+        else{
+        	DialogGameFlags.next_node = "washedaway";
+        }
         ///METHOD_BODY_END n01_r2_select
     }
 
@@ -267,6 +301,8 @@ public class Dialog_p2_cro_001 {
         /*//				killHenry()
         //				#p2_henry_code = 40
         //				post("doTrip", "CROSSING_N")*/
+        GlobalScripts.KillHenry();
+        GameFlags.P2HenryCode = 40;
         ///METHOD_BODY_END misstep_r0_select
     }
 
@@ -284,6 +320,8 @@ public class Dialog_p2_cro_001 {
         //				loseFood( 1 )
         //				post("reportHealth", "")
         //				post("doTrip", "FORD_N")*/
+        GameFlags.P2LucyFood--;
+        GameFlags.P2LucyHealth--;
         ///METHOD_BODY_END washedaway_r0_select
     }
 
@@ -299,6 +337,20 @@ public class Dialog_p2_cro_001 {
         ///METHOD_BODY_START LOG_r0_select
         /*//				post("doTrip", "FORD_N")*/
         ///METHOD_BODY_END LOG_r0_select
+    }
+
+    ///METHOD n01_r1_nextnodeid
+    public string n01_r1_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r1_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r1_nextnodeid
+    }
+
+    ///METHOD n01_r2_nextnodeid
+    public string n01_r2_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r2_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_cro_001

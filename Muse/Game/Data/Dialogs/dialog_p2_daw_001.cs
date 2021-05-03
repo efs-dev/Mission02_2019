@@ -207,7 +207,7 @@ public class Dialog_p2_daw_001 {
     public bool HINT_p1_condition (  ) {
         ///METHOD_BODY_START HINT_p1_condition
         /*// if( random(100) > 50 )*/
-        return true;
+        return UnityEngine.Random.RandomRange(1,100) > 50;
         ///METHOD_BODY_END HINT_p1_condition
     }
 
@@ -222,6 +222,7 @@ public class Dialog_p2_daw_001 {
     public void HINT_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START HINT_p0_show
         /*// ?p2_know_steward = true*/
+        GameFlags.P2KnowSteward = true;
         ///METHOD_BODY_END HINT_p0_show
     }
 
@@ -229,6 +230,7 @@ public class Dialog_p2_daw_001 {
     public void HINT_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START HINT_p1_show
         /*// ?know_tavern = true*/
+        GameFlags.P2KnowTavern = true;
         ///METHOD_BODY_END HINT_p1_show
     }
 
@@ -238,6 +240,8 @@ public class Dialog_p2_daw_001 {
         /*//				#days_passed = #days_passed + 1
         //				#lucy_health = #lucy_health + 1
         //				post("reportHealth", "")*/
+        GameFlags.P2DaysPassed++;
+        GameFlags.P2LucyHealth++;
         ///METHOD_BODY_END STAY_p0_show
     }
 
@@ -246,6 +250,7 @@ public class Dialog_p2_daw_001 {
         ///METHOD_BODY_START HINT_r0_select
         /*//				#food = #food + 2
         //				updateMessage("Esther gives you 2 food.")*/
+        GameFlags.P2LucyFood+=2;
         ///METHOD_BODY_END HINT_r0_select
     }
 }

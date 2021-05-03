@@ -38,6 +38,38 @@ MonoBehaviour:
         DefaultValue: 
         ArgType: 2
         CustomArgType: 
+    - ShowScript: 0
+      Id: DoDays
+      Text: // Another p2 script
+      Category: Default
+      ReturnType: 0
+      CustomReturnType: 
+      GameFlagTriggers: []
+      ShowArgs: 0
+      Args: []
+    - ShowScript: 0
+      Id: KillHenry
+      Text: // TBA
+      Category: Default
+      ReturnType: 0
+      CustomReturnType: 
+      GameFlagTriggers: []
+      ShowArgs: 0
+      Args: []
+    - ShowScript: 0
+      Id: LosePart2
+      Text: '// Does nothing now, code can be added once part 2 is more put-together
+
+
+        // Failing multiple times make certain random chances easier
+
+        GameFlags.P2EscapeAttempts++;'
+      Category: Default
+      ReturnType: 0
+      CustomReturnType: 
+      GameFlagTriggers: []
+      ShowArgs: 0
+      Args: []
     ShowScripts: 0
     Label: 
     LabelInFoldout: 0
