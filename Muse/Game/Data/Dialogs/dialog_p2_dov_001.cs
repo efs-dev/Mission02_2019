@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_dov_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -63,11 +79,12 @@ public class Dialog_p2_dov_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 0 Wait until night to try to steal a boat.
         response.Text = "Wait until night to try to steal a boat.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID n01 0 STEAL_NIGHT
-        response.NextNodeId = "STEAL_NIGHT";
+        ///RESPONSE_NEXT_NODE_TYPE n01 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID n01 0 
+        response.NextNodeId = "";
         response.OnSelect(n01_r0_select);
+        response.OnSelectNextNodeId(n01_r0_nextnodeid);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
@@ -245,6 +262,22 @@ public class Dialog_p2_dov_001 {
         //				elseif( hasItem("AXE") )
         //					$next_node = "AXE_NO_BOAT"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        rand += GameFlags.P2EscapeAttempts * 20;
+        if (rand > 100){
+        	DialogGameFlags.next_node = "GOT_BOAT";
+        }
+        else{
+        	DialogGameFlags.next_node = "NO_BOAT";
+        }
+        if(GameFlags.P2HasAxe){
+        	if (rand > 70){
+        		DialogGameFlags.next_node = "AXE_BOAT";
+        	}
+        	else{
+        		DialogGameFlags.next_node = "AXE_NO_BOAT";
+        	}
+        }
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -260,6 +293,7 @@ public class Dialog_p2_dov_001 {
     public void STEAL_DAY_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START STEAL_DAY_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END STEAL_DAY_r0_select
     }
 
@@ -269,6 +303,13 @@ public class Dialog_p2_dov_001 {
         /*//			$pick_result = "boat"
         //			post("doTrip", "LANDING")  */
         ///METHOD_BODY_END GOT_BOAT_r0_select
+    }
+
+    ///METHOD n01_r0_nextnodeid
+    public string n01_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r0_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_dov_001

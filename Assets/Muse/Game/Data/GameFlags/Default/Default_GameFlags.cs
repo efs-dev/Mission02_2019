@@ -148,6 +148,10 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P2KnowSteward 
 //USING
 ///GAMEFLAG_FOLDER P2DaysPassed 
+//USING
+///GAMEFLAG_FOLDER P2HasAxe 
+//USING
+///GAMEFLAG_FOLDER P2ChangedClothes 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -1534,6 +1538,44 @@ GameFlagChanged("P2KnowSteward", oldValue, value);
 _P2DaysPassed = value;
 GameFlagChanged("P2DaysPassed", oldValue, value);
             ///PROPERTY_SETTER_END P2DaysPassed
+        }
+    }
+
+    //PROPERTY _P2HasAxe
+    private static bool _P2HasAxe = false;
+
+    //PROPERTY P2HasAxe
+    public static bool P2HasAxe {
+        get {
+            ///PROPERTY_GETTER_START P2HasAxe
+            return _P2HasAxe;
+            ///PROPERTY_GETTER_END P2HasAxe
+        }
+        set {
+            ///PROPERTY_SETTER_START P2HasAxe
+            var oldValue = value;
+_P2HasAxe = value;
+GameFlagChanged("P2HasAxe", oldValue, value);
+            ///PROPERTY_SETTER_END P2HasAxe
+        }
+    }
+
+    //PROPERTY _P2ChangedClothes
+    private static bool _P2ChangedClothes = false;
+
+    //PROPERTY P2ChangedClothes
+    public static bool P2ChangedClothes {
+        get {
+            ///PROPERTY_GETTER_START P2ChangedClothes
+            return _P2ChangedClothes;
+            ///PROPERTY_GETTER_END P2ChangedClothes
+        }
+        set {
+            ///PROPERTY_SETTER_START P2ChangedClothes
+            var oldValue = value;
+_P2ChangedClothes = value;
+GameFlagChanged("P2ChangedClothes", oldValue, value);
+            ///PROPERTY_SETTER_END P2ChangedClothes
         }
     }
 }

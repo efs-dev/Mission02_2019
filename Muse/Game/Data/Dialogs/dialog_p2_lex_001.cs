@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_lex_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "true";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -82,21 +98,23 @@ public class Dialog_p2_lex_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 2 Explore the city hoping to discover something useful.
         response.Text = "Explore the city hoping to discover something useful.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 2 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID n01 2 END
-        response.NextNodeId = "END";
+        ///RESPONSE_NEXT_NODE_TYPE n01 2 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID n01 2 
+        response.NextNodeId = "";
         response.OnSelect(n01_r2_select);
+        response.OnSelectNextNodeId(n01_r2_nextnodeid);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 3 Approach other slaves and appeal to them for help.
         response.Text = "Approach other slaves and appeal to them for help.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 3 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01 3 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01 3 
         response.NextNodeId = "";
         response.OnSelect(n01_r3_select);
+        response.OnSelectNextNodeId(n01_r3_nextnodeid);
         
         ///NODE_END n01
         ///NODE_START STUMBLE
@@ -574,7 +592,7 @@ public class Dialog_p2_lex_001 {
     public bool CHURCH_p1_condition (  ) {
         ///METHOD_BODY_START CHURCH_p1_condition
         /*//if($escape_type = "henry")*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END CHURCH_p1_condition
     }
 
@@ -582,7 +600,7 @@ public class Dialog_p2_lex_001 {
     public bool DISGUISE_p1_condition (  ) {
         ///METHOD_BODY_START DISGUISE_p1_condition
         /*//if( hasItem("CLOTHES") )*/
-        return true;
+        return GameFlags.P1HasClothes;
         ///METHOD_BODY_END DISGUISE_p1_condition
     }
 
@@ -590,7 +608,7 @@ public class Dialog_p2_lex_001 {
     public bool WAGON_p1_condition (  ) {
         ///METHOD_BODY_START WAGON_p1_condition
         /*//if($escape_type = "henry" )*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END WAGON_p1_condition
     }
 
@@ -598,6 +616,7 @@ public class Dialog_p2_lex_001 {
     public void NO_GOOD_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START NO_GOOD_p0_show
         /*//					doFood()*/
+        GameFlags.P2LucyFood--;
         ///METHOD_BODY_END NO_GOOD_p0_show
     }
 
@@ -606,6 +625,7 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_START FOOD_HELP_p0_show
         /*// #food = #food + 2
         //				        updateMessage("You got 2 food.")*/
+        GameFlags.P2LucyFood+=2;
         ///METHOD_BODY_END FOOD_HELP_p0_show
     }
 
@@ -614,6 +634,7 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_START CHURCH_p0_show
         /*//				#food = #food + 2
         //			    updateMessage("You got 2 food.")				*/
+        GameFlags.P2LucyFood+=2;
         ///METHOD_BODY_END CHURCH_p0_show
     }
 
@@ -622,6 +643,8 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_START DISGUISE_p0_show
         /*// ?p2_changed_clothes = true
         //								?p2_disguised = true				*/
+        GameFlags.P2ChangedClothes = true;
+        GameFlags.P2Disguised = true;
         ///METHOD_BODY_END DISGUISE_p0_show
     }
 
@@ -630,6 +653,8 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_START DISGUISE_p1_show
         /*// ?p2_changed_clothes = true
         //								?p2_disguised = true				*/
+        GameFlags.P2Disguised = true;
+        GameFlags.P2ChangedClothes = true;
         ///METHOD_BODY_END DISGUISE_p1_show
     }
 
@@ -644,7 +669,7 @@ public class Dialog_p2_lex_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if(?know_lexington = true)*/
-        return true;
+        return GameFlags.P1KnowLexington;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -652,7 +677,7 @@ public class Dialog_p2_lex_001 {
     public bool WAGON_r0_condition (  ) {
         ///METHOD_BODY_START WAGON_r0_condition
         /*//if($escape_type = "alone" )*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END WAGON_r0_condition
     }
 
@@ -660,7 +685,7 @@ public class Dialog_p2_lex_001 {
     public bool WAGON_r1_condition (  ) {
         ///METHOD_BODY_START WAGON_r1_condition
         /*//if($escape_type = "henry" )*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END WAGON_r1_condition
     }
 
@@ -668,7 +693,7 @@ public class Dialog_p2_lex_001 {
     public bool WAGON_r2_condition (  ) {
         ///METHOD_BODY_START WAGON_r2_condition
         /*//if($escape_type = "henry" )*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END WAGON_r2_condition
     }
 
@@ -683,6 +708,16 @@ public class Dialog_p2_lex_001 {
         //				else
         //					$next_node = "STUMBLE"
         //				/if	*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 35){
+        	DialogGameFlags.next_node = "CREEPY";
+        }
+        else if (rand < 85){
+        	DialogGameFlags.next_node = "NO_GOOD";
+        }
+        else{
+        	DialogGameFlags.next_node = "STUMBLE";
+        }
         ///METHOD_BODY_END n01_r2_select
     }
 
@@ -701,6 +736,19 @@ public class Dialog_p2_lex_001 {
         //					// directed to church
         //					$next_node = "GOOD_HELP"
         //				/if			*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 10){
+        	DialogGameFlags.next_node = "BAD_HELP";
+        }
+        else if (rand < 40){
+        	DialogGameFlags.next_node = "SCARED";
+        }
+        else if (rand < 80){
+        	DialogGameFlags.next_node = "FOOD_HELP";
+        }
+        else{
+        	DialogGameFlags.next_node = "GOOD_HELP";
+        }
         ///METHOD_BODY_END n01_r3_select
     }
 
@@ -708,6 +756,7 @@ public class Dialog_p2_lex_001 {
     public void CAUGHT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START CAUGHT_r0_select
         /*//endState("escape_end", "")*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END CAUGHT_r0_select
     }
 
@@ -716,7 +765,23 @@ public class Dialog_p2_lex_001 {
         ///METHOD_BODY_START WAGON_r2_select
         /*//				#p2_henry_code = 30
         //				killHenry()*/
+        GameFlags.P2HenryCode = 30;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END WAGON_r2_select
+    }
+
+    ///METHOD n01_r2_nextnodeid
+    public string n01_r2_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r2_nextnodeid
+    }
+
+    ///METHOD n01_r3_nextnodeid
+    public string n01_r3_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r3_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_lex_001

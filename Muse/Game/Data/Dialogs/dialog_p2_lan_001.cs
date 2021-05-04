@@ -201,8 +201,8 @@ public class Dialog_p2_lan_001 {
         
         ///RESPONSE FARSIDE_H 0
         response = node.AddResponse();
-        ///RESPONSE_TEXT FARSIDE_H 0 Sadly go on
-        response.Text = "Sadly go on";
+        ///RESPONSE_TEXT FARSIDE_H 0 Sadly go on.
+        response.Text = "Sadly go on.";
         ///RESPONSE_NEXT_NODE_TYPE FARSIDE_H 0 Id
         response.NextNodeType = DialogResponse.NextNodeTypes.Id;
         ///RESPONSE_NEXT_NODE_ID FARSIDE_H 0 END
@@ -219,6 +219,8 @@ public class Dialog_p2_lan_001 {
         ///METHOD_BODY_START BOAT_H_r0_select
         /*//				#p2_henry_code = 20
         //				killHenry()*/
+        GameFlags.P2HenryCode = 20;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END BOAT_H_r0_select
     }
 
@@ -226,6 +228,7 @@ public class Dialog_p2_lan_001 {
     public void BOAT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START BOAT_r0_select
         /*//				killHenry()*/
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END BOAT_r0_select
     }
 
@@ -242,6 +245,8 @@ public class Dialog_p2_lan_001 {
         /*//				#p2_henry_code = 50
         //				killHenry()
         //				post("doTrip", "RIPLEY")*/
+        GameFlags.P2HenryCode = 50;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END CAUGHT_r0_select
     }
 
@@ -258,6 +263,8 @@ public class Dialog_p2_lan_001 {
         /*//				#p2_henry_code = 20
         //				killHenry()
         //				post("doTrip", "RIPLEY")*/
+        GameFlags.P2HenryCode = 20;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END FARSIDE_H_r0_select
     }
 }

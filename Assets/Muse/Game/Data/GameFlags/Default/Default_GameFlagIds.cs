@@ -218,5 +218,11 @@ public static partial class GameFlagIds {
 
     //PROPERTY P2DaysPassed
     public static string P2DaysPassed = "P2DaysPassed";
+
+    //PROPERTY P2HasAxe
+    public static string P2HasAxe = "P2HasAxe";
+
+    //PROPERTY P2ChangedClothes
+    public static string P2ChangedClothes = "P2ChangedClothes";
 }
 //CLASS_END GameFlagIds

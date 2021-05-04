@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_for_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -81,11 +97,12 @@ public class Dialog_p2_for_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 2 Sneak across the ford.
         response.Text = "Sneak across the ford.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 2 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01 2 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01 2 
         response.NextNodeId = "";
         response.OnSelect(n01_r2_select);
+        response.OnSelectNextNodeId(n01_r2_nextnodeid);
         
         ///RESPONSE n01 3
         response = node.AddResponse();
@@ -255,7 +272,7 @@ public class Dialog_p2_for_001 {
     public bool SNEAK_r0_condition (  ) {
         ///METHOD_BODY_START SNEAK_r0_condition
         /*// if($escape_type = "alone") */
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END SNEAK_r0_condition
     }
 
@@ -263,7 +280,7 @@ public class Dialog_p2_for_001 {
     public bool SNEAK_r1_condition (  ) {
         ///METHOD_BODY_START SNEAK_r1_condition
         /*// if($escape_type = "henry") */
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END SNEAK_r1_condition
     }
 
@@ -276,6 +293,13 @@ public class Dialog_p2_for_001 {
         //				else
         //					$next_node = "MADEIT"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 30){
+        	DialogGameFlags.next_node = "SNEAK";
+        }
+        else{
+        	DialogGameFlags.next_node = "MADEIT";
+        }
         ///METHOD_BODY_END n01_r2_select
     }
 
@@ -292,6 +316,8 @@ public class Dialog_p2_for_001 {
         /*//				doDays()
         //				doFood()
         //				//changeTemplate("top|gfx/smartmap/escape/enc/ford.png")	*/
+        GameFlags.P2LucyFood--;
+        GlobalScripts.DoDays();
         ///METHOD_BODY_END WATCHED_r0_select
     }
 
@@ -299,6 +325,7 @@ public class Dialog_p2_for_001 {
     public void CAUGHT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START CAUGHT_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END CAUGHT_r0_select
     }
 
@@ -308,7 +335,16 @@ public class Dialog_p2_for_001 {
         /*//			#p2_henry_code = 20
         //			killHenry()
         //			post("doTrip", "FORD_N") */
+        GameFlags.P2HenryCode = 20;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END SPLITUP_r0_select
+    }
+
+    ///METHOD n01_r2_nextnodeid
+    public string n01_r2_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r2_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r2_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_for_001
