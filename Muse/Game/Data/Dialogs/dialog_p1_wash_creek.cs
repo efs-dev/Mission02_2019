@@ -116,7 +116,7 @@ public class Dialog_p1_wash_creek {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if( ?comfrey_complete = false )*/
-        return true;
+        return !GameFlags.P1ComfreyComplete;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -125,6 +125,8 @@ public class Dialog_p1_wash_creek {
         ///METHOD_BODY_START n01_r0_select
         /*//?comfrey_complete = true
         //addItem("comfrey")*/
+        GameFlags.P1ComfreyComplete = true;
+        GameFlags.P1HasComfrey = true;
         ///METHOD_BODY_END n01_r0_select
     }
 

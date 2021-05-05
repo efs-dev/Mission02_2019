@@ -416,7 +416,7 @@ public class Dialog_p1_sar_002 {
     public bool n05_p1_condition (  ) {
         ///METHOD_BODY_START n05_p1_condition
         /*//if (?primer_return)*/
-        return true;
+        return GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n05_p1_condition
     }
 
@@ -424,7 +424,7 @@ public class Dialog_p1_sar_002 {
     public bool n07_p0_condition (  ) {
         ///METHOD_BODY_START n07_p0_condition
         /*//if (?primer_return AND (?primer_promise = false))*/
-        return true;
+        return !GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n07_p0_condition
     }
 
@@ -432,7 +432,7 @@ public class Dialog_p1_sar_002 {
     public bool n07_p1_condition (  ) {
         ///METHOD_BODY_START n07_p1_condition
         /*//if (?primer_return AND ?primer_promise)*/
-        return true;
+        return GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n07_p1_condition
     }
 
@@ -440,6 +440,7 @@ public class Dialog_p1_sar_002 {
     public void n03_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n03_p0_show
         /*//set ?know_king_time = true*/
+        GameFlags.P1KnowKingTime = true;
         ///METHOD_BODY_END n03_p0_show
     }
 
@@ -447,6 +448,7 @@ public class Dialog_p1_sar_002 {
     public void n05_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n05_p1_show
         /*//addItem("primer")*/
+        GameFlags.P1HasPrimer = true;
         ///METHOD_BODY_END n05_p1_show
     }
 
@@ -461,6 +463,7 @@ public class Dialog_p1_sar_002 {
     public void n07_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n07_p0_show
         /*//addItem ("primer")*/
+        GameFlags.P1HasPrimer = true;
         ///METHOD_BODY_END n07_p0_show
     }
 
@@ -468,6 +471,7 @@ public class Dialog_p1_sar_002 {
     public void n07_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n07_p1_show
         /*//addItem ("primer")*/
+        GameFlags.P1HasPrimer = true;
         ///METHOD_BODY_END n07_p1_show
     }
 
@@ -475,7 +479,7 @@ public class Dialog_p1_sar_002 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (?dress_finished = false)*/
-        return true;
+        return !GameFlags.P1DressFinished;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -483,7 +487,7 @@ public class Dialog_p1_sar_002 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?dress_finished = false AND (?dress_packed))*/
-        return true;
+        return !GameFlags.P1DressFinished && GameFlags.P1DressPacked;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -491,7 +495,7 @@ public class Dialog_p1_sar_002 {
     public bool n01_r2_condition (  ) {
         ///METHOD_BODY_START n01_r2_condition
         /*//if (?dress_finished AND (?dress_packed))*/
-        return true;
+        return GameFlags.P1DressFinished && GameFlags.P1DressPacked;
         ///METHOD_BODY_END n01_r2_condition
     }
 
@@ -499,7 +503,7 @@ public class Dialog_p1_sar_002 {
     public bool n01_r3_condition (  ) {
         ///METHOD_BODY_START n01_r3_condition
         /*//if (?dress_finished AND (?dress_packed = false))*/
-        return true;
+        return GameFlags.P1DressFinished && !GameFlags.P1DressPacked;
         ///METHOD_BODY_END n01_r3_condition
     }
 
@@ -507,7 +511,7 @@ public class Dialog_p1_sar_002 {
     public bool n01_r4_condition (  ) {
         ///METHOD_BODY_START n01_r4_condition
         /*//if (?dress_finished AND (?dress_packed = false))*/
-        return true;
+        return GameFlags.P1DressFinished && !GameFlags.P1DressPacked;
         ///METHOD_BODY_END n01_r4_condition
     }
 
@@ -515,7 +519,7 @@ public class Dialog_p1_sar_002 {
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
-        return true;
+        return (!GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn) || (GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn);
         ///METHOD_BODY_END n02_r0_condition
     }
 
@@ -523,7 +527,7 @@ public class Dialog_p1_sar_002 {
     public bool n02_r1_condition (  ) {
         ///METHOD_BODY_START n02_r1_condition
         /*//if (?primer_promise = false AND (?primer_return))*/
-        return true;
+        return !GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n02_r1_condition
     }
 
@@ -531,7 +535,7 @@ public class Dialog_p1_sar_002 {
     public bool n02_r2_condition (  ) {
         ///METHOD_BODY_START n02_r2_condition
         /*//if (?primer_promise AND (?primer_return))*/
-        return true;
+        return GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n02_r2_condition
     }
 
@@ -539,7 +543,7 @@ public class Dialog_p1_sar_002 {
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
-        return true;
+        return (!GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn) || (GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn);
         ///METHOD_BODY_END n03_r0_condition
     }
 
@@ -547,7 +551,7 @@ public class Dialog_p1_sar_002 {
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
         /*//if (?primer_promise = false AND (?primer_return))*/
-        return true;
+        return !GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n03_r1_condition
     }
 
@@ -555,7 +559,7 @@ public class Dialog_p1_sar_002 {
     public bool n03_r2_condition (  ) {
         ///METHOD_BODY_START n03_r2_condition
         /*//if (?primer_promise AND (?primer_return))*/
-        return true;
+        return GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n03_r2_condition
     }
 
@@ -563,7 +567,7 @@ public class Dialog_p1_sar_002 {
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
-        return true;
+        return (!GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn) || (GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn);
         ///METHOD_BODY_END n04_r0_condition
     }
 
@@ -571,7 +575,7 @@ public class Dialog_p1_sar_002 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if (?primer_promise = false AND (?primer_return))*/
-        return true;
+        return !GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -579,7 +583,7 @@ public class Dialog_p1_sar_002 {
     public bool n04_r2_condition (  ) {
         ///METHOD_BODY_START n04_r2_condition
         /*//if (?primer_promise AND (?primer_return))*/
-        return true;
+        return GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n04_r2_condition
     }
 
@@ -587,7 +591,7 @@ public class Dialog_p1_sar_002 {
     public bool n05_r1_condition (  ) {
         ///METHOD_BODY_START n05_r1_condition
         /*//if (?primer_return)*/
-        return true;
+        return GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n05_r1_condition
     }
 
@@ -595,7 +599,7 @@ public class Dialog_p1_sar_002 {
     public bool n06_r0_condition (  ) {
         ///METHOD_BODY_START n06_r0_condition
         /*//if (((?primer_promise = false) AND (?primer_return = false)) OR (?primer_promise AND (?primer_return = false)))*/
-        return true;
+        return (!GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn) || (GameFlags.P1PrimerPromise && !GameFlags.P1PrimerReturn);
         ///METHOD_BODY_END n06_r0_condition
     }
 
@@ -603,7 +607,7 @@ public class Dialog_p1_sar_002 {
     public bool n06_r1_condition (  ) {
         ///METHOD_BODY_START n06_r1_condition
         /*//if (?primer_promise = false AND (?primer_return))*/
-        return true;
+        return !GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n06_r1_condition
     }
 
@@ -611,7 +615,7 @@ public class Dialog_p1_sar_002 {
     public bool n06_r2_condition (  ) {
         ///METHOD_BODY_START n06_r2_condition
         /*//if (?primer_promise AND (?primer_return))*/
-        return true;
+        return GameFlags.P1PrimerPromise && GameFlags.P1PrimerReturn;
         ///METHOD_BODY_END n06_r2_condition
     }
 
@@ -619,6 +623,7 @@ public class Dialog_p1_sar_002 {
     public void n01_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r0_select
         /*//set ?sar_mad = true*/
+        GameFlags.P1SarMad = true;
         ///METHOD_BODY_END n01_r0_select
     }
 
