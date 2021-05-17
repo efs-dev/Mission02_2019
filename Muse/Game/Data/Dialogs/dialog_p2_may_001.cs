@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_may_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -92,11 +108,12 @@ public class Dialog_p2_may_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 3 Search the town looking for help.
         response.Text = "Search the town looking for help.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 3 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID n01 3 LOOKING
-        response.NextNodeId = "LOOKING";
+        ///RESPONSE_NEXT_NODE_TYPE n01 3 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID n01 3 
+        response.NextNodeId = "";
         response.OnSelect(n01_r3_select);
+        response.OnSelectNextNodeId(n01_r3_nextnodeid);
         
         ///RESPONSE n01 4
         response = node.AddResponse();
@@ -263,7 +280,7 @@ public class Dialog_p2_may_001 {
     public bool STEWARD_p1_condition (  ) {
         ///METHOD_BODY_START STEWARD_p1_condition
         /*// if($escape_type="henry") */
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END STEWARD_p1_condition
     }
 
@@ -271,7 +288,7 @@ public class Dialog_p2_may_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*// if(?p2_know_steward = true )*/
-        return true;
+        return GameFlags.P2KnowSteward;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -279,7 +296,7 @@ public class Dialog_p2_may_001 {
     public bool n01_r2_condition (  ) {
         ///METHOD_BODY_START n01_r2_condition
         /*// if(?know_tavern)*/
-        return true;
+        return GameFlags.P2KnowTavern;
         ///METHOD_BODY_END n01_r2_condition
     }
 
@@ -296,6 +313,19 @@ public class Dialog_p2_may_001 {
         //				if( #rand > 70 )
         //					$next_node = "TAVERN_HINT"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (GameFlags.P2EscapeType == "henry"){
+        rand -= 15;
+        }
+        if (GameFlags.P2EscapeAttempts > 1){
+        rand+=30;
+        }
+        if (rand > 70){
+        DialogGameFlags.next_node = "TAVERN_HINT";
+        }
+        else{
+        DialogGameFlags.next_node = "LOOKING";
+        }
         ///METHOD_BODY_END n01_r3_select
     }
 
@@ -310,6 +340,7 @@ public class Dialog_p2_may_001 {
     public void SNEAK_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START SNEAK_r0_select
         /*//  endState("escape_end", "")  */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END SNEAK_r0_select
     }
 
@@ -317,6 +348,7 @@ public class Dialog_p2_may_001 {
     public void LOOKING_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START LOOKING_r0_select
         /*//  endState("escape_end", "")  */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END LOOKING_r0_select
     }
 
@@ -325,6 +357,13 @@ public class Dialog_p2_may_001 {
         ///METHOD_BODY_START TAVERN_r0_select
         /*// $pick_result ="farside"  */
         ///METHOD_BODY_END TAVERN_r0_select
+    }
+
+    ///METHOD n01_r3_nextnodeid
+    public string n01_r3_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r3_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_may_001

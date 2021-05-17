@@ -616,7 +616,7 @@ public class Dialog_p2_lex_001 {
     public void NO_GOOD_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START NO_GOOD_p0_show
         /*//					doFood()*/
-        GameFlags.P2LucyFood--;
+        GlobalScripts.DoFood();
         ///METHOD_BODY_END NO_GOOD_p0_show
     }
 
@@ -710,13 +710,13 @@ public class Dialog_p2_lex_001 {
         //				/if	*/
         int rand = UnityEngine.Random.RandomRange(1,100);
         if (rand < 35){
-        	DialogGameFlags.next_node = "CREEPY";
+        DialogGameFlags.next_node = "CREEPY";
         }
         else if (rand < 85){
-        	DialogGameFlags.next_node = "NO_GOOD";
+        DialogGameFlags.next_node = "NO_GOOD";
         }
         else{
-        	DialogGameFlags.next_node = "STUMBLE";
+        DialogGameFlags.next_node = "STUMBLE";
         }
         ///METHOD_BODY_END n01_r2_select
     }
@@ -738,16 +738,16 @@ public class Dialog_p2_lex_001 {
         //				/if			*/
         int rand = UnityEngine.Random.RandomRange(1,100);
         if (rand < 10){
-        	DialogGameFlags.next_node = "BAD_HELP";
+        DialogGameFlags.next_node = "BAD_HELP";
         }
         else if (rand < 40){
-        	DialogGameFlags.next_node = "SCARED";
+        DialogGameFlags.next_node = "SCARED";
         }
         else if (rand < 80){
-        	DialogGameFlags.next_node = "FOOD_HELP";
+        DialogGameFlags.next_node = "FOOD_HELP";
         }
         else{
-        	DialogGameFlags.next_node = "GOOD_HELP";
+        DialogGameFlags.next_node = "GOOD_HELP";
         }
         ///METHOD_BODY_END n01_r3_select
     }

@@ -295,10 +295,10 @@ public class Dialog_p2_for_001 {
         //				/if*/
         int rand = UnityEngine.Random.RandomRange(1,100);
         if (rand < 30){
-        	DialogGameFlags.next_node = "SNEAK";
+        DialogGameFlags.next_node = "SNEAK";
         }
         else{
-        	DialogGameFlags.next_node = "MADEIT";
+        DialogGameFlags.next_node = "MADEIT";
         }
         ///METHOD_BODY_END n01_r2_select
     }
@@ -316,7 +316,7 @@ public class Dialog_p2_for_001 {
         /*//				doDays()
         //				doFood()
         //				//changeTemplate("top|gfx/smartmap/escape/enc/ford.png")	*/
-        GameFlags.P2LucyFood--;
+        GlobalScripts.DoFood();
         GlobalScripts.DoDays();
         ///METHOD_BODY_END WATCHED_r0_select
     }

@@ -106,6 +106,7 @@ public class Dialog_p2_pre_001 {
         ///METHOD_BODY_START HOME_r0_select
         /*//				#food = #food + 2
         //				updateMessage("Your father gives you 2 food.")*/
+        GameFlags.P2LucyFood+=2;
         ///METHOD_BODY_END HOME_r0_select
     }
 }

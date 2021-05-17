@@ -337,10 +337,10 @@ public class Dialog_p2_brk_001 {
         //					$next_node = "NIGHTFALL"
         //				/if*/
         if (GameFlags.P2EscapeType == "henry"){
-        	DialogGameFlags.next_node = "NIGHTFALL_H";
+        DialogGameFlags.next_node = "NIGHTFALL_H";
         }
         else{
-        	DialogGameFlags.next_node = "NIGHTFALL";
+        DialogGameFlags.next_node = "NIGHTFALL";
         }
         ///METHOD_BODY_END n01_r1_select
     }
@@ -361,15 +361,15 @@ public class Dialog_p2_brk_001 {
         //				/if*/
         int rand = UnityEngine.Random.RandomRange(1,100);
         if (GameFlags.P2EscapeType == "henry"){
-        	rand -= 15;
+        rand -= 15;
         }
         rand += GameFlags.P2EscapeAttempts * 15;
         
         if (rand > 40){
-        	DialogGameFlags.next_node = "HURRY1";
+        DialogGameFlags.next_node = "HURRY1";
         }
         else{
-        	DialogGameFlags.next_node = "HURRY2";
+        DialogGameFlags.next_node = "HURRY2";
         }
         ///METHOD_BODY_END n01_r2_select
     }
@@ -399,10 +399,10 @@ public class Dialog_p2_brk_001 {
         //					$next_node = "NIGHTFALL"
         //				/if*/
         if (GameFlags.P2EscapeType == "henry"){
-        	DialogGameFlags.next_node = "NIGHTFALL_H";
+        DialogGameFlags.next_node = "NIGHTFALL_H";
         }
         else{
-        	DialogGameFlags.next_node = "NIGHTFALL";
+        DialogGameFlags.next_node = "NIGHTFALL";
         }
         ///METHOD_BODY_END n01a_r2_select
     }
@@ -423,15 +423,15 @@ public class Dialog_p2_brk_001 {
         //				/if*/
         int rand = UnityEngine.Random.RandomRange(1,100);
         if (GameFlags.P2EscapeType == "henry"){
-        	rand -= 15;
+        rand -= 15;
         }
         rand += GameFlags.P2EscapeAttempts * 15;
         
         if (rand > 40){
-        	DialogGameFlags.next_node = "HURRY1";
+        DialogGameFlags.next_node = "HURRY1";
         }
         else{
-        	DialogGameFlags.next_node = "HURRY2";
+        DialogGameFlags.next_node = "HURRY2";
         }
         ///METHOD_BODY_END n01a_r3_select
     }
@@ -440,7 +440,7 @@ public class Dialog_p2_brk_001 {
     public void DETOUR_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START DETOUR_r0_select
         /*//				doFood()*/
-        GameFlags.P2LucyFood--;
+        GlobalScripts.DoFood();
         ///METHOD_BODY_END DETOUR_r0_select
     }
 

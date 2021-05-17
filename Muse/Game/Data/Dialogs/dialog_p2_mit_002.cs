@@ -80,6 +80,9 @@ public class Dialog_p2_mit_002 {
         /*//				#lucy_health = #lucy_health - 1
         //				#henry_health = #henry_health - 1
         //				post("reportHealth", "")				*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
+        
         ///METHOD_BODY_END n01_r0_select
     }
 }
