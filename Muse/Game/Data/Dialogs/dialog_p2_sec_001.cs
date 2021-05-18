@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_sec_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -135,11 +151,12 @@ public class Dialog_p2_sec_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT FLOAT 0 No
         response.Text = "No";
-        ///RESPONSE_NEXT_NODE_TYPE FLOAT 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID FLOAT 0 END
-        response.NextNodeId = "END";
+        ///RESPONSE_NEXT_NODE_TYPE FLOAT 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID FLOAT 0 
+        response.NextNodeId = "";
         response.OnSelect(FLOAT_r0_select);
+        response.OnSelectNextNodeId(FLOAT_r0_nextnodeid);
         
         ///RESPONSE FLOAT 1
         response = node.AddResponse();
@@ -244,11 +261,12 @@ public class Dialog_p2_sec_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT FLOAT_ACROSS 0 Pray
         response.Text = "Pray";
-        ///RESPONSE_NEXT_NODE_TYPE FLOAT_ACROSS 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE FLOAT_ACROSS 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID FLOAT_ACROSS 0 
         response.NextNodeId = "";
         response.OnSelect(FLOAT_ACROSS_r0_select);
+        response.OnSelectNextNodeId(FLOAT_ACROSS_r0_nextnodeid);
         
         ///NODE_END FLOAT_ACROSS
         ///NODE_START S_SIDE
@@ -366,11 +384,12 @@ public class Dialog_p2_sec_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT HELP 0 Hide in the boat.
         response.Text = "Hide in the boat.";
-        ///RESPONSE_NEXT_NODE_TYPE HELP 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID HELP 0 ACROSS
-        response.NextNodeId = "ACROSS";
+        ///RESPONSE_NEXT_NODE_TYPE HELP 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID HELP 0 
+        response.NextNodeId = "";
         response.OnSelect(HELP_r0_select);
+        response.OnSelectNextNodeId(HELP_r0_nextnodeid);
         
         ///NODE_END HELP
         ///NODE_START ACROSS
@@ -394,11 +413,12 @@ public class Dialog_p2_sec_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT ACROSS 0 Thank him and leave.
         response.Text = "Thank him and leave.";
-        ///RESPONSE_NEXT_NODE_TYPE ACROSS 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID ACROSS 0 END
-        response.NextNodeId = "END";
+        ///RESPONSE_NEXT_NODE_TYPE ACROSS 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID ACROSS 0 
+        response.NextNodeId = "";
         response.OnSelect(ACROSS_r0_select);
+        response.OnSelectNextNodeId(ACROSS_r0_nextnodeid);
         
         ///NODE_END ACROSS
         ///NODE_START CAUGHT
@@ -493,7 +513,7 @@ public class Dialog_p2_sec_001 {
     public bool FLOAT_ACROSS_p1_condition (  ) {
         ///METHOD_BODY_START FLOAT_ACROSS_p1_condition
         /*//				if( $escape_type = "alone" )			*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END FLOAT_ACROSS_p1_condition
     }
 
@@ -501,7 +521,7 @@ public class Dialog_p2_sec_001 {
     public bool N_SIDE_p1_condition (  ) {
         ///METHOD_BODY_START N_SIDE_p1_condition
         /*//					if( $escape_type = "henry" )			*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END N_SIDE_p1_condition
     }
 
@@ -509,6 +529,7 @@ public class Dialog_p2_sec_001 {
     public void N_SIDE_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START N_SIDE_p1_show
         /*//					#p2_henry_code = 40*/
+        GameFlags.P2HenryCode = 40;
         ///METHOD_BODY_END N_SIDE_p1_show
     }
 
@@ -525,6 +546,7 @@ public class Dialog_p2_sec_001 {
     public void CAUGHT2_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START CAUGHT2_p0_show
         /*//				#p2_henry_code = 20*/
+        GameFlags.P2HenryCode = 20;
         ///METHOD_BODY_END CAUGHT2_p0_show
     }
 
@@ -534,6 +556,12 @@ public class Dialog_p2_sec_001 {
         /*//				if( $escape_type = "henry" )
         //					$next_node = "H_CHOICE"
         //				/if			*/
+        if (GameFlags.P2EscapeType == "henry"){
+        DialogGameFlags.next_node ="H_CHOICE";
+        }
+        else{
+        DialogGameFlags.next_node ="END";
+        }
         ///METHOD_BODY_END FLOAT_r0_select
     }
 
@@ -542,6 +570,8 @@ public class Dialog_p2_sec_001 {
         ///METHOD_BODY_START GOODBYE_r0_select
         /*//				#p2_henry_code = 40
         //				killHenry()*/
+        GameFlags.P2HenryCode = 40;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END GOODBYE_r0_select
     }
 
@@ -555,6 +585,14 @@ public class Dialog_p2_sec_001 {
         //				else
         //					$next_node = "S_SIDE"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        rand+=15*GameFlags.P2EscapeAttempts;
+        if (rand > 60){
+        DialogGameFlags.next_node = "N_SIDE";
+        }
+        else{
+        DialogGameFlags.next_node = "S_SIDE";
+        }
         ///METHOD_BODY_END FLOAT_ACROSS_r0_select
     }
 
@@ -562,6 +600,7 @@ public class Dialog_p2_sec_001 {
     public void S_SIDE_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START S_SIDE_r0_select
         /*//				endState("escape_end", "")			*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END S_SIDE_r0_select
     }
 
@@ -571,6 +610,8 @@ public class Dialog_p2_sec_001 {
         /*//				#lucy_health = 1
         //				killHenry()
         //				post("reportHealth", "")*/
+        GameFlags.P2LucyHealth = 1;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END N_SIDE_r0_select
     }
 
@@ -588,6 +629,12 @@ public class Dialog_p2_sec_001 {
         /*//				if( $escape_type = "henry" )
         //					$next_node = "CAUGHT"
         //				/if*/
+        if (GameFlags.P2EscapeType == "henry"){
+        DialogGameFlags.next_node ="CAUGHT";
+        }
+        else{
+        DialogGameFlags.next_node ="ACROSS";
+        }
         ///METHOD_BODY_END HELP_r0_select
     }
 
@@ -601,6 +648,14 @@ public class Dialog_p2_sec_001 {
         //				else
         //					$next_node = "S_SIDE"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        rand+=15*GameFlags.P2EscapeAttempts;
+        if (rand > 60){
+        DialogGameFlags.next_node = "N_SIDE";
+        }
+        else{
+        DialogGameFlags.next_node = "S_SIDE";
+        }
         ///METHOD_BODY_END ACROSS_r0_select
     }
 
@@ -615,7 +670,36 @@ public class Dialog_p2_sec_001 {
     public void CAUGHT2_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START CAUGHT2_r0_select
         /*//				killHenry()*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END CAUGHT2_r0_select
+    }
+
+    ///METHOD FLOAT_r0_nextnodeid
+    public string FLOAT_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START FLOAT_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END FLOAT_r0_nextnodeid
+    }
+
+    ///METHOD FLOAT_ACROSS_r0_nextnodeid
+    public string FLOAT_ACROSS_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START FLOAT_ACROSS_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END FLOAT_ACROSS_r0_nextnodeid
+    }
+
+    ///METHOD HELP_r0_nextnodeid
+    public string HELP_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START HELP_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END HELP_r0_nextnodeid
+    }
+
+    ///METHOD ACROSS_r0_nextnodeid
+    public string ACROSS_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START ACROSS_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END ACROSS_r0_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_sec_001

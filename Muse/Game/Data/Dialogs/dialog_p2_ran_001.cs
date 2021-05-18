@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_ran_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _name_stated_ran
+        private bool _name_stated_ran = false;
+
+        //PROPERTY name_stated_ran
+        public bool name_stated_ran {
+                get {
+                        ///PROPERTY_GETTER_START name_stated_ran
+                        return _name_stated_ran;
+                        ///PROPERTY_GETTER_END name_stated_ran
+                }
+                set {
+                        ///PROPERTY_SETTER_START name_stated_ran
+                        _name_stated_ran = value;
+                        ///PROPERTY_SETTER_END name_stated_ran
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -458,7 +474,7 @@ public class Dialog_p2_ran_001 {
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
         /*//if (?name_stated_ran)*/
-        return true;
+        return DialogGameFlags.name_stated_ran;
         ///METHOD_BODY_END n04_r0_condition
     }
 
@@ -466,7 +482,7 @@ public class Dialog_p2_ran_001 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if (?name_stated_ran = false)*/
-        return true;
+        return !DialogGameFlags.name_stated_ran;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -474,6 +490,7 @@ public class Dialog_p2_ran_001 {
     public void n02_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r1_select
         /*//?name_stated_ran = true*/
+        DialogGameFlags.name_stated_ran = true;
         ///METHOD_BODY_END n02_r1_select
     }
 }

@@ -435,6 +435,7 @@ public class Dialog_p2_wag_001 {
     public void CAUGHT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START CAUGHT_r0_select
         /*//				endState("escape_end", "")*/
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END CAUGHT_r0_select
     }
 

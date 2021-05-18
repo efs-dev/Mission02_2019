@@ -224,5 +224,11 @@ public static partial class GameFlagIds {
 
     //PROPERTY P2ChangedClothes
     public static string P2ChangedClothes = "P2ChangedClothes";
+
+    //PROPERTY P2HasForgedPass
+    public static string P2HasForgedPass = "P2HasForgedPass";
+
+    //PROPERTY P2TollHint
+    public static string P2TollHint = "P2TollHint";
 }
 //CLASS_END GameFlagIds

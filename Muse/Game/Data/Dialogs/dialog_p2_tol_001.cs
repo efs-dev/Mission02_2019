@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_tol_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -91,11 +107,12 @@ public class Dialog_p2_tol_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 3 Dash across the bridge.
         response.Text = "Dash across the bridge.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 3 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID n01 3 DASH
-        response.NextNodeId = "DASH";
+        ///RESPONSE_NEXT_NODE_TYPE n01 3 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID n01 3 
+        response.NextNodeId = "";
         response.OnSelect(n01_r3_select);
+        response.OnSelectNextNodeId(n01_r3_nextnodeid);
         
         ///NODE_END n01
         ///NODE_START DASH1
@@ -232,7 +249,7 @@ public class Dialog_p2_tol_001 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*// if(?p2_toll_hint = true)*/
-        return true;
+        return GameFlags.P2TollHint;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -244,6 +261,14 @@ public class Dialog_p2_tol_001 {
         //				else
         //					$next_node = "DASH2"
         //				/if						*/
+        
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 70){
+        DialogGameFlags.next_node = "DASH1";
+        }
+        else{
+        DialogGameFlags.next_node = "DASH2";
+        }
         ///METHOD_BODY_END n01_r3_select
     }
 
@@ -258,7 +283,15 @@ public class Dialog_p2_tol_001 {
     public void DASH2_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START DASH2_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END DASH2_r0_select
+    }
+
+    ///METHOD n01_r3_nextnodeid
+    public string n01_r3_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r3_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r3_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_tol_001

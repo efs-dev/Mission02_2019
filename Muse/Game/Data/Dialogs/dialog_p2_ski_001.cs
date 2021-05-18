@@ -106,6 +106,7 @@ public class Dialog_p2_ski_001 {
     public void n01_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n01_p0_show
         /*// addItem("FORGED_PASS") */
+        GameFlags.P2HasForgedPass = true;
         ///METHOD_BODY_END n01_p0_show
     }
 

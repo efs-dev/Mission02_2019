@@ -152,6 +152,10 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P2HasAxe 
 //USING
 ///GAMEFLAG_FOLDER P2ChangedClothes 
+//USING
+///GAMEFLAG_FOLDER P2HasForgedPass 
+//USING
+///GAMEFLAG_FOLDER P2TollHint 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -1576,6 +1580,44 @@ GameFlagChanged("P2HasAxe", oldValue, value);
 _P2ChangedClothes = value;
 GameFlagChanged("P2ChangedClothes", oldValue, value);
             ///PROPERTY_SETTER_END P2ChangedClothes
+        }
+    }
+
+    //PROPERTY _P2HasForgedPass
+    private static bool _P2HasForgedPass = false;
+
+    //PROPERTY P2HasForgedPass
+    public static bool P2HasForgedPass {
+        get {
+            ///PROPERTY_GETTER_START P2HasForgedPass
+            return _P2HasForgedPass;
+            ///PROPERTY_GETTER_END P2HasForgedPass
+        }
+        set {
+            ///PROPERTY_SETTER_START P2HasForgedPass
+            var oldValue = value;
+_P2HasForgedPass = value;
+GameFlagChanged("P2HasForgedPass", oldValue, value);
+            ///PROPERTY_SETTER_END P2HasForgedPass
+        }
+    }
+
+    //PROPERTY _P2TollHint
+    private static bool _P2TollHint = false;
+
+    //PROPERTY P2TollHint
+    public static bool P2TollHint {
+        get {
+            ///PROPERTY_GETTER_START P2TollHint
+            return _P2TollHint;
+            ///PROPERTY_GETTER_END P2TollHint
+        }
+        set {
+            ///PROPERTY_SETTER_START P2TollHint
+            var oldValue = value;
+_P2TollHint = value;
+GameFlagChanged("P2TollHint", oldValue, value);
+            ///PROPERTY_SETTER_END P2TollHint
         }
     }
 }
