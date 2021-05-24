@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_won_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -350,11 +366,12 @@ public class Dialog_p2_won_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT DOGS_01 0 Ignore the sound.
         response.Text = "Ignore the sound.";
-        ///RESPONSE_NEXT_NODE_TYPE DOGS_01 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID DOGS_01 0 END
-        response.NextNodeId = "END";
+        ///RESPONSE_NEXT_NODE_TYPE DOGS_01 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID DOGS_01 0 
+        response.NextNodeId = "";
         response.OnSelect(DOGS_01_r0_select);
+        response.OnSelectNextNodeId(DOGS_01_r0_nextnodeid);
         
         ///RESPONSE DOGS_01 1
         response = node.AddResponse();
@@ -461,11 +478,12 @@ public class Dialog_p2_won_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT PATROL_01 2 Run!
         response.Text = "Run!";
-        ///RESPONSE_NEXT_NODE_TYPE PATROL_01 2 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID PATROL_01 2 PATROLRUN
-        response.NextNodeId = "PATROLRUN";
+        ///RESPONSE_NEXT_NODE_TYPE PATROL_01 2 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID PATROL_01 2 
+        response.NextNodeId = "";
         response.OnSelect(PATROL_01_r2_select);
+        response.OnSelectNextNodeId(PATROL_01_r2_nextnodeid);
         
         ///NODE_END PATROL_01
         ///NODE_START PATROLPASS
@@ -640,7 +658,7 @@ public class Dialog_p2_won_001 {
     public bool LOST_01_r0_condition (  ) {
         ///METHOD_BODY_START LOST_01_r0_condition
         /*// if($escape_type = "alone")*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END LOST_01_r0_condition
     }
 
@@ -648,7 +666,7 @@ public class Dialog_p2_won_001 {
     public bool LOST_01_r1_condition (  ) {
         ///METHOD_BODY_START LOST_01_r1_condition
         /*// if($escape_type = "henry" AND  ?HENRY_ALIVE = true) */
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END LOST_01_r1_condition
     }
 
@@ -656,7 +674,7 @@ public class Dialog_p2_won_001 {
     public bool PATROL_01_r0_condition (  ) {
         ///METHOD_BODY_START PATROL_01_r0_condition
         /*// if( hasItem("PRESTON_PASS") OR hasItem("FORGED_PASS") ) */
-        return true;
+        return GameFlags.P1HasPass || GameFlags.P2HasForgedPass;
         ///METHOD_BODY_END PATROL_01_r0_condition
     }
 
@@ -665,6 +683,8 @@ public class Dialog_p2_won_001 {
         ///METHOD_BODY_START SPEND_NIGHT_r0_select
         /*//			doDays()
         //			doFood()			*/
+        GlobalScripts.DoDays();
+        GlobalScripts.DoFood();
         ///METHOD_BODY_END SPEND_NIGHT_r0_select
     }
 
@@ -674,6 +694,8 @@ public class Dialog_p2_won_001 {
         /*//#LUCY_HEALTH = #LUCY_HEALTH - 1
         //			doDays()
         //			post("reportHealth", "")*/
+        GameFlags.P2LucyHealth --;
+        GlobalScripts.DoDays();
         ///METHOD_BODY_END KEEP_MOVING_r0_select
     }
 
@@ -685,6 +707,10 @@ public class Dialog_p2_won_001 {
         //			doDays()
         //			doFood()
         //			post("reportHealth", "")*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
+        GlobalScripts.DoDays();
+        GlobalScripts.DoFood();
         ///METHOD_BODY_END KEEP_MOVING_H_r0_select
     }
 
@@ -692,6 +718,7 @@ public class Dialog_p2_won_001 {
     public void SLAVE_01A_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START SLAVE_01A_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END SLAVE_01A_r0_select
     }
 
@@ -709,6 +736,19 @@ public class Dialog_p2_won_001 {
         //			else
         //				$next_node = "NODOGS"
         //			/if*/
+        if (GameFlags.P2DaysPassed > 2){
+        	int rand = UnityEngine.Random.RandomRange(1,100);
+        	rand += GameFlags.P2EscapeAttempts * 10;
+        	if (rand > 50){
+        		DialogGameFlags.next_node = "NODOGS";
+        	}
+        	else{
+        		DialogGameFlags.next_node = "PATROL_01";
+        	}
+        }
+        else{
+        	DialogGameFlags.next_node = "NODOGS";
+        }
         ///METHOD_BODY_END DOGS_01_r0_select
     }
 
@@ -718,6 +758,8 @@ public class Dialog_p2_won_001 {
         /*//			#LUCY_HEALTH = #LUCY_HEALTH - 1
         //			#HENRY_HEALTH = #HENRY_HEALTH - 1
         //			post("reportHealth", "")*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END RUNDOGS_r0_select
     }
 
@@ -735,6 +777,19 @@ public class Dialog_p2_won_001 {
         //					$next_node = "RUNCAUGHT"
         //				/if
         //			/if*/
+        if (GameFlags.P2EscapeType == "henry"){
+        	DialogGameFlags.next_node = "HENRYCAUGHT";
+        }
+        else{
+        	int rand = UnityEngine.Random.RandomRange(1,100);
+        	rand += GameFlags.P2EscapeAttempts * 10;
+        	if (rand > 50){
+        		DialogGameFlags.next_node = "RUNESCAPE";
+        	}
+        	else{
+        		DialogGameFlags.next_node = "RUNCAUGHT";
+        	}
+        }
         ///METHOD_BODY_END PATROL_01_r2_select
     }
 
@@ -742,6 +797,7 @@ public class Dialog_p2_won_001 {
     public void PATROLPASS_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START PATROLPASS_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END PATROLPASS_r0_select
     }
 
@@ -749,6 +805,7 @@ public class Dialog_p2_won_001 {
     public void PATROLBLUFF_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START PATROLBLUFF_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END PATROLBLUFF_r0_select
     }
 
@@ -757,6 +814,8 @@ public class Dialog_p2_won_001 {
         ///METHOD_BODY_START HENRYCAUGHT_r0_select
         /*//			#p2_henry_code = 20
         //			killHenry()*/
+        GameFlags.P2HenryCode = 20;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END HENRYCAUGHT_r0_select
     }
 
@@ -765,6 +824,8 @@ public class Dialog_p2_won_001 {
         ///METHOD_BODY_START HENRYCAUGHT_r1_select
         /*//			#p2_henry_code = 20
         //			killHenry()*/
+        GameFlags.P2HenryCode = 20;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END HENRYCAUGHT_r1_select
     }
 
@@ -773,6 +834,7 @@ public class Dialog_p2_won_001 {
         ///METHOD_BODY_START RUNESCAPE_r0_select
         /*//			#LUCY_HEALTH = #LUCY_HEALTH - 1
         //			post("reportHealth", "")*/
+        GameFlags.P2LucyHealth--;
         ///METHOD_BODY_END RUNESCAPE_r0_select
     }
 
@@ -780,7 +842,22 @@ public class Dialog_p2_won_001 {
     public void RUNCAUGHT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START RUNCAUGHT_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END RUNCAUGHT_r0_select
+    }
+
+    ///METHOD DOGS_01_r0_nextnodeid
+    public string DOGS_01_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START DOGS_01_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END DOGS_01_r0_nextnodeid
+    }
+
+    ///METHOD PATROL_01_r2_nextnodeid
+    public string PATROL_01_r2_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START PATROL_01_r2_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END PATROL_01_r2_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_won_001

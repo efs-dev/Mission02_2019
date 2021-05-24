@@ -14,6 +14,39 @@ using Efs.Dialogs;
 public class Dialog_p2_won_002 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "true";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
+
+        //PROPERTY _pick_item
+        private string _pick_item = "false";
+
+        //PROPERTY pick_item
+        public string pick_item {
+                get {
+                        ///PROPERTY_GETTER_START pick_item
+                        return _pick_item;
+                        ///PROPERTY_GETTER_END pick_item
+                }
+                set {
+                        ///PROPERTY_SETTER_START pick_item
+                        _pick_item = value;
+                        ///PROPERTY_SETTER_END pick_item
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -72,11 +105,12 @@ public class Dialog_p2_won_002 {
         response = node.AddResponse();
         ///RESPONSE_TEXT FULLTRAP 1 Build a fire.
         response.Text = "Build a fire.";
-        ///RESPONSE_NEXT_NODE_TYPE FULLTRAP 1 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID FULLTRAP 1 COOK1
-        response.NextNodeId = "COOK1";
+        ///RESPONSE_NEXT_NODE_TYPE FULLTRAP 1 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID FULLTRAP 1 
+        response.NextNodeId = "";
         response.OnSelect(FULLTRAP_r1_select);
+        response.OnSelectNextNodeId(FULLTRAP_r1_nextnodeid);
         
         ///NODE_END FULLTRAP
         ///NODE_START EMPTYTRAP
@@ -555,11 +589,12 @@ public class Dialog_p2_won_002 {
         response = node.AddResponse();
         ///RESPONSE_TEXT PATROL_01 2 Run for it!
         response.Text = "Run for it!";
-        ///RESPONSE_NEXT_NODE_TYPE PATROL_01 2 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID PATROL_01 2 PATROLRUN
-        response.NextNodeId = "PATROLRUN";
+        ///RESPONSE_NEXT_NODE_TYPE PATROL_01 2 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID PATROL_01 2 
+        response.NextNodeId = "";
         response.OnSelect(PATROL_01_r2_select);
+        response.OnSelectNextNodeId(PATROL_01_r2_nextnodeid);
         
         ///NODE_END PATROL_01
         ///NODE_START PATROLPASS
@@ -634,6 +669,7 @@ public class Dialog_p2_won_002 {
         prompt.Text = "You and Henry run like the wind. Unfortunately Henry slips on a moss covered rock and twists his ankle. He can't keep up. \"Lucy,\" he says, \"You gotta keep running. I'll get by. Now go!\"";
         ///PROMPT_IGNORE_VO HENRYCAUGHT 0 false
         prompt.IgnoreVO = false;
+        prompt.OnShow(HENRYCAUGHT_p0_show);
         
         ///RESPONSE HENRYCAUGHT 0
         response = node.AddResponse();
@@ -718,7 +754,7 @@ public class Dialog_p2_won_002 {
     public bool WARM_p1_condition (  ) {
         ///METHOD_BODY_START WARM_p1_condition
         /*//if( hasItem("SHAWL") )*/
-        return true;
+        return GameFlags.P1HasShawl;
         ///METHOD_BODY_END WARM_p1_condition
     }
 
@@ -726,7 +762,7 @@ public class Dialog_p2_won_002 {
     public bool TRADE_p0_condition (  ) {
         ///METHOD_BODY_START TRADE_p0_condition
         /*//if(  $pick_item =  "BLANKET" )*/
-        return true;
+        return DialogGameFlags.pick_item == "BLANKET";
         ///METHOD_BODY_END TRADE_p0_condition
     }
 
@@ -734,7 +770,7 @@ public class Dialog_p2_won_002 {
     public bool TRADE_p1_condition (  ) {
         ///METHOD_BODY_START TRADE_p1_condition
         /*//if(  $pick_item = "COMFREY" )*/
-        return true;
+        return DialogGameFlags.pick_item == "COMFREY";
         ///METHOD_BODY_END TRADE_p1_condition
     }
 
@@ -742,7 +778,7 @@ public class Dialog_p2_won_002 {
     public bool TRADE_p2_condition (  ) {
         ///METHOD_BODY_START TRADE_p2_condition
         /*//if(  $pick_item = "SHAWL" )*/
-        return true;
+        return DialogGameFlags.pick_item == "SHAWL";
         ///METHOD_BODY_END TRADE_p2_condition
     }
 
@@ -750,7 +786,7 @@ public class Dialog_p2_won_002 {
     public bool TRADE_p3_condition (  ) {
         ///METHOD_BODY_START TRADE_p3_condition
         /*//if( $pick_item = "AXE" )*/
-        return true;
+        return DialogGameFlags.pick_item == "AXE";
         ///METHOD_BODY_END TRADE_p3_condition
     }
 
@@ -758,6 +794,7 @@ public class Dialog_p2_won_002 {
     public void TRADE_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START TRADE_p0_show
         /*// removeItem("BLANKET") */
+        GameFlags.P1HasBlanket = false;
         ///METHOD_BODY_END TRADE_p0_show
     }
 
@@ -765,6 +802,7 @@ public class Dialog_p2_won_002 {
     public void TRADE_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START TRADE_p1_show
         /*// removeItem("COMFREY") */
+        GameFlags.P1HasComfrey = false;
         ///METHOD_BODY_END TRADE_p1_show
     }
 
@@ -772,6 +810,7 @@ public class Dialog_p2_won_002 {
     public void TRADE_p2_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START TRADE_p2_show
         /*// removeItem("SHAWL") */
+        GameFlags.P1HasShawl = false;
         ///METHOD_BODY_END TRADE_p2_show
     }
 
@@ -779,14 +818,24 @@ public class Dialog_p2_won_002 {
     public void TRADE_p3_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START TRADE_p3_show
         /*// removeItem("AXE") */
+        GameFlags.P2HasAxe = false;
         ///METHOD_BODY_END TRADE_p3_show
+    }
+
+    ///METHOD HENRYCAUGHT_p0_show
+    public void HENRYCAUGHT_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START HENRYCAUGHT_p0_show
+        GlobalScripts.KillHenry();
+        ///METHOD_BODY_END HENRYCAUGHT_p0_show
     }
 
     ///METHOD LAYOUT_r0_condition
     public bool LAYOUT_r0_condition (  ) {
         ///METHOD_BODY_START LAYOUT_r0_condition
         /*// if( ( hasItem("AXE") = false) AND ( hasItem("SHAWL") = false ) AND ( hasItem("COMFREY") =false) AND ( hasItem("BLANKET") = false) )    */
-        return true;
+        
+        // The logic above seems to only allow trading if the player has nothing to trade. Seems like it should be inverted, so I did that
+        return GameFlags.P2HasAxe || GameFlags.P1HasShawl || GameFlags.P1HasComfrey || GameFlags.P1HasBlanket;
         ///METHOD_BODY_END LAYOUT_r0_condition
     }
 
@@ -802,7 +851,7 @@ public class Dialog_p2_won_002 {
     public bool TRADE1_r1_condition (  ) {
         ///METHOD_BODY_START TRADE1_r1_condition
         /*//if( hasItem("COMFREY") =true )*/
-        return true;
+        return GameFlags.P1HasComfrey;
         ///METHOD_BODY_END TRADE1_r1_condition
     }
 
@@ -810,7 +859,7 @@ public class Dialog_p2_won_002 {
     public bool TRADE1_r2_condition (  ) {
         ///METHOD_BODY_START TRADE1_r2_condition
         /*//if( hasItem("SHAWL") = true ) */
-        return true;
+        return GameFlags.P1HasShawl;
         ///METHOD_BODY_END TRADE1_r2_condition
     }
 
@@ -818,7 +867,7 @@ public class Dialog_p2_won_002 {
     public bool TRADE1_r3_condition (  ) {
         ///METHOD_BODY_START TRADE1_r3_condition
         /*// if( hasItem("AXE") = true ) */
-        return true;
+        return GameFlags.P2HasAxe;
         ///METHOD_BODY_END TRADE1_r3_condition
     }
 
@@ -826,7 +875,7 @@ public class Dialog_p2_won_002 {
     public bool PATROL_01_r0_condition (  ) {
         ///METHOD_BODY_START PATROL_01_r0_condition
         /*// if( hasItem("PRESTON_PASS") OR hasItem("FORGED_PASS") ) */
-        return true;
+        return GameFlags.P1HasPass || GameFlags.P2HasForgedPass;
         ///METHOD_BODY_END PATROL_01_r0_condition
     }
 
@@ -840,6 +889,14 @@ public class Dialog_p2_won_002 {
         //			else
         //				$next_node = "FULL"
         //			/if		*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        rand += GameFlags.P2EscapeAttempts * 15;
+        if (rand < 45){
+        DialogGameFlags.next_node = "PATROL_01";
+        }
+        else{
+        DialogGameFlags.next_node = "FULL";
+        }
         ///METHOD_BODY_END FULLTRAP_r1_select
     }
 
@@ -850,6 +907,9 @@ public class Dialog_p2_won_002 {
         //			#lucy_health = #lucy_health + 1
         //			#henry_health = #henry_health + 1
         //			post("reportHealth","")*/
+        GameFlags.P2LucyFood+=2;
+        GameFlags.P2LucyHealth++;
+        GameFlags.P2HenryHealth++;
         ///METHOD_BODY_END FULL_r0_select
     }
 
@@ -859,6 +919,8 @@ public class Dialog_p2_won_002 {
         /*//				#lucy_health = #lucy_health - 1
         //				#henry_health = #henry_health - 1
         //				post("reportHealth", "")			*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END COLD_r0_select
     }
 
@@ -866,6 +928,7 @@ public class Dialog_p2_won_002 {
     public void TRADE1_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START TRADE1_r0_select
         /*//$pick_item = "BLANKET"*/
+        DialogGameFlags.pick_item = "BLANKET";
         ///METHOD_BODY_END TRADE1_r0_select
     }
 
@@ -873,6 +936,7 @@ public class Dialog_p2_won_002 {
     public void TRADE1_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START TRADE1_r1_select
         /*//$pick_item = "COMFREY"*/
+        DialogGameFlags.pick_item = "COMFREY";
         ///METHOD_BODY_END TRADE1_r1_select
     }
 
@@ -880,6 +944,7 @@ public class Dialog_p2_won_002 {
     public void TRADE1_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START TRADE1_r2_select
         /*//$pick_item = "SHAWL"*/
+        DialogGameFlags.pick_item = "SHAWL";
         ///METHOD_BODY_END TRADE1_r2_select
     }
 
@@ -887,6 +952,7 @@ public class Dialog_p2_won_002 {
     public void TRADE1_r3_select ( DialogResponse response ) {
         ///METHOD_BODY_START TRADE1_r3_select
         /*//$pick_item = "AXE"*/
+        DialogGameFlags.pick_item = "AXE";
         ///METHOD_BODY_END TRADE1_r3_select
     }
 
@@ -896,6 +962,8 @@ public class Dialog_p2_won_002 {
         /*//				#lucy_health = #lucy_health - 1
         //				#henry_health = #henry_health - 1
         //				post("reportHealth", "")*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END FORCE_r0_select
     }
 
@@ -912,6 +980,18 @@ public class Dialog_p2_won_002 {
         //					$next_node = "RUNCAUGHT"
         //				/if
         //			/if		*/
+        if (GameFlags.P2EscapeType == "henry"){
+        	DialogGameFlags.next_node = "HENRYCAUGHT";
+        }
+        else{
+        	int rand = UnityEngine.Random.RandomRange(1,100);
+        	if (rand > 50){
+        		DialogGameFlags.next_node = "RUNESCAPE";
+        	}
+        	else{
+        		DialogGameFlags.next_node = "RUNCAUGHT";
+        	}
+        }
         ///METHOD_BODY_END PATROL_01_r2_select
     }
 
@@ -919,6 +999,7 @@ public class Dialog_p2_won_002 {
     public void PATROLPASS_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START PATROLPASS_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END PATROLPASS_r0_select
     }
 
@@ -926,6 +1007,7 @@ public class Dialog_p2_won_002 {
     public void PATROLBLUFF_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START PATROLBLUFF_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END PATROLBLUFF_r0_select
     }
 
@@ -934,6 +1016,7 @@ public class Dialog_p2_won_002 {
         ///METHOD_BODY_START RUNESCAPE_r0_select
         /*//			#LUCY_HEALTH = #LUCY_HEALTH - 1
         //			post("reportHealth", "")		*/
+        GameFlags.P2LucyHealth--;
         ///METHOD_BODY_END RUNESCAPE_r0_select
     }
 
@@ -941,7 +1024,22 @@ public class Dialog_p2_won_002 {
     public void RUNCAUGHT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START RUNCAUGHT_r0_select
         /*// endState("escape_end", "") */
+        GlobalScripts.LosePart2();
         ///METHOD_BODY_END RUNCAUGHT_r0_select
+    }
+
+    ///METHOD FULLTRAP_r1_nextnodeid
+    public string FULLTRAP_r1_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START FULLTRAP_r1_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END FULLTRAP_r1_nextnodeid
+    }
+
+    ///METHOD PATROL_01_r2_nextnodeid
+    public string PATROL_01_r2_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START PATROL_01_r2_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END PATROL_01_r2_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_won_002
