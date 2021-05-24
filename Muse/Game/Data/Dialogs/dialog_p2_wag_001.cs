@@ -462,6 +462,7 @@ public class Dialog_p2_wag_001 {
     public void GIVEHINT_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START GIVEHINT_r0_select
         /*//				?know_tavern = true*/
+        GameFlags.P2KnowTavern = true;
         ///METHOD_BODY_END GIVEHINT_r0_select
     }
 
@@ -487,6 +488,8 @@ public class Dialog_p2_wag_001 {
         /*//				#lucy_health = #lucy_health - 1
         //				#henry_health = #henry_health - 1
         //				post("reportHealth", "")	*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END FORCE_r0_select
     }
 
