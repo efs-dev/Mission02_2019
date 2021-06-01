@@ -14,6 +14,107 @@ using Efs.Dialogs;
 public class Dialog_p3_har_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p3_ask_har_abo
+        private bool _p3_ask_har_abo = false;
+
+        //PROPERTY p3_ask_har_abo
+        public bool p3_ask_har_abo {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_har_abo
+                        return _p3_ask_har_abo;
+                        ///PROPERTY_GETTER_END p3_ask_har_abo
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_har_abo
+                        _p3_ask_har_abo = value;
+                        ///PROPERTY_SETTER_END p3_ask_har_abo
+                }
+        }
+
+        //PROPERTY _p3_ask_ken
+        private bool _p3_ask_ken = false;
+
+        //PROPERTY p3_ask_ken
+        public bool p3_ask_ken {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_ken
+                        return _p3_ask_ken;
+                        ///PROPERTY_GETTER_END p3_ask_ken
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_ken
+                        _p3_ask_ken = value;
+                        ///PROPERTY_SETTER_END p3_ask_ken
+                }
+        }
+
+        //PROPERTY _p3_har_08a_seen
+        private bool _p3_har_08a_seen = false;
+
+        //PROPERTY p3_har_08a_seen
+        public bool p3_har_08a_seen {
+                get {
+                        ///PROPERTY_GETTER_START p3_har_08a_seen
+                        return _p3_har_08a_seen;
+                        ///PROPERTY_GETTER_END p3_har_08a_seen
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_har_08a_seen
+                        _p3_har_08a_seen = value;
+                        ///PROPERTY_SETTER_END p3_har_08a_seen
+                }
+        }
+
+        //PROPERTY _p3_intro_har
+        private bool _p3_intro_har = false;
+
+        //PROPERTY p3_intro_har
+        public bool p3_intro_har {
+                get {
+                        ///PROPERTY_GETTER_START p3_intro_har
+                        return _p3_intro_har;
+                        ///PROPERTY_GETTER_END p3_intro_har
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_intro_har
+                        _p3_intro_har = value;
+                        ///PROPERTY_SETTER_END p3_intro_har
+                }
+        }
+
+        //PROPERTY _p3_know_harrison
+        private bool _p3_know_harrison = false;
+
+        //PROPERTY p3_know_harrison
+        public bool p3_know_harrison {
+                get {
+                        ///PROPERTY_GETTER_START p3_know_harrison
+                        return _p3_know_harrison;
+                        ///PROPERTY_GETTER_END p3_know_harrison
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_know_harrison
+                        _p3_know_harrison = value;
+                        ///PROPERTY_SETTER_END p3_know_harrison
+                }
+        }
+
+        //PROPERTY _p3_new_lands
+        private bool _p3_new_lands = false;
+
+        //PROPERTY p3_new_lands
+        public bool p3_new_lands {
+                get {
+                        ///PROPERTY_GETTER_START p3_new_lands
+                        return _p3_new_lands;
+                        ///PROPERTY_GETTER_END p3_new_lands
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_new_lands
+                        _p3_new_lands = value;
+                        ///PROPERTY_SETTER_END p3_new_lands
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -910,7 +1011,7 @@ public class Dialog_p3_har_001 {
     public bool n08_p1_condition (  ) {
         ///METHOD_BODY_START n08_p1_condition
         /*//if (?p3_new_lands = true)*/
-        return true;
+        return DialogGameFlags.p3_new_lands;
         ///METHOD_BODY_END n08_p1_condition
     }
 
@@ -918,7 +1019,7 @@ public class Dialog_p3_har_001 {
     public bool n08a_p1_condition (  ) {
         ///METHOD_BODY_START n08a_p1_condition
         /*//if (?p3_new_lands = true)*/
-        return true;
+        return DialogGameFlags.p3_new_lands;
         ///METHOD_BODY_END n08a_p1_condition
     }
 
@@ -926,7 +1027,7 @@ public class Dialog_p3_har_001 {
     public bool n14_p1_condition (  ) {
         ///METHOD_BODY_START n14_p1_condition
         /*//if (?p3_intro_har = false)*/
-        return true;
+        return !DialogGameFlags.p3_intro_har;
         ///METHOD_BODY_END n14_p1_condition
     }
 
@@ -934,7 +1035,7 @@ public class Dialog_p3_har_001 {
     public bool n17_p1_condition (  ) {
         ///METHOD_BODY_START n17_p1_condition
         /*//if (?p3_ask_tc = true)*/
-        return true;
+        return GameFlags.P3AskTc;
         ///METHOD_BODY_END n17_p1_condition
     }
 
@@ -949,6 +1050,7 @@ public class Dialog_p3_har_001 {
     public void n08a_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n08a_p0_show
         /*//?p3_har_08a_seen = true*/
+        DialogGameFlags.p3_har_08a_seen = true;
         ///METHOD_BODY_END n08a_p0_show
     }
 
@@ -956,6 +1058,7 @@ public class Dialog_p3_har_001 {
     public void n08a_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n08a_p1_show
         /*//?p3_har_08a_seen = true*/
+        DialogGameFlags.p3_har_08a_seen = true;
         ///METHOD_BODY_END n08a_p1_show
     }
 
@@ -963,6 +1066,8 @@ public class Dialog_p3_har_001 {
     public void n14_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n14_p1_show
         /*//?p3_har_curious = true*/
+        // Variable is never used?
+        GameFlags.P3HarCurious = true;
         ///METHOD_BODY_END n14_p1_show
     }
 
@@ -970,7 +1075,7 @@ public class Dialog_p3_har_001 {
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
         /*//if (?p3_intro_har = false)*/
-        return true;
+        return !DialogGameFlags.p3_intro_har;
         ///METHOD_BODY_END n02_r0_condition
     }
 
@@ -978,7 +1083,7 @@ public class Dialog_p3_har_001 {
     public bool n02_r1_condition (  ) {
         ///METHOD_BODY_START n02_r1_condition
         /*//if (?p3_ask_tc = false)*/
-        return true;
+        return !GameFlags.P3AskTc;
         ///METHOD_BODY_END n02_r1_condition
     }
 
@@ -986,7 +1091,7 @@ public class Dialog_p3_har_001 {
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
         /*//if (?p3_know_harrison = false)*/
-        return true;
+        return !DialogGameFlags.p3_know_harrison;
         ///METHOD_BODY_END n03_r0_condition
     }
 
@@ -994,7 +1099,7 @@ public class Dialog_p3_har_001 {
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
         /*//if (?p3_know_harrison = false)*/
-        return true;
+        return !DialogGameFlags.p3_know_harrison;
         ///METHOD_BODY_END n04_r0_condition
     }
 
@@ -1002,7 +1107,7 @@ public class Dialog_p3_har_001 {
     public bool n06_r1_condition (  ) {
         ///METHOD_BODY_START n06_r1_condition
         /*//if (?p3_ask_har_abo = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_har_abo;
         ///METHOD_BODY_END n06_r1_condition
     }
 
@@ -1010,7 +1115,7 @@ public class Dialog_p3_har_001 {
     public bool n07_r0_condition (  ) {
         ///METHOD_BODY_START n07_r0_condition
         /*//if (?p3_har_08a_seen)*/
-        return true;
+        return DialogGameFlags.p3_har_08a_seen;
         ///METHOD_BODY_END n07_r0_condition
     }
 
@@ -1018,7 +1123,7 @@ public class Dialog_p3_har_001 {
     public bool n07_r1_condition (  ) {
         ///METHOD_BODY_START n07_r1_condition
         /*//if ((?p3_new_lands = true) AND (?p3_ask_ken = false))*/
-        return true;
+        return DialogGameFlags.p3_new_lands && DialogGameFlags.p3_ask_ken;
         ///METHOD_BODY_END n07_r1_condition
     }
 
@@ -1026,7 +1131,7 @@ public class Dialog_p3_har_001 {
     public bool n07_r2_condition (  ) {
         ///METHOD_BODY_START n07_r2_condition
         /*//if (?p3_har_08a_seen = false)*/
-        return true;
+        return !DialogGameFlags.p3_har_08a_seen;
         ///METHOD_BODY_END n07_r2_condition
     }
 
@@ -1034,7 +1139,7 @@ public class Dialog_p3_har_001 {
     public bool n08_r0_condition (  ) {
         ///METHOD_BODY_START n08_r0_condition
         /*//if (?p3_ask_tc = false)*/
-        return true;
+        return !GameFlags.P3AskTc;
         ///METHOD_BODY_END n08_r0_condition
     }
 
@@ -1042,7 +1147,7 @@ public class Dialog_p3_har_001 {
     public bool n08_r2_condition (  ) {
         ///METHOD_BODY_START n08_r2_condition
         /*//if ((?p3_new_lands = false) AND (?p3_ask_ken = false))*/
-        return true;
+        return !DialogGameFlags.p3_new_lands && !DialogGameFlags.p3_ask_ken;
         ///METHOD_BODY_END n08_r2_condition
     }
 
@@ -1050,7 +1155,7 @@ public class Dialog_p3_har_001 {
     public bool n08a_r0_condition (  ) {
         ///METHOD_BODY_START n08a_r0_condition
         /*//if (?p3_ask_tc=false)*/
-        return true;
+        return !GameFlags.P3AskTc;
         ///METHOD_BODY_END n08a_r0_condition
     }
 
@@ -1058,7 +1163,7 @@ public class Dialog_p3_har_001 {
     public bool n08a_r2_condition (  ) {
         ///METHOD_BODY_START n08a_r2_condition
         /*//if ((?p3_new_lands = false) AND (?p3_ask_ken = false))*/
-        return true;
+        return !DialogGameFlags.p3_new_lands && !DialogGameFlags.p3_ask_ken;
         ///METHOD_BODY_END n08a_r2_condition
     }
 
@@ -1066,7 +1171,7 @@ public class Dialog_p3_har_001 {
     public bool n10_r1_condition (  ) {
         ///METHOD_BODY_START n10_r1_condition
         /*//if (?p3_ask_har_abo = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_har_abo;
         ///METHOD_BODY_END n10_r1_condition
     }
 
@@ -1074,7 +1179,7 @@ public class Dialog_p3_har_001 {
     public bool n12_r0_condition (  ) {
         ///METHOD_BODY_START n12_r0_condition
         /*//if (?p3_know_harrison = true)*/
-        return true;
+        return DialogGameFlags.p3_know_harrison;
         ///METHOD_BODY_END n12_r0_condition
     }
 
@@ -1082,7 +1187,7 @@ public class Dialog_p3_har_001 {
     public bool n13_r0_condition (  ) {
         ///METHOD_BODY_START n13_r0_condition
         /*//if (?p3_ask_har_abo = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_har_abo;
         ///METHOD_BODY_END n13_r0_condition
     }
 
@@ -1090,7 +1195,7 @@ public class Dialog_p3_har_001 {
     public bool n14_r0_condition (  ) {
         ///METHOD_BODY_START n14_r0_condition
         /*//if (?p3_intro_har = true)*/
-        return true;
+        return DialogGameFlags.p3_intro_har;
         ///METHOD_BODY_END n14_r0_condition
     }
 
@@ -1098,7 +1203,7 @@ public class Dialog_p3_har_001 {
     public bool n14_r1_condition (  ) {
         ///METHOD_BODY_START n14_r1_condition
         /*//if (?p3_intro_har = false)*/
-        return true;
+        return !DialogGameFlags.p3_intro_har;
         ///METHOD_BODY_END n14_r1_condition
     }
 
@@ -1106,7 +1211,7 @@ public class Dialog_p3_har_001 {
     public bool n14_r2_condition (  ) {
         ///METHOD_BODY_START n14_r2_condition
         /*//if (?p3_intro_har = false)*/
-        return true;
+        return !DialogGameFlags.p3_intro_har;
         ///METHOD_BODY_END n14_r2_condition
     }
 
@@ -1114,7 +1219,7 @@ public class Dialog_p3_har_001 {
     public bool n16_r2_condition (  ) {
         ///METHOD_BODY_START n16_r2_condition
         /*//if (?p3_ask_har_abo = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_har_abo;
         ///METHOD_BODY_END n16_r2_condition
     }
 
@@ -1122,7 +1227,7 @@ public class Dialog_p3_har_001 {
     public bool n17_r0_condition (  ) {
         ///METHOD_BODY_START n17_r0_condition
         /*//if (?p3_know_harrison = false)*/
-        return true;
+        return !DialogGameFlags.p3_know_harrison;
         ///METHOD_BODY_END n17_r0_condition
     }
 
@@ -1130,6 +1235,7 @@ public class Dialog_p3_har_001 {
     public void n01_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r0_select
         /*//set ?p3_ask_tc = true*/
+        GameFlags.P3AskTc = true;
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -1137,6 +1243,7 @@ public class Dialog_p3_har_001 {
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
         /*//set ?p3_know_harrison = true*/
+        DialogGameFlags.p3_know_harrison = true;
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -1144,6 +1251,7 @@ public class Dialog_p3_har_001 {
     public void n02_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r0_select
         /*//set ?p3_intro_har = true*/
+        DialogGameFlags.p3_intro_har = true;
         ///METHOD_BODY_END n02_r0_select
     }
 
@@ -1151,6 +1259,7 @@ public class Dialog_p3_har_001 {
     public void n02_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r1_select
         /*//set ?p3_ask_tc = true*/
+        GameFlags.P3AskTc = true;
         ///METHOD_BODY_END n02_r1_select
     }
 
@@ -1158,6 +1267,7 @@ public class Dialog_p3_har_001 {
     public void n03_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r0_select
         /*//set ?p3_know_harrison = true*/
+        DialogGameFlags.p3_know_harrison = true;
         ///METHOD_BODY_END n03_r0_select
     }
 
@@ -1165,6 +1275,7 @@ public class Dialog_p3_har_001 {
     public void n04_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r0_select
         /*//set ?p3_know_harrison = true*/
+        DialogGameFlags.p3_know_harrison = true;
         ///METHOD_BODY_END n04_r0_select
     }
 
@@ -1172,6 +1283,7 @@ public class Dialog_p3_har_001 {
     public void n06_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n06_r0_select
         /*//set ?p3_ask_ken = true*/
+        DialogGameFlags.p3_ask_ken = true;
         ///METHOD_BODY_END n06_r0_select
     }
 
@@ -1180,6 +1292,8 @@ public class Dialog_p3_har_001 {
         ///METHOD_BODY_START n06_r1_select
         /*//set ?p3_ask_har_abo = true
         //set ?p3_new_lands = true*/
+        DialogGameFlags.p3_ask_har_abo= true;
+        DialogGameFlags.p3_new_lands = true;
         ///METHOD_BODY_END n06_r1_select
     }
 
@@ -1187,6 +1301,7 @@ public class Dialog_p3_har_001 {
     public void n07_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r1_select
         /*//set ?p3_ask_ken = true*/
+        DialogGameFlags.p3_ask_ken = true;
         ///METHOD_BODY_END n07_r1_select
     }
 
@@ -1194,6 +1309,7 @@ public class Dialog_p3_har_001 {
     public void n08_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r0_select
         /*//set ?p3_ask_tc = true*/
+        GameFlags.P3AskTc = true;
         ///METHOD_BODY_END n08_r0_select
     }
 
@@ -1208,6 +1324,7 @@ public class Dialog_p3_har_001 {
     public void n08_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r2_select
         /*//set ?p3_ask_ken = true*/
+        DialogGameFlags.p3_ask_ken = true;
         ///METHOD_BODY_END n08_r2_select
     }
 
@@ -1215,6 +1332,7 @@ public class Dialog_p3_har_001 {
     public void n08a_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08a_r0_select
         /*//?p3_ask_tc=true*/
+        GameFlags.P3AskTc = true;
         ///METHOD_BODY_END n08a_r0_select
     }
 
@@ -1229,6 +1347,7 @@ public class Dialog_p3_har_001 {
     public void n08a_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08a_r2_select
         /*//?p3_ask_ken = true*/
+        DialogGameFlags.p3_ask_ken = true;
         ///METHOD_BODY_END n08a_r2_select
     }
 
@@ -1236,6 +1355,7 @@ public class Dialog_p3_har_001 {
     public void n10_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r1_select
         /*//set ?p3_ask_har_abo = true*/
+        DialogGameFlags.p3_ask_har_abo = true;
         ///METHOD_BODY_END n10_r1_select
     }
 
@@ -1257,6 +1377,7 @@ public class Dialog_p3_har_001 {
     public void n13_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n13_r0_select
         /*//set ?p3_ask_har_abo = true*/
+        DialogGameFlags.p3_ask_har_abo = true;
         ///METHOD_BODY_END n13_r0_select
     }
 
@@ -1278,6 +1399,7 @@ public class Dialog_p3_har_001 {
     public void n14_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n14_r2_select
         /*//set ?p3_intro_har = true*/
+        DialogGameFlags.p3_intro_har = true;
         ///METHOD_BODY_END n14_r2_select
     }
 
@@ -1299,6 +1421,7 @@ public class Dialog_p3_har_001 {
     public void n16_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n16_r2_select
         /*//?p3_ask_har_abo = true*/
+        DialogGameFlags.p3_ask_har_abo = true;
         ///METHOD_BODY_END n16_r2_select
     }
 
@@ -1306,6 +1429,7 @@ public class Dialog_p3_har_001 {
     public void n17_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n17_r0_select
         /*//?p3_know_harrison = true*/
+        DialogGameFlags.p3_know_harrison = true;
         ///METHOD_BODY_END n17_r0_select
     }
 

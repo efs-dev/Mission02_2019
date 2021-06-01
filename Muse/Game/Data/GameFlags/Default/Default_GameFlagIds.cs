@@ -230,5 +230,29 @@ public static partial class GameFlagIds {
 
     //PROPERTY P2TollHint
     public static string P2TollHint = "P2TollHint";
+
+    //PROPERTY P3KnowMorganCin
+    public static string P3KnowMorganCin = "P3KnowMorganCin";
+
+    //PROPERTY P3AskMilllie
+    public static string P3AskMilllie = "P3AskMilllie";
+
+    //PROPERTY P3LucyMillieInterest
+    public static string P3LucyMillieInterest = "P3LucyMillieInterest";
+
+    //PROPERTY P3LucyParkerInterest
+    public static string P3LucyParkerInterest = "P3LucyParkerInterest";
+
+    //PROPERTY P3HasFair
+    public static string P3HasFair = "P3HasFair";
+
+    //PROPERTY P3AskedCanada
+    public static string P3AskedCanada = "P3AskedCanada";
+
+    //PROPERTY P3AskTc
+    public static string P3AskTc = "P3AskTc";
+
+    //PROPERTY P3HarCurious
+    public static string P3HarCurious = "P3HarCurious";
 }
 //CLASS_END GameFlagIds

@@ -269,7 +269,7 @@ public class Dialog_p2_wos_002 {
     public bool WARM_p1_condition (  ) {
         ///METHOD_BODY_START WARM_p1_condition
         /*//if( hasItem("SHAWL") )*/
-        return true;
+        return GameFlags.P1HasShawl;
         ///METHOD_BODY_END WARM_p1_condition
     }
 
@@ -286,6 +286,8 @@ public class Dialog_p2_wos_002 {
         /*//				#lucy_health = #lucy_health - 1
         //				#henry_health = #henry_health - 1
         //				post("reportHealth", "")			*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END COLD_r0_select
     }
 
@@ -294,6 +296,7 @@ public class Dialog_p2_wos_002 {
         ///METHOD_BODY_START BLAND_r0_select
         /*//				#food = #food + 2
         //				updateMessage("You got 2 food")			*/
+        GameFlags.P2LucyFood+=2;
         ///METHOD_BODY_END BLAND_r0_select
     }
 
@@ -305,6 +308,9 @@ public class Dialog_p2_wos_002 {
         //				post("reportHealth", "")
         //				#days_passed = #days_passed + 1
         //				updateMessage("Another day passes")						*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
+        GameFlags.P2DaysPassed++;
         ///METHOD_BODY_END SICK_r0_select
     }
 }

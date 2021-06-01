@@ -14,6 +14,73 @@ using Efs.Dialogs;
 public class Dialog_p3_abi_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p3_asked_parker
+        private bool _p3_asked_parker = false;
+
+        //PROPERTY p3_asked_parker
+        public bool p3_asked_parker {
+                get {
+                        ///PROPERTY_GETTER_START p3_asked_parker
+                        return _p3_asked_parker;
+                        ///PROPERTY_GETTER_END p3_asked_parker
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_asked_parker
+                        _p3_asked_parker = value;
+                        ///PROPERTY_SETTER_END p3_asked_parker
+                }
+        }
+
+        //PROPERTY _p3_lucy_knows_law
+        private bool _p3_lucy_knows_law = false;
+
+        //PROPERTY p3_lucy_knows_law
+        public bool p3_lucy_knows_law {
+                get {
+                        ///PROPERTY_GETTER_START p3_lucy_knows_law
+                        return _p3_lucy_knows_law;
+                        ///PROPERTY_GETTER_END p3_lucy_knows_law
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_lucy_knows_law
+                        _p3_lucy_knows_law = value;
+                        ///PROPERTY_SETTER_END p3_lucy_knows_law
+                }
+        }
+
+        //PROPERTY _p3_want_meet_millie
+        private bool _p3_want_meet_millie = false;
+
+        //PROPERTY p3_want_meet_millie
+        public bool p3_want_meet_millie {
+                get {
+                        ///PROPERTY_GETTER_START p3_want_meet_millie
+                        return _p3_want_meet_millie;
+                        ///PROPERTY_GETTER_END p3_want_meet_millie
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_want_meet_millie
+                        _p3_want_meet_millie = value;
+                        ///PROPERTY_SETTER_END p3_want_meet_millie
+                }
+        }
+
+        //PROPERTY _p3_want_meet_parker
+        private bool _p3_want_meet_parker = false;
+
+        //PROPERTY p3_want_meet_parker
+        public bool p3_want_meet_parker {
+                get {
+                        ///PROPERTY_GETTER_START p3_want_meet_parker
+                        return _p3_want_meet_parker;
+                        ///PROPERTY_GETTER_END p3_want_meet_parker
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_want_meet_parker
+                        _p3_want_meet_parker = value;
+                        ///PROPERTY_SETTER_END p3_want_meet_parker
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -908,7 +975,7 @@ public class Dialog_p3_abi_001 {
     public bool n09_p1_condition (  ) {
         ///METHOD_BODY_START n09_p1_condition
         /*//if (?p3_lucy_knows_law = true)*/
-        return true;
+        return DialogGameFlags.p3_lucy_knows_law;
         ///METHOD_BODY_END n09_p1_condition
     }
 
@@ -916,7 +983,7 @@ public class Dialog_p3_abi_001 {
     public bool n17_p0_condition (  ) {
         ///METHOD_BODY_START n17_p0_condition
         /*//if (?p3_want_meet_millie)*/
-        return true;
+        return DialogGameFlags.p3_want_meet_millie;
         ///METHOD_BODY_END n17_p0_condition
     }
 
@@ -924,7 +991,7 @@ public class Dialog_p3_abi_001 {
     public bool n17_p1_condition (  ) {
         ///METHOD_BODY_START n17_p1_condition
         /*//if (?p3_want_meet_parker)*/
-        return true;
+        return DialogGameFlags.p3_want_meet_parker;
         ///METHOD_BODY_END n17_p1_condition
     }
 
@@ -932,6 +999,7 @@ public class Dialog_p3_abi_001 {
     public void n02_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n02_p0_show
         /*//set ?p3_know_morgan_cin = true*/
+        GameFlags.P3KnowMorganCin = true;
         ///METHOD_BODY_END n02_p0_show
     }
 
@@ -946,6 +1014,7 @@ public class Dialog_p3_abi_001 {
     public void n20_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n20_p0_show
         /*//?has_fair = true*/
+        GameFlags.P3HasFair = true;
         ///METHOD_BODY_END n20_p0_show
     }
 
@@ -953,7 +1022,7 @@ public class Dialog_p3_abi_001 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if (?p3_know_morgan_cin = false)*/
-        return true;
+        return !GameFlags.P3KnowMorganCin;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -961,7 +1030,7 @@ public class Dialog_p3_abi_001 {
     public bool n12_r1_condition (  ) {
         ///METHOD_BODY_START n12_r1_condition
         /*//if (?p3_asked_parker = false)*/
-        return true;
+        return !DialogGameFlags.p3_asked_parker;
         ///METHOD_BODY_END n12_r1_condition
     }
 
@@ -969,7 +1038,7 @@ public class Dialog_p3_abi_001 {
     public bool n13_r0_condition (  ) {
         ///METHOD_BODY_START n13_r0_condition
         /*//if (?p3_ask_millie = false)*/
-        return true;
+        return !GameFlags.P3AskMilllie;
         ///METHOD_BODY_END n13_r0_condition
     }
 
@@ -977,7 +1046,7 @@ public class Dialog_p3_abi_001 {
     public bool n15_r1_condition (  ) {
         ///METHOD_BODY_START n15_r1_condition
         /*//if (?p3_ask_millie = false)*/
-        return true;
+        return !GameFlags.P3AskMilllie;
         ///METHOD_BODY_END n15_r1_condition
     }
 
@@ -985,6 +1054,7 @@ public class Dialog_p3_abi_001 {
     public void n10_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r1_select
         /*//set ?p3_asked_parker = true*/
+        DialogGameFlags.p3_asked_parker = true;
         ///METHOD_BODY_END n10_r1_select
     }
 
@@ -992,6 +1062,7 @@ public class Dialog_p3_abi_001 {
     public void n10_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r2_select
         /*//set ?p3_ask_millie = true*/
+        GameFlags.P3AskMilllie = true;
         ///METHOD_BODY_END n10_r2_select
     }
 
@@ -999,6 +1070,7 @@ public class Dialog_p3_abi_001 {
     public void n12_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n12_r0_select
         /*//set ?p3_want_meet_millie = true*/
+        DialogGameFlags.p3_want_meet_millie = true;
         ///METHOD_BODY_END n12_r0_select
     }
 
@@ -1006,6 +1078,7 @@ public class Dialog_p3_abi_001 {
     public void n12_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n12_r1_select
         /*//set ?p3_asked_parker = true*/
+        DialogGameFlags.p3_asked_parker = true;
         ///METHOD_BODY_END n12_r1_select
     }
 
@@ -1013,6 +1086,7 @@ public class Dialog_p3_abi_001 {
     public void n12_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n12_r2_select
         /*//set ?p3_lucy_millie_interest = true*/
+        GameFlags.P3LucyMillieInterest = true;
         ///METHOD_BODY_END n12_r2_select
     }
 
@@ -1020,6 +1094,7 @@ public class Dialog_p3_abi_001 {
     public void n13_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n13_r0_select
         /*//set ?p3_ask_millie = true*/
+        GameFlags.P3AskMilllie = true;
         ///METHOD_BODY_END n13_r0_select
     }
 
@@ -1027,6 +1102,7 @@ public class Dialog_p3_abi_001 {
     public void n13_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n13_r1_select
         /*//set ?p3_lucy_parker_interest = true*/
+        GameFlags.P3LucyParkerInterest = true;
         ///METHOD_BODY_END n13_r1_select
     }
 
@@ -1034,6 +1110,7 @@ public class Dialog_p3_abi_001 {
     public void n15_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n15_r0_select
         /*//set ?p3_lucy_parker_interest = true*/
+        GameFlags.P3LucyParkerInterest = true;
         ///METHOD_BODY_END n15_r0_select
     }
 
@@ -1041,6 +1118,7 @@ public class Dialog_p3_abi_001 {
     public void n15_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n15_r1_select
         /*//set ?p3_ask_millie = true*/
+        GameFlags.P3AskMilllie = true;
         ///METHOD_BODY_END n15_r1_select
     }
 
@@ -1048,6 +1126,7 @@ public class Dialog_p3_abi_001 {
     public void n15_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n15_r2_select
         /*//set ?p3_want_meet_parker = true*/
+        DialogGameFlags.p3_want_meet_parker = true;
         ///METHOD_BODY_END n15_r2_select
     }
 
@@ -1055,6 +1134,7 @@ public class Dialog_p3_abi_001 {
     public void n22_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n22_r1_select
         /*//set ?p3_asked_canada = true*/
+        GameFlags.P3AskedCanada = true;
         ///METHOD_BODY_END n22_r1_select
     }
 
@@ -1062,6 +1142,7 @@ public class Dialog_p3_abi_001 {
     public void n23_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n23_r0_select
         /*//set ?p3_lucy_knows_law = true*/
+        DialogGameFlags.p3_lucy_knows_law = true;
         ///METHOD_BODY_END n23_r0_select
     }
 
@@ -1069,6 +1150,7 @@ public class Dialog_p3_abi_001 {
     public void n23_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n23_r1_select
         /*//set ?p3_lucy_knows_law = true*/
+        DialogGameFlags.p3_lucy_knows_law = true;
         ///METHOD_BODY_END n23_r1_select
     }
 }

@@ -156,6 +156,22 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P2HasForgedPass 
 //USING
 ///GAMEFLAG_FOLDER P2TollHint 
+//USING
+///GAMEFLAG_FOLDER P3KnowMorganCin 
+//USING
+///GAMEFLAG_FOLDER P3AskMilllie 
+//USING
+///GAMEFLAG_FOLDER P3LucyMillieInterest 
+//USING
+///GAMEFLAG_FOLDER P3LucyParkerInterest 
+//USING
+///GAMEFLAG_FOLDER P3HasFair 
+//USING
+///GAMEFLAG_FOLDER P3AskedCanada 
+//USING
+///GAMEFLAG_FOLDER P3AskTc 
+//USING
+///GAMEFLAG_FOLDER P3HarCurious 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -1618,6 +1634,158 @@ GameFlagChanged("P2HasForgedPass", oldValue, value);
 _P2TollHint = value;
 GameFlagChanged("P2TollHint", oldValue, value);
             ///PROPERTY_SETTER_END P2TollHint
+        }
+    }
+
+    //PROPERTY _P3KnowMorganCin
+    private static bool _P3KnowMorganCin = false;
+
+    //PROPERTY P3KnowMorganCin
+    public static bool P3KnowMorganCin {
+        get {
+            ///PROPERTY_GETTER_START P3KnowMorganCin
+            return _P3KnowMorganCin;
+            ///PROPERTY_GETTER_END P3KnowMorganCin
+        }
+        set {
+            ///PROPERTY_SETTER_START P3KnowMorganCin
+            var oldValue = value;
+_P3KnowMorganCin = value;
+GameFlagChanged("P3KnowMorganCin", oldValue, value);
+            ///PROPERTY_SETTER_END P3KnowMorganCin
+        }
+    }
+
+    //PROPERTY _P3AskMilllie
+    private static bool _P3AskMilllie = false;
+
+    //PROPERTY P3AskMilllie
+    public static bool P3AskMilllie {
+        get {
+            ///PROPERTY_GETTER_START P3AskMilllie
+            return _P3AskMilllie;
+            ///PROPERTY_GETTER_END P3AskMilllie
+        }
+        set {
+            ///PROPERTY_SETTER_START P3AskMilllie
+            var oldValue = value;
+_P3AskMilllie = value;
+GameFlagChanged("P3AskMilllie", oldValue, value);
+            ///PROPERTY_SETTER_END P3AskMilllie
+        }
+    }
+
+    //PROPERTY _P3LucyMillieInterest
+    private static bool _P3LucyMillieInterest = false;
+
+    //PROPERTY P3LucyMillieInterest
+    public static bool P3LucyMillieInterest {
+        get {
+            ///PROPERTY_GETTER_START P3LucyMillieInterest
+            return _P3LucyMillieInterest;
+            ///PROPERTY_GETTER_END P3LucyMillieInterest
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LucyMillieInterest
+            var oldValue = value;
+_P3LucyMillieInterest = value;
+GameFlagChanged("P3LucyMillieInterest", oldValue, value);
+            ///PROPERTY_SETTER_END P3LucyMillieInterest
+        }
+    }
+
+    //PROPERTY _P3LucyParkerInterest
+    private static bool _P3LucyParkerInterest = false;
+
+    //PROPERTY P3LucyParkerInterest
+    public static bool P3LucyParkerInterest {
+        get {
+            ///PROPERTY_GETTER_START P3LucyParkerInterest
+            return _P3LucyParkerInterest;
+            ///PROPERTY_GETTER_END P3LucyParkerInterest
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LucyParkerInterest
+            var oldValue = value;
+_P3LucyParkerInterest = value;
+GameFlagChanged("P3LucyParkerInterest", oldValue, value);
+            ///PROPERTY_SETTER_END P3LucyParkerInterest
+        }
+    }
+
+    //PROPERTY _P3HasFair
+    private static bool _P3HasFair = false;
+
+    //PROPERTY P3HasFair
+    public static bool P3HasFair {
+        get {
+            ///PROPERTY_GETTER_START P3HasFair
+            return _P3HasFair;
+            ///PROPERTY_GETTER_END P3HasFair
+        }
+        set {
+            ///PROPERTY_SETTER_START P3HasFair
+            var oldValue = value;
+_P3HasFair = value;
+GameFlagChanged("P3HasFair", oldValue, value);
+            ///PROPERTY_SETTER_END P3HasFair
+        }
+    }
+
+    //PROPERTY _P3AskedCanada
+    private static bool _P3AskedCanada = false;
+
+    //PROPERTY P3AskedCanada
+    public static bool P3AskedCanada {
+        get {
+            ///PROPERTY_GETTER_START P3AskedCanada
+            return _P3AskedCanada;
+            ///PROPERTY_GETTER_END P3AskedCanada
+        }
+        set {
+            ///PROPERTY_SETTER_START P3AskedCanada
+            var oldValue = value;
+_P3AskedCanada = value;
+GameFlagChanged("P3AskedCanada", oldValue, value);
+            ///PROPERTY_SETTER_END P3AskedCanada
+        }
+    }
+
+    //PROPERTY _P3AskTc
+    private static bool _P3AskTc = false;
+
+    //PROPERTY P3AskTc
+    public static bool P3AskTc {
+        get {
+            ///PROPERTY_GETTER_START P3AskTc
+            return _P3AskTc;
+            ///PROPERTY_GETTER_END P3AskTc
+        }
+        set {
+            ///PROPERTY_SETTER_START P3AskTc
+            var oldValue = value;
+_P3AskTc = value;
+GameFlagChanged("P3AskTc", oldValue, value);
+            ///PROPERTY_SETTER_END P3AskTc
+        }
+    }
+
+    //PROPERTY _P3HarCurious
+    private static bool _P3HarCurious = false;
+
+    //PROPERTY P3HarCurious
+    public static bool P3HarCurious {
+        get {
+            ///PROPERTY_GETTER_START P3HarCurious
+            return _P3HarCurious;
+            ///PROPERTY_GETTER_END P3HarCurious
+        }
+        set {
+            ///PROPERTY_SETTER_START P3HarCurious
+            var oldValue = value;
+_P3HarCurious = value;
+GameFlagChanged("P3HarCurious", oldValue, value);
+            ///PROPERTY_SETTER_END P3HarCurious
         }
     }
 }
