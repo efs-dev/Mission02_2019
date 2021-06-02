@@ -694,6 +694,8 @@ public class Dialog_p3_jon_001 {
     public void n01_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n01_p0_show
         /*//?p3_family = true*/
+        GameFlags.P3Family = true;
+        // Not used for anything?
         ///METHOD_BODY_END n01_p0_show
     }
 
@@ -701,6 +703,7 @@ public class Dialog_p3_jon_001 {
     public void n04_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r0_select
         /*//?p3_faith = true*/
+        GameFlags.P3Faith = true;
         ///METHOD_BODY_END n04_r0_select
     }
 
@@ -708,6 +711,7 @@ public class Dialog_p3_jon_001 {
     public void n05_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n05_r0_select
         /*//?p3_faith = true*/
+        GameFlags.P3Faith= true;
         ///METHOD_BODY_END n05_r0_select
     }
 
@@ -715,6 +719,7 @@ public class Dialog_p3_jon_001 {
     public void n10_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r0_select
         /*//?p3_faith = true*/
+        GameFlags.P3Faith = true;
         ///METHOD_BODY_END n10_r0_select
     }
 
@@ -722,6 +727,7 @@ public class Dialog_p3_jon_001 {
     public void n22_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n22_r0_select
         /*//?p3_faith = true*/
+        GameFlags.P3Faith = true;
         ///METHOD_BODY_END n22_r0_select
     }
 }

@@ -14,6 +14,90 @@ using Efs.Dialogs;
 public class Dialog_p3_mil_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p3_ask_millie_help
+        private bool _p3_ask_millie_help = false;
+
+        //PROPERTY p3_ask_millie_help
+        public bool p3_ask_millie_help {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_millie_help
+                        return _p3_ask_millie_help;
+                        ///PROPERTY_GETTER_END p3_ask_millie_help
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_millie_help
+                        _p3_ask_millie_help = value;
+                        ///PROPERTY_SETTER_END p3_ask_millie_help
+                }
+        }
+
+        //PROPERTY _p3_kerchief_done
+        private bool _p3_kerchief_done = false;
+
+        //PROPERTY p3_kerchief_done
+        public bool p3_kerchief_done {
+                get {
+                        ///PROPERTY_GETTER_START p3_kerchief_done
+                        return _p3_kerchief_done;
+                        ///PROPERTY_GETTER_END p3_kerchief_done
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_kerchief_done
+                        _p3_kerchief_done = value;
+                        ///PROPERTY_SETTER_END p3_kerchief_done
+                }
+        }
+
+        //PROPERTY _p3_millie_laundry
+        private bool _p3_millie_laundry = false;
+
+        //PROPERTY p3_millie_laundry
+        public bool p3_millie_laundry {
+                get {
+                        ///PROPERTY_GETTER_START p3_millie_laundry
+                        return _p3_millie_laundry;
+                        ///PROPERTY_GETTER_END p3_millie_laundry
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_millie_laundry
+                        _p3_millie_laundry = value;
+                        ///PROPERTY_SETTER_END p3_millie_laundry
+                }
+        }
+
+        //PROPERTY _p3_millie_lesson_offer
+        private bool _p3_millie_lesson_offer = false;
+
+        //PROPERTY p3_millie_lesson_offer
+        public bool p3_millie_lesson_offer {
+                get {
+                        ///PROPERTY_GETTER_START p3_millie_lesson_offer
+                        return _p3_millie_lesson_offer;
+                        ///PROPERTY_GETTER_END p3_millie_lesson_offer
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_millie_lesson_offer
+                        _p3_millie_lesson_offer = value;
+                        ///PROPERTY_SETTER_END p3_millie_lesson_offer
+                }
+        }
+
+        //PROPERTY _p3_seen_stowe_letter
+        private bool _p3_seen_stowe_letter = false;
+
+        //PROPERTY p3_seen_stowe_letter
+        public bool p3_seen_stowe_letter {
+                get {
+                        ///PROPERTY_GETTER_START p3_seen_stowe_letter
+                        return _p3_seen_stowe_letter;
+                        ///PROPERTY_GETTER_END p3_seen_stowe_letter
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_seen_stowe_letter
+                        _p3_seen_stowe_letter = value;
+                        ///PROPERTY_SETTER_END p3_seen_stowe_letter
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -1645,7 +1729,7 @@ public class Dialog_p3_mil_001 {
     public bool n11_p1_condition (  ) {
         ///METHOD_BODY_START n11_p1_condition
         /*//if ((?p3_millie_lesson_offer = false) AND (?p3_millie_lesson_promise = false))*/
-        return true;
+        return !DialogGameFlags.p3_millie_lesson_offer && !GameFlags.P3MillieLessonPromise;
         ///METHOD_BODY_END n11_p1_condition
     }
 
@@ -1653,7 +1737,7 @@ public class Dialog_p3_mil_001 {
     public bool n11_p2_condition (  ) {
         ///METHOD_BODY_START n11_p2_condition
         /*//if (?p3_kerchief_done = false)*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done;
         ///METHOD_BODY_END n11_p2_condition
     }
 
@@ -1661,7 +1745,7 @@ public class Dialog_p3_mil_001 {
     public bool n51_p1_condition (  ) {
         ///METHOD_BODY_START n51_p1_condition
         /*//if (?p3_kerchief_done = true)*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done;
         ///METHOD_BODY_END n51_p1_condition
     }
 
@@ -1669,7 +1753,7 @@ public class Dialog_p3_mil_001 {
     public bool n55_p1_condition (  ) {
         ///METHOD_BODY_START n55_p1_condition
         /*//if ((?p3_millie_lesson_offer = false) AND (?p3_millie_lesson_promise = false))*/
-        return true;
+        return !DialogGameFlags.p3_millie_lesson_offer && !GameFlags.P3MillieLessonPromise;
         ///METHOD_BODY_END n55_p1_condition
     }
 
@@ -1677,7 +1761,7 @@ public class Dialog_p3_mil_001 {
     public bool n55_p2_condition (  ) {
         ///METHOD_BODY_START n55_p2_condition
         /*//if (?p3_kerchief_done = false)*/
-        return true;
+        return !DialogGameFlags.p3_kerchief_done;
         ///METHOD_BODY_END n55_p2_condition
     }
 
@@ -1685,6 +1769,7 @@ public class Dialog_p3_mil_001 {
     public void n02_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n02_p0_show
         /*//set ?p3_millie_laundry = true*/
+        DialogGameFlags.p3_millie_laundry = true;
         ///METHOD_BODY_END n02_p0_show
     }
 
@@ -1693,6 +1778,7 @@ public class Dialog_p3_mil_001 {
         ///METHOD_BODY_START n03_p0_show
         /*//#mil_points = #mil_points + 1
         //updateMessage ("Millie's opinion of you improves.")*/
+        GameFlags.P3MilPoints++;
         ///METHOD_BODY_END n03_p0_show
     }
 
@@ -1708,6 +1794,7 @@ public class Dialog_p3_mil_001 {
     public void n11_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n11_p1_show
         /*//set ?p3_millie_lesson_offer = true*/
+        DialogGameFlags.p3_millie_lesson_offer = true;
         ///METHOD_BODY_END n11_p1_show
     }
 
@@ -1715,6 +1802,7 @@ public class Dialog_p3_mil_001 {
     public void n23_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n23_p0_show
         /*//set ?p3_millie_lesson_offer = true*/
+        DialogGameFlags.p3_millie_lesson_offer = true;
         ///METHOD_BODY_END n23_p0_show
     }
 
@@ -1733,6 +1821,7 @@ public class Dialog_p3_mil_001 {
         /*//set ?p3_millie_lesson_offer = true
         //showNpc( true, 1)
         //setLayer("fg", "")*/
+        DialogGameFlags.p3_millie_lesson_offer = true;
         ///METHOD_BODY_END n31_p0_show
     }
 
@@ -1780,6 +1869,7 @@ public class Dialog_p3_mil_001 {
     public void n55_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n55_p1_show
         /*//set ?p3_millie_lesson_offer = true*/
+        DialogGameFlags.p3_millie_lesson_offer = true;
         ///METHOD_BODY_END n55_p1_show
     }
 
@@ -1787,7 +1877,7 @@ public class Dialog_p3_mil_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?p3_ask_millie = true)*/
-        return true;
+        return GameFlags.P3AskMilllie;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -1795,7 +1885,7 @@ public class Dialog_p3_mil_001 {
     public bool n11_r0_condition (  ) {
         ///METHOD_BODY_START n11_r0_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = true))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n11_r0_condition
     }
 
@@ -1803,7 +1893,7 @@ public class Dialog_p3_mil_001 {
     public bool n11_r1_condition (  ) {
         ///METHOD_BODY_START n11_r1_condition
         /*//if (?p3_kerchief_done = false)*/
-        return true;
+        return !DialogGameFlags.p3_kerchief_done;
         ///METHOD_BODY_END n11_r1_condition
     }
 
@@ -1811,7 +1901,7 @@ public class Dialog_p3_mil_001 {
     public bool n11_r2_condition (  ) {
         ///METHOD_BODY_START n11_r2_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = false))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n11_r2_condition
     }
 
@@ -1819,7 +1909,7 @@ public class Dialog_p3_mil_001 {
     public bool n11_r3_condition (  ) {
         ///METHOD_BODY_START n11_r3_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = false))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n11_r3_condition
     }
 
@@ -1827,7 +1917,7 @@ public class Dialog_p3_mil_001 {
     public bool n11_r4_condition (  ) {
         ///METHOD_BODY_START n11_r4_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = false))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n11_r4_condition
     }
 
@@ -1835,7 +1925,7 @@ public class Dialog_p3_mil_001 {
     public bool n14_r0_condition (  ) {
         ///METHOD_BODY_START n14_r0_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n14_r0_condition
     }
 
@@ -1843,7 +1933,7 @@ public class Dialog_p3_mil_001 {
     public bool n16_r1_condition (  ) {
         ///METHOD_BODY_START n16_r1_condition
         /*//if (?p3_millie_laundry = true)*/
-        return true;
+        return DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n16_r1_condition
     }
 
@@ -1851,7 +1941,7 @@ public class Dialog_p3_mil_001 {
     public bool n16_r2_condition (  ) {
         ///METHOD_BODY_START n16_r2_condition
         /*//if (?p3_millie_laundry = true)*/
-        return true;
+        return DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n16_r2_condition
     }
 
@@ -1859,7 +1949,7 @@ public class Dialog_p3_mil_001 {
     public bool n16_r3_condition (  ) {
         ///METHOD_BODY_START n16_r3_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n16_r3_condition
     }
 
@@ -1867,7 +1957,7 @@ public class Dialog_p3_mil_001 {
     public bool n16_r4_condition (  ) {
         ///METHOD_BODY_START n16_r4_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n16_r4_condition
     }
 
@@ -1875,7 +1965,7 @@ public class Dialog_p3_mil_001 {
     public bool n17_r0_condition (  ) {
         ///METHOD_BODY_START n17_r0_condition
         /*//if (?p3_know_parker_resourceful = false)*/
-        return true;
+        return !GameFlags.P3KnowParkerResourceful;
         ///METHOD_BODY_END n17_r0_condition
     }
 
@@ -1883,7 +1973,7 @@ public class Dialog_p3_mil_001 {
     public bool n17_r1_condition (  ) {
         ///METHOD_BODY_START n17_r1_condition
         /*//if (?p3_know_parker_resourceful = true)*/
-        return true;
+        return GameFlags.P3KnowParkerResourceful;
         ///METHOD_BODY_END n17_r1_condition
     }
 
@@ -1891,7 +1981,7 @@ public class Dialog_p3_mil_001 {
     public bool n18_r0_condition (  ) {
         ///METHOD_BODY_START n18_r0_condition
         /*//if (?p3_millie_laundry = true)*/
-        return true;
+        return DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n18_r0_condition
     }
 
@@ -1899,7 +1989,7 @@ public class Dialog_p3_mil_001 {
     public bool n18_r1_condition (  ) {
         ///METHOD_BODY_START n18_r1_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n18_r1_condition
     }
 
@@ -1907,7 +1997,7 @@ public class Dialog_p3_mil_001 {
     public bool n19_r0_condition (  ) {
         ///METHOD_BODY_START n19_r0_condition
         /*//if (?p3_millie_lesson_promise = false)*/
-        return true;
+        return !GameFlags.P3MillieLessonPromise;
         ///METHOD_BODY_END n19_r0_condition
     }
 
@@ -1915,7 +2005,7 @@ public class Dialog_p3_mil_001 {
     public bool n19_r1_condition (  ) {
         ///METHOD_BODY_START n19_r1_condition
         /*//if (?p3_ask_millie_help = true)*/
-        return true;
+        return DialogGameFlags.p3_ask_millie_help;
         ///METHOD_BODY_END n19_r1_condition
     }
 
@@ -1923,7 +2013,7 @@ public class Dialog_p3_mil_001 {
     public bool n19_r2_condition (  ) {
         ///METHOD_BODY_START n19_r2_condition
         /*//if (?p3_seen_stowe_letter = true)*/
-        return true;
+        return DialogGameFlags.p3_seen_stowe_letter;
         ///METHOD_BODY_END n19_r2_condition
     }
 
@@ -1931,7 +2021,7 @@ public class Dialog_p3_mil_001 {
     public bool n30_r1_condition (  ) {
         ///METHOD_BODY_START n30_r1_condition
         /*//if (?p3_millie_lesson_offer = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n30_r1_condition
     }
 
@@ -1939,7 +2029,7 @@ public class Dialog_p3_mil_001 {
     public bool n40_r0_condition (  ) {
         ///METHOD_BODY_START n40_r0_condition
         /*//if (?p3_millie_laundry = true)*/
-        return true;
+        return DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n40_r0_condition
     }
 
@@ -1947,7 +2037,7 @@ public class Dialog_p3_mil_001 {
     public bool n40_r1_condition (  ) {
         ///METHOD_BODY_START n40_r1_condition
         /*//if (?p3_ask_millie_help = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_millie_help;
         ///METHOD_BODY_END n40_r1_condition
     }
 
@@ -1955,7 +2045,7 @@ public class Dialog_p3_mil_001 {
     public bool n40_r2_condition (  ) {
         ///METHOD_BODY_START n40_r2_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n40_r2_condition
     }
 
@@ -1963,7 +2053,7 @@ public class Dialog_p3_mil_001 {
     public bool n41_r0_condition (  ) {
         ///METHOD_BODY_START n41_r0_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n41_r0_condition
     }
 
@@ -1971,7 +2061,7 @@ public class Dialog_p3_mil_001 {
     public bool n41_r1_condition (  ) {
         ///METHOD_BODY_START n41_r1_condition
         /*//if (?p3_millie_laundry = true)*/
-        return true;
+        return DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n41_r1_condition
     }
 
@@ -1979,7 +2069,7 @@ public class Dialog_p3_mil_001 {
     public bool n41_r2_condition (  ) {
         ///METHOD_BODY_START n41_r2_condition
         /*//if (?p3_asked_canada = false)*/
-        return true;
+        return !GameFlags.P3AskedCanada;
         ///METHOD_BODY_END n41_r2_condition
     }
 
@@ -1987,7 +2077,7 @@ public class Dialog_p3_mil_001 {
     public bool n41_r3_condition (  ) {
         ///METHOD_BODY_START n41_r3_condition
         /*// if (?p3_millie_lesson_offer = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n41_r3_condition
     }
 
@@ -1995,7 +2085,7 @@ public class Dialog_p3_mil_001 {
     public bool n41_r4_condition (  ) {
         ///METHOD_BODY_START n41_r4_condition
         /*//if (?p3_ask_millie_help = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_millie_help;
         ///METHOD_BODY_END n41_r4_condition
     }
 
@@ -2003,7 +2093,7 @@ public class Dialog_p3_mil_001 {
     public bool n42_r0_condition (  ) {
         ///METHOD_BODY_START n42_r0_condition
         /*//if (?p3_millie_laundry = true)*/
-        return true;
+        return DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n42_r0_condition
     }
 
@@ -2011,7 +2101,7 @@ public class Dialog_p3_mil_001 {
     public bool n42_r1_condition (  ) {
         ///METHOD_BODY_START n42_r1_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n42_r1_condition
     }
 
@@ -2019,7 +2109,7 @@ public class Dialog_p3_mil_001 {
     public bool n43_r0_condition (  ) {
         ///METHOD_BODY_START n43_r0_condition
         /*//if (?p3_millie_laundry = false)*/
-        return true;
+        return !DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n43_r0_condition
     }
 
@@ -2027,7 +2117,7 @@ public class Dialog_p3_mil_001 {
     public bool n43_r1_condition (  ) {
         ///METHOD_BODY_START n43_r1_condition
         /*//if (?p3_millie_laundry = true)*/
-        return true;
+        return DialogGameFlags.p3_millie_laundry;
         ///METHOD_BODY_END n43_r1_condition
     }
 
@@ -2035,7 +2125,7 @@ public class Dialog_p3_mil_001 {
     public bool n52_r0_condition (  ) {
         ///METHOD_BODY_START n52_r0_condition
         /*//if (?p3_ask_millie_help = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_millie_help;
         ///METHOD_BODY_END n52_r0_condition
     }
 
@@ -2043,7 +2133,7 @@ public class Dialog_p3_mil_001 {
     public bool n55_r0_condition (  ) {
         ///METHOD_BODY_START n55_r0_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = true))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n55_r0_condition
     }
 
@@ -2051,7 +2141,7 @@ public class Dialog_p3_mil_001 {
     public bool n55_r1_condition (  ) {
         ///METHOD_BODY_START n55_r1_condition
         /*//if (?p3_kerchief_done = false)*/
-        return true;
+        return !DialogGameFlags.p3_kerchief_done;
         ///METHOD_BODY_END n55_r1_condition
     }
 
@@ -2059,7 +2149,7 @@ public class Dialog_p3_mil_001 {
     public bool n55_r2_condition (  ) {
         ///METHOD_BODY_START n55_r2_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = false))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n55_r2_condition
     }
 
@@ -2067,7 +2157,7 @@ public class Dialog_p3_mil_001 {
     public bool n55_r3_condition (  ) {
         ///METHOD_BODY_START n55_r3_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = false))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n55_r3_condition
     }
 
@@ -2075,7 +2165,7 @@ public class Dialog_p3_mil_001 {
     public bool n55_r4_condition (  ) {
         ///METHOD_BODY_START n55_r4_condition
         /*//if ((?p3_kerchief_done = true) AND (?p3_millie_lesson_offer = false))*/
-        return true;
+        return DialogGameFlags.p3_kerchief_done && !DialogGameFlags.p3_millie_lesson_offer;
         ///METHOD_BODY_END n55_r4_condition
     }
 
@@ -2083,6 +2173,7 @@ public class Dialog_p3_mil_001 {
     public void n01_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r0_select
         /*//set ?p3_kerchief_done = true*/
+        DialogGameFlags.p3_kerchief_done = true;
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -2090,6 +2181,7 @@ public class Dialog_p3_mil_001 {
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
         /*//set ?p3_ask_millie_help = true*/
+        DialogGameFlags.p3_ask_millie_help = true;
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -2122,6 +2214,7 @@ public class Dialog_p3_mil_001 {
         /*//showNpc(false,1)
         //setLayer("fg", "gfx/stills/letter/letter2.swf")
         //?p3_mil_curious = true*/
+        GameFlags.P3MilCurious = true;
         ///METHOD_BODY_END n07_r0_select
     }
 
@@ -2161,6 +2254,7 @@ public class Dialog_p3_mil_001 {
     public void n11_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r1_select
         /*//set ?p3_kerchief_done = true*/
+        DialogGameFlags.p3_kerchief_done = true;
         ///METHOD_BODY_END n11_r1_select
     }
 
@@ -2169,6 +2263,7 @@ public class Dialog_p3_mil_001 {
         ///METHOD_BODY_START n11_r3_select
         /*//#mil_points = #mil_points + 1
         //updateMessage ("Millie's opinion of you improves.")*/
+        GameFlags.P3MilPoints++;
         ///METHOD_BODY_END n11_r3_select
     }
 
@@ -2177,6 +2272,8 @@ public class Dialog_p3_mil_001 {
         ///METHOD_BODY_START n11_r4_select
         /*//set ?p3_millie_lesson_promise = true
         //#mil_points = #mil_points + 2*/
+        GameFlags.P3MillieLessonPromise = true;
+        GameFlags.P3MilPoints+=2;
         ///METHOD_BODY_END n11_r4_select
     }
 
@@ -2191,6 +2288,7 @@ public class Dialog_p3_mil_001 {
     public void n17_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n17_r0_select
         /*//set ?p3_know_parker_resourceful_mil = true*/
+        GameFlags.P3KnowParkerResourcefulMil = true;
         ///METHOD_BODY_END n17_r0_select
     }
 
@@ -2198,6 +2296,7 @@ public class Dialog_p3_mil_001 {
     public void n17_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n17_r1_select
         /*//set ?p3_know_parker_resourceful_mil = true*/
+        GameFlags.P3KnowParkerResourcefulMil = true;
         ///METHOD_BODY_END n17_r1_select
     }
 
@@ -2226,6 +2325,7 @@ public class Dialog_p3_mil_001 {
     public void n23_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n23_r2_select
         /*//set ?p3_millie_lesson_promise = true*/
+        GameFlags.P3MillieLessonPromise = true;
         ///METHOD_BODY_END n23_r2_select
     }
 
@@ -2233,6 +2333,7 @@ public class Dialog_p3_mil_001 {
     public void n30_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n30_r1_select
         /*//?p3_millie_lesson_offer = true*/
+        DialogGameFlags.p3_millie_lesson_offer = true;
         ///METHOD_BODY_END n30_r1_select
     }
 
@@ -2240,6 +2341,7 @@ public class Dialog_p3_mil_001 {
     public void n31_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n31_r2_select
         /*//set ?p3_millie_lesson_promise = true*/
+        GameFlags.P3MillieLessonPromise = true;
         ///METHOD_BODY_END n31_r2_select
     }
 
@@ -2268,6 +2370,7 @@ public class Dialog_p3_mil_001 {
     public void n40_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n40_r1_select
         /*//set ?p3_ask_millie_help = true*/
+        DialogGameFlags.p3_ask_millie_help = true;
         ///METHOD_BODY_END n40_r1_select
     }
 
@@ -2275,6 +2378,7 @@ public class Dialog_p3_mil_001 {
     public void n40_r3_select ( DialogResponse response ) {
         ///METHOD_BODY_START n40_r3_select
         /*//set ?p3_ask_funds = true*/
+        GameFlags.P3AskFunds = true;
         ///METHOD_BODY_END n40_r3_select
     }
 
@@ -2282,6 +2386,7 @@ public class Dialog_p3_mil_001 {
     public void n41_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n41_r2_select
         /*//set ?p3_asked_canada = true*/
+        GameFlags.P3AskedCanada = true;
         ///METHOD_BODY_END n41_r2_select
     }
 
@@ -2291,6 +2396,9 @@ public class Dialog_p3_mil_001 {
         /*//set ?p3_millie_lesson_promise = true
         //?p3_millie_lesson_offer = true
         //#mil_points = #mil_points + 1*/
+        DialogGameFlags.p3_millie_lesson_offer = true;
+        GameFlags.P3MillieLessonPromise = true;
+        GameFlags.P3MilPoints++;
         ///METHOD_BODY_END n41_r3_select
     }
 
@@ -2298,6 +2406,7 @@ public class Dialog_p3_mil_001 {
     public void n41_r4_select ( DialogResponse response ) {
         ///METHOD_BODY_START n41_r4_select
         /*//set ?p3_ask_millie_help = true*/
+        DialogGameFlags.p3_ask_millie_help = true;
         ///METHOD_BODY_END n41_r4_select
     }
 
@@ -2312,6 +2421,7 @@ public class Dialog_p3_mil_001 {
     public void n52_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n52_r0_select
         /*//set ?p3_ask_millie_help = true*/
+        DialogGameFlags.p3_ask_millie_help = true;
         ///METHOD_BODY_END n52_r0_select
     }
 
@@ -2327,6 +2437,7 @@ public class Dialog_p3_mil_001 {
         ///METHOD_BODY_START n53_r0_select
         /*//setLayer("bg", "gfx/swfs/dlg_bg/dbg_millie_house.swf")
         //#mil_points = #mil_points + 1*/
+        GameFlags.P3MilPoints++;
         ///METHOD_BODY_END n53_r0_select
     }
 
@@ -2341,6 +2452,7 @@ public class Dialog_p3_mil_001 {
     public void n55_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n55_r1_select
         /*//set ?p3_kerchief_done = true*/
+        DialogGameFlags.p3_kerchief_done = true;
         ///METHOD_BODY_END n55_r1_select
     }
 
@@ -2349,6 +2461,7 @@ public class Dialog_p3_mil_001 {
         ///METHOD_BODY_START n55_r3_select
         /*//#mil_points = #mil_points + 1
         //updateMessage ("Millie's opinion of you improves.")*/
+        GameFlags.P3MilPoints+=1;
         ///METHOD_BODY_END n55_r3_select
     }
 
@@ -2357,6 +2470,8 @@ public class Dialog_p3_mil_001 {
         ///METHOD_BODY_START n55_r4_select
         /*//set ?p3_millie_lesson_promise = true
         //#mil_points = #mil_points + 2*/
+        GameFlags.P3MillieLessonPromise = true;
+        GameFlags.P3MilPoints+=2;
         ///METHOD_BODY_END n55_r4_select
     }
 }

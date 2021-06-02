@@ -14,6 +14,158 @@ using Efs.Dialogs;
 public class Dialog_p3_par_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p3_ask_help_hen
+        private bool _p3_ask_help_hen = false;
+
+        //PROPERTY p3_ask_help_hen
+        public bool p3_ask_help_hen {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_help_hen
+                        return _p3_ask_help_hen;
+                        ///PROPERTY_GETTER_END p3_ask_help_hen
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_help_hen
+                        _p3_ask_help_hen = value;
+                        ///PROPERTY_SETTER_END p3_ask_help_hen
+                }
+        }
+
+        //PROPERTY _p3_ask_par_family
+        private bool _p3_ask_par_family = false;
+
+        //PROPERTY p3_ask_par_family
+        public bool p3_ask_par_family {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_par_family
+                        return _p3_ask_par_family;
+                        ///PROPERTY_GETTER_END p3_ask_par_family
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_par_family
+                        _p3_ask_par_family = value;
+                        ///PROPERTY_SETTER_END p3_ask_par_family
+                }
+        }
+
+        //PROPERTY _p3_ask_see_hen
+        private bool _p3_ask_see_hen = false;
+
+        //PROPERTY p3_ask_see_hen
+        public bool p3_ask_see_hen {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_see_hen
+                        return _p3_ask_see_hen;
+                        ///PROPERTY_GETTER_END p3_ask_see_hen
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_see_hen
+                        _p3_ask_see_hen = value;
+                        ///PROPERTY_SETTER_END p3_ask_see_hen
+                }
+        }
+
+        //PROPERTY _p3_disgust_tc
+        private bool _p3_disgust_tc = false;
+
+        //PROPERTY p3_disgust_tc
+        public bool p3_disgust_tc {
+                get {
+                        ///PROPERTY_GETTER_START p3_disgust_tc
+                        return _p3_disgust_tc;
+                        ///PROPERTY_GETTER_END p3_disgust_tc
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_disgust_tc
+                        _p3_disgust_tc = value;
+                        ///PROPERTY_SETTER_END p3_disgust_tc
+                }
+        }
+
+        //PROPERTY _p3_fighting_spirit
+        private bool _p3_fighting_spirit = false;
+
+        //PROPERTY p3_fighting_spirit
+        public bool p3_fighting_spirit {
+                get {
+                        ///PROPERTY_GETTER_START p3_fighting_spirit
+                        return _p3_fighting_spirit;
+                        ///PROPERTY_GETTER_END p3_fighting_spirit
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_fighting_spirit
+                        _p3_fighting_spirit = value;
+                        ///PROPERTY_SETTER_END p3_fighting_spirit
+                }
+        }
+
+        //PROPERTY _p3_from_n10
+        private bool _p3_from_n10 = false;
+
+        //PROPERTY p3_from_n10
+        public bool p3_from_n10 {
+                get {
+                        ///PROPERTY_GETTER_START p3_from_n10
+                        return _p3_from_n10;
+                        ///PROPERTY_GETTER_END p3_from_n10
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_from_n10
+                        _p3_from_n10 = value;
+                        ///PROPERTY_SETTER_END p3_from_n10
+                }
+        }
+
+        //PROPERTY _p3_hen_discussed
+        private bool _p3_hen_discussed = false;
+
+        //PROPERTY p3_hen_discussed
+        public bool p3_hen_discussed {
+                get {
+                        ///PROPERTY_GETTER_START p3_hen_discussed
+                        return _p3_hen_discussed;
+                        ///PROPERTY_GETTER_END p3_hen_discussed
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_hen_discussed
+                        _p3_hen_discussed = value;
+                        ///PROPERTY_SETTER_END p3_hen_discussed
+                }
+        }
+
+        //PROPERTY _p3_know_henry_aff
+        private bool _p3_know_henry_aff = false;
+
+        //PROPERTY p3_know_henry_aff
+        public bool p3_know_henry_aff {
+                get {
+                        ///PROPERTY_GETTER_START p3_know_henry_aff
+                        return _p3_know_henry_aff;
+                        ///PROPERTY_GETTER_END p3_know_henry_aff
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_know_henry_aff
+                        _p3_know_henry_aff = value;
+                        ///PROPERTY_SETTER_END p3_know_henry_aff
+                }
+        }
+
+        //PROPERTY _p3_lucy_screams
+        private bool _p3_lucy_screams = false;
+
+        //PROPERTY p3_lucy_screams
+        public bool p3_lucy_screams {
+                get {
+                        ///PROPERTY_GETTER_START p3_lucy_screams
+                        return _p3_lucy_screams;
+                        ///PROPERTY_GETTER_END p3_lucy_screams
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_lucy_screams
+                        _p3_lucy_screams = value;
+                        ///PROPERTY_SETTER_END p3_lucy_screams
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -1439,7 +1591,7 @@ public class Dialog_p3_par_001 {
     public bool n06_p0_condition (  ) {
         ///METHOD_BODY_START n06_p0_condition
         /*//if (?p3_did_hotel = false)*/
-        return true;
+        return !GameFlags.P3DidHotel;
         ///METHOD_BODY_END n06_p0_condition
     }
 
@@ -1447,7 +1599,7 @@ public class Dialog_p3_par_001 {
     public bool n06_p1_condition (  ) {
         ///METHOD_BODY_START n06_p1_condition
         /*//if ((?p3_did_hotel = true) AND (?p3_ask_tc = false))*/
-        return true;
+        return !GameFlags.P3AskTc && GameFlags.P3DidHotel;
         ///METHOD_BODY_END n06_p1_condition
     }
 
@@ -1455,7 +1607,7 @@ public class Dialog_p3_par_001 {
     public bool n06_p2_condition (  ) {
         ///METHOD_BODY_START n06_p2_condition
         /*//if (?p3_ask_tc = true)*/
-        return true;
+        return GameFlags.P3AskTc;
         ///METHOD_BODY_END n06_p2_condition
     }
 
@@ -1463,7 +1615,7 @@ public class Dialog_p3_par_001 {
     public bool n07_p0_condition (  ) {
         ///METHOD_BODY_START n07_p0_condition
         /*//if ((?p3_know_parker_resourceful_mil = true) AND (?p3_know_parker_resourceful = true))*/
-        return true;
+        return GameFlags.P3KnowParkerResourceful && GameFlags.P3KnowParkerResourcefulMil;
         ///METHOD_BODY_END n07_p0_condition
     }
 
@@ -1471,7 +1623,7 @@ public class Dialog_p3_par_001 {
     public bool n07_p1_condition (  ) {
         ///METHOD_BODY_START n07_p1_condition
         /*//if ((?p3_know_parker_resourceful_mil = true) AND (?p3_know_parker_resourceful = false))*/
-        return true;
+        return !GameFlags.P3KnowParkerResourceful && GameFlags.P3KnowParkerResourcefulMil;
         ///METHOD_BODY_END n07_p1_condition
     }
 
@@ -1479,7 +1631,7 @@ public class Dialog_p3_par_001 {
     public bool n07_p2_condition (  ) {
         ///METHOD_BODY_START n07_p2_condition
         /*//if ((?p3_know_parker_resourceful_mil = false) AND (?p3_know_parker_resourceful = true))*/
-        return true;
+        return GameFlags.P3KnowParkerResourceful && !GameFlags.P3KnowParkerResourcefulMil;
         ///METHOD_BODY_END n07_p2_condition
     }
 
@@ -1487,7 +1639,7 @@ public class Dialog_p3_par_001 {
     public bool n11_p1_condition (  ) {
         ///METHOD_BODY_START n11_p1_condition
         /*//if (?p3_from_n10 = false)*/
-        return true;
+        return !DialogGameFlags.p3_from_n10;
         ///METHOD_BODY_END n11_p1_condition
     }
 
@@ -1495,7 +1647,7 @@ public class Dialog_p3_par_001 {
     public bool n14_p0_condition (  ) {
         ///METHOD_BODY_START n14_p0_condition
         /*//if (?p3_disgust_tc = true)*/
-        return true;
+        return DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n14_p0_condition
     }
 
@@ -1503,7 +1655,7 @@ public class Dialog_p3_par_001 {
     public bool n14_p1_condition (  ) {
         ///METHOD_BODY_START n14_p1_condition
         /*//if (?p3_disgust_tc = false)*/
-        return true;
+        return !DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n14_p1_condition
     }
 
@@ -1511,7 +1663,7 @@ public class Dialog_p3_par_001 {
     public bool n28_p1_condition (  ) {
         ///METHOD_BODY_START n28_p1_condition
         /*//if (?p3_lucy_screams = true)*/
-        return true;
+        return DialogGameFlags.p3_lucy_screams;
         ///METHOD_BODY_END n28_p1_condition
     }
 
@@ -1519,7 +1671,7 @@ public class Dialog_p3_par_001 {
     public bool n28_p2_condition (  ) {
         ///METHOD_BODY_START n28_p2_condition
         /*//if (?p3_fighting_spirit=true)*/
-        return true;
+        return DialogGameFlags.p3_fighting_spirit;
         ///METHOD_BODY_END n28_p2_condition
     }
 
@@ -1529,6 +1681,7 @@ public class Dialog_p3_par_001 {
         /*//setLayer("fg", "gfx/stills/affidavit/affidavit2.swf")
         //#par_points = #par_points + 1
         //updateMessage ("Parker's opinion of you improves.")*/
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n05_p0_show
     }
 
@@ -1536,6 +1689,7 @@ public class Dialog_p3_par_001 {
     public void n14_p1_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n14_p1_show
         /*//set ?p3_disgust_tc = true*/
+        DialogGameFlags.p3_disgust_tc = true;
         ///METHOD_BODY_END n14_p1_show
     }
 
@@ -1544,6 +1698,7 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n17_p0_show
         /*//#par_points = #par_points + 1
         //updateMessage ("Parker's opinion of you improves.")*/
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n17_p0_show
     }
 
@@ -1552,6 +1707,7 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n31_p0_show
         /*//#par_points = #par_points + 1
         //updateMessage ("Parker's opinion of you improves.")*/
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n31_p0_show
     }
 
@@ -1560,6 +1716,7 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n36_p0_show
         /*//#par_points = #par_points + 1
         //updateMessage ("Parker's opinion of you improves.")*/
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n36_p0_show
     }
 
@@ -1567,7 +1724,7 @@ public class Dialog_p3_par_001 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if ((?p3_know_parker_resourceful = true) OR (?p3_know_parker_resourceful_mil = true))*/
-        return true;
+        return GameFlags.P3KnowParkerResourceful || GameFlags.P3KnowParkerResourcefulMil;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -1575,7 +1732,7 @@ public class Dialog_p3_par_001 {
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
         /*//if (?p3_have_aff = true)*/
-        return true;
+        return GameFlags.P3HaveAff;
         ///METHOD_BODY_END n03_r0_condition
     }
 
@@ -1583,7 +1740,7 @@ public class Dialog_p3_par_001 {
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
         /*//if ((?p3_know_parker_resourceful_mil = true) AND (?p3_know_parker_resourceful = true))*/
-        return true;
+        return GameFlags.P3KnowParkerResourceful && GameFlags.P3KnowParkerResourcefulMil;
         ///METHOD_BODY_END n04_r0_condition
     }
 
@@ -1591,7 +1748,7 @@ public class Dialog_p3_par_001 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if ((?p3_know_parker_resourceful_mil = true) AND (?p3_know_parker_resourceful = false))*/
-        return true;
+        return GameFlags.P3KnowParkerResourceful && !GameFlags.P3KnowParkerResourcefulMil;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -1599,7 +1756,7 @@ public class Dialog_p3_par_001 {
     public bool n04_r2_condition (  ) {
         ///METHOD_BODY_START n04_r2_condition
         /*//if ((?p3_know_parker_resourceful_mil = false) AND (?p3_know_parker_resourceful = true))*/
-        return true;
+        return !GameFlags.P3KnowParkerResourceful && GameFlags.P3KnowParkerResourcefulMil;
         ///METHOD_BODY_END n04_r2_condition
     }
 
@@ -1607,7 +1764,7 @@ public class Dialog_p3_par_001 {
     public bool n05_r1_condition (  ) {
         ///METHOD_BODY_START n05_r1_condition
         /*//if ((?p3_know_henry_aff = false) AND (?p3_hen_discussed = false))*/
-        return true;
+        return !DialogGameFlags.p3_know_henry_aff && !DialogGameFlags.p3_hen_discussed;
         ///METHOD_BODY_END n05_r1_condition
     }
 
@@ -1615,7 +1772,7 @@ public class Dialog_p3_par_001 {
     public bool n10_r0_condition (  ) {
         ///METHOD_BODY_START n10_r0_condition
         /*//if ($escape_type = "alone")*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END n10_r0_condition
     }
 
@@ -1623,7 +1780,9 @@ public class Dialog_p3_par_001 {
     public bool n10_r1_condition (  ) {
         ///METHOD_BODY_START n10_r1_condition
         /*//if ($escape_type = "henry")*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
+        
+        // TODO: I think this was an error in the original? Henry getting caught is supposed to change this variable, and that always happens...
         ///METHOD_BODY_END n10_r1_condition
     }
 
@@ -1631,7 +1790,7 @@ public class Dialog_p3_par_001 {
     public bool n11_r0_condition (  ) {
         ///METHOD_BODY_START n11_r0_condition
         /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
-        return true;
+        return !GameFlags.P3DidHotel || GameFlags.P3AffRead;
         ///METHOD_BODY_END n11_r0_condition
     }
 
@@ -1639,7 +1798,7 @@ public class Dialog_p3_par_001 {
     public bool n11_r1_condition (  ) {
         ///METHOD_BODY_START n11_r1_condition
         /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
-        return true;
+        return GameFlags.P3AffRead || !GameFlags.P3DidHotel;
         ///METHOD_BODY_END n11_r1_condition
     }
 
@@ -1647,7 +1806,7 @@ public class Dialog_p3_par_001 {
     public bool n11_r2_condition (  ) {
         ///METHOD_BODY_START n11_r2_condition
         /*//if ((?p3_ask_tc = false) AND (?p3_have_aff = true) AND (?p3_aff_read = false))*/
-        return true;
+        return !GameFlags.P3AskTc && GameFlags.P3HaveAff && !GameFlags.P3AffRead;
         ///METHOD_BODY_END n11_r2_condition
     }
 
@@ -1655,7 +1814,7 @@ public class Dialog_p3_par_001 {
     public bool n11_r3_condition (  ) {
         ///METHOD_BODY_START n11_r3_condition
         /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = true) AND (?p3_disgust_tc = true))*/
-        return true;
+        return GameFlags.P3AskTc && GameFlags.P3AffRead && DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n11_r3_condition
     }
 
@@ -1663,7 +1822,7 @@ public class Dialog_p3_par_001 {
     public bool n11_r4_condition (  ) {
         ///METHOD_BODY_START n11_r4_condition
         /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = true) AND (?p3_disgust_tc = false))*/
-        return true;
+        return GameFlags.P3AskTc && GameFlags.P3AffRead && !DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n11_r4_condition
     }
 
@@ -1671,7 +1830,7 @@ public class Dialog_p3_par_001 {
     public bool n11_r5_condition (  ) {
         ///METHOD_BODY_START n11_r5_condition
         /*//if ((?p3_ask_tc = true) AND (?p3_aff_read = false))*/
-        return true;
+        return GameFlags.P3AskTc && !GameFlags.P3AffRead;
         ///METHOD_BODY_END n11_r5_condition
     }
 
@@ -1679,7 +1838,7 @@ public class Dialog_p3_par_001 {
     public bool n12_r1_condition (  ) {
         ///METHOD_BODY_START n12_r1_condition
         /*//if (?p3_ask_par_family = true)*/
-        return true;
+        return DialogGameFlags.p3_ask_par_family;
         ///METHOD_BODY_END n12_r1_condition
     }
 
@@ -1687,7 +1846,7 @@ public class Dialog_p3_par_001 {
     public bool n13_r0_condition (  ) {
         ///METHOD_BODY_START n13_r0_condition
         /*//if ((?p3_aff_read = false) AND (?p3_have_aff = true) AND (?p3_hen_discussed = false))*/
-        return true;
+        return !GameFlags.P3AffRead && GameFlags.P3HaveAff && !DialogGameFlags.p3_hen_discussed;
         ///METHOD_BODY_END n13_r0_condition
     }
 
@@ -1695,7 +1854,7 @@ public class Dialog_p3_par_001 {
     public bool n13_r1_condition (  ) {
         ///METHOD_BODY_START n13_r1_condition
         /*//if ((?p3_aff_read = false) AND (?p3_have_aff = true) AND (?p3_hen_discussed = true))*/
-        return true;
+        return !GameFlags.P3AffRead && GameFlags.P3HaveAff && DialogGameFlags.p3_hen_discussed;
         ///METHOD_BODY_END n13_r1_condition
     }
 
@@ -1703,7 +1862,7 @@ public class Dialog_p3_par_001 {
     public bool n14_r1_condition (  ) {
         ///METHOD_BODY_START n14_r1_condition
         /*//if (?p3_ask_par_family = true)*/
-        return true;
+        return DialogGameFlags.p3_ask_par_family;
         ///METHOD_BODY_END n14_r1_condition
     }
 
@@ -1711,7 +1870,7 @@ public class Dialog_p3_par_001 {
     public bool n16_r1_condition (  ) {
         ///METHOD_BODY_START n16_r1_condition
         /*//if (?p3_ask_help_hen = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_help_hen;
         ///METHOD_BODY_END n16_r1_condition
     }
 
@@ -1719,7 +1878,7 @@ public class Dialog_p3_par_001 {
     public bool n17_r1_condition (  ) {
         ///METHOD_BODY_START n17_r1_condition
         /*//if (?p3_ask_see_hen = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_help_hen;
         ///METHOD_BODY_END n17_r1_condition
     }
 
@@ -1727,7 +1886,7 @@ public class Dialog_p3_par_001 {
     public bool n18_r1_condition (  ) {
         ///METHOD_BODY_START n18_r1_condition
         /*//if (?p3_ask_par_family = true)*/
-        return true;
+        return DialogGameFlags.p3_ask_par_family;
         ///METHOD_BODY_END n18_r1_condition
     }
 
@@ -1735,7 +1894,7 @@ public class Dialog_p3_par_001 {
     public bool n20_r0_condition (  ) {
         ///METHOD_BODY_START n20_r0_condition
         /*//if ((?p3_ask_tc=true) AND (?p3_disgust_tc = true))*/
-        return true;
+        return GameFlags.P3AskTc && DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n20_r0_condition
     }
 
@@ -1743,7 +1902,7 @@ public class Dialog_p3_par_001 {
     public bool n20_r1_condition (  ) {
         ///METHOD_BODY_START n20_r1_condition
         /*//if ((?p3_ask_tc=true) AND (?p3_disgust_tc = false))*/
-        return true;
+        return GameFlags.P3AskTc && !DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n20_r1_condition
     }
 
@@ -1751,7 +1910,7 @@ public class Dialog_p3_par_001 {
     public bool n20_r2_condition (  ) {
         ///METHOD_BODY_START n20_r2_condition
         /*//if (?p3_ask_tc=false)*/
-        return true;
+        return !GameFlags.P3AskTc;
         ///METHOD_BODY_END n20_r2_condition
     }
 
@@ -1759,7 +1918,7 @@ public class Dialog_p3_par_001 {
     public bool n21_r0_condition (  ) {
         ///METHOD_BODY_START n21_r0_condition
         /*//if ((?p3_ask_tc=true) AND (?p3_disgust_tc = true))*/
-        return true;
+        return GameFlags.P3AskTc && DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n21_r0_condition
     }
 
@@ -1767,7 +1926,7 @@ public class Dialog_p3_par_001 {
     public bool n21_r1_condition (  ) {
         ///METHOD_BODY_START n21_r1_condition
         /*//if ((?p3_ask_tc=true) AND (?p3_disgust_tc = false))*/
-        return true;
+        return GameFlags.P3AskTc && !DialogGameFlags.p3_disgust_tc;
         ///METHOD_BODY_END n21_r1_condition
     }
 
@@ -1775,7 +1934,7 @@ public class Dialog_p3_par_001 {
     public bool n21_r2_condition (  ) {
         ///METHOD_BODY_START n21_r2_condition
         /*//if (?p3_ask_tc=false)*/
-        return true;
+        return !GameFlags.P3AskTc;
         ///METHOD_BODY_END n21_r2_condition
     }
 
@@ -1783,7 +1942,7 @@ public class Dialog_p3_par_001 {
     public bool n28_r0_condition (  ) {
         ///METHOD_BODY_START n28_r0_condition
         /*//if (?p3_lucy_screams = true)*/
-        return true;
+        return DialogGameFlags.p3_lucy_screams;
         ///METHOD_BODY_END n28_r0_condition
     }
 
@@ -1791,7 +1950,7 @@ public class Dialog_p3_par_001 {
     public bool n34_r0_condition (  ) {
         ///METHOD_BODY_START n34_r0_condition
         /*//if ($escape_type = "alone")*/
-        return true;
+        return GameFlags.P2EscapeType == "alone";
         ///METHOD_BODY_END n34_r0_condition
     }
 
@@ -1799,7 +1958,7 @@ public class Dialog_p3_par_001 {
     public bool n34_r1_condition (  ) {
         ///METHOD_BODY_START n34_r1_condition
         /*//if ($escape_type = "henry")*/
-        return true;
+        return GameFlags.P2EscapeType == "henry";
         ///METHOD_BODY_END n34_r1_condition
     }
 
@@ -1807,7 +1966,7 @@ public class Dialog_p3_par_001 {
     public bool n35_r0_condition (  ) {
         ///METHOD_BODY_START n35_r0_condition
         /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
-        return true;
+        return !GameFlags.P3DidHotel || GameFlags.P3AffRead;
         ///METHOD_BODY_END n35_r0_condition
     }
 
@@ -1815,7 +1974,7 @@ public class Dialog_p3_par_001 {
     public bool n35_r1_condition (  ) {
         ///METHOD_BODY_START n35_r1_condition
         /*//if ((?p3_did_hotel = false) OR (?p3_aff_read = true))*/
-        return true;
+        return !GameFlags.P3DidHotel || GameFlags.P3AffRead;
         ///METHOD_BODY_END n35_r1_condition
     }
 
@@ -1823,7 +1982,7 @@ public class Dialog_p3_par_001 {
     public bool n35_r2_condition (  ) {
         ///METHOD_BODY_START n35_r2_condition
         /*//if ((?p3_ask_tc = false) AND (?p3_have_aff = true) AND (?p3_aff_read = false))*/
-        return true;
+        return !GameFlags.P3AskTc && GameFlags.P3HaveAff && !GameFlags.P3AffRead;
         ///METHOD_BODY_END n35_r2_condition
     }
 
@@ -1833,6 +1992,7 @@ public class Dialog_p3_par_001 {
         /*//setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_outside1.swf")
         //set ?p3_tc_spied = true
         //showNpc(false,1)*/
+        GameFlags.P3TcSpied = true;
         ///METHOD_BODY_END n02_r0_select
     }
 
@@ -1841,6 +2001,7 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n03_r0_select
         /*//set ?p3_aff_read = true
         //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
+        GameFlags.P3AffRead = true;
         ///METHOD_BODY_END n03_r0_select
     }
 
@@ -1849,6 +2010,7 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n03_r1_select
         /*//set ?p3_ask_par_family = true
         //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
+        DialogGameFlags.p3_ask_par_family = true;
         ///METHOD_BODY_END n03_r1_select
     }
 
@@ -1864,6 +2026,7 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n05_r1_select
         /*//set ?p3_know_henry_aff = true
         //setLayer("fg", "")*/
+        DialogGameFlags.p3_know_henry_aff = true;
         ///METHOD_BODY_END n05_r1_select
     }
 
@@ -1886,6 +2049,7 @@ public class Dialog_p3_par_001 {
     public void n08_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r0_select
         /*//set ?p3_hen_discussed = true*/
+        DialogGameFlags.p3_hen_discussed = true;
         ///METHOD_BODY_END n08_r0_select
     }
 
@@ -1894,6 +2058,8 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n10_r0_select
         /*//set ?p3_hen_discussed = true
         //set ?p3_from_n10 = false*/
+        DialogGameFlags.p3_hen_discussed = true;
+        DialogGameFlags.p3_from_n10 = false;
         ///METHOD_BODY_END n10_r0_select
     }
 
@@ -1902,6 +2068,8 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n10_r1_select
         /*//set ?p3_hen_discussed = true
         //set ?p3_from_n10 = true*/
+        DialogGameFlags.p3_hen_discussed = true;
+        DialogGameFlags.p3_from_n10 = true;
         ///METHOD_BODY_END n10_r1_select
     }
 
@@ -1909,6 +2077,7 @@ public class Dialog_p3_par_001 {
     public void n11_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r0_select
         /*//set ?p3_ask_help_hen = true*/
+        DialogGameFlags.p3_ask_help_hen = true;
         ///METHOD_BODY_END n11_r0_select
     }
 
@@ -1916,6 +2085,7 @@ public class Dialog_p3_par_001 {
     public void n11_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r1_select
         /*//set ?p3_ask_see_hen = true*/
+        DialogGameFlags.p3_ask_see_hen = true;
         ///METHOD_BODY_END n11_r1_select
     }
 
@@ -1923,6 +2093,7 @@ public class Dialog_p3_par_001 {
     public void n11_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r2_select
         /*//set ?p3_aff_read = true*/
+        GameFlags.P3AffRead = true;
         ///METHOD_BODY_END n11_r2_select
     }
 
@@ -1930,6 +2101,7 @@ public class Dialog_p3_par_001 {
     public void n11_r5_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r5_select
         /*//set ?p3_disgust_tc = true*/
+        DialogGameFlags.p3_disgust_tc = true;
         ///METHOD_BODY_END n11_r5_select
     }
 
@@ -1937,6 +2109,7 @@ public class Dialog_p3_par_001 {
     public void n13_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n13_r0_select
         /*//set ?p3_aff_read = true*/
+        GameFlags.P3AffRead = true;
         ///METHOD_BODY_END n13_r0_select
     }
 
@@ -1944,6 +2117,7 @@ public class Dialog_p3_par_001 {
     public void n13_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n13_r1_select
         /*//set ?p3_aff_read = true*/
+        GameFlags.P3AffRead = true;
         ///METHOD_BODY_END n13_r1_select
     }
 
@@ -1951,6 +2125,7 @@ public class Dialog_p3_par_001 {
     public void n16_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n16_r1_select
         /*//set ?p3_ask_help_hen = true*/
+        DialogGameFlags.p3_ask_help_hen = true;
         ///METHOD_BODY_END n16_r1_select
     }
 
@@ -1958,6 +2133,7 @@ public class Dialog_p3_par_001 {
     public void n17_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n17_r1_select
         /*//set ?p3_ask_see_hen = true*/
+        DialogGameFlags.p3_ask_help_hen = true;
         ///METHOD_BODY_END n17_r1_select
     }
 
@@ -1965,6 +2141,7 @@ public class Dialog_p3_par_001 {
     public void n20_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n20_r1_select
         /*//set ?p3_disgust_tc = true*/
+        DialogGameFlags.p3_disgust_tc = true;
         ///METHOD_BODY_END n20_r1_select
     }
 
@@ -1972,6 +2149,7 @@ public class Dialog_p3_par_001 {
     public void n21_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n21_r1_select
         /*//set ?p3_disgust_tc = true*/
+        DialogGameFlags.p3_disgust_tc = true;
         ///METHOD_BODY_END n21_r1_select
     }
 
@@ -1988,6 +2166,7 @@ public class Dialog_p3_par_001 {
         ///METHOD_BODY_START n23_r0_select
         /*//set ?p3_lucy_resist_par = true
         //setLayer("bg", "gfx/swfs/dlg_bg/dbg_parker_inside2.swf")*/
+        GameFlags.P3LucyResistPar = true;
         ///METHOD_BODY_END n23_r0_select
     }
 
@@ -2002,6 +2181,7 @@ public class Dialog_p3_par_001 {
     public void n25_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n25_r0_select
         /*//set ?p3_lucy_screams = true*/
+        DialogGameFlags.p3_lucy_screams = true;
         ///METHOD_BODY_END n25_r0_select
     }
 
@@ -2009,6 +2189,7 @@ public class Dialog_p3_par_001 {
     public void n26_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n26_r0_select
         /*//set ?p3_lucy_screams = true*/
+        DialogGameFlags.p3_lucy_screams = true;
         ///METHOD_BODY_END n26_r0_select
     }
 
@@ -2016,6 +2197,7 @@ public class Dialog_p3_par_001 {
     public void n27_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n27_r0_select
         /*//?p3_fighting_spirit = true*/
+        DialogGameFlags.p3_fighting_spirit = true;
         ///METHOD_BODY_END n27_r0_select
     }
 
@@ -2023,6 +2205,7 @@ public class Dialog_p3_par_001 {
     public void n30_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n30_r0_select
         /*//set ?p3_ask_par_family = true*/
+        DialogGameFlags.p3_ask_par_family = true;
         ///METHOD_BODY_END n30_r0_select
     }
 
@@ -2030,6 +2213,7 @@ public class Dialog_p3_par_001 {
     public void n34_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n34_r0_select
         /*//set ?p3_hen_discussed = true*/
+        DialogGameFlags.p3_hen_discussed = true;
         ///METHOD_BODY_END n34_r0_select
     }
 
@@ -2037,6 +2221,7 @@ public class Dialog_p3_par_001 {
     public void n34_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n34_r1_select
         /*//set ?p3_hen_discussed = true*/
+        DialogGameFlags.p3_hen_discussed = true;
         ///METHOD_BODY_END n34_r1_select
     }
 
@@ -2044,6 +2229,7 @@ public class Dialog_p3_par_001 {
     public void n35_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n35_r0_select
         /*//set ?p3_ask_help_hen = true*/
+        DialogGameFlags.p3_ask_help_hen = true;
         ///METHOD_BODY_END n35_r0_select
     }
 
@@ -2051,6 +2237,7 @@ public class Dialog_p3_par_001 {
     public void n35_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n35_r1_select
         /*//set ?p3_ask_see_hen = true*/
+        DialogGameFlags.p3_ask_see_hen = true;
         ///METHOD_BODY_END n35_r1_select
     }
 
@@ -2058,6 +2245,7 @@ public class Dialog_p3_par_001 {
     public void n35_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n35_r2_select
         /*//set ?p3_aff_read = true*/
+        GameFlags.P3AffRead = true;
         ///METHOD_BODY_END n35_r2_select
     }
 

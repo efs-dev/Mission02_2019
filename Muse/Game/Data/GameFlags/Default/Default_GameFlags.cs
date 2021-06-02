@@ -172,6 +172,34 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P3AskTc 
 //USING
 ///GAMEFLAG_FOLDER P3HarCurious 
+//USING
+///GAMEFLAG_FOLDER P3Family 
+//USING
+///GAMEFLAG_FOLDER P3Faith 
+//USING
+///GAMEFLAG_FOLDER P3MilPoints 
+//USING
+///GAMEFLAG_FOLDER P3MilCurious 
+//USING
+///GAMEFLAG_FOLDER P3MillieLessonPromise 
+//USING
+///GAMEFLAG_FOLDER P3KnowParkerResourceful 
+//USING
+///GAMEFLAG_FOLDER P3KnowParkerResourcefulMil 
+//USING
+///GAMEFLAG_FOLDER P3AskFunds 
+//USING
+///GAMEFLAG_FOLDER P3TcSpied 
+//USING
+///GAMEFLAG_FOLDER P3HaveAff 
+//USING
+///GAMEFLAG_FOLDER P3AffRead 
+//USING
+///GAMEFLAG_FOLDER P3ParPoints 
+//USING
+///GAMEFLAG_FOLDER P3DidHotel 
+//USING
+///GAMEFLAG_FOLDER P3LucyResistPar 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -1786,6 +1814,272 @@ GameFlagChanged("P3AskTc", oldValue, value);
 _P3HarCurious = value;
 GameFlagChanged("P3HarCurious", oldValue, value);
             ///PROPERTY_SETTER_END P3HarCurious
+        }
+    }
+
+    //PROPERTY _P3Family
+    private static bool _P3Family = false;
+
+    //PROPERTY P3Family
+    public static bool P3Family {
+        get {
+            ///PROPERTY_GETTER_START P3Family
+            return _P3Family;
+            ///PROPERTY_GETTER_END P3Family
+        }
+        set {
+            ///PROPERTY_SETTER_START P3Family
+            var oldValue = value;
+_P3Family = value;
+GameFlagChanged("P3Family", oldValue, value);
+            ///PROPERTY_SETTER_END P3Family
+        }
+    }
+
+    //PROPERTY _P3Faith
+    private static bool _P3Faith = false;
+
+    //PROPERTY P3Faith
+    public static bool P3Faith {
+        get {
+            ///PROPERTY_GETTER_START P3Faith
+            return _P3Faith;
+            ///PROPERTY_GETTER_END P3Faith
+        }
+        set {
+            ///PROPERTY_SETTER_START P3Faith
+            var oldValue = value;
+_P3Faith = value;
+GameFlagChanged("P3Faith", oldValue, value);
+            ///PROPERTY_SETTER_END P3Faith
+        }
+    }
+
+    //PROPERTY _P3MilPoints
+    private static int _P3MilPoints = 0;
+
+    //PROPERTY P3MilPoints
+    public static int P3MilPoints {
+        get {
+            ///PROPERTY_GETTER_START P3MilPoints
+            return _P3MilPoints;
+            ///PROPERTY_GETTER_END P3MilPoints
+        }
+        set {
+            ///PROPERTY_SETTER_START P3MilPoints
+            var oldValue = value;
+_P3MilPoints = value;
+GameFlagChanged("P3MilPoints", oldValue, value);
+            ///PROPERTY_SETTER_END P3MilPoints
+        }
+    }
+
+    //PROPERTY _P3MilCurious
+    private static bool _P3MilCurious = false;
+
+    //PROPERTY P3MilCurious
+    public static bool P3MilCurious {
+        get {
+            ///PROPERTY_GETTER_START P3MilCurious
+            return _P3MilCurious;
+            ///PROPERTY_GETTER_END P3MilCurious
+        }
+        set {
+            ///PROPERTY_SETTER_START P3MilCurious
+            var oldValue = value;
+_P3MilCurious = value;
+GameFlagChanged("P3MilCurious", oldValue, value);
+            ///PROPERTY_SETTER_END P3MilCurious
+        }
+    }
+
+    //PROPERTY _P3MillieLessonPromise
+    private static bool _P3MillieLessonPromise = false;
+
+    //PROPERTY P3MillieLessonPromise
+    public static bool P3MillieLessonPromise {
+        get {
+            ///PROPERTY_GETTER_START P3MillieLessonPromise
+            return _P3MillieLessonPromise;
+            ///PROPERTY_GETTER_END P3MillieLessonPromise
+        }
+        set {
+            ///PROPERTY_SETTER_START P3MillieLessonPromise
+            var oldValue = value;
+_P3MillieLessonPromise = value;
+GameFlagChanged("P3MillieLessonPromise", oldValue, value);
+            ///PROPERTY_SETTER_END P3MillieLessonPromise
+        }
+    }
+
+    //PROPERTY _P3KnowParkerResourceful
+    private static bool _P3KnowParkerResourceful = false;
+
+    //PROPERTY P3KnowParkerResourceful
+    public static bool P3KnowParkerResourceful {
+        get {
+            ///PROPERTY_GETTER_START P3KnowParkerResourceful
+            return _P3KnowParkerResourceful;
+            ///PROPERTY_GETTER_END P3KnowParkerResourceful
+        }
+        set {
+            ///PROPERTY_SETTER_START P3KnowParkerResourceful
+            var oldValue = value;
+_P3KnowParkerResourceful = value;
+GameFlagChanged("P3KnowParkerResourceful", oldValue, value);
+            ///PROPERTY_SETTER_END P3KnowParkerResourceful
+        }
+    }
+
+    //PROPERTY _P3KnowParkerResourcefulMil
+    private static bool _P3KnowParkerResourcefulMil = false;
+
+    //PROPERTY P3KnowParkerResourcefulMil
+    public static bool P3KnowParkerResourcefulMil {
+        get {
+            ///PROPERTY_GETTER_START P3KnowParkerResourcefulMil
+            return _P3KnowParkerResourcefulMil;
+            ///PROPERTY_GETTER_END P3KnowParkerResourcefulMil
+        }
+        set {
+            ///PROPERTY_SETTER_START P3KnowParkerResourcefulMil
+            var oldValue = value;
+_P3KnowParkerResourcefulMil = value;
+GameFlagChanged("P3KnowParkerResourcefulMil", oldValue, value);
+            ///PROPERTY_SETTER_END P3KnowParkerResourcefulMil
+        }
+    }
+
+    //PROPERTY _P3AskFunds
+    private static bool _P3AskFunds = false;
+
+    //PROPERTY P3AskFunds
+    public static bool P3AskFunds {
+        get {
+            ///PROPERTY_GETTER_START P3AskFunds
+            return _P3AskFunds;
+            ///PROPERTY_GETTER_END P3AskFunds
+        }
+        set {
+            ///PROPERTY_SETTER_START P3AskFunds
+            var oldValue = value;
+_P3AskFunds = value;
+GameFlagChanged("P3AskFunds", oldValue, value);
+            ///PROPERTY_SETTER_END P3AskFunds
+        }
+    }
+
+    //PROPERTY _P3TcSpied
+    private static bool _P3TcSpied = false;
+
+    //PROPERTY P3TcSpied
+    public static bool P3TcSpied {
+        get {
+            ///PROPERTY_GETTER_START P3TcSpied
+            return _P3TcSpied;
+            ///PROPERTY_GETTER_END P3TcSpied
+        }
+        set {
+            ///PROPERTY_SETTER_START P3TcSpied
+            var oldValue = value;
+_P3TcSpied = value;
+GameFlagChanged("P3TcSpied", oldValue, value);
+            ///PROPERTY_SETTER_END P3TcSpied
+        }
+    }
+
+    //PROPERTY _P3HaveAff
+    private static bool _P3HaveAff = false;
+
+    //PROPERTY P3HaveAff
+    public static bool P3HaveAff {
+        get {
+            ///PROPERTY_GETTER_START P3HaveAff
+            return _P3HaveAff;
+            ///PROPERTY_GETTER_END P3HaveAff
+        }
+        set {
+            ///PROPERTY_SETTER_START P3HaveAff
+            var oldValue = value;
+_P3HaveAff = value;
+GameFlagChanged("P3HaveAff", oldValue, value);
+            ///PROPERTY_SETTER_END P3HaveAff
+        }
+    }
+
+    //PROPERTY _P3AffRead
+    private static bool _P3AffRead = false;
+
+    //PROPERTY P3AffRead
+    public static bool P3AffRead {
+        get {
+            ///PROPERTY_GETTER_START P3AffRead
+            return _P3AffRead;
+            ///PROPERTY_GETTER_END P3AffRead
+        }
+        set {
+            ///PROPERTY_SETTER_START P3AffRead
+            var oldValue = value;
+_P3AffRead = value;
+GameFlagChanged("P3AffRead", oldValue, value);
+            ///PROPERTY_SETTER_END P3AffRead
+        }
+    }
+
+    //PROPERTY _P3ParPoints
+    private static int _P3ParPoints = 0;
+
+    //PROPERTY P3ParPoints
+    public static int P3ParPoints {
+        get {
+            ///PROPERTY_GETTER_START P3ParPoints
+            return _P3ParPoints;
+            ///PROPERTY_GETTER_END P3ParPoints
+        }
+        set {
+            ///PROPERTY_SETTER_START P3ParPoints
+            var oldValue = value;
+_P3ParPoints = value;
+GameFlagChanged("P3ParPoints", oldValue, value);
+            ///PROPERTY_SETTER_END P3ParPoints
+        }
+    }
+
+    //PROPERTY _P3DidHotel
+    private static bool _P3DidHotel = false;
+
+    //PROPERTY P3DidHotel
+    public static bool P3DidHotel {
+        get {
+            ///PROPERTY_GETTER_START P3DidHotel
+            return _P3DidHotel;
+            ///PROPERTY_GETTER_END P3DidHotel
+        }
+        set {
+            ///PROPERTY_SETTER_START P3DidHotel
+            var oldValue = value;
+_P3DidHotel = value;
+GameFlagChanged("P3DidHotel", oldValue, value);
+            ///PROPERTY_SETTER_END P3DidHotel
+        }
+    }
+
+    //PROPERTY _P3LucyResistPar
+    private static bool _P3LucyResistPar = false;
+
+    //PROPERTY P3LucyResistPar
+    public static bool P3LucyResistPar {
+        get {
+            ///PROPERTY_GETTER_START P3LucyResistPar
+            return _P3LucyResistPar;
+            ///PROPERTY_GETTER_END P3LucyResistPar
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LucyResistPar
+            var oldValue = value;
+_P3LucyResistPar = value;
+GameFlagChanged("P3LucyResistPar", oldValue, value);
+            ///PROPERTY_SETTER_END P3LucyResistPar
         }
     }
 }

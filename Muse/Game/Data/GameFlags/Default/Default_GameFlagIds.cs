@@ -254,5 +254,47 @@ public static partial class GameFlagIds {
 
     //PROPERTY P3HarCurious
     public static string P3HarCurious = "P3HarCurious";
+
+    //PROPERTY P3Family
+    public static string P3Family = "P3Family";
+
+    //PROPERTY P3Faith
+    public static string P3Faith = "P3Faith";
+
+    //PROPERTY P3MilPoints
+    public static string P3MilPoints = "P3MilPoints";
+
+    //PROPERTY P3MilCurious
+    public static string P3MilCurious = "P3MilCurious";
+
+    //PROPERTY P3MillieLessonPromise
+    public static string P3MillieLessonPromise = "P3MillieLessonPromise";
+
+    //PROPERTY P3KnowParkerResourceful
+    public static string P3KnowParkerResourceful = "P3KnowParkerResourceful";
+
+    //PROPERTY P3KnowParkerResourcefulMil
+    public static string P3KnowParkerResourcefulMil = "P3KnowParkerResourcefulMil";
+
+    //PROPERTY P3AskFunds
+    public static string P3AskFunds = "P3AskFunds";
+
+    //PROPERTY P3TcSpied
+    public static string P3TcSpied = "P3TcSpied";
+
+    //PROPERTY P3HaveAff
+    public static string P3HaveAff = "P3HaveAff";
+
+    //PROPERTY P3AffRead
+    public static string P3AffRead = "P3AffRead";
+
+    //PROPERTY P3ParPoints
+    public static string P3ParPoints = "P3ParPoints";
+
+    //PROPERTY P3DidHotel
+    public static string P3DidHotel = "P3DidHotel";
+
+    //PROPERTY P3LucyResistPar
+    public static string P3LucyResistPar = "P3LucyResistPar";
 }
 //CLASS_END GameFlagIds
