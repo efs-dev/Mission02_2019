@@ -14,6 +14,39 @@ using Efs.Dialogs;
 public class Dialog_p4_abi_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p4_asked_mckee
+        private bool _p4_asked_mckee = false;
+
+        //PROPERTY p4_asked_mckee
+        public bool p4_asked_mckee {
+                get {
+                        ///PROPERTY_GETTER_START p4_asked_mckee
+                        return _p4_asked_mckee;
+                        ///PROPERTY_GETTER_END p4_asked_mckee
+                }
+                set {
+                        ///PROPERTY_SETTER_START p4_asked_mckee
+                        _p4_asked_mckee = value;
+                        ///PROPERTY_SETTER_END p4_asked_mckee
+                }
+        }
+
+        //PROPERTY _p4_asked_papers
+        private bool _p4_asked_papers = false;
+
+        //PROPERTY p4_asked_papers
+        public bool p4_asked_papers {
+                get {
+                        ///PROPERTY_GETTER_START p4_asked_papers
+                        return _p4_asked_papers;
+                        ///PROPERTY_GETTER_END p4_asked_papers
+                }
+                set {
+                        ///PROPERTY_SETTER_START p4_asked_papers
+                        _p4_asked_papers = value;
+                        ///PROPERTY_SETTER_END p4_asked_papers
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -323,6 +356,7 @@ public class Dialog_p4_abi_001 {
     public void n03_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n03_p0_show
         /*//set ?p4_lucy_know_fsa = true*/
+        GameFlags.P4LucyKnowFSA = true;
         ///METHOD_BODY_END n03_p0_show
     }
 
@@ -330,7 +364,7 @@ public class Dialog_p4_abi_001 {
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
         /*//if (?p4_asked_mckee = false)*/
-        return true;
+        return !DialogGameFlags.p4_asked_mckee;
         ///METHOD_BODY_END n03_r1_condition
     }
 
@@ -338,7 +372,7 @@ public class Dialog_p4_abi_001 {
     public bool n03_r2_condition (  ) {
         ///METHOD_BODY_START n03_r2_condition
         /*//if (?p3_millie_lesson_promise = true)*/
-        return true;
+        return GameFlags.P3MillieLessonPromise;
         ///METHOD_BODY_END n03_r2_condition
     }
 
@@ -346,7 +380,7 @@ public class Dialog_p4_abi_001 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if (?p4_asked_papers = false)*/
-        return true;
+        return !DialogGameFlags.p4_asked_papers;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -354,7 +388,7 @@ public class Dialog_p4_abi_001 {
     public bool n05_r0_condition (  ) {
         ///METHOD_BODY_START n05_r0_condition
         /*//if (?p4_asked_papers = false)*/
-        return true;
+        return !DialogGameFlags.p4_asked_papers;
         ///METHOD_BODY_END n05_r0_condition
     }
 
@@ -362,7 +396,7 @@ public class Dialog_p4_abi_001 {
     public bool n07_r0_condition (  ) {
         ///METHOD_BODY_START n07_r0_condition
         /*//if (?p4_asked_mckee = false)*/
-        return true;
+        return !DialogGameFlags.p4_asked_mckee;
         ///METHOD_BODY_END n07_r0_condition
     }
 
@@ -370,6 +404,7 @@ public class Dialog_p4_abi_001 {
     public void n01a_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01a_r1_select
         /*//set ?p4_asked_papers = true*/
+        DialogGameFlags.p4_asked_papers = true;
         ///METHOD_BODY_END n01a_r1_select
     }
 
@@ -377,6 +412,7 @@ public class Dialog_p4_abi_001 {
     public void n01a_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01a_r2_select
         /*//set ?p4_asked_mckee = true*/
+        DialogGameFlags.p4_asked_mckee = true;
         ///METHOD_BODY_END n01a_r2_select
     }
 
@@ -384,6 +420,7 @@ public class Dialog_p4_abi_001 {
     public void n03_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r1_select
         /*//set ?p4_asked_mckee = true*/
+        DialogGameFlags.p4_asked_mckee = true;
         ///METHOD_BODY_END n03_r1_select
     }
 
@@ -391,6 +428,7 @@ public class Dialog_p4_abi_001 {
     public void n04_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r1_select
         /*//set ?p4_asked_papers = true*/
+        DialogGameFlags.p4_asked_papers = true;
         ///METHOD_BODY_END n04_r1_select
     }
 
@@ -398,6 +436,7 @@ public class Dialog_p4_abi_001 {
     public void n05_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n05_r0_select
         /*//set ?p4_asked_papers = true*/
+        DialogGameFlags.p4_asked_papers = true;
         ///METHOD_BODY_END n05_r0_select
     }
 
@@ -405,6 +444,7 @@ public class Dialog_p4_abi_001 {
     public void n07_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r0_select
         /*//set ?p4_asked_mckee = true*/
+        DialogGameFlags.p4_asked_mckee = true;
         ///METHOD_BODY_END n07_r0_select
     }
 }

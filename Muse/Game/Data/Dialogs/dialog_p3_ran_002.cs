@@ -971,7 +971,7 @@ public class Dialog_p3_ran_002 {
     public bool n05_r1_condition (  ) {
         ///METHOD_BODY_START n05_r1_condition
         /*//if ((?p3_tc_spied = true) AND (?p3_ask_tc = true))*/
-        return true;
+        return GameFlags.P3TcSpied && GameFlags.P3AskTc;
         ///METHOD_BODY_END n05_r1_condition
     }
 
@@ -979,7 +979,7 @@ public class Dialog_p3_ran_002 {
     public bool n05_r2_condition (  ) {
         ///METHOD_BODY_START n05_r2_condition
         /*//if ((?p3_tc_ask_parker = true) AND (?p3_ask_tc = true))*/
-        return true;
+        return GameFlags.P3TcAskParker && GameFlags.P3AskTc;
         ///METHOD_BODY_END n05_r2_condition
     }
 
@@ -987,7 +987,7 @@ public class Dialog_p3_ran_002 {
     public bool n09_r1_condition (  ) {
         ///METHOD_BODY_START n09_r1_condition
         /*//if (?p3_ask_funds = false)*/
-        return true;
+        return !GameFlags.P3AskFunds;
         ///METHOD_BODY_END n09_r1_condition
     }
 
@@ -995,6 +995,7 @@ public class Dialog_p3_ran_002 {
     public void n21_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n21_r0_select
         /*//$next_state = "LOSE_RAN_002"*/
+        GameFlags.P3LoseRan002 = true;
         ///METHOD_BODY_END n21_r0_select
     }
 }

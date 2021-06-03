@@ -649,6 +649,7 @@ public class Dialog_p4_abi_002 {
     public void n10_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r0_select
         /*//#p4_lucy_canada = 2*/
+        GameFlags.P4LucyCanada = 2;
         ///METHOD_BODY_END n10_r0_select
     }
 
@@ -656,6 +657,7 @@ public class Dialog_p4_abi_002 {
     public void n10_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n10_r1_select
         /*//#p4_lucy_canada = 2*/
+        GameFlags.P4LucyCanada = 2;
         ///METHOD_BODY_END n10_r1_select
     }
 
@@ -663,6 +665,7 @@ public class Dialog_p4_abi_002 {
     public void n11_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r0_select
         /*//#p4_lucy_canada = 1*/
+        GameFlags.P4LucyCanada = 1;
         ///METHOD_BODY_END n11_r0_select
     }
 
@@ -670,6 +673,7 @@ public class Dialog_p4_abi_002 {
     public void n14_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n14_r0_select
         /*//#p4_lucy_canada = 1*/
+        GameFlags.P4LucyCanada = 1;
         ///METHOD_BODY_END n14_r0_select
     }
 
@@ -677,6 +681,7 @@ public class Dialog_p4_abi_002 {
     public void n16_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n16_r0_select
         /*//#p4_lucy_canada = 0*/
+        GameFlags.P4LucyCanada = 0;
         ///METHOD_BODY_END n16_r0_select
     }
 
@@ -684,6 +689,7 @@ public class Dialog_p4_abi_002 {
     public void n18_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n18_r1_select
         /*//#p4_lucy_canada = 0*/
+        GameFlags.P4LucyCanada = 0;
         ///METHOD_BODY_END n18_r1_select
     }
 }

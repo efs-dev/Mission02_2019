@@ -200,6 +200,36 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P3DidHotel 
 //USING
 ///GAMEFLAG_FOLDER P3LucyResistPar 
+//USING
+///GAMEFLAG_FOLDER P3LucyCautious 
+//USING
+///GAMEFLAG_FOLDER P3LucySelfReliant 
+//USING
+///GAMEFLAG_FOLDER P3LosePar002 
+//USING
+///GAMEFLAG_FOLDER P2LucyEscapeLex 
+//USING
+///GAMEFLAG_FOLDER P3ParkersPromise 
+//USING
+///GAMEFLAG_FOLDER P3ChooseReading 
+//USING
+///GAMEFLAG_FOLDER P3WitnessU1 
+//USING
+///GAMEFLAG_FOLDER P3Persuader 
+//USING
+///GAMEFLAG_FOLDER P3LoseHotel 
+//USING
+///GAMEFLAG_FOLDER P3KnowParkerFree 
+//USING
+///GAMEFLAG_FOLDER P3TcAskParker 
+//USING
+///GAMEFLAG_FOLDER P3LoseRan002 
+//USING
+///GAMEFLAG_FOLDER P3TCBLose 
+//USING
+///GAMEFLAG_FOLDER P4LucyKnowFSA 
+//USING
+///GAMEFLAG_FOLDER P4LucyCanada 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -2080,6 +2110,291 @@ GameFlagChanged("P3DidHotel", oldValue, value);
 _P3LucyResistPar = value;
 GameFlagChanged("P3LucyResistPar", oldValue, value);
             ///PROPERTY_SETTER_END P3LucyResistPar
+        }
+    }
+
+    //PROPERTY _P3LucyCautious
+    private static bool _P3LucyCautious = false;
+
+    //PROPERTY P3LucyCautious
+    public static bool P3LucyCautious {
+        get {
+            ///PROPERTY_GETTER_START P3LucyCautious
+            return _P3LucyCautious;
+            ///PROPERTY_GETTER_END P3LucyCautious
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LucyCautious
+            var oldValue = value;
+_P3LucyCautious = value;
+GameFlagChanged("P3LucyCautious", oldValue, value);
+            ///PROPERTY_SETTER_END P3LucyCautious
+        }
+    }
+
+    //PROPERTY _P3LucySelfReliant
+    private static bool _P3LucySelfReliant = false;
+
+    //PROPERTY P3LucySelfReliant
+    public static bool P3LucySelfReliant {
+        get {
+            ///PROPERTY_GETTER_START P3LucySelfReliant
+            return _P3LucySelfReliant;
+            ///PROPERTY_GETTER_END P3LucySelfReliant
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LucySelfReliant
+            var oldValue = value;
+_P3LucySelfReliant = value;
+GameFlagChanged("P3LucySelfReliant", oldValue, value);
+            ///PROPERTY_SETTER_END P3LucySelfReliant
+        }
+    }
+
+    //PROPERTY _P3LosePar002
+    private static bool _P3LosePar002 = false;
+
+    //PROPERTY P3LosePar002
+    public static bool P3LosePar002 {
+        get {
+            ///PROPERTY_GETTER_START P3LosePar002
+            return _P3LosePar002;
+            ///PROPERTY_GETTER_END P3LosePar002
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LosePar002
+            var oldValue = value;
+_P3LosePar002 = value;
+GameFlagChanged("P3LosePar002", oldValue, value);
+            ///PROPERTY_SETTER_END P3LosePar002
+        }
+    }
+
+    //PROPERTY _P2LucyEscapeLex
+    private static bool _P2LucyEscapeLex = false;
+
+    //PROPERTY P2LucyEscapeLex
+    public static bool P2LucyEscapeLex {
+        get {
+            ///PROPERTY_GETTER_START P2LucyEscapeLex
+            return _P2LucyEscapeLex;
+            ///PROPERTY_GETTER_END P2LucyEscapeLex
+        }
+        set {
+            ///PROPERTY_SETTER_START P2LucyEscapeLex
+            var oldValue = value;
+_P2LucyEscapeLex = value;
+GameFlagChanged("P2LucyEscapeLex", oldValue, value);
+            ///PROPERTY_SETTER_END P2LucyEscapeLex
+        }
+    }
+
+    //PROPERTY _P3ParkersPromise
+    private static bool _P3ParkersPromise = false;
+
+    //PROPERTY P3ParkersPromise
+    public static bool P3ParkersPromise {
+        get {
+            ///PROPERTY_GETTER_START P3ParkersPromise
+            return _P3ParkersPromise;
+            ///PROPERTY_GETTER_END P3ParkersPromise
+        }
+        set {
+            ///PROPERTY_SETTER_START P3ParkersPromise
+            var oldValue = value;
+_P3ParkersPromise = value;
+GameFlagChanged("P3ParkersPromise", oldValue, value);
+            ///PROPERTY_SETTER_END P3ParkersPromise
+        }
+    }
+
+    //PROPERTY _P3ChooseReading
+    private static bool _P3ChooseReading = false;
+
+    //PROPERTY P3ChooseReading
+    public static bool P3ChooseReading {
+        get {
+            ///PROPERTY_GETTER_START P3ChooseReading
+            return _P3ChooseReading;
+            ///PROPERTY_GETTER_END P3ChooseReading
+        }
+        set {
+            ///PROPERTY_SETTER_START P3ChooseReading
+            var oldValue = value;
+_P3ChooseReading = value;
+GameFlagChanged("P3ChooseReading", oldValue, value);
+            ///PROPERTY_SETTER_END P3ChooseReading
+        }
+    }
+
+    //PROPERTY _P3WitnessU1
+    private static bool _P3WitnessU1 = false;
+
+    //PROPERTY P3WitnessU1
+    public static bool P3WitnessU1 {
+        get {
+            ///PROPERTY_GETTER_START P3WitnessU1
+            return _P3WitnessU1;
+            ///PROPERTY_GETTER_END P3WitnessU1
+        }
+        set {
+            ///PROPERTY_SETTER_START P3WitnessU1
+            var oldValue = value;
+_P3WitnessU1 = value;
+GameFlagChanged("P3WitnessU1", oldValue, value);
+            ///PROPERTY_SETTER_END P3WitnessU1
+        }
+    }
+
+    //PROPERTY _P3Persuader
+    private static bool _P3Persuader = false;
+
+    //PROPERTY P3Persuader
+    public static bool P3Persuader {
+        get {
+            ///PROPERTY_GETTER_START P3Persuader
+            return _P3Persuader;
+            ///PROPERTY_GETTER_END P3Persuader
+        }
+        set {
+            ///PROPERTY_SETTER_START P3Persuader
+            var oldValue = value;
+_P3Persuader = value;
+GameFlagChanged("P3Persuader", oldValue, value);
+            ///PROPERTY_SETTER_END P3Persuader
+        }
+    }
+
+    //PROPERTY _P3LoseHotel
+    private static bool _P3LoseHotel = false;
+
+    //PROPERTY P3LoseHotel
+    public static bool P3LoseHotel {
+        get {
+            ///PROPERTY_GETTER_START P3LoseHotel
+            return _P3LoseHotel;
+            ///PROPERTY_GETTER_END P3LoseHotel
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LoseHotel
+            var oldValue = value;
+_P3LoseHotel = value;
+GameFlagChanged("P3LoseHotel", oldValue, value);
+            ///PROPERTY_SETTER_END P3LoseHotel
+        }
+    }
+
+    //PROPERTY _P3KnowParkerFree
+    private static bool _P3KnowParkerFree = false;
+
+    //PROPERTY P3KnowParkerFree
+    public static bool P3KnowParkerFree {
+        get {
+            ///PROPERTY_GETTER_START P3KnowParkerFree
+            return _P3KnowParkerFree;
+            ///PROPERTY_GETTER_END P3KnowParkerFree
+        }
+        set {
+            ///PROPERTY_SETTER_START P3KnowParkerFree
+            var oldValue = value;
+_P3KnowParkerFree = value;
+GameFlagChanged("P3KnowParkerFree", oldValue, value);
+            ///PROPERTY_SETTER_END P3KnowParkerFree
+        }
+    }
+
+    //PROPERTY _P3TcAskParker
+    private static bool _P3TcAskParker = false;
+
+    //PROPERTY P3TcAskParker
+    public static bool P3TcAskParker {
+        get {
+            ///PROPERTY_GETTER_START P3TcAskParker
+            return _P3TcAskParker;
+            ///PROPERTY_GETTER_END P3TcAskParker
+        }
+        set {
+            ///PROPERTY_SETTER_START P3TcAskParker
+            var oldValue = value;
+_P3TcAskParker = value;
+GameFlagChanged("P3TcAskParker", oldValue, value);
+            ///PROPERTY_SETTER_END P3TcAskParker
+        }
+    }
+
+    //PROPERTY _P3LoseRan002
+    private static bool _P3LoseRan002 = false;
+
+    //PROPERTY P3LoseRan002
+    public static bool P3LoseRan002 {
+        get {
+            ///PROPERTY_GETTER_START P3LoseRan002
+            return _P3LoseRan002;
+            ///PROPERTY_GETTER_END P3LoseRan002
+        }
+        set {
+            ///PROPERTY_SETTER_START P3LoseRan002
+            var oldValue = value;
+_P3LoseRan002 = value;
+GameFlagChanged("P3LoseRan002", oldValue, value);
+            ///PROPERTY_SETTER_END P3LoseRan002
+        }
+    }
+
+    //PROPERTY _P3TCBLose
+    private static bool _P3TCBLose = false;
+
+    //PROPERTY P3TCBLose
+    public static bool P3TCBLose {
+        get {
+            ///PROPERTY_GETTER_START P3TCBLose
+            return _P3TCBLose;
+            ///PROPERTY_GETTER_END P3TCBLose
+        }
+        set {
+            ///PROPERTY_SETTER_START P3TCBLose
+            var oldValue = value;
+_P3TCBLose = value;
+GameFlagChanged("P3TCBLose", oldValue, value);
+            ///PROPERTY_SETTER_END P3TCBLose
+        }
+    }
+
+    //PROPERTY _P4LucyKnowFSA
+    private static bool _P4LucyKnowFSA = false;
+
+    //PROPERTY P4LucyKnowFSA
+    public static bool P4LucyKnowFSA {
+        get {
+            ///PROPERTY_GETTER_START P4LucyKnowFSA
+            return _P4LucyKnowFSA;
+            ///PROPERTY_GETTER_END P4LucyKnowFSA
+        }
+        set {
+            ///PROPERTY_SETTER_START P4LucyKnowFSA
+            var oldValue = value;
+_P4LucyKnowFSA = value;
+GameFlagChanged("P4LucyKnowFSA", oldValue, value);
+            ///PROPERTY_SETTER_END P4LucyKnowFSA
+        }
+    }
+
+    //PROPERTY _P4LucyCanada
+    private static int _P4LucyCanada = 0;
+
+    //PROPERTY P4LucyCanada
+    public static int P4LucyCanada {
+        get {
+            ///PROPERTY_GETTER_START P4LucyCanada
+            return _P4LucyCanada;
+            ///PROPERTY_GETTER_END P4LucyCanada
+        }
+        set {
+            ///PROPERTY_SETTER_START P4LucyCanada
+            var oldValue = value;
+_P4LucyCanada = value;
+GameFlagChanged("P4LucyCanada", oldValue, value);
+            ///PROPERTY_SETTER_END P4LucyCanada
         }
     }
 }

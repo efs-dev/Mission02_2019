@@ -1002,7 +1002,7 @@ public class Dialog_p3_tcb_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?p3_tc_spied = false)*/
-        return true;
+        return !GameFlags.P3TcSpied;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -1010,7 +1010,7 @@ public class Dialog_p3_tcb_001 {
     public bool n01_r2_condition (  ) {
         ///METHOD_BODY_START n01_r2_condition
         /*//if (?p3_tc_spied = true)*/
-        return true;
+        return GameFlags.P3TcSpied;
         ///METHOD_BODY_END n01_r2_condition
     }
 
@@ -1018,7 +1018,7 @@ public class Dialog_p3_tcb_001 {
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
         /*//if (?p3_know_morgan_cin = true)*/
-        return true;
+        return GameFlags.P3KnowMorganCin;
         ///METHOD_BODY_END n03_r0_condition
     }
 
@@ -1026,7 +1026,7 @@ public class Dialog_p3_tcb_001 {
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
         /*//if (?p3_tc_spied = false)*/
-        return true;
+        return !GameFlags.P3TcSpied;
         ///METHOD_BODY_END n04_r0_condition
     }
 
@@ -1034,7 +1034,7 @@ public class Dialog_p3_tcb_001 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if (?p3_tc_spied = true)*/
-        return true;
+        return GameFlags.P3TcSpied;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -1042,7 +1042,7 @@ public class Dialog_p3_tcb_001 {
     public bool n07_r0_condition (  ) {
         ///METHOD_BODY_START n07_r0_condition
         /*//if (?p3_tc_spied = false)*/
-        return true;
+        return !GameFlags.P3TcSpied;
         ///METHOD_BODY_END n07_r0_condition
     }
 
@@ -1050,7 +1050,7 @@ public class Dialog_p3_tcb_001 {
     public bool n07_r1_condition (  ) {
         ///METHOD_BODY_START n07_r1_condition
         /*//if (?p3_tc_spied = true)*/
-        return true;
+        return GameFlags.P3TcSpied;
         ///METHOD_BODY_END n07_r1_condition
     }
 
@@ -1058,6 +1058,7 @@ public class Dialog_p3_tcb_001 {
     public void n07_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r2_select
         /*//$next_state = "tcb_lose"*/
+        GameFlags.P3TCBLose = true;
         ///METHOD_BODY_END n07_r2_select
     }
 
@@ -1073,6 +1074,7 @@ public class Dialog_p3_tcb_001 {
     public void n11_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r0_select
         /*//$next_state = "tcb_lose"*/
+        GameFlags.P3TCBLose = true;
         ///METHOD_BODY_END n11_r0_select
     }
 
@@ -1080,6 +1082,7 @@ public class Dialog_p3_tcb_001 {
     public void n15_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n15_r0_select
         /*//$next_state = "tcb_lose"*/
+        GameFlags.P3TCBLose = true;
         ///METHOD_BODY_END n15_r0_select
     }
 
@@ -1105,6 +1108,7 @@ public class Dialog_p3_tcb_001 {
         /*//addItem("ITEM_AFFIDAVIT")
         //set ?p3_have_aff = true
         //setLayer("fg", "gfx/stills/affidavit/affidavit.swf")*/
+        GameFlags.P3HaveAff = true;
         ///METHOD_BODY_END n20_r0_select
     }
 

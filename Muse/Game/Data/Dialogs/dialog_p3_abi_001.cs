@@ -1007,6 +1007,7 @@ public class Dialog_p3_abi_001 {
     public void n13_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n13_p0_show
         /*//set ?p3_know_parker_free = true*/
+        GameFlags.P3KnowParkerFree = true;
         ///METHOD_BODY_END n13_p0_show
     }
 

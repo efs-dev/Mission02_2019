@@ -296,5 +296,50 @@ public static partial class GameFlagIds {
 
     //PROPERTY P3LucyResistPar
     public static string P3LucyResistPar = "P3LucyResistPar";
+
+    //PROPERTY P3LucyCautious
+    public static string P3LucyCautious = "P3LucyCautious";
+
+    //PROPERTY P3LucySelfReliant
+    public static string P3LucySelfReliant = "P3LucySelfReliant";
+
+    //PROPERTY P3LosePar002
+    public static string P3LosePar002 = "P3LosePar002";
+
+    //PROPERTY P2LucyEscapeLex
+    public static string P2LucyEscapeLex = "P2LucyEscapeLex";
+
+    //PROPERTY P3ParkersPromise
+    public static string P3ParkersPromise = "P3ParkersPromise";
+
+    //PROPERTY P3ChooseReading
+    public static string P3ChooseReading = "P3ChooseReading";
+
+    //PROPERTY P3WitnessU1
+    public static string P3WitnessU1 = "P3WitnessU1";
+
+    //PROPERTY P3Persuader
+    public static string P3Persuader = "P3Persuader";
+
+    //PROPERTY P3LoseHotel
+    public static string P3LoseHotel = "P3LoseHotel";
+
+    //PROPERTY P3KnowParkerFree
+    public static string P3KnowParkerFree = "P3KnowParkerFree";
+
+    //PROPERTY P3TcAskParker
+    public static string P3TcAskParker = "P3TcAskParker";
+
+    //PROPERTY P3LoseRan002
+    public static string P3LoseRan002 = "P3LoseRan002";
+
+    //PROPERTY P3TCBLose
+    public static string P3TCBLose = "P3TCBLose";
+
+    //PROPERTY P4LucyKnowFSA
+    public static string P4LucyKnowFSA = "P4LucyKnowFSA";
+
+    //PROPERTY P4LucyCanada
+    public static string P4LucyCanada = "P4LucyCanada";
 }
 //CLASS_END GameFlagIds

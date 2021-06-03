@@ -489,7 +489,7 @@ public class Dialog_p3_ran_001 {
     public bool n06_r0_condition (  ) {
         ///METHOD_BODY_START n06_r0_condition
         /*//if (?p3_know_parker_free = true)*/
-        return true;
+        return GameFlags.P3KnowParkerFree;
         ///METHOD_BODY_END n06_r0_condition
     }
 
@@ -497,7 +497,7 @@ public class Dialog_p3_ran_001 {
     public bool n06_r1_condition (  ) {
         ///METHOD_BODY_START n06_r1_condition
         /*//if (?p3_know_parker_free = false)*/
-        return true;
+        return !GameFlags.P3KnowParkerFree;
         ///METHOD_BODY_END n06_r1_condition
     }
 
@@ -505,7 +505,7 @@ public class Dialog_p3_ran_001 {
     public bool n07_r0_condition (  ) {
         ///METHOD_BODY_START n07_r0_condition
         /*//if (?p3_know_parker_free = true)*/
-        return true;
+        return GameFlags.P3KnowParkerFree;
         ///METHOD_BODY_END n07_r0_condition
     }
 
@@ -513,7 +513,7 @@ public class Dialog_p3_ran_001 {
     public bool n07_r1_condition (  ) {
         ///METHOD_BODY_START n07_r1_condition
         /*//if (?p3_know_parker_free = false)*/
-        return true;
+        return !GameFlags.P3KnowParkerFree;
         ///METHOD_BODY_END n07_r1_condition
     }
 
@@ -521,7 +521,7 @@ public class Dialog_p3_ran_001 {
     public bool n10_r0_condition (  ) {
         ///METHOD_BODY_START n10_r0_condition
         /*//if (?p3_know_parker_free = true)*/
-        return true;
+        return GameFlags.P3KnowParkerFree;
         ///METHOD_BODY_END n10_r0_condition
     }
 
@@ -529,6 +529,7 @@ public class Dialog_p3_ran_001 {
     public void n11_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n11_r0_select
         /*//set ?p3_know_parker_resourceful = true*/
+        GameFlags.P3KnowParkerResourceful = true;
         ///METHOD_BODY_END n11_r0_select
     }
 

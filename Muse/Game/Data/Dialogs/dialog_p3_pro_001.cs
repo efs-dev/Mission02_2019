@@ -271,6 +271,7 @@ public class Dialog_p3_pro_001 {
     public void n01_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n01_p0_show
         /*//?p3_did_hotel = true*/
+        GameFlags.P3DidHotel = true;
         ///METHOD_BODY_END n01_p0_show
     }
 
@@ -278,6 +279,7 @@ public class Dialog_p3_pro_001 {
     public void n04_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n04_p0_show
         /*//?witness_u1 = true*/
+        GameFlags.P3WitnessU1 = true;
         ///METHOD_BODY_END n04_p0_show
     }
 
@@ -285,7 +287,7 @@ public class Dialog_p3_pro_001 {
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
         /*//if (?p3_know_morgan_cin = true)*/
-        return true;
+        return GameFlags.P3KnowMorganCin;
         ///METHOD_BODY_END n02_r0_condition
     }
 
@@ -293,6 +295,7 @@ public class Dialog_p3_pro_001 {
     public void n03_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r2_select
         /*//?p3_persuader = true*/
+        GameFlags.P3Persuader = true;
         ///METHOD_BODY_END n03_r2_select
     }
 
@@ -300,6 +303,7 @@ public class Dialog_p3_pro_001 {
     public void n08_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r0_select
         /*//set ?p3_lose_hotel = true*/
+        GameFlags.P3LoseHotel = true;
         ///METHOD_BODY_END n08_r0_select
     }
 }

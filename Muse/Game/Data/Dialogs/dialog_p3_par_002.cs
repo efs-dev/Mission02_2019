@@ -14,6 +14,39 @@ using Efs.Dialogs;
 public class Dialog_p3_par_002 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p3_ask_cart
+        private bool _p3_ask_cart = false;
+
+        //PROPERTY p3_ask_cart
+        public bool p3_ask_cart {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_cart
+                        return _p3_ask_cart;
+                        ///PROPERTY_GETTER_END p3_ask_cart
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_cart
+                        _p3_ask_cart = value;
+                        ///PROPERTY_SETTER_END p3_ask_cart
+                }
+        }
+
+        //PROPERTY _p3_ask_paper
+        private bool _p3_ask_paper = false;
+
+        //PROPERTY p3_ask_paper
+        public bool p3_ask_paper {
+                get {
+                        ///PROPERTY_GETTER_START p3_ask_paper
+                        return _p3_ask_paper;
+                        ///PROPERTY_GETTER_END p3_ask_paper
+                }
+                set {
+                        ///PROPERTY_SETTER_START p3_ask_paper
+                        _p3_ask_paper = value;
+                        ///PROPERTY_SETTER_END p3_ask_paper
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -1191,7 +1224,7 @@ public class Dialog_p3_par_002 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (?p3_aff_read = false)*/
-        return true;
+        return !GameFlags.P3AffRead;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -1199,7 +1232,7 @@ public class Dialog_p3_par_002 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?p3_aff_read = true)*/
-        return true;
+        return GameFlags.P3AffRead;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -1207,7 +1240,7 @@ public class Dialog_p3_par_002 {
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
         /*//if (?p3_ask_cart = true)*/
-        return true;
+        return DialogGameFlags.p3_ask_cart;
         ///METHOD_BODY_END n03_r0_condition
     }
 
@@ -1215,7 +1248,7 @@ public class Dialog_p3_par_002 {
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
         /*//if (?p3_ask_cart = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_cart;
         ///METHOD_BODY_END n03_r1_condition
     }
 
@@ -1223,7 +1256,7 @@ public class Dialog_p3_par_002 {
     public bool n04_r0_condition (  ) {
         ///METHOD_BODY_START n04_r0_condition
         /*//if (?p3_ask_paper = true)*/
-        return true;
+        return DialogGameFlags.p3_ask_paper;
         ///METHOD_BODY_END n04_r0_condition
     }
 
@@ -1231,7 +1264,7 @@ public class Dialog_p3_par_002 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if (?p3_ask_paper = false)*/
-        return true;
+        return !DialogGameFlags.p3_ask_paper;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -1239,7 +1272,7 @@ public class Dialog_p3_par_002 {
     public bool n33_r1_condition (  ) {
         ///METHOD_BODY_START n33_r1_condition
         /*//if ((?know_lexington = true) AND (?p2_lucy_escape_lex = false))*/
-        return true;
+        return GameFlags.P1KnowLexington && !GameFlags.P2LucyEscapeLex;
         ///METHOD_BODY_END n33_r1_condition
     }
 
@@ -1247,7 +1280,7 @@ public class Dialog_p3_par_002 {
     public bool n33_r2_condition (  ) {
         ///METHOD_BODY_START n33_r2_condition
         /*//if (?p2_lucy_escape_lex = true)*/
-        return true;
+        return GameFlags.P2LucyEscapeLex;
         ///METHOD_BODY_END n33_r2_condition
     }
 
@@ -1256,6 +1289,7 @@ public class Dialog_p3_par_002 {
         ///METHOD_BODY_START n01_r0_select
         /*//#par_points = #par_points + 1
         //updateMessage ("This helps earn the Parker's Ally Badge.")*/
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -1263,6 +1297,7 @@ public class Dialog_p3_par_002 {
     public void n02_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r0_select
         /*//set ?p3_ask_cart = true*/
+        DialogGameFlags.p3_ask_cart = true;
         ///METHOD_BODY_END n02_r0_select
     }
 
@@ -1270,6 +1305,7 @@ public class Dialog_p3_par_002 {
     public void n02_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r1_select
         /*//set ?p3_ask_paper = true*/
+        DialogGameFlags.p3_ask_paper = true;
         ///METHOD_BODY_END n02_r1_select
     }
 
@@ -1277,6 +1313,7 @@ public class Dialog_p3_par_002 {
     public void n03_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r1_select
         /*//set ?p3_ask_cart = true*/
+        DialogGameFlags.p3_ask_cart = true;
         ///METHOD_BODY_END n03_r1_select
     }
 
@@ -1284,6 +1321,7 @@ public class Dialog_p3_par_002 {
     public void n04_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r1_select
         /*//set ?p3_ask_paper = true*/
+        DialogGameFlags.p3_ask_paper = true;
         ///METHOD_BODY_END n04_r1_select
     }
 
@@ -1295,6 +1333,9 @@ public class Dialog_p3_par_002 {
         //#mil_points = #mil_points + 1
         //updateMessage ("Parker's opinion of you improves.")
         //updateMessage ("Millie's opinion of you improves.")*/
+        GameFlags.P3LucyCautious = true;
+        GameFlags.P3ParPoints++;
+        GameFlags.P3MilPoints++;
         ///METHOD_BODY_END n05_r0_select
     }
 
@@ -1302,6 +1343,7 @@ public class Dialog_p3_par_002 {
     public void n22_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n22_r0_select
         /*//set ?p3_ask_paper = true*/
+        DialogGameFlags.p3_ask_paper = true;
         ///METHOD_BODY_END n22_r0_select
     }
 
@@ -1310,6 +1352,7 @@ public class Dialog_p3_par_002 {
         ///METHOD_BODY_START n25_r1_select
         /*//#mil_points = #mil_points + 1
         //updateMessage ("Millie's opinion of you improves.")*/
+        GameFlags.P3MilPoints++;
         ///METHOD_BODY_END n25_r1_select
     }
 
@@ -1318,6 +1361,7 @@ public class Dialog_p3_par_002 {
         ///METHOD_BODY_START n25_r3_select
         /*//#par_points = #par_points + 1
         //updateMessage ("Parker's opinion of you improves.")*/
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n25_r3_select
     }
 
@@ -1325,6 +1369,7 @@ public class Dialog_p3_par_002 {
     public void n25_r4_select ( DialogResponse response ) {
         ///METHOD_BODY_START n25_r4_select
         /*//?p3_lucy_self_reliant = true*/
+        GameFlags.P3LucySelfReliant = true;
         ///METHOD_BODY_END n25_r4_select
     }
 
@@ -1332,6 +1377,7 @@ public class Dialog_p3_par_002 {
     public void n30_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n30_r0_select
         /*//$next_state = "LOSE_PAR_002"*/
+        GameFlags.P3LosePar002 = true;
         ///METHOD_BODY_END n30_r0_select
     }
 
@@ -1339,6 +1385,7 @@ public class Dialog_p3_par_002 {
     public void n32_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n32_r0_select
         /*//$next_state = "LOSE_PAR_002"*/
+        GameFlags.P3LosePar002 = true;
         ///METHOD_BODY_END n32_r0_select
     }
 
@@ -1349,6 +1396,8 @@ public class Dialog_p3_par_002 {
         //?p3_choose_reading = true
         //updateMessage ("Millie's opinion of you improves.")
         //updateMessage ("This helps improve your reading.")*/
+        GameFlags.P3ChooseReading = true;
+        GameFlags.P3MilPoints++;
         ///METHOD_BODY_END n36_r0_select
     }
 
@@ -1358,6 +1407,8 @@ public class Dialog_p3_par_002 {
         /*//?p3_parkers_promise = true
         //#par_points = #par_points + 1
         //updateMessage ("Parker's opinion of you improves.")*/
+        GameFlags.P3ParkersPromise = true;
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n36_r1_select
     }
 }
