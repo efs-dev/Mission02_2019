@@ -230,6 +230,24 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P4LucyKnowFSA 
 //USING
 ///GAMEFLAG_FOLDER P4LucyCanada 
+//USING
+///GAMEFLAG_FOLDER P4AuctionChoice 
+//USING
+///GAMEFLAG_FOLDER P4JonahServant 
+//USING
+///GAMEFLAG_FOLDER P4HasNail 
+//USING
+///GAMEFLAG_FOLDER P3Telegraph 
+//USING
+///GAMEFLAG_FOLDER P4TelegraphTime 
+//USING
+///GAMEFLAG_FOLDER P4VisitedWitness1 
+//USING
+///GAMEFLAG_FOLDER P4VisitedWitness2 
+//USING
+///GAMEFLAG_FOLDER P4VisitedAmbush1 
+//USING
+///GAMEFLAG_FOLDER P4VisitedAmbush2 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -2395,6 +2413,177 @@ GameFlagChanged("P4LucyKnowFSA", oldValue, value);
 _P4LucyCanada = value;
 GameFlagChanged("P4LucyCanada", oldValue, value);
             ///PROPERTY_SETTER_END P4LucyCanada
+        }
+    }
+
+    //PROPERTY _P4AuctionChoice
+    private static string _P4AuctionChoice = "";
+
+    //PROPERTY P4AuctionChoice
+    public static string P4AuctionChoice {
+        get {
+            ///PROPERTY_GETTER_START P4AuctionChoice
+            return _P4AuctionChoice;
+            ///PROPERTY_GETTER_END P4AuctionChoice
+        }
+        set {
+            ///PROPERTY_SETTER_START P4AuctionChoice
+            var oldValue = value;
+_P4AuctionChoice = value;
+GameFlagChanged("P4AuctionChoice", oldValue, value);
+            ///PROPERTY_SETTER_END P4AuctionChoice
+        }
+    }
+
+    //PROPERTY _P4JonahServant
+    private static bool _P4JonahServant = false;
+
+    //PROPERTY P4JonahServant
+    public static bool P4JonahServant {
+        get {
+            ///PROPERTY_GETTER_START P4JonahServant
+            return _P4JonahServant;
+            ///PROPERTY_GETTER_END P4JonahServant
+        }
+        set {
+            ///PROPERTY_SETTER_START P4JonahServant
+            var oldValue = value;
+_P4JonahServant = value;
+GameFlagChanged("P4JonahServant", oldValue, value);
+            ///PROPERTY_SETTER_END P4JonahServant
+        }
+    }
+
+    //PROPERTY _P4HasNail
+    private static bool _P4HasNail = false;
+
+    //PROPERTY P4HasNail
+    public static bool P4HasNail {
+        get {
+            ///PROPERTY_GETTER_START P4HasNail
+            return _P4HasNail;
+            ///PROPERTY_GETTER_END P4HasNail
+        }
+        set {
+            ///PROPERTY_SETTER_START P4HasNail
+            var oldValue = value;
+_P4HasNail = value;
+GameFlagChanged("P4HasNail", oldValue, value);
+            ///PROPERTY_SETTER_END P4HasNail
+        }
+    }
+
+    //PROPERTY _P3Telegraph
+    private static bool _P3Telegraph = false;
+
+    //PROPERTY P3Telegraph
+    public static bool P3Telegraph {
+        get {
+            ///PROPERTY_GETTER_START P3Telegraph
+            return _P3Telegraph;
+            ///PROPERTY_GETTER_END P3Telegraph
+        }
+        set {
+            ///PROPERTY_SETTER_START P3Telegraph
+            var oldValue = value;
+_P3Telegraph = value;
+GameFlagChanged("P3Telegraph", oldValue, value);
+            ///PROPERTY_SETTER_END P3Telegraph
+        }
+    }
+
+    //PROPERTY _P4TelegraphTime
+    private static int _P4TelegraphTime = 0;
+
+    //PROPERTY P4TelegraphTime
+    public static int P4TelegraphTime {
+        get {
+            ///PROPERTY_GETTER_START P4TelegraphTime
+            return _P4TelegraphTime;
+            ///PROPERTY_GETTER_END P4TelegraphTime
+        }
+        set {
+            ///PROPERTY_SETTER_START P4TelegraphTime
+            var oldValue = value;
+_P4TelegraphTime = value;
+GameFlagChanged("P4TelegraphTime", oldValue, value);
+            ///PROPERTY_SETTER_END P4TelegraphTime
+        }
+    }
+
+    //PROPERTY _P4VisitedWitness1
+    private static bool _P4VisitedWitness1 = false;
+
+    //PROPERTY P4VisitedWitness1
+    public static bool P4VisitedWitness1 {
+        get {
+            ///PROPERTY_GETTER_START P4VisitedWitness1
+            return _P4VisitedWitness1;
+            ///PROPERTY_GETTER_END P4VisitedWitness1
+        }
+        set {
+            ///PROPERTY_SETTER_START P4VisitedWitness1
+            var oldValue = value;
+_P4VisitedWitness1 = value;
+GameFlagChanged("P4VisitedWitness1", oldValue, value);
+            ///PROPERTY_SETTER_END P4VisitedWitness1
+        }
+    }
+
+    //PROPERTY _P4VisitedWitness2
+    private static bool _P4VisitedWitness2 = false;
+
+    //PROPERTY P4VisitedWitness2
+    public static bool P4VisitedWitness2 {
+        get {
+            ///PROPERTY_GETTER_START P4VisitedWitness2
+            return _P4VisitedWitness2;
+            ///PROPERTY_GETTER_END P4VisitedWitness2
+        }
+        set {
+            ///PROPERTY_SETTER_START P4VisitedWitness2
+            var oldValue = value;
+_P4VisitedWitness2 = value;
+GameFlagChanged("P4VisitedWitness2", oldValue, value);
+            ///PROPERTY_SETTER_END P4VisitedWitness2
+        }
+    }
+
+    //PROPERTY _P4VisitedAmbush1
+    private static bool _P4VisitedAmbush1 = false;
+
+    //PROPERTY P4VisitedAmbush1
+    public static bool P4VisitedAmbush1 {
+        get {
+            ///PROPERTY_GETTER_START P4VisitedAmbush1
+            return _P4VisitedAmbush1;
+            ///PROPERTY_GETTER_END P4VisitedAmbush1
+        }
+        set {
+            ///PROPERTY_SETTER_START P4VisitedAmbush1
+            var oldValue = value;
+_P4VisitedAmbush1 = value;
+GameFlagChanged("P4VisitedAmbush1", oldValue, value);
+            ///PROPERTY_SETTER_END P4VisitedAmbush1
+        }
+    }
+
+    //PROPERTY _P4VisitedAmbush2
+    private static bool _P4VisitedAmbush2 = false;
+
+    //PROPERTY P4VisitedAmbush2
+    public static bool P4VisitedAmbush2 {
+        get {
+            ///PROPERTY_GETTER_START P4VisitedAmbush2
+            return _P4VisitedAmbush2;
+            ///PROPERTY_GETTER_END P4VisitedAmbush2
+        }
+        set {
+            ///PROPERTY_SETTER_START P4VisitedAmbush2
+            var oldValue = value;
+_P4VisitedAmbush2 = value;
+GameFlagChanged("P4VisitedAmbush2", oldValue, value);
+            ///PROPERTY_SETTER_END P4VisitedAmbush2
         }
     }
 }

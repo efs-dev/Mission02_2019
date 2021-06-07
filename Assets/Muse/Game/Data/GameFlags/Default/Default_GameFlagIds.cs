@@ -341,5 +341,32 @@ public static partial class GameFlagIds {
 
     //PROPERTY P4LucyCanada
     public static string P4LucyCanada = "P4LucyCanada";
+
+    //PROPERTY P4AuctionChoice
+    public static string P4AuctionChoice = "P4AuctionChoice";
+
+    //PROPERTY P4JonahServant
+    public static string P4JonahServant = "P4JonahServant";
+
+    //PROPERTY P4HasNail
+    public static string P4HasNail = "P4HasNail";
+
+    //PROPERTY P3Telegraph
+    public static string P3Telegraph = "P3Telegraph";
+
+    //PROPERTY P4TelegraphTime
+    public static string P4TelegraphTime = "P4TelegraphTime";
+
+    //PROPERTY P4VisitedWitness1
+    public static string P4VisitedWitness1 = "P4VisitedWitness1";
+
+    //PROPERTY P4VisitedWitness2
+    public static string P4VisitedWitness2 = "P4VisitedWitness2";
+
+    //PROPERTY P4VisitedAmbush1
+    public static string P4VisitedAmbush1 = "P4VisitedAmbush1";
+
+    //PROPERTY P4VisitedAmbush2
+    public static string P4VisitedAmbush2 = "P4VisitedAmbush2";
 }
 //CLASS_END GameFlagIds

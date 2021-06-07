@@ -207,7 +207,7 @@ public class Dialog_p4_choice_telegraph {
     public bool three_more_r0_condition (  ) {
         ///METHOD_BODY_START three_more_r0_condition
         /*//					if( ?P3_TELEGRAPH  )*/
-        return true;
+        return GameFlags.P3Telegraph;
         ///METHOD_BODY_END three_more_r0_condition
     }
 
@@ -231,7 +231,7 @@ public class Dialog_p4_choice_telegraph {
     public bool one_more_r0_condition (  ) {
         ///METHOD_BODY_START one_more_r0_condition
         /*//				if( (visitCount("ambush2") = 0)  )*/
-        return true;
+        return !GameFlags.P4VisitedAmbush2;
         ///METHOD_BODY_END one_more_r0_condition
     }
 
@@ -239,7 +239,7 @@ public class Dialog_p4_choice_telegraph {
     public bool one_more_r1_condition (  ) {
         ///METHOD_BODY_START one_more_r1_condition
         /*//				if( (visitCount("witness2") = 0)  )*/
-        return true;
+        return !GameFlags.P4VisitedWitness2;
         ///METHOD_BODY_END one_more_r1_condition
     }
 
@@ -254,6 +254,7 @@ public class Dialog_p4_choice_telegraph {
     public void three_more_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START three_more_r1_select
         /*//				endState("ambush", "CROSSFADE")*/
+        GameFlags.P4VisitedAmbush1 = true;
         ///METHOD_BODY_END three_more_r1_select
     }
 
@@ -261,6 +262,7 @@ public class Dialog_p4_choice_telegraph {
     public void three_more_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START three_more_r2_select
         /*//					endState("witness", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness1 = true;
         ///METHOD_BODY_END three_more_r2_select
     }
 
@@ -288,6 +290,7 @@ public class Dialog_p4_choice_telegraph {
         //				else
         //					endState("ambush2", "")
         //				/if*/
+        GameFlags.P4VisitedAmbush2 = true;
         ///METHOD_BODY_END one_more_r0_select
     }
 
@@ -299,6 +302,7 @@ public class Dialog_p4_choice_telegraph {
         //					else
         //						endState("witness2", "")
         //					/if*/
+        GameFlags.P4VisitedWitness2 = true;
         ///METHOD_BODY_END one_more_r1_select
     }
 

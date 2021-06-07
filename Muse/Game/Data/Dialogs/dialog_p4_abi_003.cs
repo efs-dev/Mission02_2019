@@ -331,6 +331,7 @@ public class Dialog_p4_abi_003 {
     public void n07_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r0_select
         /*//#p4_lucy_canada = 0*/
+        GameFlags.P4LucyCanada = 0;
         ///METHOD_BODY_END n07_r0_select
     }
 
@@ -338,6 +339,7 @@ public class Dialog_p4_abi_003 {
     public void n07_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n07_r1_select
         /*//#p4_lucy_canada = 0*/
+        GameFlags.P4LucyCanada = 0;
         ///METHOD_BODY_END n07_r1_select
     }
 
@@ -345,6 +347,7 @@ public class Dialog_p4_abi_003 {
     public void n08_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r0_select
         /*//#p4_lucy_canada = 2*/
+        GameFlags.P4LucyCanada = 2;
         ///METHOD_BODY_END n08_r0_select
     }
 }

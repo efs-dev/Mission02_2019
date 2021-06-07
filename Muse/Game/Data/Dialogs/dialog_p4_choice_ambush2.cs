@@ -129,7 +129,7 @@ public class Dialog_p4_choice_ambush2 {
     public bool one_more_r0_condition (  ) {
         ///METHOD_BODY_START one_more_r0_condition
         /*//					if( (#telegraph_time = 0) AND (?P3_TELEGRAPH)  )*/
-        return true;
+        return GameFlags.P4TelegraphTime == 0 && GameFlags.P3Telegraph;
         ///METHOD_BODY_END one_more_r0_condition
     }
 
@@ -137,7 +137,7 @@ public class Dialog_p4_choice_ambush2 {
     public bool one_more_r1_condition (  ) {
         ///METHOD_BODY_START one_more_r1_condition
         /*//				if( visitCount("witness") = 1 )*/
-        return true;
+        return GameFlags.P4VisitedWitness1;
         ///METHOD_BODY_END one_more_r1_condition
     }
 
@@ -145,7 +145,7 @@ public class Dialog_p4_choice_ambush2 {
     public bool one_more_r2_condition (  ) {
         ///METHOD_BODY_START one_more_r2_condition
         /*//				if( visitCount("witness") = 0 )*/
-        return true;
+        return !GameFlags.P4VisitedWitness1;
         ///METHOD_BODY_END one_more_r2_condition
     }
 
@@ -160,6 +160,7 @@ public class Dialog_p4_choice_ambush2 {
     public void one_more_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START one_more_r1_select
         /*//				endState("witness2", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness2 = true;
         ///METHOD_BODY_END one_more_r1_select
     }
 
@@ -167,6 +168,7 @@ public class Dialog_p4_choice_ambush2 {
     public void one_more_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START one_more_r2_select
         /*//				endState("witness", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness1 = true;
         ///METHOD_BODY_END one_more_r2_select
     }
 

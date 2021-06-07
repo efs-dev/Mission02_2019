@@ -279,7 +279,7 @@ public class Dialog_p4_auc_001 {
     public bool n02_p1_condition (  ) {
         ///METHOD_BODY_START n02_p1_condition
         /*//if ((#p4_lucy_canada = 0) AND (?p4_jonah_servant = false))*/
-        return true;
+        return GameFlags.P4LucyCanada == 0 && !GameFlags.P4JonahServant;
         ///METHOD_BODY_END n02_p1_condition
     }
 
@@ -287,6 +287,7 @@ public class Dialog_p4_auc_001 {
     public void n01_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r0_select
         /*//?p4_auction_faith = true*/
+        GameFlags.P4AuctionChoice = "faith";
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -294,6 +295,7 @@ public class Dialog_p4_auc_001 {
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
         /*//?p4_auction_resistance = true*/
+        GameFlags.P4AuctionChoice = "resistance";
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -301,6 +303,7 @@ public class Dialog_p4_auc_001 {
     public void n01_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r2_select
         /*//?p4_auction_community = true*/
+        GameFlags.P4AuctionChoice = "community";
         ///METHOD_BODY_END n01_r2_select
     }
 
@@ -308,6 +311,7 @@ public class Dialog_p4_auc_001 {
     public void n01_r3_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r3_select
         /*//?p4_auction_family = true*/
+        GameFlags.P4AuctionChoice = "family";
         ///METHOD_BODY_END n01_r3_select
     }
 
@@ -315,6 +319,7 @@ public class Dialog_p4_auc_001 {
     public void n04_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n04_r0_select
         /*//?p4_has_nail = true*/
+        GameFlags.P4HasNail= true;
         ///METHOD_BODY_END n04_r0_select
     }
 }

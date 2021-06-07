@@ -188,7 +188,8 @@ public class Dialog_p4_choice_ambush {
     public bool two_more_r0_condition (  ) {
         ///METHOD_BODY_START two_more_r0_condition
         /*//					if( ?p3_telegraph )*/
-        return true;
+        return GameFlags.P3Telegraph;
+        // TODO: This doesn't get set, currently, was probably set outside of dialogs in old game
         ///METHOD_BODY_END two_more_r0_condition
     }
 
@@ -196,7 +197,7 @@ public class Dialog_p4_choice_ambush {
     public bool one_more_r0_condition (  ) {
         ///METHOD_BODY_START one_more_r0_condition
         /*//					if( (#telegraph_time = 0) AND (?P3_TELEGRAPH)  )*/
-        return true;
+        return GameFlags.P4TelegraphTime == 0 && GameFlags.P3Telegraph;
         ///METHOD_BODY_END one_more_r0_condition
     }
 
@@ -204,7 +205,7 @@ public class Dialog_p4_choice_ambush {
     public bool one_more_r1_condition (  ) {
         ///METHOD_BODY_START one_more_r1_condition
         /*//				if( visitCount("witness") = 1 )*/
-        return true;
+        return GameFlags.P4VisitedWitness1;
         ///METHOD_BODY_END one_more_r1_condition
     }
 
@@ -212,7 +213,7 @@ public class Dialog_p4_choice_ambush {
     public bool one_more_r2_condition (  ) {
         ///METHOD_BODY_START one_more_r2_condition
         /*//				if( visitCount("witness") = 0 )*/
-        return true;
+        return !GameFlags.P4VisitedWitness1;
         ///METHOD_BODY_END one_more_r2_condition
     }
 
@@ -230,6 +231,7 @@ public class Dialog_p4_choice_ambush {
         /*//					// 1st witness
         //					$next_state = "witness"
         //					//endState("witness", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness1 = true;
         ///METHOD_BODY_END two_more_r1_select
     }
 
@@ -238,6 +240,7 @@ public class Dialog_p4_choice_ambush {
         ///METHOD_BODY_START two_more_r2_select
         /*//				$next_state = "ambush2"
         //				//endState( "ambush2" )								*/
+        GameFlags.P4VisitedAmbush2 = true;
         ///METHOD_BODY_END two_more_r2_select
     }
 
@@ -254,6 +257,7 @@ public class Dialog_p4_choice_ambush {
         ///METHOD_BODY_START one_more_r1_select
         /*//				$next_state = "witness2"
         //				//endState("witness2", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness2 = true;
         ///METHOD_BODY_END one_more_r1_select
     }
 
@@ -262,6 +266,7 @@ public class Dialog_p4_choice_ambush {
         ///METHOD_BODY_START one_more_r2_select
         /*//				$next_state = "witness"
         //				//endState("witness", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness1 = true;
         ///METHOD_BODY_END one_more_r2_select
     }
 
@@ -270,6 +275,7 @@ public class Dialog_p4_choice_ambush {
         ///METHOD_BODY_START one_more_r3_select
         /*//					$next_state = "ambush2"
         //					//endState("ambush2", "CROSSFADE")*/
+        GameFlags.P4VisitedAmbush2 = true;
         ///METHOD_BODY_END one_more_r3_select
     }
 
