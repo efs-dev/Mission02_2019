@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p4_par_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p4_parker_doing
+        private bool _p4_parker_doing = false;
+
+        //PROPERTY p4_parker_doing
+        public bool p4_parker_doing {
+                get {
+                        ///PROPERTY_GETTER_START p4_parker_doing
+                        return _p4_parker_doing;
+                        ///PROPERTY_GETTER_END p4_parker_doing
+                }
+                set {
+                        ///PROPERTY_SETTER_START p4_parker_doing
+                        _p4_parker_doing = value;
+                        ///PROPERTY_SETTER_END p4_parker_doing
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -512,6 +528,7 @@ public class Dialog_p4_par_001 {
     public void n01_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n01_p0_show
         /*//set ?p4_talk_parker = true*/
+        GameFlags.P4TalkParker = true;
         ///METHOD_BODY_END n01_p0_show
     }
 
@@ -519,6 +536,7 @@ public class Dialog_p4_par_001 {
     public void n06_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n06_p0_show
         /*//set ?p4_comm_thugs = true*/
+        GameFlags.P4CommThugs = true;
         ///METHOD_BODY_END n06_p0_show
     }
 
@@ -527,6 +545,8 @@ public class Dialog_p4_par_001 {
         ///METHOD_BODY_START n12_p0_show
         /*//?p4_confirm_par = true
         //#par_points = #par_points +1*/
+        GameFlags.P4ConfirmPar = true;
+        GameFlags.P3ParPoints++;
         ///METHOD_BODY_END n12_p0_show
     }
 
@@ -536,6 +556,9 @@ public class Dialog_p4_par_001 {
         /*//set ?p4_bring_jonah = true
         //?p4_confirm_par = true
         //#par_points = #par_points +1*/
+        GameFlags.P4ConfirmPar = true;
+        GameFlags.P3ParPoints++;
+        GameFlags.P4BringJonah = true;
         ///METHOD_BODY_END n13_p0_show
     }
 
@@ -543,7 +566,7 @@ public class Dialog_p4_par_001 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (?p4_talk_millie = true)*/
-        return true;
+        return GameFlags.P4TalkMillie;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -551,7 +574,7 @@ public class Dialog_p4_par_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?p4_ask_morgan_ok = false)*/
-        return true;
+        return !GameFlags.P4AskMorganOK;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -559,7 +582,7 @@ public class Dialog_p4_par_001 {
     public bool n10_r2_condition (  ) {
         ///METHOD_BODY_START n10_r2_condition
         /*//if (?p4_parker_doing = false)*/
-        return true;
+        return !DialogGameFlags.p4_parker_doing;
         ///METHOD_BODY_END n10_r2_condition
     }
 
@@ -567,7 +590,7 @@ public class Dialog_p4_par_001 {
     public bool n11_r0_condition (  ) {
         ///METHOD_BODY_START n11_r0_condition
         /*//if (?p4_parker_doing = true)*/
-        return true;
+        return DialogGameFlags.p4_parker_doing;
         ///METHOD_BODY_END n11_r0_condition
     }
 
@@ -575,7 +598,7 @@ public class Dialog_p4_par_001 {
     public bool n11_r1_condition (  ) {
         ///METHOD_BODY_START n11_r1_condition
         /*//if (?p4_parker_doing = false)*/
-        return true;
+        return !DialogGameFlags.p4_parker_doing;
         ///METHOD_BODY_END n11_r1_condition
     }
 
@@ -583,7 +606,7 @@ public class Dialog_p4_par_001 {
     public bool n11_r2_condition (  ) {
         ///METHOD_BODY_START n11_r2_condition
         /*//if (?p4_parker_doing = false)*/
-        return true;
+        return !DialogGameFlags.p4_parker_doing;
         ///METHOD_BODY_END n11_r2_condition
     }
 
@@ -591,6 +614,7 @@ public class Dialog_p4_par_001 {
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
         /*//set ?p4_ask_morgan_ok = true*/
+        GameFlags.P4AskMorganOK = true;
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -598,6 +622,7 @@ public class Dialog_p4_par_001 {
     public void n08_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r0_select
         /*//?p4_parker_doing = true*/
+        DialogGameFlags.p4_parker_doing = true;
         ///METHOD_BODY_END n08_r0_select
     }
 }

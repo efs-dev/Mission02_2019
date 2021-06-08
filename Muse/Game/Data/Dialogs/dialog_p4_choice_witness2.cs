@@ -117,7 +117,7 @@ public class Dialog_p4_choice_witness2 {
     public bool one_more_r0_condition (  ) {
         ///METHOD_BODY_START one_more_r0_condition
         /*//					if( (#telegraph_time = 0) AND (?P3_TELEGRAPH)  )*/
-        return true;
+        return GameFlags.P3Telegraph && GameFlags.P4TelegraphTime == 0;
         ///METHOD_BODY_END one_more_r0_condition
     }
 
@@ -133,6 +133,7 @@ public class Dialog_p4_choice_witness2 {
         ///METHOD_BODY_START one_more_r1_select
         /*//				// first ambush
         //				endState("ambush", "CROSSFADE")*/
+        GameFlags.P4VisitedAmbush1 = true;
         ///METHOD_BODY_END one_more_r1_select
     }
 

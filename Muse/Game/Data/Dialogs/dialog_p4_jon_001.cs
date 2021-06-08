@@ -649,7 +649,7 @@ public class Dialog_p4_jon_001 {
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n02_r0_condition
     }
 
@@ -657,7 +657,7 @@ public class Dialog_p4_jon_001 {
     public bool n02_r1_condition (  ) {
         ///METHOD_BODY_START n02_r1_condition
         /*//if (#p4_lucy_canada = 1)*/
-        return true;
+        return GameFlags.P4LucyCanada == 1;
         ///METHOD_BODY_END n02_r1_condition
     }
 
@@ -665,7 +665,7 @@ public class Dialog_p4_jon_001 {
     public bool n02_r2_condition (  ) {
         ///METHOD_BODY_START n02_r2_condition
         /*//if (#p4_lucy_canada = 2)*/
-        return true;
+        return GameFlags.P4LucyCanada == 2;
         ///METHOD_BODY_END n02_r2_condition
     }
 
@@ -673,7 +673,7 @@ public class Dialog_p4_jon_001 {
     public bool n14_r0_condition (  ) {
         ///METHOD_BODY_START n14_r0_condition
         /*//if (?p3_parker_gun = false)*/
-        return true;
+        return !GameFlags.P3ParkerGun;
         ///METHOD_BODY_END n14_r0_condition
     }
 
@@ -681,7 +681,8 @@ public class Dialog_p4_jon_001 {
     public bool n14_r1_condition (  ) {
         ///METHOD_BODY_START n14_r1_condition
         /*//if (?p3_parker_gun = true)*/
-        return true;
+        return GameFlags.P3ParkerGun;
+        // TODO: This never gets set to true
         ///METHOD_BODY_END n14_r1_condition
     }
 
@@ -689,6 +690,7 @@ public class Dialog_p4_jon_001 {
     public void n03_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r0_select
         /*//#p4_lucy_canada = 2*/
+        GameFlags.P4LucyCanada = 2;
         ///METHOD_BODY_END n03_r0_select
     }
 
@@ -696,6 +698,7 @@ public class Dialog_p4_jon_001 {
     public void n05_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n05_r0_select
         /*//#p4_lucy_canada = 0*/
+        GameFlags.P4LucyCanada = 0;
         ///METHOD_BODY_END n05_r0_select
     }
 
@@ -704,6 +707,7 @@ public class Dialog_p4_jon_001 {
         ///METHOD_BODY_START n06_r2_select
         /*//updateMessage ("This helps earn a Literacy Badge.")
         //?p4_finish_school = true*/
+        GameFlags.P4FinishSchool = true;
         ///METHOD_BODY_END n06_r2_select
     }
 
@@ -711,6 +715,7 @@ public class Dialog_p4_jon_001 {
     public void n08_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n08_r0_select
         /*//#p4_lucy_canada = 0*/
+        GameFlags.P4LucyCanada = 0;
         ///METHOD_BODY_END n08_r0_select
     }
 
@@ -718,6 +723,7 @@ public class Dialog_p4_jon_001 {
     public void n13_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n13_r0_select
         /*//#p4_lucy_canada = 1*/
+        GameFlags.P4LucyCanada = 1;
         ///METHOD_BODY_END n13_r0_select
     }
 
@@ -725,6 +731,7 @@ public class Dialog_p4_jon_001 {
     public void n15_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n15_r0_select
         /*//#p4_lucy_canada = 2*/
+        GameFlags.P4LucyCanada =2;
         ///METHOD_BODY_END n15_r0_select
     }
 
@@ -732,6 +739,7 @@ public class Dialog_p4_jon_001 {
     public void n16_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n16_r0_select
         /*//#p4_lucy_canada = 1*/
+        GameFlags.P4LucyCanada = 1;
         ///METHOD_BODY_END n16_r0_select
     }
 
@@ -739,6 +747,7 @@ public class Dialog_p4_jon_001 {
     public void n16_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n16_r1_select
         /*//#p4_lucy_canada = 1*/
+        GameFlags.P4LucyCanada = 1;
         ///METHOD_BODY_END n16_r1_select
     }
 
@@ -746,6 +755,7 @@ public class Dialog_p4_jon_001 {
     public void n16_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n16_r2_select
         /*//#p4_lucy_canada = 1*/
+        GameFlags.P4LucyCanada = 1;
         ///METHOD_BODY_END n16_r2_select
     }
 }

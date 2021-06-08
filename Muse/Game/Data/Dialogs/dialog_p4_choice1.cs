@@ -99,7 +99,7 @@ public class Dialog_p4_choice1 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//					if( ?P3_TELEGRAPH  )*/
-        return true;
+        return GameFlags.P3Telegraph;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -114,6 +114,7 @@ public class Dialog_p4_choice1 {
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
         /*//				endState("ambush", "CROSSFADE")*/
+        GameFlags.P4VisitedAmbush1 = true;
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -121,6 +122,7 @@ public class Dialog_p4_choice1 {
     public void n01_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r2_select
         /*//					endState("witness", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness1 = true;
         ///METHOD_BODY_END n01_r2_select
     }
 }

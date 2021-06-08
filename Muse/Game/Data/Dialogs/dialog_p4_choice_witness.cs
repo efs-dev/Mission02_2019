@@ -188,7 +188,7 @@ public class Dialog_p4_choice_witness {
     public bool two_more_r0_condition (  ) {
         ///METHOD_BODY_START two_more_r0_condition
         /*//					if( (#telegraph_time = 0) AND ?P3_TELEGRAPH  )*/
-        return true;
+        return GameFlags.P3Telegraph && GameFlags.P4TelegraphTime==0;
         ///METHOD_BODY_END two_more_r0_condition
     }
 
@@ -196,7 +196,7 @@ public class Dialog_p4_choice_witness {
     public bool one_more_r0_condition (  ) {
         ///METHOD_BODY_START one_more_r0_condition
         /*//					if( (?P3_TELEGRAPH) AND ( #telegraph_time = 0 ) )*/
-        return true;
+        return GameFlags.P3Telegraph && GameFlags.P4TelegraphTime == 0;;
         ///METHOD_BODY_END one_more_r0_condition
     }
 
@@ -204,7 +204,7 @@ public class Dialog_p4_choice_witness {
     public bool one_more_r1_condition (  ) {
         ///METHOD_BODY_START one_more_r1_condition
         /*//				if( visitCount("ambush") = 1 )*/
-        return true;
+        return GameFlags.P4VisitedAmbush1;
         ///METHOD_BODY_END one_more_r1_condition
     }
 
@@ -212,7 +212,7 @@ public class Dialog_p4_choice_witness {
     public bool one_more_r2_condition (  ) {
         ///METHOD_BODY_START one_more_r2_condition
         /*//				if( visitCount("ambush") = 0 )*/
-        return true;
+        return !GameFlags.P4VisitedAmbush1;
         ///METHOD_BODY_END one_more_r2_condition
     }
 
@@ -227,6 +227,7 @@ public class Dialog_p4_choice_witness {
     public void two_more_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START two_more_r1_select
         /*//				endState("ambush", "CROSSFADE")*/
+        GameFlags.P4VisitedAmbush1 = true;
         ///METHOD_BODY_END two_more_r1_select
     }
 
@@ -234,6 +235,7 @@ public class Dialog_p4_choice_witness {
     public void two_more_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START two_more_r2_select
         /*//					endState("witness2", "CROSSFADE")*/
+        GameFlags.P4VisitedWitness2 = true;
         ///METHOD_BODY_END two_more_r2_select
     }
 
@@ -248,6 +250,7 @@ public class Dialog_p4_choice_witness {
     public void one_more_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START one_more_r1_select
         /*//				endState("ambush2", "CROSSFADE")*/
+        GameFlags.P4VisitedAmbush2 = true;
         ///METHOD_BODY_END one_more_r1_select
     }
 
@@ -255,6 +258,7 @@ public class Dialog_p4_choice_witness {
     public void one_more_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START one_more_r2_select
         /*//				endState("ambush", "CROSSFADE")*/
+        GameFlags.P4VisitedAmbush1 = true;
         ///METHOD_BODY_END one_more_r2_select
     }
 

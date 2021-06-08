@@ -368,5 +368,32 @@ public static partial class GameFlagIds {
 
     //PROPERTY P4VisitedAmbush2
     public static string P4VisitedAmbush2 = "P4VisitedAmbush2";
+
+    //PROPERTY P4FinishSchool
+    public static string P4FinishSchool = "P4FinishSchool";
+
+    //PROPERTY P3ParkerGun
+    public static string P3ParkerGun = "P3ParkerGun";
+
+    //PROPERTY P4TalkMillie
+    public static string P4TalkMillie = "P4TalkMillie";
+
+    //PROPERTY P4AskMorganOK
+    public static string P4AskMorganOK = "P4AskMorganOK";
+
+    //PROPERTY P4TalkParker
+    public static string P4TalkParker = "P4TalkParker";
+
+    //PROPERTY P4CommThugs
+    public static string P4CommThugs = "P4CommThugs";
+
+    //PROPERTY P4ConfirmMil
+    public static string P4ConfirmMil = "P4ConfirmMil";
+
+    //PROPERTY P4ConfirmPar
+    public static string P4ConfirmPar = "P4ConfirmPar";
+
+    //PROPERTY P4BringJonah
+    public static string P4BringJonah = "P4BringJonah";
 }
 //CLASS_END GameFlagIds

@@ -248,6 +248,24 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P4VisitedAmbush1 
 //USING
 ///GAMEFLAG_FOLDER P4VisitedAmbush2 
+//USING
+///GAMEFLAG_FOLDER P4FinishSchool 
+//USING
+///GAMEFLAG_FOLDER P3ParkerGun 
+//USING
+///GAMEFLAG_FOLDER P4TalkMillie 
+//USING
+///GAMEFLAG_FOLDER P4AskMorganOK 
+//USING
+///GAMEFLAG_FOLDER P4TalkParker 
+//USING
+///GAMEFLAG_FOLDER P4CommThugs 
+//USING
+///GAMEFLAG_FOLDER P4ConfirmMil 
+//USING
+///GAMEFLAG_FOLDER P4ConfirmPar 
+//USING
+///GAMEFLAG_FOLDER P4BringJonah 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -2584,6 +2602,177 @@ GameFlagChanged("P4VisitedAmbush1", oldValue, value);
 _P4VisitedAmbush2 = value;
 GameFlagChanged("P4VisitedAmbush2", oldValue, value);
             ///PROPERTY_SETTER_END P4VisitedAmbush2
+        }
+    }
+
+    //PROPERTY _P4FinishSchool
+    private static bool _P4FinishSchool = false;
+
+    //PROPERTY P4FinishSchool
+    public static bool P4FinishSchool {
+        get {
+            ///PROPERTY_GETTER_START P4FinishSchool
+            return _P4FinishSchool;
+            ///PROPERTY_GETTER_END P4FinishSchool
+        }
+        set {
+            ///PROPERTY_SETTER_START P4FinishSchool
+            var oldValue = value;
+_P4FinishSchool = value;
+GameFlagChanged("P4FinishSchool", oldValue, value);
+            ///PROPERTY_SETTER_END P4FinishSchool
+        }
+    }
+
+    //PROPERTY _P3ParkerGun
+    private static bool _P3ParkerGun = false;
+
+    //PROPERTY P3ParkerGun
+    public static bool P3ParkerGun {
+        get {
+            ///PROPERTY_GETTER_START P3ParkerGun
+            return _P3ParkerGun;
+            ///PROPERTY_GETTER_END P3ParkerGun
+        }
+        set {
+            ///PROPERTY_SETTER_START P3ParkerGun
+            var oldValue = value;
+_P3ParkerGun = value;
+GameFlagChanged("P3ParkerGun", oldValue, value);
+            ///PROPERTY_SETTER_END P3ParkerGun
+        }
+    }
+
+    //PROPERTY _P4TalkMillie
+    private static bool _P4TalkMillie = false;
+
+    //PROPERTY P4TalkMillie
+    public static bool P4TalkMillie {
+        get {
+            ///PROPERTY_GETTER_START P4TalkMillie
+            return _P4TalkMillie;
+            ///PROPERTY_GETTER_END P4TalkMillie
+        }
+        set {
+            ///PROPERTY_SETTER_START P4TalkMillie
+            var oldValue = value;
+_P4TalkMillie = value;
+GameFlagChanged("P4TalkMillie", oldValue, value);
+            ///PROPERTY_SETTER_END P4TalkMillie
+        }
+    }
+
+    //PROPERTY _P4AskMorganOK
+    private static bool _P4AskMorganOK = false;
+
+    //PROPERTY P4AskMorganOK
+    public static bool P4AskMorganOK {
+        get {
+            ///PROPERTY_GETTER_START P4AskMorganOK
+            return _P4AskMorganOK;
+            ///PROPERTY_GETTER_END P4AskMorganOK
+        }
+        set {
+            ///PROPERTY_SETTER_START P4AskMorganOK
+            var oldValue = value;
+_P4AskMorganOK = value;
+GameFlagChanged("P4AskMorganOK", oldValue, value);
+            ///PROPERTY_SETTER_END P4AskMorganOK
+        }
+    }
+
+    //PROPERTY _P4TalkParker
+    private static bool _P4TalkParker = false;
+
+    //PROPERTY P4TalkParker
+    public static bool P4TalkParker {
+        get {
+            ///PROPERTY_GETTER_START P4TalkParker
+            return _P4TalkParker;
+            ///PROPERTY_GETTER_END P4TalkParker
+        }
+        set {
+            ///PROPERTY_SETTER_START P4TalkParker
+            var oldValue = value;
+_P4TalkParker = value;
+GameFlagChanged("P4TalkParker", oldValue, value);
+            ///PROPERTY_SETTER_END P4TalkParker
+        }
+    }
+
+    //PROPERTY _P4CommThugs
+    private static bool _P4CommThugs = false;
+
+    //PROPERTY P4CommThugs
+    public static bool P4CommThugs {
+        get {
+            ///PROPERTY_GETTER_START P4CommThugs
+            return _P4CommThugs;
+            ///PROPERTY_GETTER_END P4CommThugs
+        }
+        set {
+            ///PROPERTY_SETTER_START P4CommThugs
+            var oldValue = value;
+_P4CommThugs = value;
+GameFlagChanged("P4CommThugs", oldValue, value);
+            ///PROPERTY_SETTER_END P4CommThugs
+        }
+    }
+
+    //PROPERTY _P4ConfirmMil
+    private static bool _P4ConfirmMil = false;
+
+    //PROPERTY P4ConfirmMil
+    public static bool P4ConfirmMil {
+        get {
+            ///PROPERTY_GETTER_START P4ConfirmMil
+            return _P4ConfirmMil;
+            ///PROPERTY_GETTER_END P4ConfirmMil
+        }
+        set {
+            ///PROPERTY_SETTER_START P4ConfirmMil
+            var oldValue = value;
+_P4ConfirmMil = value;
+GameFlagChanged("P4ConfirmMil", oldValue, value);
+            ///PROPERTY_SETTER_END P4ConfirmMil
+        }
+    }
+
+    //PROPERTY _P4ConfirmPar
+    private static bool _P4ConfirmPar = false;
+
+    //PROPERTY P4ConfirmPar
+    public static bool P4ConfirmPar {
+        get {
+            ///PROPERTY_GETTER_START P4ConfirmPar
+            return _P4ConfirmPar;
+            ///PROPERTY_GETTER_END P4ConfirmPar
+        }
+        set {
+            ///PROPERTY_SETTER_START P4ConfirmPar
+            var oldValue = value;
+_P4ConfirmPar = value;
+GameFlagChanged("P4ConfirmPar", oldValue, value);
+            ///PROPERTY_SETTER_END P4ConfirmPar
+        }
+    }
+
+    //PROPERTY _P4BringJonah
+    private static bool _P4BringJonah = false;
+
+    //PROPERTY P4BringJonah
+    public static bool P4BringJonah {
+        get {
+            ///PROPERTY_GETTER_START P4BringJonah
+            return _P4BringJonah;
+            ///PROPERTY_GETTER_END P4BringJonah
+        }
+        set {
+            ///PROPERTY_SETTER_START P4BringJonah
+            var oldValue = value;
+_P4BringJonah = value;
+GameFlagChanged("P4BringJonah", oldValue, value);
+            ///PROPERTY_SETTER_END P4BringJonah
         }
     }
 }

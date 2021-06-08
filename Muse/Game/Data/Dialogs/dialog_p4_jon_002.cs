@@ -171,7 +171,7 @@ public class Dialog_p4_jon_002 {
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n02_r0_condition
     }
 
@@ -179,7 +179,7 @@ public class Dialog_p4_jon_002 {
     public bool n02_r1_condition (  ) {
         ///METHOD_BODY_START n02_r1_condition
         /*//if (#p4_lucy_canada = 2)*/
-        return true;
+        return GameFlags.P4LucyCanada == 2;
         ///METHOD_BODY_END n02_r1_condition
     }
 
@@ -187,6 +187,7 @@ public class Dialog_p4_jon_002 {
     public void n03_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n03_r0_select
         /*//#p4_lucy_canada = 2*/
+        GameFlags.P4LucyCanada = 2;
         ///METHOD_BODY_END n03_r0_select
     }
 
@@ -194,6 +195,7 @@ public class Dialog_p4_jon_002 {
     public void n05_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n05_r0_select
         /*//#p4_lucy_canada = 0*/
+        GameFlags.P4LucyCanada = 0;
         ///METHOD_BODY_END n05_r0_select
     }
 }

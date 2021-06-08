@@ -428,6 +428,7 @@ public class Dialog_p4_mil_001 {
     public void n01_p0_show ( DialogPrompt prompt ) {
         ///METHOD_BODY_START n01_p0_show
         /*//set ?p4_talk_millie = true*/
+        GameFlags.P4TalkMillie = true;
         ///METHOD_BODY_END n01_p0_show
     }
 
@@ -436,6 +437,8 @@ public class Dialog_p4_mil_001 {
         ///METHOD_BODY_START n10_p0_show
         /*//?p4_confirm_mil = true
         //#mil_points = #mil_points +1*/
+        GameFlags.P3MilPoints++;
+        GameFlags.P4ConfirmMil = true;
         ///METHOD_BODY_END n10_p0_show
     }
 
@@ -443,7 +446,7 @@ public class Dialog_p4_mil_001 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (?p4_talk_parker = true)*/
-        return true;
+        return GameFlags.P4TalkParker;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -451,7 +454,7 @@ public class Dialog_p4_mil_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?p4_ask_morgan_ok = false)*/
-        return true;
+        return !GameFlags.P4AskMorganOK;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -459,7 +462,7 @@ public class Dialog_p4_mil_001 {
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
         /*//if (?p4_talk_parker = true)*/
-        return true;
+        return GameFlags.P4TalkParker;
         ///METHOD_BODY_END n03_r1_condition
     }
 
@@ -467,7 +470,7 @@ public class Dialog_p4_mil_001 {
     public bool n06_r1_condition (  ) {
         ///METHOD_BODY_START n06_r1_condition
         /*//if (?p4_comm_thugs = true)*/
-        return true;
+        return GameFlags.P4CommThugs;
         ///METHOD_BODY_END n06_r1_condition
     }
 
@@ -475,6 +478,7 @@ public class Dialog_p4_mil_001 {
     public void n01_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n01_r1_select
         /*//set ?p4_ask_morgan_ok = true*/
+        GameFlags.P4AskMorganOK = true;
         ///METHOD_BODY_END n01_r1_select
     }
 

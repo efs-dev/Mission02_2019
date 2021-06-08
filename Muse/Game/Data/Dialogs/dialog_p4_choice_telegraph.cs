@@ -215,7 +215,7 @@ public class Dialog_p4_choice_telegraph {
     public bool two_more_r0_condition (  ) {
         ///METHOD_BODY_START two_more_r0_condition
         /*//				if( (visitCount("ambush2") = 0)  )*/
-        return true;
+        return !GameFlags.P4VisitedAmbush2;
         ///METHOD_BODY_END two_more_r0_condition
     }
 
@@ -223,7 +223,7 @@ public class Dialog_p4_choice_telegraph {
     public bool two_more_r1_condition (  ) {
         ///METHOD_BODY_START two_more_r1_condition
         /*//				if( (visitCount("witness2") = 0)  )*/
-        return true;
+        return !GameFlags.P4VisitedWitness2;
         ///METHOD_BODY_END two_more_r1_condition
     }
 
@@ -271,6 +271,10 @@ public class Dialog_p4_choice_telegraph {
         ///METHOD_BODY_START two_more_r0_select
         /*//				// 1st ambush
         //				endState("ambush", "CROSSFADE")				*/
+        if (GameFlags.P4VisitedAmbush1){
+        	GameFlags.P4VisitedAmbush2 = true;
+        }
+        GameFlags.P4VisitedAmbush1 = true;
         ///METHOD_BODY_END two_more_r0_select
     }
 
@@ -279,6 +283,10 @@ public class Dialog_p4_choice_telegraph {
         ///METHOD_BODY_START two_more_r1_select
         /*//					// first witness
         //					endState("witness", "CROSSFADE")					*/
+        if (GameFlags.P4VisitedWitness1){
+        	GameFlags.P4VisitedWitness2 = true;
+        }
+        GameFlags.P4VisitedWitness1 = true;
         ///METHOD_BODY_END two_more_r1_select
     }
 
