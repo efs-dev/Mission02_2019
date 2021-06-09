@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p4_tcb_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _p4_why_tc_cares
+        private bool _p4_why_tc_cares = false;
+
+        //PROPERTY p4_why_tc_cares
+        public bool p4_why_tc_cares {
+                get {
+                        ///PROPERTY_GETTER_START p4_why_tc_cares
+                        return _p4_why_tc_cares;
+                        ///PROPERTY_GETTER_END p4_why_tc_cares
+                }
+                set {
+                        ///PROPERTY_SETTER_START p4_why_tc_cares
+                        _p4_why_tc_cares = value;
+                        ///PROPERTY_SETTER_END p4_why_tc_cares
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -869,6 +885,8 @@ public class Dialog_p4_tcb_001 {
         ///METHOD_BODY_START n19_p0_show
         /*//#p4_witness_pts += 50
         //?p4_got_tcb = true*/
+        GameFlags.P4WitnessPoints += 50;
+        GameFlags.P4GotTCB = true;
         ///METHOD_BODY_END n19_p0_show
     }
 
@@ -876,7 +894,7 @@ public class Dialog_p4_tcb_001 {
     public bool n01_r0_condition (  ) {
         ///METHOD_BODY_START n01_r0_condition
         /*//if (?p4_bring_jonah  = true)*/
-        return true;
+        return GameFlags.P4BringJonah;
         ///METHOD_BODY_END n01_r0_condition
     }
 
@@ -884,7 +902,7 @@ public class Dialog_p4_tcb_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (?p4_bring_jonah = false)*/
-        return true;
+        return !GameFlags.P4BringJonah;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -892,7 +910,7 @@ public class Dialog_p4_tcb_001 {
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
         /*//if (?p4_bring_jonah = true)*/
-        return true;
+        return GameFlags.P4BringJonah;
         ///METHOD_BODY_END n02_r0_condition
     }
 
@@ -900,7 +918,7 @@ public class Dialog_p4_tcb_001 {
     public bool n02_r1_condition (  ) {
         ///METHOD_BODY_START n02_r1_condition
         /*//if (?p4_bring_jonah = false)*/
-        return true;
+        return !GameFlags.P4BringJonah;
         ///METHOD_BODY_END n02_r1_condition
     }
 
@@ -908,7 +926,7 @@ public class Dialog_p4_tcb_001 {
     public bool n03_r0_condition (  ) {
         ///METHOD_BODY_START n03_r0_condition
         /*//if (?p4_bring_jonah = true)*/
-        return true;
+        return GameFlags.P4BringJonah;
         ///METHOD_BODY_END n03_r0_condition
     }
 
@@ -916,7 +934,7 @@ public class Dialog_p4_tcb_001 {
     public bool n03_r1_condition (  ) {
         ///METHOD_BODY_START n03_r1_condition
         /*//if (?p4_bring_jonah = false)*/
-        return true;
+        return !GameFlags.P4BringJonah;
         ///METHOD_BODY_END n03_r1_condition
     }
 
@@ -924,7 +942,7 @@ public class Dialog_p4_tcb_001 {
     public bool n06_r0_condition (  ) {
         ///METHOD_BODY_START n06_r0_condition
         /*//if (?p4_bring_jonah = true)*/
-        return true;
+        return GameFlags.P4BringJonah;
         ///METHOD_BODY_END n06_r0_condition
     }
 
@@ -932,7 +950,7 @@ public class Dialog_p4_tcb_001 {
     public bool n06_r1_condition (  ) {
         ///METHOD_BODY_START n06_r1_condition
         /*//if (?p4_bring_jonah = false)*/
-        return true;
+        return !GameFlags.P4BringJonah;
         ///METHOD_BODY_END n06_r1_condition
     }
 
@@ -940,7 +958,7 @@ public class Dialog_p4_tcb_001 {
     public bool n07_r0_condition (  ) {
         ///METHOD_BODY_START n07_r0_condition
         /*//if (?p4_bring_jonah = true)*/
-        return true;
+        return GameFlags.P4BringJonah;
         ///METHOD_BODY_END n07_r0_condition
     }
 
@@ -948,7 +966,7 @@ public class Dialog_p4_tcb_001 {
     public bool n07_r1_condition (  ) {
         ///METHOD_BODY_START n07_r1_condition
         /*//if (?p4_bring_jonah = false)*/
-        return true;
+        return !GameFlags.P4BringJonah;
         ///METHOD_BODY_END n07_r1_condition
     }
 
@@ -956,7 +974,7 @@ public class Dialog_p4_tcb_001 {
     public bool n08_r1_condition (  ) {
         ///METHOD_BODY_START n08_r1_condition
         /*//if (?p4_why_tc_cares = true)*/
-        return true;
+        return DialogGameFlags.p4_why_tc_cares;
         ///METHOD_BODY_END n08_r1_condition
     }
 
@@ -964,7 +982,7 @@ public class Dialog_p4_tcb_001 {
     public bool n09_r0_condition (  ) {
         ///METHOD_BODY_START n09_r0_condition
         /*//if (?p4_bring_jonah = true)*/
-        return true;
+        return GameFlags.P4BringJonah;
         ///METHOD_BODY_END n09_r0_condition
     }
 
@@ -972,7 +990,7 @@ public class Dialog_p4_tcb_001 {
     public bool n09_r1_condition (  ) {
         ///METHOD_BODY_START n09_r1_condition
         /*//if (?p4_bring_jonah = false)*/
-        return true;
+        return !GameFlags.P4BringJonah;
         ///METHOD_BODY_END n09_r1_condition
     }
 
@@ -980,7 +998,7 @@ public class Dialog_p4_tcb_001 {
     public bool n14_r1_condition (  ) {
         ///METHOD_BODY_START n14_r1_condition
         /*//if (#lucy_money = 31)*/
-        return true;
+        return GameFlags.LucyMoney == 31;
         ///METHOD_BODY_END n14_r1_condition
     }
 
@@ -988,7 +1006,7 @@ public class Dialog_p4_tcb_001 {
     public bool n14_r2_condition (  ) {
         ///METHOD_BODY_START n14_r2_condition
         /*//if (#lucy_money = 33)*/
-        return true;
+        return GameFlags.LucyMoney == 33;
         ///METHOD_BODY_END n14_r2_condition
     }
 
@@ -996,7 +1014,7 @@ public class Dialog_p4_tcb_001 {
     public bool n14_r3_condition (  ) {
         ///METHOD_BODY_START n14_r3_condition
         /*//if (#lucy_money = 35)*/
-        return true;
+        return GameFlags.LucyMoney == 35;
         ///METHOD_BODY_END n14_r3_condition
     }
 
@@ -1004,7 +1022,7 @@ public class Dialog_p4_tcb_001 {
     public bool n14_r4_condition (  ) {
         ///METHOD_BODY_START n14_r4_condition
         /*//if (#lucy_money = 37)*/
-        return true;
+        return GameFlags.LucyMoney == 37;
         ///METHOD_BODY_END n14_r4_condition
     }
 
@@ -1012,6 +1030,7 @@ public class Dialog_p4_tcb_001 {
     public void n02_r2_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r2_select
         /*//set ?p4_why_tc_cares = true*/
+        DialogGameFlags.p4_why_tc_cares = true;
         ///METHOD_BODY_END n02_r2_select
     }
 
@@ -1019,6 +1038,7 @@ public class Dialog_p4_tcb_001 {
     public void n15_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n15_r0_select
         /*//?p4_hard_bargain=true*/
+        GameFlags.P4HardBargain = true;
         ///METHOD_BODY_END n15_r0_select
     }
 
@@ -1026,6 +1046,7 @@ public class Dialog_p4_tcb_001 {
     public void n17_r1_select ( DialogResponse response ) {
         ///METHOD_BODY_START n17_r1_select
         /*//?p4_hard_bargain = true*/
+        GameFlags.P4HardBargain = true;
         ///METHOD_BODY_END n17_r1_select
     }
 }

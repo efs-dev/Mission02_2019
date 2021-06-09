@@ -395,5 +395,29 @@ public static partial class GameFlagIds {
 
     //PROPERTY P4BringJonah
     public static string P4BringJonah = "P4BringJonah";
+
+    //PROPERTY P1YankeeGentleman
+    public static string P1YankeeGentleman = "P1YankeeGentleman";
+
+    //PROPERTY P4PleaWorks
+    public static string P4PleaWorks = "P4PleaWorks";
+
+    //PROPERTY LucyMoney
+    public static string LucyMoney = "LucyMoney";
+
+    //PROPERTY P4HardBargain
+    public static string P4HardBargain = "P4HardBargain";
+
+    //PROPERTY P4WitnessPoints
+    public static string P4WitnessPoints = "P4WitnessPoints";
+
+    //PROPERTY P4GotTCB
+    public static string P4GotTCB = "P4GotTCB";
+
+    //PROPERTY P4JonRipley
+    public static string P4JonRipley = "P4JonRipley";
+
+    //PROPERTY P4JonCanada
+    public static string P4JonCanada = "P4JonCanada";
 }
 //CLASS_END GameFlagIds

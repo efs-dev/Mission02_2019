@@ -484,7 +484,7 @@ public class Dialog_p4_tcb_002 {
     public bool n02_r0_condition (  ) {
         ///METHOD_BODY_START n02_r0_condition
         /*//if (?p4_jon_canada = true)*/
-        return true;
+        return GameFlags.P4JonCanada;
         ///METHOD_BODY_END n02_r0_condition
     }
 
@@ -492,7 +492,7 @@ public class Dialog_p4_tcb_002 {
     public bool n02_r3_condition (  ) {
         ///METHOD_BODY_START n02_r3_condition
         /*//if (?p4_jon_ripley = true)*/
-        return true;
+        return GameFlags.P4JonRipley;
         ///METHOD_BODY_END n02_r3_condition
     }
 }

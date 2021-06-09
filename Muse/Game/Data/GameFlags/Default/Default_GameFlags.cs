@@ -266,6 +266,22 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P4ConfirmPar 
 //USING
 ///GAMEFLAG_FOLDER P4BringJonah 
+//USING
+///GAMEFLAG_FOLDER P1YankeeGentleman 
+//USING
+///GAMEFLAG_FOLDER P4PleaWorks 
+//USING
+///GAMEFLAG_FOLDER LucyMoney 
+//USING
+///GAMEFLAG_FOLDER P4HardBargain 
+//USING
+///GAMEFLAG_FOLDER P4WitnessPoints 
+//USING
+///GAMEFLAG_FOLDER P4GotTCB 
+//USING
+///GAMEFLAG_FOLDER P4JonRipley 
+//USING
+///GAMEFLAG_FOLDER P4JonCanada 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -2773,6 +2789,158 @@ GameFlagChanged("P4ConfirmPar", oldValue, value);
 _P4BringJonah = value;
 GameFlagChanged("P4BringJonah", oldValue, value);
             ///PROPERTY_SETTER_END P4BringJonah
+        }
+    }
+
+    //PROPERTY _P1YankeeGentleman
+    private static bool _P1YankeeGentleman = false;
+
+    //PROPERTY P1YankeeGentleman
+    public static bool P1YankeeGentleman {
+        get {
+            ///PROPERTY_GETTER_START P1YankeeGentleman
+            return _P1YankeeGentleman;
+            ///PROPERTY_GETTER_END P1YankeeGentleman
+        }
+        set {
+            ///PROPERTY_SETTER_START P1YankeeGentleman
+            var oldValue = value;
+_P1YankeeGentleman = value;
+GameFlagChanged("P1YankeeGentleman", oldValue, value);
+            ///PROPERTY_SETTER_END P1YankeeGentleman
+        }
+    }
+
+    //PROPERTY _P4PleaWorks
+    private static bool _P4PleaWorks = false;
+
+    //PROPERTY P4PleaWorks
+    public static bool P4PleaWorks {
+        get {
+            ///PROPERTY_GETTER_START P4PleaWorks
+            return _P4PleaWorks;
+            ///PROPERTY_GETTER_END P4PleaWorks
+        }
+        set {
+            ///PROPERTY_SETTER_START P4PleaWorks
+            var oldValue = value;
+_P4PleaWorks = value;
+GameFlagChanged("P4PleaWorks", oldValue, value);
+            ///PROPERTY_SETTER_END P4PleaWorks
+        }
+    }
+
+    //PROPERTY _LucyMoney
+    private static int _LucyMoney = 37;
+
+    //PROPERTY LucyMoney
+    public static int LucyMoney {
+        get {
+            ///PROPERTY_GETTER_START LucyMoney
+            return _LucyMoney;
+            ///PROPERTY_GETTER_END LucyMoney
+        }
+        set {
+            ///PROPERTY_SETTER_START LucyMoney
+            var oldValue = value;
+_LucyMoney = value;
+GameFlagChanged("LucyMoney", oldValue, value);
+            ///PROPERTY_SETTER_END LucyMoney
+        }
+    }
+
+    //PROPERTY _P4HardBargain
+    private static bool _P4HardBargain = false;
+
+    //PROPERTY P4HardBargain
+    public static bool P4HardBargain {
+        get {
+            ///PROPERTY_GETTER_START P4HardBargain
+            return _P4HardBargain;
+            ///PROPERTY_GETTER_END P4HardBargain
+        }
+        set {
+            ///PROPERTY_SETTER_START P4HardBargain
+            var oldValue = value;
+_P4HardBargain = value;
+GameFlagChanged("P4HardBargain", oldValue, value);
+            ///PROPERTY_SETTER_END P4HardBargain
+        }
+    }
+
+    //PROPERTY _P4WitnessPoints
+    private static int _P4WitnessPoints = 0;
+
+    //PROPERTY P4WitnessPoints
+    public static int P4WitnessPoints {
+        get {
+            ///PROPERTY_GETTER_START P4WitnessPoints
+            return _P4WitnessPoints;
+            ///PROPERTY_GETTER_END P4WitnessPoints
+        }
+        set {
+            ///PROPERTY_SETTER_START P4WitnessPoints
+            var oldValue = value;
+_P4WitnessPoints = value;
+GameFlagChanged("P4WitnessPoints", oldValue, value);
+            ///PROPERTY_SETTER_END P4WitnessPoints
+        }
+    }
+
+    //PROPERTY _P4GotTCB
+    private static bool _P4GotTCB = false;
+
+    //PROPERTY P4GotTCB
+    public static bool P4GotTCB {
+        get {
+            ///PROPERTY_GETTER_START P4GotTCB
+            return _P4GotTCB;
+            ///PROPERTY_GETTER_END P4GotTCB
+        }
+        set {
+            ///PROPERTY_SETTER_START P4GotTCB
+            var oldValue = value;
+_P4GotTCB = value;
+GameFlagChanged("P4GotTCB", oldValue, value);
+            ///PROPERTY_SETTER_END P4GotTCB
+        }
+    }
+
+    //PROPERTY _P4JonRipley
+    private static bool _P4JonRipley = false;
+
+    //PROPERTY P4JonRipley
+    public static bool P4JonRipley {
+        get {
+            ///PROPERTY_GETTER_START P4JonRipley
+            return _P4JonRipley;
+            ///PROPERTY_GETTER_END P4JonRipley
+        }
+        set {
+            ///PROPERTY_SETTER_START P4JonRipley
+            var oldValue = value;
+_P4JonRipley = value;
+GameFlagChanged("P4JonRipley", oldValue, value);
+            ///PROPERTY_SETTER_END P4JonRipley
+        }
+    }
+
+    //PROPERTY _P4JonCanada
+    private static bool _P4JonCanada = false;
+
+    //PROPERTY P4JonCanada
+    public static bool P4JonCanada {
+        get {
+            ///PROPERTY_GETTER_START P4JonCanada
+            return _P4JonCanada;
+            ///PROPERTY_GETTER_END P4JonCanada
+        }
+        set {
+            ///PROPERTY_SETTER_START P4JonCanada
+            var oldValue = value;
+_P4JonCanada = value;
+GameFlagChanged("P4JonCanada", oldValue, value);
+            ///PROPERTY_SETTER_END P4JonCanada
         }
     }
 }

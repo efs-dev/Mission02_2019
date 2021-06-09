@@ -956,7 +956,7 @@ public class Dialog_p4_sar_001 {
     public bool n06_p1_condition (  ) {
         ///METHOD_BODY_START n06_p1_condition
         /*//if (#p4_lucy_canada > 0)*/
-        return true;
+        return GameFlags.P4LucyCanada > 0;
         ///METHOD_BODY_END n06_p1_condition
     }
 
@@ -964,7 +964,7 @@ public class Dialog_p4_sar_001 {
     public bool n11_p1_condition (  ) {
         ///METHOD_BODY_START n11_p1_condition
         /*//if (?p1_yankee_gentlemen = true)*/
-        return true;
+        return GameFlags.P1YankeeGentleman;
         ///METHOD_BODY_END n11_p1_condition
     }
 
@@ -986,7 +986,7 @@ public class Dialog_p4_sar_001 {
     public bool n01_r1_condition (  ) {
         ///METHOD_BODY_START n01_r1_condition
         /*//if (#dress_quality < 3)*/
-        return true;
+        return GameFlags.P1DressQuality < 3;
         ///METHOD_BODY_END n01_r1_condition
     }
 
@@ -994,7 +994,7 @@ public class Dialog_p4_sar_001 {
     public bool n01_r2_condition (  ) {
         ///METHOD_BODY_START n01_r2_condition
         /*//if (#dress_quality = 3)*/
-        return true;
+        return GameFlags.P1DressQuality == 3;
         ///METHOD_BODY_END n01_r2_condition
     }
 
@@ -1002,7 +1002,7 @@ public class Dialog_p4_sar_001 {
     public bool n02_r2_condition (  ) {
         ///METHOD_BODY_START n02_r2_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n02_r2_condition
     }
 
@@ -1010,7 +1010,7 @@ public class Dialog_p4_sar_001 {
     public bool n04_r1_condition (  ) {
         ///METHOD_BODY_START n04_r1_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n04_r1_condition
     }
 
@@ -1018,7 +1018,7 @@ public class Dialog_p4_sar_001 {
     public bool n06_r0_condition (  ) {
         ///METHOD_BODY_START n06_r0_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n06_r0_condition
     }
 
@@ -1026,7 +1026,7 @@ public class Dialog_p4_sar_001 {
     public bool n10_r2_condition (  ) {
         ///METHOD_BODY_START n10_r2_condition
         /*//if (?p1_yankee_gentlemen = true)*/
-        return true;
+        return GameFlags.P1YankeeGentleman;
         ///METHOD_BODY_END n10_r2_condition
     }
 
@@ -1034,7 +1034,7 @@ public class Dialog_p4_sar_001 {
     public bool n11_r1_condition (  ) {
         ///METHOD_BODY_START n11_r1_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n11_r1_condition
     }
 
@@ -1042,7 +1042,7 @@ public class Dialog_p4_sar_001 {
     public bool n12_r0_condition (  ) {
         ///METHOD_BODY_START n12_r0_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n12_r0_condition
     }
 
@@ -1050,7 +1050,7 @@ public class Dialog_p4_sar_001 {
     public bool n13_r0_condition (  ) {
         ///METHOD_BODY_START n13_r0_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n13_r0_condition
     }
 
@@ -1058,7 +1058,7 @@ public class Dialog_p4_sar_001 {
     public bool n16_r1_condition (  ) {
         ///METHOD_BODY_START n16_r1_condition
         /*//if (#p4_lucy_canada = 0)*/
-        return true;
+        return GameFlags.P4LucyCanada == 0;
         ///METHOD_BODY_END n16_r1_condition
     }
 
@@ -1066,7 +1066,7 @@ public class Dialog_p4_sar_001 {
     public bool n20_r0_condition (  ) {
         ///METHOD_BODY_START n20_r0_condition
         /*//if (?p4_plea_works = false)*/
-        return true;
+        return !GameFlags.P4PleaWorks;
         ///METHOD_BODY_END n20_r0_condition
     }
 
@@ -1074,7 +1074,7 @@ public class Dialog_p4_sar_001 {
     public bool n20_r1_condition (  ) {
         ///METHOD_BODY_START n20_r1_condition
         /*//if (?p4_plea_works = true)*/
-        return true;
+        return GameFlags.P4PleaWorks;
         ///METHOD_BODY_END n20_r1_condition
     }
 
@@ -1082,6 +1082,7 @@ public class Dialog_p4_sar_001 {
     public void n13_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n13_r0_select
         /*//set ?p4_plea_works = true*/
+        GameFlags.P4PleaWorks = true;
         ///METHOD_BODY_END n13_r0_select
     }
 
@@ -1089,6 +1090,7 @@ public class Dialog_p4_sar_001 {
     public void n15_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n15_r0_select
         /*//set ?p4_plea_works = true*/
+        GameFlags.P4PleaWorks = true;
         ///METHOD_BODY_END n15_r0_select
     }
 
@@ -1096,6 +1098,7 @@ public class Dialog_p4_sar_001 {
     public void n24_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n24_r0_select
         /*//set ?p4_jonah_servant = true*/
+        GameFlags.P4JonahServant = true;
         ///METHOD_BODY_END n24_r0_select
     }
 }
