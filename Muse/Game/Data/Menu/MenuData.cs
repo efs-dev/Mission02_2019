@@ -28,8 +28,8 @@ public static partial class MenuData {
         OnPartActionsNonBlocking.Add(null);
         ///PartName Part 1
         PartNames.Add("Part 1");
-        ///PartSubName Greenwood
-        PartSubNames.Add("Greenwood");
+        ///PartSubName Behind the Big House
+        PartSubNames.Add("Behind the Big House");
         ///PartModulesToLoad 
         ModulesToLoad.Add(new List<string>() {  });
         ///PartModulesToUnload 
@@ -40,8 +40,8 @@ public static partial class MenuData {
         OnPartActionsNonBlocking.Add(null);
         ///PartName Part 2
         PartNames.Add("Part 2");
-        ///PartSubName SNIC
-        PartSubNames.Add("SNIC");
+        ///PartSubName Runaway!
+        PartSubNames.Add("Runaway!");
         ///PartModulesToLoad 
         ModulesToLoad.Add(new List<string>() {  });
         ///PartModulesToUnload 
@@ -52,8 +52,8 @@ public static partial class MenuData {
         OnPartActionsNonBlocking.Add(null);
         ///PartName Part 3
         PartNames.Add("Part 3");
-        ///PartSubName Voting
-        PartSubNames.Add("Voting");
+        ///PartSubName Free and Not Free
+        PartSubNames.Add("Free and Not Free");
         ///PartModulesToLoad 
         ModulesToLoad.Add(new List<string>() {  });
         ///PartModulesToUnload 
@@ -62,6 +62,30 @@ public static partial class MenuData {
         PartImagesOverride.Add(false);
         OnPartActionsBlocking.Add(PartAction_3);
         OnPartActionsNonBlocking.Add(null);
+        ///PartName Part 4
+        PartNames.Add("Part 4");
+        ///PartSubName Gathering Forces
+        PartSubNames.Add("Gathering Forces");
+        ///PartModulesToLoad 
+        ModulesToLoad.Add(new List<string>() {  });
+        ///PartModulesToUnload 
+        ModulesToUnload.Add(new List<string>() {  });
+        OnPartConditions.Add(PartCondition_4);
+        PartImagesOverride.Add(false);
+        OnPartActionsNonBlocking.Add(PartAction_4);
+        OnPartActionsBlocking.Add(null);
+        ///PartName Part 5
+        PartNames.Add("Part 5");
+        ///PartSubName New Times, New Troubles
+        PartSubNames.Add("New Times, New Troubles");
+        ///PartModulesToLoad 
+        ModulesToLoad.Add(new List<string>() {  });
+        ///PartModulesToUnload 
+        ModulesToUnload.Add(new List<string>() {  });
+        OnPartConditions.Add(PartCondition_5);
+        PartImagesOverride.Add(false);
+        OnPartActionsNonBlocking.Add(PartAction_5);
+        OnPartActionsBlocking.Add(null);
         ///PartName Epilogue
         PartNames.Add("Epilogue");
         ///PartSubName 
@@ -70,9 +94,9 @@ public static partial class MenuData {
         ModulesToLoad.Add(new List<string>() {  });
         ///PartModulesToUnload 
         ModulesToUnload.Add(new List<string>() {  });
-        OnPartConditions.Add(PartCondition_4);
+        OnPartConditions.Add(PartCondition_6);
         PartImagesOverride.Add(false);
-        OnPartActionsBlocking.Add(PartAction_4);
+        OnPartActionsBlocking.Add(PartAction_6);
         OnPartActionsNonBlocking.Add(null);
         OnEnterState = RunEnterState;
         OnShowState = RunShowState;
@@ -104,9 +128,8 @@ public static partial class MenuData {
     ///METHOD PartAction_0
     public static IEnumerator PartAction_0 (  ) {
         ///METHOD_BODY_START PartAction_0
-        Actions.IncrementData(6, 2);
         GameFlags.CurrentPart = 0;
-        yield return Actions.LoadScene("anim_prologue1", "prologue");
+        yield return Actions.LoadScene("anim_prologue", "prologue");
         ///METHOD_BODY_END PartAction_0
     }
 
@@ -120,7 +143,6 @@ public static partial class MenuData {
     ///METHOD PartAction_1
     public static IEnumerator PartAction_1 (  ) {
         ///METHOD_BODY_START PartAction_1
-        Actions.IncrementData(7, 2);
         GameFlags.CurrentPart = 1;
         yield return Actions.LoadScene("loc_camp_night", "p1");
         ///METHOD_BODY_END PartAction_1
@@ -151,7 +173,6 @@ public static partial class MenuData {
     ///METHOD PartAction_3
     public static IEnumerator PartAction_3 (  ) {
         ///METHOD_BODY_START PartAction_3
-        Actions.IncrementData(9, 2);
         GameFlags.CurrentPart = 3;
         yield return Actions.LoadScene("loc_camp_p3", "p3");
         ///METHOD_BODY_END PartAction_3
@@ -160,15 +181,43 @@ public static partial class MenuData {
     ///METHOD PartCondition_4
     public static bool PartCondition_4 (  ) {
         ///METHOD_BODY_START PartCondition_4
-        return GameFlags.UnlockedEpilogue;
+        return GameFlags.UnlockedPart4;
         ///METHOD_BODY_END PartCondition_4
     }
 
     ///METHOD PartAction_4
-    public static IEnumerator PartAction_4 (  ) {
+    public static void PartAction_4 (  ) {
         ///METHOD_BODY_START PartAction_4
-        yield return Actions.LoadScene("epilogue", "epilogue");
+        
         ///METHOD_BODY_END PartAction_4
+    }
+
+    ///METHOD PartCondition_5
+    public static bool PartCondition_5 (  ) {
+        ///METHOD_BODY_START PartCondition_5
+        return GameFlags.UnlockedPart5;
+        ///METHOD_BODY_END PartCondition_5
+    }
+
+    ///METHOD PartAction_5
+    public static void PartAction_5 (  ) {
+        ///METHOD_BODY_START PartAction_5
+        
+        ///METHOD_BODY_END PartAction_5
+    }
+
+    ///METHOD PartCondition_6
+    public static bool PartCondition_6 (  ) {
+        ///METHOD_BODY_START PartCondition_6
+        return GameFlags.UnlockedEpilogue;
+        ///METHOD_BODY_END PartCondition_6
+    }
+
+    ///METHOD PartAction_6
+    public static IEnumerator PartAction_6 (  ) {
+        ///METHOD_BODY_START PartAction_6
+        yield return Actions.LoadScene("epilogue", "epilogue");
+        ///METHOD_BODY_END PartAction_6
     }
 
     ///METHOD RunEnterState
