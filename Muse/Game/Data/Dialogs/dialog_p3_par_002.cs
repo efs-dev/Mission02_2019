@@ -476,6 +476,13 @@ public class Dialog_p3_par_002 {
         ///NODE_VISUAL_USESCRIPT n20 false
         node.VisualDataType = "full";
         ///NODE_VISUAL_DATA~|||~n20~|||~
+        ///PROMPT n20 0
+        prompt = node.AddPrompt();
+        ///PROMPT_TEXT n20 0 
+        prompt.Text = "";
+        ///PROMPT_IGNORE_VO n20 0 false
+        prompt.IgnoreVO = false;
+        
         ///RESPONSE n20 0
         response = node.AddResponse();
         ///RESPONSE_TEXT n20 0 What does it mean?\n

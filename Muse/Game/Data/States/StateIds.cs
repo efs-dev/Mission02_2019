@@ -3,6 +3,9 @@ public partial class StateIds {
     //PROPERTY _UNTITLED0
     public const string _UNTITLED0 = "_untitled0";
 
+    //PROPERTY LOC_AUCTION
+    public const string LOC_AUCTION = "loc_auction";
+
     //PROPERTY LOC_BAKER_HOUSE
     public const string LOC_BAKER_HOUSE = "loc_baker_house";
 
