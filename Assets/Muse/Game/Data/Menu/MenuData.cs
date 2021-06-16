@@ -225,7 +225,7 @@ public static partial class MenuData {
         ///METHOD_BODY_START RunEnterState
         Actions.SmartwordsButtonHide();
         Actions.BadgesButtonHide();
-        //Actions.AudioPlay("coming_home", true);
+        Actions.AudioPlay("long_john_loop", true);
         Actions.HideQuests();
         if (SaveGames.IsDemoMode)
         {
@@ -249,7 +249,7 @@ public static partial class MenuData {
     ///METHOD RunExitState
     public static void RunExitState (  ) {
         ///METHOD_BODY_START RunExitState
-        //AudioManager.Stop("coming_home");
+        AudioManager.Stop("long_john_loop");
         Actions.ShowQuests();
         Actions.SmartwordsButtonShow();
         Actions.BadgesButtonShow();

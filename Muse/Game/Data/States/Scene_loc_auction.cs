@@ -28,6 +28,7 @@ public class Scene_loc_auction : State {
     public Scene_loc_auction (  ) {
         ///METHOD_BODY_START Scene_loc_auction
         Id = "loc_auction";
+        Modules.Add("p5");
         OnShowBlocking = OnShowCallback;
         ///METHOD_BODY_END Scene_loc_auction
     }
