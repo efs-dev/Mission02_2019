@@ -64,10 +64,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES NOFISH False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE NOFISH Full
+        ///NODE_VISUAL_TYPE NOFISH Popup
         ///NODE_VISUAL_USESCRIPT NOFISH false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~NOFISH~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~NOFISH~|||~Header~||~~|~ImagePath~||~secluded01_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded01_700");
         ///PROMPT NOFISH 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT NOFISH 0 This is a remote, well-wooded spot on the bank of the Ohio River. The river is wide and the current swift.
@@ -100,10 +102,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES FISH False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE FISH Full
+        ///NODE_VISUAL_TYPE FISH Popup
         ///NODE_VISUAL_USESCRIPT FISH false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~FISH~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~FISH~|||~Header~||~~|~ImagePath~||~secluded02_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded02_700");
         ///PROMPT FISH 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT FISH 0 You spot a Negro fisherman in his boat passing close by.
@@ -136,10 +140,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES FLOAT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE FLOAT Full
+        ///NODE_VISUAL_TYPE FLOAT Popup
         ///NODE_VISUAL_USESCRIPT FLOAT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~FLOAT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~FLOAT~|||~Header~||~~|~ImagePath~||~secluded01_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded01_700");
         ///PROMPT FLOAT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT FLOAT 0 [This seems like a very dangerous thing to do. Are you sure?]
@@ -174,10 +180,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES H_CHOICE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE H_CHOICE Full
+        ///NODE_VISUAL_TYPE H_CHOICE Popup
         ///NODE_VISUAL_USESCRIPT H_CHOICE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~H_CHOICE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~H_CHOICE~|||~Header~||~~|~ImagePath~||~secluded01_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded01_700");
         ///PROMPT H_CHOICE 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT H_CHOICE 0 \"Well I'm gonna do it,\" says Henry. \"Last chance. You coming with me?\"
@@ -210,10 +218,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES GOODBYE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE GOODBYE Full
+        ///NODE_VISUAL_TYPE GOODBYE Popup
         ///NODE_VISUAL_USESCRIPT GOODBYE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~GOODBYE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~GOODBYE~|||~Header~||~~|~ImagePath~||~secluded01_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded01_700");
         ///PROMPT GOODBYE 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT GOODBYE 0 Sadly, you say goodbye to Henry. He wades into the river with a log and starts paddling. About halfway across the current is too strong for him. He clings to the log as the water quickly sweeps him downriver and out of sight.
@@ -238,10 +248,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES FLOAT_ACROSS False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE FLOAT_ACROSS Full
+        ///NODE_VISUAL_TYPE FLOAT_ACROSS Popup
         ///NODE_VISUAL_USESCRIPT FLOAT_ACROSS false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~FLOAT_ACROSS~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~FLOAT_ACROSS~|||~Header~||~~|~ImagePath~||~secluded01_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded01_700");
         ///PROMPT FLOAT_ACROSS 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT FLOAT_ACROSS 0 You and Henry drag a log into the water and start paddling. It is very difficult and tiring to fight the river current. About halfway across you give up. It's all you can do to hold on. The river sweeps you away.
@@ -275,14 +287,16 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES S_SIDE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE S_SIDE Full
+        ///NODE_VISUAL_TYPE S_SIDE Popup
         ///NODE_VISUAL_USESCRIPT S_SIDE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~S_SIDE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~S_SIDE~|||~Header~||~~|~ImagePath~||~secluded01_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded01_700");
         ///PROMPT S_SIDE 0
         prompt = node.AddPrompt();
-        ///PROMPT_TEXT S_SIDE 0 Amazingly you don't drown. You are plucked out of the water by the crew of a flatboat. They tie you up and turn you over to the sheriff in Dover.
-        prompt.Text = "Amazingly you don't drown. You are plucked out of the water by the crew of a flatboat. They tie you up and turn you over to the sheriff in Dover.";
+        ///PROMPT_TEXT S_SIDE 0 Amazingly, you don't drown. You are plucked out of the water by the crew of a flatboat. They tie you up and turn you over to the sheriff in Dover.
+        prompt.Text = "Amazingly, you don't drown. You are plucked out of the water by the crew of a flatboat. They tie you up and turn you over to the sheriff in Dover.";
         ///PROMPT_IGNORE_VO S_SIDE 0 false
         prompt.IgnoreVO = false;
         
@@ -303,10 +317,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES N_SIDE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE N_SIDE Full
+        ///NODE_VISUAL_TYPE N_SIDE Popup
         ///NODE_VISUAL_USESCRIPT N_SIDE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~N_SIDE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~N_SIDE~|||~Header~||~~|~ImagePath~||~secluded01_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded01_700");
         ///PROMPT N_SIDE 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT N_SIDE 0 You hit a stretch of rough water and lose your grip. Gasping, you frantically try to dog-paddle. At some point you pass out because you wake up bruised on the riverbank. You made it across the Ohio River!
@@ -340,10 +356,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES DIRECTIONS False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE DIRECTIONS Full
+        ///NODE_VISUAL_TYPE DIRECTIONS Popup
         ///NODE_VISUAL_USESCRIPT DIRECTIONS false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~DIRECTIONS~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~DIRECTIONS~|||~Header~||~~|~ImagePath~||~secluded02_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded02_700");
         ///PROMPT DIRECTIONS 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT DIRECTIONS 0 You stumble along and finally encounter a free Negro woman on her way to Ripley. She points to a house on a hill and tells you to go there.
@@ -368,10 +386,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES HELP False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE HELP Full
+        ///NODE_VISUAL_TYPE HELP Popup
         ///NODE_VISUAL_USESCRIPT HELP false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~HELP~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~HELP~|||~Header~||~~|~ImagePath~||~secluded02_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded02_700");
         ///PROMPT HELP 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT HELP 0 The man hesitates. He looks at the river. There is not much traffic at the moment. \"I could get in big trouble,\" he says, \"but, okay, hurry up.\"
@@ -398,10 +418,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES ACROSS False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE ACROSS Full
+        ///NODE_VISUAL_TYPE ACROSS Popup
         ///NODE_VISUAL_USESCRIPT ACROSS false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~ACROSS~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~ACROSS~|||~Header~||~~|~ImagePath~||~secluded02_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded02_700");
         ///PROMPT ACROSS 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT ACROSS 0 The fisherman rows you across the river and lets you off in a quiet spot. He tells you to find Reverend Rankin's house on the hill in Ripley. He also says to be careful, there are slave catchers on this side of the river too.
@@ -427,10 +449,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES CAUGHT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE CAUGHT Full
+        ///NODE_VISUAL_TYPE CAUGHT Popup
         ///NODE_VISUAL_USESCRIPT CAUGHT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~Header~||~~|~ImagePath~||~secluded02_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded02_700");
         ///PROMPT CAUGHT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT CAUGHT 0 The fisherman rows you across. You are just thanking him when a group of white men shout and start running toward the boat. There are slave catchers on this side, too!
@@ -455,10 +479,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES CAUGHT2 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE CAUGHT2 Full
+        ///NODE_VISUAL_TYPE CAUGHT2 Popup
         ///NODE_VISUAL_USESCRIPT CAUGHT2 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~CAUGHT2~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~CAUGHT2~|||~Header~||~~|~ImagePath~||~secluded02_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded02_700");
         ///PROMPT CAUGHT2 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT CAUGHT2 0 Henry starts fighting with the slave catchers, while the fisherman rows away. \"Run!\" Henry shouts to you.
@@ -484,10 +510,12 @@ public class Dialog_p2_sec_001 {
         node.Npc = "SEC";
         ///NODE_RANDOM_RESPONSES RUN False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE RUN Full
+        ///NODE_VISUAL_TYPE RUN Popup
         ///NODE_VISUAL_USESCRIPT RUN false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~RUN~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~RUN~|||~Header~||~~|~ImagePath~||~secluded02_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "secluded02_700");
         ///PROMPT RUN 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT RUN 0 You start running. The fisherman told you to find Reverend Rankin's house on the hill in Ripley.

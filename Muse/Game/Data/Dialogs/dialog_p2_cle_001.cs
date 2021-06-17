@@ -48,10 +48,12 @@ public class Dialog_p2_cle_001 {
         node.Npc = "CLE";
         ///NODE_RANDOM_RESPONSES NO_BERRIES False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE NO_BERRIES Full
+        ///NODE_VISUAL_TYPE NO_BERRIES Popup
         ///NODE_VISUAL_USESCRIPT NO_BERRIES false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~NO_BERRIES~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~NO_BERRIES~|||~Header~||~~|~ImagePath~||~clearing_noberries_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "clearing_noberries_700");
         ///PROMPT NO_BERRIES 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT NO_BERRIES 0 You reach this quiet spot with no trouble. There are blackberry bushes here, but it looks like wild animals and birds have eaten almost all of them.
@@ -84,10 +86,12 @@ public class Dialog_p2_cle_001 {
         node.Npc = "CLE";
         ///NODE_RANDOM_RESPONSES REST False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE REST Full
+        ///NODE_VISUAL_TYPE REST Popup
         ///NODE_VISUAL_USESCRIPT REST false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~REST~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~REST~|||~Header~||~~|~ImagePath~||~clearing_noberries_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "clearing_noberries_700");
         ///PROMPT REST 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT REST 0 The grass here is soft and the trees sheltering. You sleep here and wake feeling refreshed. [Health increases]
@@ -112,10 +116,12 @@ public class Dialog_p2_cle_001 {
         node.Npc = "CLE";
         ///NODE_RANDOM_RESPONSES BERRIES False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE BERRIES Full
+        ///NODE_VISUAL_TYPE BERRIES Popup
         ///NODE_VISUAL_USESCRIPT BERRIES false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~BERRIES~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~BERRIES~|||~Header~||~~|~ImagePath~||~clearing_berries_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "clearing_berries_700");
         ///PROMPT BERRIES 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT BERRIES 0 You reach this quiet spot with no trouble. There are bushes here full of delicious ripe blackberries. You eat some and take some with you for the days ahead.

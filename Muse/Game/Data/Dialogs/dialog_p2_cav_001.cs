@@ -64,10 +64,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES n01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01 Full
+        ///NODE_VISUAL_TYPE n01 Popup
         ///NODE_VISUAL_USESCRIPT n01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT n01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01 0 You get to the chilly cave and find signs that an animal was living here at some point.
@@ -111,10 +113,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES FORCE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE FORCE Full
+        ///NODE_VISUAL_TYPE FORCE Popup
         ///NODE_VISUAL_USESCRIPT FORCE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~FORCE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~FORCE~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT FORCE 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT FORCE 0 No telling what might be nearby. You push on even though it's very tiring. [Health goes down.]
@@ -139,10 +143,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES FIRE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE FIRE Full
+        ///NODE_VISUAL_TYPE FIRE Popup
         ///NODE_VISUAL_USESCRIPT FIRE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~FIRE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~FIRE~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT FIRE 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT FIRE 0 You light a fire at the mouth of the cave and settle down to rest.
@@ -168,10 +174,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES CAUGHT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE CAUGHT Full
+        ///NODE_VISUAL_TYPE CAUGHT Popup
         ///NODE_VISUAL_USESCRIPT CAUGHT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT CAUGHT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT CAUGHT 0 You are surprised in the middle of the night by an armed patrol that saw the fire. They don't believe your story and take you to the sheriff. You are returned to the plantation and soon sold south.
@@ -196,10 +204,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES ANIMAL False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE ANIMAL Full
+        ///NODE_VISUAL_TYPE ANIMAL Popup
         ///NODE_VISUAL_USESCRIPT ANIMAL false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~ANIMAL~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~ANIMAL~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT ANIMAL 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT ANIMAL 0 You are woken in the middle of the night by the sound of a large animal nearby. Luckily, it fears the fire and keeps its distance.
@@ -223,10 +233,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES WARM False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE WARM Full
+        ///NODE_VISUAL_TYPE WARM Popup
         ///NODE_VISUAL_USESCRIPT WARM false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~WARM~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~WARM~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT WARM 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT WARM 0 The fire keeps you warm in the chilly cave. You wake refreshed. [Health improves.]
@@ -251,10 +263,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES COLD False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE COLD Full
+        ///NODE_VISUAL_TYPE COLD Popup
         ///NODE_VISUAL_USESCRIPT COLD false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~COLD~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~COLD~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT COLD 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT COLD 0 The cave is a very cold place at night. You have nothing to keep you warm. You catch a chill during the night. [Health goes down.]
@@ -307,10 +321,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES BEAR False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE BEAR Full
+        ///NODE_VISUAL_TYPE BEAR Popup
         ///NODE_VISUAL_USESCRIPT BEAR false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~BEAR~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~BEAR~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT BEAR 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT BEAR 0 As it grows dark and you try to fall asleep in this uncomfortable place, you hear an animal stirring deeper in the cave. You see a bear!
@@ -343,10 +359,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES RUN False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE RUN Full
+        ///NODE_VISUAL_TYPE RUN Popup
         ///NODE_VISUAL_USESCRIPT RUN false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~RUN~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~RUN~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT RUN 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT RUN 0 The bear is faster than you and angry at your disturbance. It chases you down.
@@ -371,10 +389,12 @@ public class Dialog_p2_cav_001 {
         node.Npc = "CAV";
         ///NODE_RANDOM_RESPONSES SLOW False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE SLOW Full
+        ///NODE_VISUAL_TYPE SLOW Popup
         ///NODE_VISUAL_USESCRIPT SLOW false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~SLOW~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~SLOW~|||~Header~||~~|~ImagePath~||~cave_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "cave_700");
         ///PROMPT SLOW 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT SLOW 0 You take slow steps backwards out of the cave and keep moving until the cave is no longer in sight. You got away! Unfortunately you had to leave some food behind. [Food goes down.]

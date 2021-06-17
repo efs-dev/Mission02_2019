@@ -64,10 +64,12 @@ public class Dialog_p2_cro_001 {
         node.Npc = "CRO";
         ///NODE_RANDOM_RESPONSES n01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01 Full
+        ///NODE_VISUAL_TYPE n01 Popup
         ///NODE_VISUAL_USESCRIPT n01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01~|||~Header~||~~|~ImagePath~||~crossing_s_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "crossing_s_700");
         ///PROMPT n01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01 0 The river here is fairly fast and it might get deep.
@@ -113,10 +115,12 @@ public class Dialog_p2_cro_001 {
         node.Npc = "CRO";
         ///NODE_RANDOM_RESPONSES misstep False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE misstep Full
+        ///NODE_VISUAL_TYPE misstep Popup
         ///NODE_VISUAL_USESCRIPT misstep false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~misstep~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~misstep~|||~Header~||~~|~ImagePath~||~henryswept_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "henryswept_700");
         ///PROMPT misstep 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT misstep 0 Henry takes a bad step into a deep spot. He struggles but is too weak to fight the river current. It sweeps him away. \"I'll be okay,\" he shouts back at you, \"You keep going north!\"
@@ -141,10 +145,12 @@ public class Dialog_p2_cro_001 {
         node.Npc = "CRO";
         ///NODE_RANDOM_RESPONSES madeit False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE madeit Full
+        ///NODE_VISUAL_TYPE madeit Popup
         ///NODE_VISUAL_USESCRIPT madeit false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~madeit~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~madeit~|||~Header~||~~|~ImagePath~||~crossing_s_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "crossing_s_700");
         ///PROMPT madeit 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT madeit 0 You move across very slowly and carefully, feeling ahead with a stick. The water comes right up to your nose. It's scary, but finally you make it to the far side.
@@ -169,10 +175,12 @@ public class Dialog_p2_cro_001 {
         node.Npc = "CRO";
         ///NODE_RANDOM_RESPONSES washedaway False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE washedaway Full
+        ///NODE_VISUAL_TYPE washedaway Popup
         ///NODE_VISUAL_USESCRIPT washedaway false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~washedaway~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~washedaway~|||~Header~||~~|~ImagePath~||~crossing_s_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "crossing_s_700");
         ///PROMPT washedaway 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT washedaway 0 The spot you are crossing is too deep and you were wading too quickly. The currents take you up and carry you far down stream before leaving you in a shallow part. You lose some of your food. [Health and food go down.]
@@ -197,10 +205,12 @@ public class Dialog_p2_cro_001 {
         node.Npc = "CRO";
         ///NODE_RANDOM_RESPONSES LOG_H False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE LOG_H Full
+        ///NODE_VISUAL_TYPE LOG_H Popup
         ///NODE_VISUAL_USESCRIPT LOG_H false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~LOG_H~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~LOG_H~|||~Header~||~~|~ImagePath~||~crossing_s_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "crossing_s_700");
         ///PROMPT LOG_H 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT LOG_H 0 You find part of a fallen tree and enter the water. With you and Henry kicking and paddling you manage to make it across!
@@ -225,10 +235,12 @@ public class Dialog_p2_cro_001 {
         node.Npc = "CRO";
         ///NODE_RANDOM_RESPONSES LOG False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE LOG Full
+        ///NODE_VISUAL_TYPE LOG Popup
         ///NODE_VISUAL_USESCRIPT LOG false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~LOG~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~LOG~|||~Header~||~~|~ImagePath~||~crossing_s_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "crossing_s_700");
         ///PROMPT LOG 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT LOG 0 The log is hard to control. The river current carries you far downriver before depositing you in a shallow part.
@@ -260,10 +272,10 @@ public class Dialog_p2_cro_001 {
         //					$next_node = "LOG"
         //				/if*/
         if (GameFlags.P2EscapeType == "henry"){
-        	DialogGameFlags.next_node = "LOG_H";
+        DialogGameFlags.next_node = "LOG_H";
         }
         else{
-        	DialogGameFlags.next_node = "LOG";
+        DialogGameFlags.next_node = "LOG";
         }
         ///METHOD_BODY_END n01_r1_select
     }
@@ -284,13 +296,13 @@ public class Dialog_p2_cro_001 {
         //			$pick_result = "okay" */
         int rand = UnityEngine.Random.RandomRange(1,100);
         if (GameFlags.P2EscapeType == "henry"){
-        	DialogGameFlags.next_node = "misstep";
+        DialogGameFlags.next_node = "misstep";
         }
         else if (rand > 35){
-        	DialogGameFlags.next_node = "madeit";
+        DialogGameFlags.next_node = "madeit";
         }
         else{
-        	DialogGameFlags.next_node = "washedaway";
+        DialogGameFlags.next_node = "washedaway";
         }
         ///METHOD_BODY_END n01_r2_select
     }

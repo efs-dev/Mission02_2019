@@ -64,10 +64,12 @@ public class Dialog_p2_brk_001 {
         node.Npc = "BRK";
         ///NODE_RANDOM_RESPONSES n01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01 Full
+        ///NODE_VISUAL_TYPE n01 Popup
         ///NODE_VISUAL_USESCRIPT n01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01~|||~Header~||~~|~ImagePath~||~brooksville_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "brooksville_700");
         ///PROMPT n01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01 0 You arrive at the outskirts of Brooksville, Kentucky and see a poster nailed to a tree.
@@ -123,10 +125,12 @@ public class Dialog_p2_brk_001 {
         node.Npc = "BRK";
         ///NODE_RANDOM_RESPONSES n01a False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01a Full
+        ///NODE_VISUAL_TYPE n01a Popup
         ///NODE_VISUAL_USESCRIPT n01a false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01a~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01a~|||~Header~||~~|~ImagePath~||~brooksville_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "brooksville_700");
         ///PROMPT n01a 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01a 0 You are just outside of Brooksville, Kentucky.
@@ -183,10 +187,12 @@ public class Dialog_p2_brk_001 {
         node.Npc = "BRK";
         ///NODE_RANDOM_RESPONSES DETOUR False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE DETOUR Full
+        ///NODE_VISUAL_TYPE DETOUR Popup
         ///NODE_VISUAL_USESCRIPT DETOUR false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~DETOUR~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~DETOUR~|||~Header~||~~|~ImagePath~||~brooksville_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "brooksville_700");
         ///PROMPT DETOUR 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT DETOUR 0 You make a wide path around Brooksville. The way is difficult and you need to eat some extra food. [Food goes down.]
@@ -211,10 +217,12 @@ public class Dialog_p2_brk_001 {
         node.Npc = "BRK";
         ///NODE_RANDOM_RESPONSES HURRY1 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE HURRY1 Full
+        ///NODE_VISUAL_TYPE HURRY1 Popup
         ///NODE_VISUAL_USESCRIPT HURRY1 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~HURRY1~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~HURRY1~|||~Header~||~~|~ImagePath~||~brooksville_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "brooksville_700");
         ///PROMPT HURRY1 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT HURRY1 0 [Lucky] You get some suspicious glances but you keep your head down and quickly move through town.
@@ -238,10 +246,12 @@ public class Dialog_p2_brk_001 {
         node.Npc = "BRK";
         ///NODE_RANDOM_RESPONSES HURRY2 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE HURRY2 Full
+        ///NODE_VISUAL_TYPE HURRY2 Popup
         ///NODE_VISUAL_USESCRIPT HURRY2 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~HURRY2~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~HURRY2~|||~Header~||~~|~ImagePath~||~brooksville_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "brooksville_700");
         ///PROMPT HURRY2 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT HURRY2 0 Several people recognize you from the description in the wanted poster. The sheriff questions you and takes you into custody.
@@ -266,10 +276,12 @@ public class Dialog_p2_brk_001 {
         node.Npc = "BRK";
         ///NODE_RANDOM_RESPONSES NIGHTFALL False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE NIGHTFALL Full
+        ///NODE_VISUAL_TYPE NIGHTFALL Popup
         ///NODE_VISUAL_USESCRIPT NIGHTFALL false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~NIGHTFALL~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~NIGHTFALL~|||~Header~||~~|~ImagePath~||~brooksville_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "brooksville_700");
         ///PROMPT NIGHTFALL 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT NIGHTFALL 0 It's very suspicious for a Negro to be out after dark, especially in a small town. You are quickly reported and taken into custody.
@@ -294,10 +306,12 @@ public class Dialog_p2_brk_001 {
         node.Npc = "BRK";
         ///NODE_RANDOM_RESPONSES NIGHTFALL_H False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE NIGHTFALL_H Full
+        ///NODE_VISUAL_TYPE NIGHTFALL_H Popup
         ///NODE_VISUAL_USESCRIPT NIGHTFALL_H false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~NIGHTFALL_H~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~NIGHTFALL_H~|||~Header~||~~|~ImagePath~||~brooksville_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "brooksville_700");
         ///PROMPT NIGHTFALL_H 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT NIGHTFALL_H 0 It's suspicious for slaves to be out at night. You're surprised by a patrol. \"Split up!\" Henry shouts. You run until you're exhausted. You don't know what happens to Henry. [Health goes down.]

@@ -48,10 +48,12 @@ public class Dialog_p2_pre_001 {
         node.Npc = "PRE";
         ///NODE_RANDOM_RESPONSES HOME False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE HOME Full
+        ///NODE_VISUAL_TYPE HOME Popup
         ///NODE_VISUAL_USESCRIPT HOME false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~HOME~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~HOME~|||~Header~||~~|~ImagePath~||~mini_dad_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "mini_dad_700");
         ///PROMPT HOME 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT HOME 0 Your father is overjoyed to see you. When you explain your situation his manner turns grim. He gives you some food and tells you to find his brother up north at the Skinner farm. He hugs you goodbye and wipes away a tear.
@@ -76,10 +78,12 @@ public class Dialog_p2_pre_001 {
         node.Npc = "PRE";
         ///NODE_RANDOM_RESPONSES NOT_HOME False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE NOT_HOME Full
+        ///NODE_VISUAL_TYPE NOT_HOME Popup
         ///NODE_VISUAL_USESCRIPT NOT_HOME false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~NOT_HOME~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~NOT_HOME~|||~Header~||~~|~ImagePath~||~dark_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "dark_700");
         ///PROMPT NOT_HOME 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT NOT_HOME 0 You get to the Preston plantation and find out that unfortunately your father has been sent on an errand down to Lexington. It's not safe to stay here.

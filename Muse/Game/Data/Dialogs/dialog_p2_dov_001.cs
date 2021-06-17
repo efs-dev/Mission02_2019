@@ -64,10 +64,12 @@ public class Dialog_p2_dov_001 {
         node.Npc = "DOV";
         ///NODE_RANDOM_RESPONSES n01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01 Full
+        ///NODE_VISUAL_TYPE n01 Popup
         ///NODE_VISUAL_USESCRIPT n01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01~|||~Header~||~~|~ImagePath~||~dover_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "dover_700");
         ///PROMPT n01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01 0 You reach the edge of the small town of Dover.
@@ -111,10 +113,12 @@ public class Dialog_p2_dov_001 {
         node.Npc = "DOV";
         ///NODE_RANDOM_RESPONSES AXE_BOAT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE AXE_BOAT Full
+        ///NODE_VISUAL_TYPE AXE_BOAT Popup
         ///NODE_VISUAL_USESCRIPT AXE_BOAT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~AXE_BOAT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~AXE_BOAT~|||~Header~||~~|~ImagePath~||~dover_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "dover_700");
         ///PROMPT AXE_BOAT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT AXE_BOAT 0 Most boats are locked up, but using your axe you quickly free one. You are not familiar with boating but manage to make your way across the river with some difficulty.
@@ -139,10 +143,12 @@ public class Dialog_p2_dov_001 {
         node.Npc = "DOV";
         ///NODE_RANDOM_RESPONSES AXE_NO_BOAT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE AXE_NO_BOAT Full
+        ///NODE_VISUAL_TYPE AXE_NO_BOAT Popup
         ///NODE_VISUAL_USESCRIPT AXE_NO_BOAT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~AXE_NO_BOAT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~AXE_NO_BOAT~|||~Header~||~~|~ImagePath~||~dover_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "dover_700");
         ///PROMPT AXE_NO_BOAT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT AXE_NO_BOAT 0 Most boats are locked up. Your axe could help you free one, but all the boats you find are watched too closely.
@@ -166,10 +172,12 @@ public class Dialog_p2_dov_001 {
         node.Npc = "DOV";
         ///NODE_RANDOM_RESPONSES STEAL_DAY False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE STEAL_DAY Full
+        ///NODE_VISUAL_TYPE STEAL_DAY Popup
         ///NODE_VISUAL_USESCRIPT STEAL_DAY false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~STEAL_DAY~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~STEAL_DAY~|||~Header~||~~|~ImagePath~||~dover_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "dover_700");
         ///PROMPT STEAL_DAY 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT STEAL_DAY 0 On this side of the river the boats are locked up and closely watched. You draw attention to yourself and are captured and turned in for a reward.
@@ -194,10 +202,12 @@ public class Dialog_p2_dov_001 {
         node.Npc = "DOV";
         ///NODE_RANDOM_RESPONSES NO_BOAT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE NO_BOAT Full
+        ///NODE_VISUAL_TYPE NO_BOAT Popup
         ///NODE_VISUAL_USESCRIPT NO_BOAT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~NO_BOAT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~NO_BOAT~|||~Header~||~~|~ImagePath~||~dover_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "dover_700");
         ///PROMPT NO_BOAT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT NO_BOAT 0 You search for a long time, but it's no good. The boats on this side of the river are kept locked up tight.
@@ -221,10 +231,12 @@ public class Dialog_p2_dov_001 {
         node.Npc = "DOV";
         ///NODE_RANDOM_RESPONSES GOT_BOAT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE GOT_BOAT Full
+        ///NODE_VISUAL_TYPE GOT_BOAT Popup
         ///NODE_VISUAL_USESCRIPT GOT_BOAT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~GOT_BOAT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~GOT_BOAT~|||~Header~||~~|~ImagePath~||~dover_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "dover_700");
         ///PROMPT GOT_BOAT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT GOT_BOAT 0 Most boats on this side of the river are kept locked up, but you manage to find one unlocked and, with difficulty, make your way to the far side.
@@ -265,18 +277,18 @@ public class Dialog_p2_dov_001 {
         int rand = UnityEngine.Random.RandomRange(1,100);
         rand += GameFlags.P2EscapeAttempts * 20;
         if (rand > 100){
-        	DialogGameFlags.next_node = "GOT_BOAT";
+        DialogGameFlags.next_node = "GOT_BOAT";
         }
         else{
-        	DialogGameFlags.next_node = "NO_BOAT";
+        DialogGameFlags.next_node = "NO_BOAT";
         }
         if(GameFlags.P2HasAxe){
-        	if (rand > 70){
-        		DialogGameFlags.next_node = "AXE_BOAT";
-        	}
-        	else{
-        		DialogGameFlags.next_node = "AXE_NO_BOAT";
-        	}
+        if (rand > 70){
+        DialogGameFlags.next_node = "AXE_BOAT";
+        }
+        else{
+        DialogGameFlags.next_node = "AXE_NO_BOAT";
+        }
         }
         ///METHOD_BODY_END n01_r0_select
     }

@@ -64,10 +64,12 @@ public class Dialog_p2_for_001 {
         node.Npc = "FOR";
         ///NODE_RANDOM_RESPONSES n01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01 Full
+        ///NODE_VISUAL_TYPE n01 Popup
         ///NODE_VISUAL_USESCRIPT n01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01~|||~Header~||~~|~ImagePath~||~ford_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "ford_700");
         ///PROMPT n01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01 0 This is a crossing point at a shallow part of the river that is busy with foot traffic and wagons full of corn and other goods.
@@ -120,10 +122,12 @@ public class Dialog_p2_for_001 {
         node.Npc = "FOR";
         ///NODE_RANDOM_RESPONSES MADEIT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE MADEIT Full
+        ///NODE_VISUAL_TYPE MADEIT Popup
         ///NODE_VISUAL_USESCRIPT MADEIT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~MADEIT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~MADEIT~|||~Header~||~~|~ImagePath~||~ford_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "ford_700");
         ///PROMPT MADEIT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT MADEIT 0 You make it to the far side of the ford without trouble. That was nerve-wracking!
@@ -148,10 +152,12 @@ public class Dialog_p2_for_001 {
         node.Npc = "FOR";
         ///NODE_RANDOM_RESPONSES WATCHED False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE WATCHED Full
+        ///NODE_VISUAL_TYPE WATCHED Popup
         ///NODE_VISUAL_USESCRIPT WATCHED false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~WATCHED~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~WATCHED~|||~Header~||~~|~ImagePath~||~fordnight_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "fordnight_700");
         ///PROMPT WATCHED 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT WATCHED 0 Unfortunately the ford is patrolled heavily at night because it is such an easy place to cross. You spend the whole night but don't see an opportunity to get by without being caught. [Time passes and food goes down.]
@@ -176,10 +182,12 @@ public class Dialog_p2_for_001 {
         node.Npc = "FOR";
         ///NODE_RANDOM_RESPONSES SNEAK False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE SNEAK Full
+        ///NODE_VISUAL_TYPE SNEAK Popup
         ///NODE_VISUAL_USESCRIPT SNEAK false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~SNEAK~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~SNEAK~|||~Header~||~~|~ImagePath~||~ford_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "ford_700");
         ///PROMPT SNEAK 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT SNEAK 0 Your strange behavior draws the attention of a mounted patrol.
@@ -214,10 +222,12 @@ public class Dialog_p2_for_001 {
         node.Npc = "FOR";
         ///NODE_RANDOM_RESPONSES CAUGHT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE CAUGHT Full
+        ///NODE_VISUAL_TYPE CAUGHT Popup
         ///NODE_VISUAL_USESCRIPT CAUGHT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~Header~||~~|~ImagePath~||~ford_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "ford_700");
         ///PROMPT CAUGHT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT CAUGHT 0 They quickly ride you down and turn you in for a reward.
@@ -242,10 +252,12 @@ public class Dialog_p2_for_001 {
         node.Npc = "FOR";
         ///NODE_RANDOM_RESPONSES SPLITUP False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE SPLITUP Full
+        ///NODE_VISUAL_TYPE SPLITUP Popup
         ///NODE_VISUAL_USESCRIPT SPLITUP false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~SPLITUP~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~SPLITUP~|||~Header~||~~|~ImagePath~||~ford_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "ford_700");
         ///PROMPT SPLITUP 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT SPLITUP 0 Henry shouts for you to split up. \"Run, Lucy!\" Since he is worth more money the patrol chases him. You get away.
