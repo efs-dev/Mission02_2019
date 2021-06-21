@@ -14,6 +14,22 @@ using Efs.Dialogs;
 public class Dialog_p2_wag_001 {
     //CLASS DialogGameFlagsClass
     public class DialogGameFlagsClass {
+        //PROPERTY _next_node
+        private string _next_node = "false";
+
+        //PROPERTY next_node
+        public string next_node {
+                get {
+                        ///PROPERTY_GETTER_START next_node
+                        return _next_node;
+                        ///PROPERTY_GETTER_END next_node
+                }
+                set {
+                        ///PROPERTY_SETTER_START next_node
+                        _next_node = value;
+                        ///PROPERTY_SETTER_END next_node
+                }
+        }
     }
     //CLASS_END DialogGameFlagsClass
     //CLASS DialogScriptsClass
@@ -48,10 +64,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES n01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01 Full
+        ///NODE_VISUAL_TYPE n01 Popup
         ///NODE_VISUAL_USESCRIPT n01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT n01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01 0 There is a wagon outside the wagon station. Through the window you can smell something delicious cooking.
@@ -63,21 +81,23 @@ public class Dialog_p2_wag_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 0 Hide in one of the wagons.
         response.Text = "Hide in one of the wagons.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 0 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
-        ///RESPONSE_NEXT_NODE_ID n01 0 END
-        response.NextNodeId = "END";
+        ///RESPONSE_NEXT_NODE_TYPE n01 0 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
+        ///RESPONSE_NEXT_NODE_ID n01 0 
+        response.NextNodeId = "";
         response.OnSelect(n01_r0_select);
+        response.OnSelectNextNodeId(n01_r0_nextnodeid);
         
         ///RESPONSE n01 1
         response = node.AddResponse();
         ///RESPONSE_TEXT n01 1 Wait to see who comes out.
         response.Text = "Wait to see who comes out.";
-        ///RESPONSE_NEXT_NODE_TYPE n01 1 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE n01 1 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID n01 1 
         response.NextNodeId = "";
         response.OnSelect(n01_r1_select);
+        response.OnSelectNextNodeId(n01_r1_nextnodeid);
         
         ///RESPONSE n01 2
         response = node.AddResponse();
@@ -104,10 +124,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES CAUGHT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE CAUGHT Full
+        ///NODE_VISUAL_TYPE CAUGHT Popup
         ///NODE_VISUAL_USESCRIPT CAUGHT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~CAUGHT~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT CAUGHT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT CAUGHT 0 You are discovered in the wagon and turned over to the local sheriff.
@@ -132,10 +154,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES HIDWELL False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE HIDWELL Full
+        ///NODE_VISUAL_TYPE HIDWELL Popup
         ///NODE_VISUAL_USESCRIPT HIDWELL false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~HIDWELL~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~HIDWELL~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT HIDWELL 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT HIDWELL 0 You are discovered by the driver, but surprisingly he's not angry. He says you can stay hidden and he will take you across the Maysville ferry to Ohio!
@@ -160,10 +184,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES OFFERRIDE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE OFFERRIDE Full
+        ///NODE_VISUAL_TYPE OFFERRIDE Popup
         ///NODE_VISUAL_USESCRIPT OFFERRIDE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~OFFERRIDE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~OFFERRIDE~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT OFFERRIDE 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT OFFERRIDE 0 After awhile a Negro wagon driver comes out and gets ready to move on.
@@ -184,11 +210,12 @@ public class Dialog_p2_wag_001 {
         response = node.AddResponse();
         ///RESPONSE_TEXT OFFERRIDE 1 Ask for help.
         response.Text = "Ask for help.";
-        ///RESPONSE_NEXT_NODE_TYPE OFFERRIDE 1 Id
-        response.NextNodeType = DialogResponse.NextNodeTypes.Id;
+        ///RESPONSE_NEXT_NODE_TYPE OFFERRIDE 1 Script
+        response.NextNodeType = DialogResponse.NextNodeTypes.Script;
         ///RESPONSE_NEXT_NODE_ID OFFERRIDE 1 
         response.NextNodeId = "";
         response.OnSelect(OFFERRIDE_r1_select);
+        response.OnSelectNextNodeId(OFFERRIDE_r1_nextnodeid);
         
         ///NODE_END OFFERRIDE
         ///NODE_START OFFERHINT
@@ -197,10 +224,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES OFFERHINT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE OFFERHINT Full
+        ///NODE_VISUAL_TYPE OFFERHINT Popup
         ///NODE_VISUAL_USESCRIPT OFFERHINT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~OFFERHINT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~OFFERHINT~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT OFFERHINT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT OFFERHINT 0 After awhile a black wagon driver comes out and gets ready to move on.
@@ -233,10 +262,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES GIVEHINT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE GIVEHINT Full
+        ///NODE_VISUAL_TYPE GIVEHINT Popup
         ///NODE_VISUAL_USESCRIPT GIVEHINT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~GIVEHINT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~GIVEHINT~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT GIVEHINT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT GIVEHINT 0 The driver tells you to find help at the back door of the Maysville tavern.
@@ -261,10 +292,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES WAGON_H False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE WAGON_H Full
+        ///NODE_VISUAL_TYPE WAGON_H Popup
         ///NODE_VISUAL_USESCRIPT WAGON_H false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~WAGON_H~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~WAGON_H~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT WAGON_H 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT WAGON_H 0 The driver says he can hide one of you all the way across the Maysville ferry! \"You go,\" Henry insists, \"I'll find another way. Don't argue with me.\"
@@ -298,10 +331,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES WAGON False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE WAGON Full
+        ///NODE_VISUAL_TYPE WAGON Popup
         ///NODE_VISUAL_USESCRIPT WAGON false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~WAGON~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~WAGON~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT WAGON 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT WAGON 0 The driver says he can hide you all the way across the Maysville ferry! He hides you among his goods and tells you to be as quiet as you can.
@@ -326,10 +361,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES FORCE False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE FORCE Full
+        ///NODE_VISUAL_TYPE FORCE Popup
         ///NODE_VISUAL_USESCRIPT FORCE false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~FORCE~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~FORCE~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT FORCE 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT FORCE 0 You stagger on even though you are tired. You wind up exhausted. [Health goes down.]
@@ -354,10 +391,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES HELP False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE HELP Full
+        ///NODE_VISUAL_TYPE HELP Popup
         ///NODE_VISUAL_USESCRIPT HELP false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~HELP~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~HELP~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT HELP 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT HELP 0 The manager of the wagon station scowls when you walk in. \"Get out!\" he shouts, \"I'm calling a patrol!\"
@@ -381,10 +420,12 @@ public class Dialog_p2_wag_001 {
         node.Npc = "WAG";
         ///NODE_RANDOM_RESPONSES RUN False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE RUN Full
+        ///NODE_VISUAL_TYPE RUN Popup
         ///NODE_VISUAL_USESCRIPT RUN false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~RUN~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~RUN~|||~Header~||~~|~ImagePath~||~wagon_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "wagon_700");
         ///PROMPT RUN 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT RUN 0 You run as fast as you can and wind up exhausted. [Health goes down.]
@@ -416,6 +457,13 @@ public class Dialog_p2_wag_001 {
         //				else
         //					$next_node = "CAUGHT"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 85){
+        DialogGameFlags.next_node = "HIDWELL";
+        }
+        else{
+        DialogGameFlags.next_node = "CAUGHT";
+        }
         ///METHOD_BODY_END n01_r0_select
     }
 
@@ -428,6 +476,13 @@ public class Dialog_p2_wag_001 {
         //				else
         //					$next_node = "OFFERHINT"
         //				/if*/
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand < 50){
+        DialogGameFlags.next_node = "OFFERRIDE";
+        }
+        else{
+        DialogGameFlags.next_node = "OFFERHINT";
+        }
         ///METHOD_BODY_END n01_r1_select
     }
 
@@ -455,6 +510,12 @@ public class Dialog_p2_wag_001 {
         //				else
         //					$next_node = "WAGON"
         //				/if*/
+        if (GameFlags.P2EscapeType == "henry"){
+        	DialogGameFlags.next_node = "WAGON_H";
+        }
+        else{
+        	DialogGameFlags.next_node = "WAGON";
+        }
         ///METHOD_BODY_END OFFERRIDE_r1_select
     }
 
@@ -471,6 +532,8 @@ public class Dialog_p2_wag_001 {
         ///METHOD_BODY_START WAGON_H_r1_select
         /*//				#p2_henry_code = 30
         //				killHenry()*/
+        GameFlags.P2HenryCode = 30;
+        GlobalScripts.KillHenry();
         ///METHOD_BODY_END WAGON_H_r1_select
     }
 
@@ -499,7 +562,30 @@ public class Dialog_p2_wag_001 {
         /*//				#lucy_health = #lucy_health - 1
         //				#henry_health = #henry_health - 1
         //				post("reportHealth", "")*/
+        GameFlags.P2LucyHealth--;
+        GameFlags.P2HenryHealth--;
         ///METHOD_BODY_END RUN_r0_select
+    }
+
+    ///METHOD n01_r0_nextnodeid
+    public string n01_r0_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r0_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r0_nextnodeid
+    }
+
+    ///METHOD n01_r1_nextnodeid
+    public string n01_r1_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START n01_r1_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END n01_r1_nextnodeid
+    }
+
+    ///METHOD OFFERRIDE_r1_nextnodeid
+    public string OFFERRIDE_r1_nextnodeid ( DialogResponse response ) {
+        ///METHOD_BODY_START OFFERRIDE_r1_nextnodeid
+        return DialogGameFlags.next_node;
+        ///METHOD_BODY_END OFFERRIDE_r1_nextnodeid
     }
 }
 //CLASS_END Dialog_p2_wag_001

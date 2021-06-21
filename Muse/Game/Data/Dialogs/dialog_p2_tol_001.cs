@@ -64,10 +64,12 @@ public class Dialog_p2_tol_001 {
         node.Npc = "TOL";
         ///NODE_RANDOM_RESPONSES n01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE n01 Full
+        ///NODE_VISUAL_TYPE n01 Popup
         ///NODE_VISUAL_USESCRIPT n01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~n01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~n01~|||~Header~||~~|~ImagePath~||~toll_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "toll_700");
         ///PROMPT n01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT n01 0 A short bridge extends across the river here. A rope stretches across the mouth of the bridge preventing horses and wagons from crossing unless they pay the toll. The toll man studies you from his small wooden shack nearby.
@@ -121,10 +123,12 @@ public class Dialog_p2_tol_001 {
         node.Npc = "TOL";
         ///NODE_RANDOM_RESPONSES DASH1 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE DASH1 Full
+        ///NODE_VISUAL_TYPE DASH1 Popup
         ///NODE_VISUAL_USESCRIPT DASH1 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~DASH1~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~DASH1~|||~Header~||~~|~ImagePath~||~toll_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "toll_700");
         ///PROMPT DASH1 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT DASH1 0 You run across and don't look back. The toll man shouts but doesn't follow you. Hopefully he won't alert a patrol until you are long gone.
@@ -149,10 +153,12 @@ public class Dialog_p2_tol_001 {
         node.Npc = "TOL";
         ///NODE_RANDOM_RESPONSES DASH2 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE DASH2 Full
+        ///NODE_VISUAL_TYPE DASH2 Popup
         ///NODE_VISUAL_USESCRIPT DASH2 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~DASH2~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~DASH2~|||~Header~||~~|~ImagePath~||~toll_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "toll_700");
         ///PROMPT DASH2 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT DASH2 0 You sprint across the bridge only to run into a mounted patrol on the other side. There is nowhere to run. You are swiftly returned to the King Plantation.
@@ -177,10 +183,12 @@ public class Dialog_p2_tol_001 {
         node.Npc = "TOL";
         ///NODE_RANDOM_RESPONSES SNEAK False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE SNEAK Full
+        ///NODE_VISUAL_TYPE SNEAK Popup
         ///NODE_VISUAL_USESCRIPT SNEAK false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~SNEAK~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~SNEAK~|||~Header~||~~|~ImagePath~||~toll2_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "toll2_700");
         ///PROMPT SNEAK 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT SNEAK 0 You hide until it is the dead of night and the toll man has fallen asleep after drinking. Then, as quickly and quietly as you can, you make your way across the bridge.
@@ -205,10 +213,12 @@ public class Dialog_p2_tol_001 {
         node.Npc = "TOL";
         ///NODE_RANDOM_RESPONSES HINT False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE HINT Full
+        ///NODE_VISUAL_TYPE HINT Popup
         ///NODE_VISUAL_USESCRIPT HINT false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~HINT~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~HINT~|||~Header~||~~|~ImagePath~||~toll_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "toll_700");
         ///PROMPT HINT 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT HINT 0 The man mops some sweat from his forehead and nods. He waves you across.

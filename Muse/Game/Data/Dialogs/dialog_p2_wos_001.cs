@@ -64,10 +64,12 @@ public class Dialog_p2_wos_001 {
         node.Npc = "WOS";
         ///NODE_RANDOM_RESPONSES LOST_01 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE LOST_01 Full
+        ///NODE_VISUAL_TYPE LOST_01 Popup
         ///NODE_VISUAL_USESCRIPT LOST_01 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~LOST_01~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~LOST_01~|||~Header~||~~|~ImagePath~||~woodsnight_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "woodsnight_700");
         ///PROMPT LOST_01 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT LOST_01 0 After wandering around in the woods for hours, you realize you are lost and it's getting dark.
@@ -139,10 +141,12 @@ public class Dialog_p2_wos_001 {
         node.Npc = "WOS";
         ///NODE_RANDOM_RESPONSES KEEP_MOVING False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE KEEP_MOVING Full
+        ///NODE_VISUAL_TYPE KEEP_MOVING Popup
         ///NODE_VISUAL_USESCRIPT KEEP_MOVING false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~KEEP_MOVING~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~KEEP_MOVING~|||~Header~||~~|~ImagePath~||~woodsnight_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "woodsnight_700");
         ///PROMPT KEEP_MOVING 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT KEEP_MOVING 0 You're not familiar with traveling these woods after dark. You stumble into a stream, get soaked, and lose some food. You get little sleep, but you find your way by morning. [Health and food go down]
@@ -167,10 +171,12 @@ public class Dialog_p2_wos_001 {
         node.Npc = "WOS";
         ///NODE_RANDOM_RESPONSES KEEP_MOVING_H False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE KEEP_MOVING_H Full
+        ///NODE_VISUAL_TYPE KEEP_MOVING_H Popup
         ///NODE_VISUAL_USESCRIPT KEEP_MOVING_H false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~KEEP_MOVING_H~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~KEEP_MOVING_H~|||~Header~||~~|~ImagePath~||~woodsnight_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "woodsnight_700");
         ///PROMPT KEEP_MOVING_H 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT KEEP_MOVING_H 0 Henry finds the North Star in the night sky. It helps you get your bearings. By morning you are heading north again, but you are exhausted. [Health goes down.]
@@ -465,10 +471,12 @@ public class Dialog_p2_wos_001 {
         node.Npc = "WOS";
         ///NODE_RANDOM_RESPONSES NOTCAUGHT1 False
         node.RandomizeResponseOrder = false;
-        ///NODE_VISUAL_TYPE NOTCAUGHT1 Full
+        ///NODE_VISUAL_TYPE NOTCAUGHT1 Popup
         ///NODE_VISUAL_USESCRIPT NOTCAUGHT1 false
-        node.VisualDataType = "full";
-        ///NODE_VISUAL_DATA~|||~NOTCAUGHT1~|||~
+        node.VisualDataType = "popup";
+        ///NODE_VISUAL_DATA~|||~NOTCAUGHT1~|||~Header~||~~|~ImagePath~||~rabbit_700
+        node.VisualData.Add("Header", "");
+        node.VisualData.Add("ImagePath", "rabbit_700");
         ///PROMPT NOTCAUGHT1 0
         prompt = node.AddPrompt();
         ///PROMPT_TEXT NOTCAUGHT1 0 You chase the rabbit around and around. Unfortunately it gets away and now you are exhausted. [Health goes down.]
@@ -784,7 +792,7 @@ public class Dialog_p2_wos_001 {
         //				$next_node = "NODOGS"
         //			/if*/
         if (GameFlags.P2DaysPassed > 2){
-        	int rand = UnityEngine.Random.RandomRange(1,100);
+        int rand = UnityEngine.Random.RandomRange(1,100);
         rand += GameFlags.P2EscapeAttempts * 10;
         if (rand < 60){
         DialogGameFlags.next_node = "NODOGS";
@@ -794,7 +802,7 @@ public class Dialog_p2_wos_001 {
         }
         }
         else{
-        	DialogGameFlags.next_node = "NODOGS";
+        DialogGameFlags.next_node = "NODOGS";
         }
         ///METHOD_BODY_END DOGS_01_r0_select
     }
@@ -835,7 +843,7 @@ public class Dialog_p2_wos_001 {
         //            /if*/
         int rand = UnityEngine.Random.RandomRange(1,100);
         if (GameFlags.P2EscapeType == "henry"){
-        	rand+= 50;
+        rand+= 50;
         }
         if (rand < 74){
         DialogGameFlags.next_node = "CAUGHT1";
@@ -905,16 +913,16 @@ public class Dialog_p2_wos_001 {
         //				/if
         //			/if*/
         if (GameFlags.P2EscapeType == "henry"){
-        	DialogGameFlags.next_node = "HENRYCAUGHT";
+        DialogGameFlags.next_node = "HENRYCAUGHT";
         }
         else{
-        	int rand = UnityEngine.Random.RandomRange(1,100);
-        	if (rand > 50){
-        		DialogGameFlags.next_node = "RUNESCAPE";
-        	}
-        	else{
-        		DialogGameFlags.next_node = "RUNCAUGHT";
-        	}
+        int rand = UnityEngine.Random.RandomRange(1,100);
+        if (rand > 50){
+        DialogGameFlags.next_node = "RUNESCAPE";
+        }
+        else{
+        DialogGameFlags.next_node = "RUNCAUGHT";
+        }
         }
         ///METHOD_BODY_END PATROL_01_r2_select
     }
