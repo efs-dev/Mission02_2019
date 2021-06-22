@@ -3,7 +3,16 @@ public partial class StateIds {
     //PROPERTY ANIM_PROLOGUE
     public const string ANIM_PROLOGUE = "anim_prologue";
 
-    //PROPERTY LOC_AUCTION
-    public const string LOC_AUCTION = "loc_auction";
+    //PROPERTY P1_INTRO
+    public const string P1_INTRO = "p1_intro";
+
+    //PROPERTY P1_MAP
+    public const string P1_MAP = "p1_map";
+
+    //PROPERTY P1_QUARTERS
+    public const string P1_QUARTERS = "p1_quarters";
+
+    //PROPERTY P5_AUCTION
+    public const string P5_AUCTION = "p5_auction";
 }
 //CLASS_END StateIds
