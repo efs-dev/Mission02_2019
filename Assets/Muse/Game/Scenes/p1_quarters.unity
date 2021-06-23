@@ -12882,7 +12882,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_your_house);
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -13170,7 +13170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_big_house);
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -18425,7 +18425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_henrys_house);
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -21149,7 +21149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_smokehouse);
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -21473,7 +21473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_yard);
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -24359,7 +24359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_community_garden);
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
