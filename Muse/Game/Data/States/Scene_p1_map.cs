@@ -31,6 +31,7 @@ public class Scene_p1_map : State {
         OnHotspotClickBlocking.Add("bigHouseHotspot", OnbigHouseHotspotClickCallback);
         OnHotspotClickBlocking.Add("chickenCoopHotspot", OnchickenCoopHotspotClickCallback);
         OnHotspotClickBlocking.Add("cornfieldHotspot", OncornfieldHotspotClickCallback);
+        OnHotspotClickBlocking.Add("creekHotspot", OncreekHotspotClickCallback);
         OnHotspotClickBlocking.Add("hempBotHotspot", OnhempBotHotspotClickCallback);
         OnHotspotClickBlocking.Add("hempBreaksHotspot", OnhempBreaksHotspotClickCallback);
         OnHotspotClickBlocking.Add("hempLeftHotspot", OnhempLeftHotspotClickCallback);
@@ -61,6 +62,24 @@ public class Scene_p1_map : State {
         ///METHOD_BODY_START OncornfieldHotspotClickCallback
         yield return Actions.OpenPopupBlocking(PopupIds.p1_cornfield);
         ///METHOD_BODY_END OncornfieldHotspotClickCallback
+    }
+
+    ///METHOD OncreekHotspotClickCallback
+    public IEnumerator OncreekHotspotClickCallback ( State Scene ) {
+        ///METHOD_BODY_START OncreekHotspotClickCallback
+        if (GameFlags.P1CreekVisits == 0){
+        	GameFlags.P1CreekVisits++;
+        	yield return Actions.LoadScene("p1_creek");
+        }
+        else if (GameFlags.P1CreekVisits == 1){
+        	// TODO: replace the above task with a quest-related conditional
+        	GameFlags.P1CreekVisits++;
+        	yield return Actions.DialogOpenBlocking("p1_wash_creek");
+        }
+        else{
+        	yield return Actions.OpenPopupBlocking(PopupIds.p1_creek);
+        }
+        ///METHOD_BODY_END OncreekHotspotClickCallback
     }
 
     ///METHOD OnhempBotHotspotClickCallback

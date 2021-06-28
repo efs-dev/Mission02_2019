@@ -282,6 +282,8 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P4JonRipley 
 //USING
 ///GAMEFLAG_FOLDER P4JonCanada 
+//USING
+///GAMEFLAG_FOLDER P1CreekVisits 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -2941,6 +2943,25 @@ GameFlagChanged("P4JonRipley", oldValue, value);
 _P4JonCanada = value;
 GameFlagChanged("P4JonCanada", oldValue, value);
             ///PROPERTY_SETTER_END P4JonCanada
+        }
+    }
+
+    //PROPERTY _P1CreekVisits
+    private static int _P1CreekVisits = 0;
+
+    //PROPERTY P1CreekVisits
+    public static int P1CreekVisits {
+        get {
+            ///PROPERTY_GETTER_START P1CreekVisits
+            return _P1CreekVisits;
+            ///PROPERTY_GETTER_END P1CreekVisits
+        }
+        set {
+            ///PROPERTY_SETTER_START P1CreekVisits
+            var oldValue = value;
+_P1CreekVisits = value;
+GameFlagChanged("P1CreekVisits", oldValue, value);
+            ///PROPERTY_SETTER_END P1CreekVisits
         }
     }
 }

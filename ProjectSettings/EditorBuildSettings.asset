@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Muse/Game/Scenes/anim_prologue.unity
     guid: 80d2be2479b2da9468cbd3e2580b1b95
   - enabled: 1
+    path: Assets/Muse/Game/Scenes/p1_creek.unity
+    guid: 8c464a609c8f3214f9843233f9fc0d92
+  - enabled: 1
     path: Assets/Muse/Game/Scenes/p1_intro.unity
     guid: 471ef62784a3bca4bb52bc1ba64e01ef
   - enabled: 1

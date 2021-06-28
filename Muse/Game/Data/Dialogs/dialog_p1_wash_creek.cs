@@ -134,6 +134,7 @@ public class Dialog_p1_wash_creek {
     public void n02_r0_select ( DialogResponse response ) {
         ///METHOD_BODY_START n02_r0_select
         /*//#p1_total_tasks     += 1*/
+        GameFlags.P1TotalTasks++;
         ///METHOD_BODY_END n02_r0_select
     }
 }

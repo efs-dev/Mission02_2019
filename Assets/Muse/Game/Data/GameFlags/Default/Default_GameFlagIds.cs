@@ -419,5 +419,8 @@ public static partial class GameFlagIds {
 
     //PROPERTY P4JonCanada
     public static string P4JonCanada = "P4JonCanada";
+
+    //PROPERTY P1CreekVisits
+    public static string P1CreekVisits = "P1CreekVisits";
 }
 //CLASS_END GameFlagIds

@@ -3,6 +3,7 @@ p1_big_house
 , p1_chicken_coop
 , p1_community_garden
 , p1_cornfield
+, p1_creek
 , p1_creek1
 , p1_creek2
 , p1_hemp_bot

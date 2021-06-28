@@ -1044,7 +1044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189697879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: 7.85, y: -1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1785895958}
@@ -4100,7 +4100,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395757144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: -8.58, y: -2.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2142898390}
@@ -6927,7 +6927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425889065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: 8.24, y: -5.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 783701064}
@@ -12177,7 +12177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949948313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: -3.81, y: -5.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 191337491}
@@ -15468,7 +15468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038778802}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: -3.65, y: -2.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 951033868}
@@ -18530,7 +18530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158535803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: -5.48, y: 0.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 807388823}
@@ -21645,7 +21645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250227844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: 0.93, y: 3.81, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1588782076}
@@ -25353,7 +25353,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: "if (GameFlags.P1CreekVisits == 0){\n\tGameFlags.P1CreekVisits++;\n\tyield
+    return Actions.LoadScene(\"p1_creek\");\n}\nelse if (GameFlags.P1CreekVisits ==
+    1){\n\t// TODO: replace the above task with a quest-related conditional\n\tGameFlags.P1CreekVisits++;\n\tyield
+    return Actions.DialogOpenBlocking(\"p1_wash_creek\");\n}\nelse{\n\tyield return
+    Actions.OpenPopupBlocking(PopupIds.p1_creek);\n}"
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -25625,7 +25629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479800915}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: 5.42, y: -0.54, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1802787690}
@@ -29243,7 +29247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623877032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: 2.48, y: -4.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2114469563}
@@ -31871,7 +31875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643397431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: 8.96, y: 1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 814497748}
@@ -37205,7 +37209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084424102}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: -7.77, y: -5.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 98161648}
@@ -40348,7 +40352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118628978}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.01, y: -3.83, z: 0}
+  m_LocalPosition: {x: 7.43, y: 5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1153718339}

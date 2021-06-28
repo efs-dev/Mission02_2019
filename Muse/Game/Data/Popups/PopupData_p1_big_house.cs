@@ -15,8 +15,8 @@ public class PopupData_p1_big_house : PopupData {
         Id = "p1_big_house";
         ///Type InfoPopupTemplate
         Type = "InfoPopupTemplate";
-        ///Text This is the Big House where Master King and his family live. Field slaves aren't allowed near the big house. Since you work in the yard you cna go to the back door to deliver eggs, pick up wash, gather dirty pots and get slop for the hogs.
-        Text = "This is the Big House where Master King and his family live. Field slaves aren't allowed near the big house. Since you work in the yard you cna go to the back door to deliver eggs, pick up wash, gather dirty pots and get slop for the hogs.";
+        ///Text This is the Big House where Master King and his family live. Field slaves aren't allowed near the big house. Since you work in the yard you can go to the back door to deliver eggs, pick up wash, gather dirty pots and get slop for the hogs.
+        Text = "This is the Big House where Master King and his family live. Field slaves aren't allowed near the big house. Since you work in the yard you can go to the back door to deliver eggs, pick up wash, gather dirty pots and get slop for the hogs.";
         ///RunCloseFirst false
         RunCloseFirst = false;
         ///METHOD_BODY_END PopupData_p1_big_house
