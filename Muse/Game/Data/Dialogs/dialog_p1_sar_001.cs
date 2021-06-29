@@ -717,6 +717,13 @@ public class Dialog_p1_sar_001 {
         ///NODE_VISUAL_USESCRIPT n16a false
         node.VisualDataType = "full";
         ///NODE_VISUAL_DATA~|||~n16a~|||~
+        ///PROMPT n16a 0
+        prompt = node.AddPrompt();
+        ///PROMPT_TEXT n16a 0 
+        prompt.Text = "";
+        ///PROMPT_IGNORE_VO n16a 0 false
+        prompt.IgnoreVO = false;
+        
         ///RESPONSE n16a 0
         response = node.AddResponse();
         ///RESPONSE_TEXT n16a 0 [Done]

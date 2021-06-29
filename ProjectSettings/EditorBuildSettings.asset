@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Muse/Game/Scenes/anim_prologue.unity
     guid: 80d2be2479b2da9468cbd3e2580b1b95
   - enabled: 1
+    path: Assets/Muse/Game/Scenes/p1_after_fire.unity
+    guid: 0670b42e3f1ecdd458ffdf70e85b614c
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/p1_big_house_kitchen.unity
+    guid: e178cf291cd96444db3b7a5bb4a5eca5
+  - enabled: 1
     path: Assets/Muse/Game/Scenes/p1_creek.unity
     guid: 8c464a609c8f3214f9843233f9fc0d92
   - enabled: 1
@@ -32,6 +38,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Muse/Game/Scenes/p1_quarters.unity
     guid: 09fe47ed94f28be4199c6f5918f97f0c
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/p1_sarah.unity
+    guid: 133c174e835150e43861dcaa1ecc7359
+  - enabled: 1
+    path: Assets/Muse/Game/Scenes/p1_yard.unity
+    guid: 32e9524e9a5b53f4895ba9e3f1906791
   - enabled: 1
     path: Assets/Muse/Game/Scenes/p5_auction.unity
     guid: 6910a33edd0cda04aa19c0afec8ac219

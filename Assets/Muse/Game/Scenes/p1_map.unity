@@ -9630,7 +9630,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_chicken_coop);
+  OnClickScript: "if (!GameFlags.P1EggsComplete && GameFlags.P1ComfreyTried){\n\tyield
+    return Actions.DialogOpenBlocking(\"henhouse\");\n}\nelse{\nyield return Actions.OpenPopupBlocking(PopupIds.p1_chicken_coop);\n}"
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -36606,7 +36607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_yard2);
+  OnClickScript: "if (!GameFlags.P1ComfreyTried){\n\tyield return Actions.LoadScene(\"p1_yard\");\n}\nelse{\n\tyield
+    return Actions.OpenPopupBlocking(PopupIds.p1_yard2);\n}"
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -36931,7 +36933,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: yield return Actions.OpenPopupBlocking(PopupIds.p1_hog_pen);
+  OnClickScript: "if (!GameFlags.P1HogsComplete && GameFlags.P1ComfreyTried){\n\tyield
+    return Actions.DialogOpenBlocking(\"p1_hogs\");\n}\nelse{\n\tyield return Actions.OpenPopupBlocking(PopupIds.p1_hog_pen);\n}"
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 

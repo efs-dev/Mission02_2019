@@ -53,7 +53,12 @@ public class Scene_p1_map : State {
     ///METHOD OnchickenCoopHotspotClickCallback
     public IEnumerator OnchickenCoopHotspotClickCallback ( State Scene ) {
         ///METHOD_BODY_START OnchickenCoopHotspotClickCallback
+        if (!GameFlags.P1EggsComplete && GameFlags.P1ComfreyTried){
+        	yield return Actions.DialogOpenBlocking("henhouse");
+        }
+        else{
         yield return Actions.OpenPopupBlocking(PopupIds.p1_chicken_coop);
+        }
         ///METHOD_BODY_END OnchickenCoopHotspotClickCallback
     }
 
@@ -113,7 +118,12 @@ public class Scene_p1_map : State {
     ///METHOD OnhogPenHotspotClickCallback
     public IEnumerator OnhogPenHotspotClickCallback ( State Scene ) {
         ///METHOD_BODY_START OnhogPenHotspotClickCallback
-        yield return Actions.OpenPopupBlocking(PopupIds.p1_hog_pen);
+        if (!GameFlags.P1HogsComplete && GameFlags.P1ComfreyTried){
+        	yield return Actions.DialogOpenBlocking("p1_hogs");
+        }
+        else{
+        	yield return Actions.OpenPopupBlocking(PopupIds.p1_hog_pen);
+        }
         ///METHOD_BODY_END OnhogPenHotspotClickCallback
     }
 
@@ -134,7 +144,12 @@ public class Scene_p1_map : State {
     ///METHOD OnyardHotspotClickCallback
     public IEnumerator OnyardHotspotClickCallback ( State Scene ) {
         ///METHOD_BODY_START OnyardHotspotClickCallback
-        yield return Actions.OpenPopupBlocking(PopupIds.p1_yard2);
+        if (!GameFlags.P1ComfreyTried){
+        	yield return Actions.LoadScene("p1_yard");
+        }
+        else{
+        	yield return Actions.OpenPopupBlocking(PopupIds.p1_yard2);
+        }
         ///METHOD_BODY_END OnyardHotspotClickCallback
     }
 }

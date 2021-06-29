@@ -3,6 +3,12 @@ public partial class StateIds {
     //PROPERTY ANIM_PROLOGUE
     public const string ANIM_PROLOGUE = "anim_prologue";
 
+    //PROPERTY P1_AFTER_FIRE
+    public const string P1_AFTER_FIRE = "p1_after_fire";
+
+    //PROPERTY P1_BIG_HOUSE_KITCHEN
+    public const string P1_BIG_HOUSE_KITCHEN = "p1_big_house_kitchen";
+
     //PROPERTY P1_CREEK
     public const string P1_CREEK = "p1_creek";
 
@@ -14,6 +20,9 @@ public partial class StateIds {
 
     //PROPERTY P1_QUARTERS
     public const string P1_QUARTERS = "p1_quarters";
+
+    //PROPERTY P1_SARAH
+    public const string P1_SARAH = "p1_sarah";
 
     //PROPERTY P1_YARD
     public const string P1_YARD = "p1_yard";
