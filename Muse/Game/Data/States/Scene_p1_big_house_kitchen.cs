@@ -42,7 +42,8 @@ public class Scene_p1_big_house_kitchen : State {
         }
         else{
         	yield return Actions.DialogOpenBlocking("p1_est_002");
-        	
+        	yield return Actions.OpenPopupBlocking(PopupIds.placeholder_fire);
+        	yield return Actions.LoadScene("p1_after_fire");
         }
         ///METHOD_BODY_END OnShowCallback
     }

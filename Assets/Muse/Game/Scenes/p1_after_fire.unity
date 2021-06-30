@@ -171,7 +171,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnEnter: 
-  OnShow: 
+  OnShow: 'yield return Actions.DialogOpenBlocking("p1_ovr_003");
+
+    yield return Actions.DialogOpenBlocking("p1_hen_001");
+
+    // after this, we go to the night map'
   OnExit: 
   CustomScripts: []
   Modules: []

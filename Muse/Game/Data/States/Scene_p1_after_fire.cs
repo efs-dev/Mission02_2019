@@ -28,7 +28,17 @@ public class Scene_p1_after_fire : State {
     public Scene_p1_after_fire (  ) {
         ///METHOD_BODY_START Scene_p1_after_fire
         Id = "p1_after_fire";
+        OnShowBlocking = OnShowCallback;
         ///METHOD_BODY_END Scene_p1_after_fire
+    }
+
+    ///METHOD OnShowCallback
+    public IEnumerator OnShowCallback ( State Scene ) {
+        ///METHOD_BODY_START OnShowCallback
+        yield return Actions.DialogOpenBlocking("p1_ovr_003");
+        yield return Actions.DialogOpenBlocking("p1_hen_001");
+        // after this, we go to the night map
+        ///METHOD_BODY_END OnShowCallback
     }
 }
 //CLASS_END Scene_p1_after_fire : State

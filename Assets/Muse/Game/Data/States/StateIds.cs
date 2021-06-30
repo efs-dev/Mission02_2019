@@ -18,6 +18,9 @@ public partial class StateIds {
     //PROPERTY P1_MAP
     public const string P1_MAP = "p1_map";
 
+    //PROPERTY P1_NIGHT_MAP
+    public const string P1_NIGHT_MAP = "p1_night_map";
+
     //PROPERTY P1_QUARTERS
     public const string P1_QUARTERS = "p1_quarters";
 

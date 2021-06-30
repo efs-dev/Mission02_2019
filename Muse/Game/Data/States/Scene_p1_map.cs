@@ -13,7 +13,7 @@ using NodeMaps;
 //USING
 
 //USING
-[State("p1_map", "yardHotspot", "quartersHotspot", "map_plantation_night", "map_plantation_2k", "map_plantation", "iceHouseHotspot", "hogPenHotspot", "hempRightHotspot", "hempLeftHotspot", "hempBreaksHotspot", "hempBotHotspot", "creekHotspot", "cornfieldHotspot", "chickenCoopHotspot", "bigHouseHotspot")]
+[State("p1_map", "yardHotspot", "quartersHotspot", "map_plantation_2k", "map_plantation", "iceHouseHotspot", "hogPenHotspot", "hempRightHotspot", "hempLeftHotspot", "hempBreaksHotspot", "hempBotHotspot", "creekHotspot", "cornfieldHotspot", "chickenCoopHotspot", "bigHouseHotspot")]
 //CLASS Scene_p1_map : State
 public class Scene_p1_map : State {
     //CLASS SceneScriptsClass
