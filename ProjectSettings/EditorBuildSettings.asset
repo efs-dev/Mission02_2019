@@ -36,6 +36,9 @@ EditorBuildSettings:
     path: Assets/Muse/Game/Scenes/p1_map.unity
     guid: 69dea7f141545a64aa342b4ec7c717be
   - enabled: 1
+    path: Assets/Muse/Game/Scenes/p1_night_map.unity
+    guid: a7fcc2524e4779f4baa8816c144e4bdf
+  - enabled: 1
     path: Assets/Muse/Game/Scenes/p1_quarters.unity
     guid: 09fe47ed94f28be4199c6f5918f97f0c
   - enabled: 1
