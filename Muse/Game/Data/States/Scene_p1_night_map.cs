@@ -13,7 +13,7 @@ using NodeMaps;
 //USING
 
 //USING
-[State("p1_night_map", "map_plantation_night")]
+[State("p1_night_map", "woodshedHotspot", "smokehouseHotspot", "map_plantation_night", "laundryHotspot", "kingsGardenHotspot", "henhouseHotspot")]
 //CLASS Scene_p1_night_map : State
 public class Scene_p1_night_map : State {
     //CLASS SceneScriptsClass
