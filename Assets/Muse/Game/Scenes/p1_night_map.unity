@@ -4085,7 +4085,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: 'GameFlags.P1NightLocationsVisited++;
+
+    yield return GlobalScripts.P1NightMapAfterSpot("kingsGardenHotspot");'
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -4732,6 +4734,7 @@ Transform:
   - {fileID: 1933605066}
   - {fileID: 2019786525}
   - {fileID: 1803177210}
+  - {fileID: 1594044689}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14602,6 +14605,144 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1594044688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1594044689}
+  - component: {fileID: 1594044691}
+  - component: {fileID: 1594044690}
+  - component: {fileID: 1594044692}
+  m_Layer: 0
+  m_Name: pin_jon_2k
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1594044689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594044688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.98, y: 1.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 988964260}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594044690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594044688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625c338390ee7c3428d737b4b4bdea58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IconType: 0
+  CountClick: 0
+  OnClickScript: 'GameFlags.P1NightLocationsVisited++;
+
+    yield return Actions.DialogOpenBlocking("p1_jon_002");
+
+    yield return GlobalScripts.P1NightMapAfterSpot("pin_jon_2k");'
+  OnVisibleScript: 
+  OnInitScript: 
+  OnCompleteScript: 
+  IsBlinkable: 0
+  BlinkSprite: {fileID: 0}
+  HasClickScript: 1
+  HasVisibleScript: 0
+  HasInitScript: 0
+  HasTooltip: 0
+  SyncTooltipCollisionBox: 0
+  Id: pin_jon_2k
+  Icon: {fileID: 0}
+--- !u!212 &1594044691
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594044688}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 9e5b434271a119d479ff6c636dcf4629, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.4, y: 2.08}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!61 &1594044692
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594044688}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4, y: 2.08}
+    newSize: {x: 1.4, y: 2.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.4, y: 2.08}
+  m_EdgeRadius: 0
 --- !u!1 &1738323205
 GameObject:
   m_ObjectHideFlags: 0
@@ -14877,7 +15018,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: 'GameFlags.P1NightLocationsVisited++;
+
+    yield return GlobalScripts.P1NightMapAfterSpot("smokehouseHotspot");'
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -18188,7 +18331,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: 'GameFlags.P1NightLocationsVisited++;
+
+    yield return GlobalScripts.P1NightMapAfterSpot("woodshedHotspot");'
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -18334,7 +18479,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: 'GameFlags.P1NightLocationsVisited++;
+
+    yield return GlobalScripts.P1NightMapAfterSpot("laundryHotspot");'
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -18393,7 +18540,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: 
+  OnClickScript: 'GameFlags.P1NightLocationsVisited++;
+
+    yield return GlobalScripts.P1NightMapAfterSpot("henhouseHotspot");'
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 

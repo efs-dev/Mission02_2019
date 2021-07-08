@@ -154,6 +154,44 @@ public static partial class GameFlags {
         }
     }
 
+    //PROPERTY _HotspotActive_p1_night_map_pin_jon_2k
+    private static int _HotspotActive_p1_night_map_pin_jon_2k = 1;
+
+    //PROPERTY HotspotActive_p1_night_map_pin_jon_2k
+    public static int HotspotActive_p1_night_map_pin_jon_2k {
+        get {
+            ///PROPERTY_GETTER_START HotspotActive_p1_night_map_pin_jon_2k
+            return _HotspotActive_p1_night_map_pin_jon_2k;
+            ///PROPERTY_GETTER_END HotspotActive_p1_night_map_pin_jon_2k
+        }
+        set {
+            ///PROPERTY_SETTER_START HotspotActive_p1_night_map_pin_jon_2k
+            var oldValue = _HotspotActive_p1_night_map_pin_jon_2k;
+            _HotspotActive_p1_night_map_pin_jon_2k = value;
+            GameFlagChanged("HotspotActive_p1_night_map_pin_jon_2k", oldValue, value);
+            ///PROPERTY_SETTER_END HotspotActive_p1_night_map_pin_jon_2k
+        }
+    }
+
+    //PROPERTY _HotspotCountClick_p1_night_map_pin_jon_2k
+    private static bool _HotspotCountClick_p1_night_map_pin_jon_2k = false;
+
+    //PROPERTY HotspotCountClick_p1_night_map_pin_jon_2k
+    public static bool HotspotCountClick_p1_night_map_pin_jon_2k {
+        get {
+            ///PROPERTY_GETTER_START HotspotCountClick_p1_night_map_pin_jon_2k
+            return _HotspotCountClick_p1_night_map_pin_jon_2k;
+            ///PROPERTY_GETTER_END HotspotCountClick_p1_night_map_pin_jon_2k
+        }
+        set {
+            ///PROPERTY_SETTER_START HotspotCountClick_p1_night_map_pin_jon_2k
+            var oldValue = _HotspotCountClick_p1_night_map_pin_jon_2k;
+            _HotspotCountClick_p1_night_map_pin_jon_2k = value;
+            GameFlagChanged("HotspotCountClick_p1_night_map_pin_jon_2k", oldValue, value);
+            ///PROPERTY_SETTER_END HotspotCountClick_p1_night_map_pin_jon_2k
+        }
+    }
+
     //PROPERTY _HotspotActive_p1_night_map_smokehouseHotspot
     private static int _HotspotActive_p1_night_map_smokehouseHotspot = 1;
 

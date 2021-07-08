@@ -12,6 +12,9 @@ public partial class StateIds {
     //PROPERTY P1_CREEK
     public const string P1_CREEK = "p1_creek";
 
+    //PROPERTY P1_END
+    public const string P1_END = "p1_end";
+
     //PROPERTY P1_INTRO
     public const string P1_INTRO = "p1_intro";
 
