@@ -25,4 +25,5 @@ p1_big_house
 , p4_popups
 , p5_anim_placeholder
 , placeholder_fire
+, placeholder_p1_end_anim
 };

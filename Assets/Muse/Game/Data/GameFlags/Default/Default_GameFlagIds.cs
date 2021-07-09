@@ -425,5 +425,8 @@ public static partial class GameFlagIds {
 
     //PROPERTY P1SpokeEstherOnce
     public static string P1SpokeEstherOnce = "P1SpokeEstherOnce";
+
+    //PROPERTY P1NightLocationsVisited
+    public static string P1NightLocationsVisited = "P1NightLocationsVisited";
 }
 //CLASS_END GameFlagIds
