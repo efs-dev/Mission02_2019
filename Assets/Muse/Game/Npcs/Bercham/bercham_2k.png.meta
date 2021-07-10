@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: 6fce98d5e76802244bdf4a4bf065401f
+guid: 53e82a6dec9e24f01a3f3da0f85afce7
 TextureImporter:
   internalIDToNameTable:
-  - first:
-      213: -1728448059665387632
-    second: armR
   - first:
       213: 1782080342235219337
     second: legs
@@ -12,23 +9,26 @@ TextureImporter:
       213: -2142246038737991177
     second: torso
   - first:
-      213: -1846784345090356148
-    second: head
-  - first:
       213: 478731433384316736
     second: armL
   - first:
-      213: -7292488204952235664
-    second: mouth1
+      213: -1728448059665387632
+    second: armR
   - first:
-      213: -4533523987547846949
-    second: mouth2
+      213: -1846784345090356148
+    second: head
   - first:
       213: 2604626717366517260
     second: mouth4
   - first:
       213: 664829790506365547
     second: mouth3
+  - first:
+      213: -7292488204952235664
+    second: mouth1
+  - first:
+      213: -4533523987547846949
+    second: mouth2
   - first:
       213: -7498823661647850892
     second: eyes
@@ -128,34 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: armR
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 1249
-        width: 895
-        height: 266
-      alignment: 9
-      pivot: {x: 0.02094635, y: 0.61743486}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c92b82b888aed564f880bf95f1fab183
-      internalID: -1728448059665387632
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: legs
       rect:
         serializedVersion: 2
-        x: 50
-        y: 24
-        width: 720
-        height: 1147
+        x: 18
+        y: 13
+        width: 662
+        height: 1307
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c0322913397266428ac118d78fd05ee
+      spriteID: 7ffd9ed4a4bd14a7ca4e09ff3aa6684d
       internalID: 1782080342235219337
       vertices: []
       indices: 
@@ -173,40 +152,19 @@ TextureImporter:
       name: torso
       rect:
         serializedVersion: 2
-        x: 788
-        y: 24
-        width: 647
-        height: 1213
+        x: 696
+        y: 14
+        width: 582
+        height: 1214
       alignment: 9
-      pivot: {x: 0.5160331, y: 0.0797367}
+      pivot: {x: 0.3480794, y: 0.35433635}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 034434f3e8e3a864a9eb3bc36aff78ee
+      spriteID: 9368fa276803246918e322860138c443
       internalID: -2142246038737991177
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: head
-      rect:
-        serializedVersion: 2
-        x: 1475
-        y: 836
-        width: 325
-        height: 604
-      alignment: 9
-      pivot: {x: 0.49374625, y: 0.53028476}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eac45aded499084faefe5158e776735
-      internalID: -1846784345090356148
       vertices: []
       indices: 
       edges: []
@@ -215,61 +173,61 @@ TextureImporter:
       name: armL
       rect:
         serializedVersion: 2
-        x: 1478
-        y: 9
-        width: 523
-        height: 816
+        x: 1293
+        y: 16
+        width: 442
+        height: 662
       alignment: 9
-      pivot: {x: 0.6524719, y: 0.94305897}
+      pivot: {x: 0.6018373, y: 0.9780828}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca98317c6faf8fd4fb7c85138059ddca
+      spriteID: 9b28faa6b8e864117a12521a42875b87
       internalID: 478731433384316736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouth1
+      name: armR
       rect:
         serializedVersion: 2
-        x: 992
-        y: 1414
-        width: 125
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1754
+        y: 18
+        width: 196
+        height: 879
+      alignment: 9
+      pivot: {x: 0.650811, y: 0.9834053}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 477f4600c9803fe4ea51c7f2b92d2b09
-      internalID: -7292488204952235664
+      spriteID: 09aff348b2d454af3a27f25b01d30453
+      internalID: -1728448059665387632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouth2
+      name: head
       rect:
         serializedVersion: 2
-        x: 1124
-        y: 1414
-        width: 125
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 30
+        y: 1340
+        width: 466
+        height: 358
+      alignment: 9
+      pivot: {x: 0.6437657, y: 0.18575147}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53bb073493d542b4c9e25c5d66d8c69e
-      internalID: -4533523987547846949
+      spriteID: f99351901f99a4ec0935319d5b26f977
+      internalID: -1846784345090356148
       vertices: []
       indices: 
       edges: []
@@ -278,10 +236,10 @@ TextureImporter:
       name: mouth4
       rect:
         serializedVersion: 2
-        x: 1124
-        y: 1308
-        width: 125
-        height: 99
+        x: 268
+        y: 1703
+        width: 98
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eed024e302f59484388e2e65bf92b519
+      spriteID: 48cf871062a854cb7a953950a1ed737d
       internalID: 2604626717366517260
       vertices: []
       indices: 
@@ -299,10 +257,10 @@ TextureImporter:
       name: mouth3
       rect:
         serializedVersion: 2
-        x: 992
-        y: 1308
-        width: 125
-        height: 99
+        x: 166
+        y: 1703
+        width: 98
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,8 +268,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e89e1d0beec0ab24ebf7defc406b241d
+      spriteID: 3f42ed3d4b0d44f7aa80238e3cfd3e92
       internalID: 664829790506365547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouth1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1810
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d492b067f3f64175ae7c63d38f6b1a3
+      internalID: -7292488204952235664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mouth2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1810
+        width: 98
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1097ba6e9aa44edb80f654eb09f26cf
+      internalID: -4533523987547846949
       vertices: []
       indices: 
       edges: []
@@ -320,10 +320,10 @@ TextureImporter:
       name: eyes
       rect:
         serializedVersion: 2
-        x: 1269
-        y: 1372
-        width: 148
-        height: 35
+        x: 29
+        y: 1737
+        width: 133
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95ff3b1467fbd474f84e6345a8d59ff4
+      spriteID: 1b163226506fa4418bde67906b17937f
       internalID: -7498823661647850892
       vertices: []
       indices: 
@@ -341,10 +341,10 @@ TextureImporter:
       name: blink
       rect:
         serializedVersion: 2
-        x: 1269
-        y: 1334
-        width: 148
-        height: 35
+        x: 30
+        y: 1703
+        width: 132
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,7 +352,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6826d493540e6d478f4029a18121294
+      spriteID: baa532284d9914120bdeec3b9e8301ae
       internalID: -1520935271367812032
       vertices: []
       indices: 
@@ -361,7 +361,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4b0590011e703704aa71c8c7eea2a692
+    spriteID: 31ad413972db640e7afa9575766683bf
     internalID: 0
     vertices: []
     indices: 
