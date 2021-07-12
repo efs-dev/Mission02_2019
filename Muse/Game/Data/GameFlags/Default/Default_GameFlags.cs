@@ -288,6 +288,10 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER P1SpokeEstherOnce 
 //USING
 ///GAMEFLAG_FOLDER P1NightLocationsVisited 
+//USING
+///GAMEFLAG_FOLDER CancelTask 
+//USING
+///GAMEFLAG_FOLDER P1SmokehouseAssigned 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -3004,6 +3008,44 @@ GameFlagChanged("P1SpokeEstherOnce", oldValue, value);
 _P1NightLocationsVisited = value;
 GameFlagChanged("P1NightLocationsVisited", oldValue, value);
             ///PROPERTY_SETTER_END P1NightLocationsVisited
+        }
+    }
+
+    //PROPERTY _CancelTask
+    private static bool _CancelTask = false;
+
+    //PROPERTY CancelTask
+    public static bool CancelTask {
+        get {
+            ///PROPERTY_GETTER_START CancelTask
+            return _CancelTask;
+            ///PROPERTY_GETTER_END CancelTask
+        }
+        set {
+            ///PROPERTY_SETTER_START CancelTask
+            var oldValue = value;
+_CancelTask = value;
+GameFlagChanged("CancelTask", oldValue, value);
+            ///PROPERTY_SETTER_END CancelTask
+        }
+    }
+
+    //PROPERTY _P1SmokehouseAssigned
+    private static bool _P1SmokehouseAssigned = false;
+
+    //PROPERTY P1SmokehouseAssigned
+    public static bool P1SmokehouseAssigned {
+        get {
+            ///PROPERTY_GETTER_START P1SmokehouseAssigned
+            return _P1SmokehouseAssigned;
+            ///PROPERTY_GETTER_END P1SmokehouseAssigned
+        }
+        set {
+            ///PROPERTY_SETTER_START P1SmokehouseAssigned
+            var oldValue = value;
+_P1SmokehouseAssigned = value;
+GameFlagChanged("P1SmokehouseAssigned", oldValue, value);
+            ///PROPERTY_SETTER_END P1SmokehouseAssigned
         }
     }
 }
