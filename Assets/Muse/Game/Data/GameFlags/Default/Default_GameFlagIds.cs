@@ -428,5 +428,11 @@ public static partial class GameFlagIds {
 
     //PROPERTY P1NightLocationsVisited
     public static string P1NightLocationsVisited = "P1NightLocationsVisited";
+
+    //PROPERTY CancelTask
+    public static string CancelTask = "CancelTask";
+
+    //PROPERTY P1SmokehouseAssigned
+    public static string P1SmokehouseAssigned = "P1SmokehouseAssigned";
 }
 //CLASS_END GameFlagIds

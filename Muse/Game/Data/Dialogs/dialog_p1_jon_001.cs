@@ -58,6 +58,7 @@ public class Dialog_p1_jon_001 {
         prompt.Text = "[Jonah shoves something behind his back.]";
         ///PROMPT_IGNORE_VO n01 0 false
         prompt.IgnoreVO = false;
+        prompt.OnShow(n01_p0_show);
         
         ///RESPONSE n01 0
         response = node.AddResponse();
@@ -489,6 +490,13 @@ public class Dialog_p1_jon_001 {
         ///NODE_END n14
         return dialog;
         ///METHOD_BODY_END CreateDialog
+    }
+
+    ///METHOD n01_p0_show
+    public void n01_p0_show ( DialogPrompt prompt ) {
+        ///METHOD_BODY_START n01_p0_show
+        GameFlags.P1TotalTasks += 2;
+        ///METHOD_BODY_END n01_p0_show
     }
 
     ///METHOD n10_p0_show
