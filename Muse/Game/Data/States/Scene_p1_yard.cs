@@ -40,6 +40,7 @@ public class Scene_p1_yard : State {
     public IEnumerator OnbigHouseHotspotClickCallback ( State Scene ) {
         ///METHOD_BODY_START OnbigHouseHotspotClickCallback
         yield return Actions.LoadScene("p1_big_house_kitchen");
+        yield return GlobalScripts.P1TimeCheck();
         ///METHOD_BODY_END OnbigHouseHotspotClickCallback
     }
 
@@ -47,13 +48,20 @@ public class Scene_p1_yard : State {
     public IEnumerator OnjonahHotspotClickCallback ( State Scene ) {
         ///METHOD_BODY_START OnjonahHotspotClickCallback
         yield return Actions.DialogOpenBlocking("p1_jon_001");
+        yield return GlobalScripts.P1TimeCheck();
         ///METHOD_BODY_END OnjonahHotspotClickCallback
     }
 
     ///METHOD OnsmokehouseHotspotClickCallback
     public IEnumerator OnsmokehouseHotspotClickCallback ( State Scene ) {
         ///METHOD_BODY_START OnsmokehouseHotspotClickCallback
-        yield return Actions.DialogOpenBlocking("");
+        if (GameFlags.P1SmokehouseAssigned && GameFlags.P1GotWood){
+        	yield return Actions.DialogOpenBlocking("p1_smokehouse");
+        }
+        else if (GameFlags.P1SmokehouseAssigned && !GameFlags.P1GotWood){
+        	yield return Actions.OpenPopupBlocking(PopupIds.p1_need_wood);
+        }
+        yield return GlobalScripts.P1TimeCheck();
         ///METHOD_BODY_END OnsmokehouseHotspotClickCallback
     }
 
@@ -75,7 +83,11 @@ public class Scene_p1_yard : State {
     ///METHOD OnwoodshedHotspotClickCallback
     public IEnumerator OnwoodshedHotspotClickCallback ( State Scene ) {
         ///METHOD_BODY_START OnwoodshedHotspotClickCallback
-        yield return Actions.DialogOpenBlocking("");
+        if (GameFlags.P1SmokehouseAssigned && !GameFlags.P1GotWood){
+        	GameFlags.P1GotWood = true;
+        	yield return Actions.DialogOpenBlocking("p1_get_wood");
+        }
+        yield return GlobalScripts.P1TimeCheck();
         ///METHOD_BODY_END OnwoodshedHotspotClickCallback
     }
 }

@@ -292,6 +292,8 @@ using System.Collections.Generic;
 ///GAMEFLAG_FOLDER CancelTask 
 //USING
 ///GAMEFLAG_FOLDER P1SmokehouseAssigned 
+//USING
+///GAMEFLAG_FOLDER P1GotWood 
 //CLASS GameFlags
 public static partial class GameFlags {
     //PROPERTY _P1HorseFail
@@ -1568,7 +1570,7 @@ GameFlagChanged("P2LucyHealth", oldValue, value);
     }
 
     //PROPERTY _P2LucyFood
-    private static int _P2LucyFood = 0;
+    private static int _P2LucyFood = 2;
 
     //PROPERTY P2LucyFood
     public static int P2LucyFood {
@@ -3046,6 +3048,25 @@ GameFlagChanged("CancelTask", oldValue, value);
 _P1SmokehouseAssigned = value;
 GameFlagChanged("P1SmokehouseAssigned", oldValue, value);
             ///PROPERTY_SETTER_END P1SmokehouseAssigned
+        }
+    }
+
+    //PROPERTY _P1GotWood
+    private static bool _P1GotWood = false;
+
+    //PROPERTY P1GotWood
+    public static bool P1GotWood {
+        get {
+            ///PROPERTY_GETTER_START P1GotWood
+            return _P1GotWood;
+            ///PROPERTY_GETTER_END P1GotWood
+        }
+        set {
+            ///PROPERTY_SETTER_START P1GotWood
+            var oldValue = value;
+_P1GotWood = value;
+GameFlagChanged("P1GotWood", oldValue, value);
+            ///PROPERTY_SETTER_END P1GotWood
         }
     }
 }

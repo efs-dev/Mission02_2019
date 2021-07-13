@@ -14,6 +14,7 @@ p1_big_house
 , p1_hog_pen
 , p1_horses_night
 , p1_icehouse
+, p1_need_wood
 , p1_no_back_to_quarters
 , p1_smokehouse
 , p1_start

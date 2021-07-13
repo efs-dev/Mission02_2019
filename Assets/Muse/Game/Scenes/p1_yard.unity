@@ -5826,7 +5826,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: yield return Actions.DialogOpenBlocking("");
+  OnClickScript: "if (GameFlags.P1SmokehouseAssigned && !GameFlags.P1GotWood){\n\tGameFlags.P1GotWood
+    = true;\n\tyield return Actions.DialogOpenBlocking(\"p1_get_wood\");\n}\nyield
+    return GlobalScripts.P1TimeCheck();"
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -8513,7 +8515,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: yield return Actions.LoadScene("p1_big_house_kitchen");
+  OnClickScript: 'yield return Actions.LoadScene("p1_big_house_kitchen");
+
+    yield return GlobalScripts.P1TimeCheck();'
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -15775,7 +15779,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 7
   CountClick: 0
-  OnClickScript: yield return Actions.DialogOpenBlocking("");
+  OnClickScript: "if (GameFlags.P1SmokehouseAssigned && GameFlags.P1GotWood){\n\tyield
+    return Actions.DialogOpenBlocking(\"p1_smokehouse\");\n}\nelse if (GameFlags.P1SmokehouseAssigned
+    && !GameFlags.P1GotWood){\n\tyield return Actions.OpenPopupBlocking(PopupIds.p1_need_wood);\n}\nyield
+    return GlobalScripts.P1TimeCheck();"
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 
@@ -16292,7 +16299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconType: 19
   CountClick: 0
-  OnClickScript: yield return Actions.DialogOpenBlocking("p1_jon_001");
+  OnClickScript: 'yield return Actions.DialogOpenBlocking("p1_jon_001");
+
+    yield return GlobalScripts.P1TimeCheck();'
   OnVisibleScript: 
   OnInitScript: 
   OnCompleteScript: 

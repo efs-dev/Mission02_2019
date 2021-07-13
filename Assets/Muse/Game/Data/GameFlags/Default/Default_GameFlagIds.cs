@@ -434,5 +434,8 @@ public static partial class GameFlagIds {
 
     //PROPERTY P1SmokehouseAssigned
     public static string P1SmokehouseAssigned = "P1SmokehouseAssigned";
+
+    //PROPERTY P1GotWood
+    public static string P1GotWood = "P1GotWood";
 }
 //CLASS_END GameFlagIds

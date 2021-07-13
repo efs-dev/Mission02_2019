@@ -192,6 +192,44 @@ public static partial class GameFlags {
         }
     }
 
+    //PROPERTY _HotspotActive_p1_night_map_slaveGardenHotspot
+    private static int _HotspotActive_p1_night_map_slaveGardenHotspot = 1;
+
+    //PROPERTY HotspotActive_p1_night_map_slaveGardenHotspot
+    public static int HotspotActive_p1_night_map_slaveGardenHotspot {
+        get {
+            ///PROPERTY_GETTER_START HotspotActive_p1_night_map_slaveGardenHotspot
+            return _HotspotActive_p1_night_map_slaveGardenHotspot;
+            ///PROPERTY_GETTER_END HotspotActive_p1_night_map_slaveGardenHotspot
+        }
+        set {
+            ///PROPERTY_SETTER_START HotspotActive_p1_night_map_slaveGardenHotspot
+            var oldValue = _HotspotActive_p1_night_map_slaveGardenHotspot;
+            _HotspotActive_p1_night_map_slaveGardenHotspot = value;
+            GameFlagChanged("HotspotActive_p1_night_map_slaveGardenHotspot", oldValue, value);
+            ///PROPERTY_SETTER_END HotspotActive_p1_night_map_slaveGardenHotspot
+        }
+    }
+
+    //PROPERTY _HotspotCountClick_p1_night_map_slaveGardenHotspot
+    private static bool _HotspotCountClick_p1_night_map_slaveGardenHotspot = false;
+
+    //PROPERTY HotspotCountClick_p1_night_map_slaveGardenHotspot
+    public static bool HotspotCountClick_p1_night_map_slaveGardenHotspot {
+        get {
+            ///PROPERTY_GETTER_START HotspotCountClick_p1_night_map_slaveGardenHotspot
+            return _HotspotCountClick_p1_night_map_slaveGardenHotspot;
+            ///PROPERTY_GETTER_END HotspotCountClick_p1_night_map_slaveGardenHotspot
+        }
+        set {
+            ///PROPERTY_SETTER_START HotspotCountClick_p1_night_map_slaveGardenHotspot
+            var oldValue = _HotspotCountClick_p1_night_map_slaveGardenHotspot;
+            _HotspotCountClick_p1_night_map_slaveGardenHotspot = value;
+            GameFlagChanged("HotspotCountClick_p1_night_map_slaveGardenHotspot", oldValue, value);
+            ///PROPERTY_SETTER_END HotspotCountClick_p1_night_map_slaveGardenHotspot
+        }
+    }
+
     //PROPERTY _HotspotActive_p1_night_map_smokehouseHotspot
     private static int _HotspotActive_p1_night_map_smokehouseHotspot = 1;
 

@@ -13,7 +13,7 @@ using NodeMaps;
 //USING
 
 //USING
-[State("p1_night_map", "woodshedHotspot", "smokehouseHotspot", "pin_jon_2k", "map_plantation_night", "laundryHotspot", "kingsGardenHotspot", "henhouseHotspot")]
+[State("p1_night_map", "woodshedHotspot", "smokehouseHotspot", "slaveGardenHotspot", "pin_jon_2k", "map_plantation_night", "laundryHotspot", "kingsGardenHotspot", "henhouseHotspot")]
 //CLASS Scene_p1_night_map : State
 public class Scene_p1_night_map : State {
     //CLASS SceneScriptsClass
@@ -32,6 +32,7 @@ public class Scene_p1_night_map : State {
         OnHotspotClickBlocking.Add("kingsGardenHotspot", OnkingsGardenHotspotClickCallback);
         OnHotspotClickBlocking.Add("laundryHotspot", OnlaundryHotspotClickCallback);
         OnHotspotClickBlocking.Add("pin_jon_2k", Onpin_jon_2kClickCallback);
+        OnHotspotClickBlocking.Add("slaveGardenHotspot", OnslaveGardenHotspotClickCallback);
         OnHotspotClickBlocking.Add("smokehouseHotspot", OnsmokehouseHotspotClickCallback);
         OnHotspotClickBlocking.Add("woodshedHotspot", OnwoodshedHotspotClickCallback);
         ///METHOD_BODY_END Scene_p1_night_map
@@ -68,6 +69,15 @@ public class Scene_p1_night_map : State {
         yield return Actions.DialogOpenBlocking("p1_jon_002");
         yield return GlobalScripts.P1NightMapAfterSpot("pin_jon_2k");
         ///METHOD_BODY_END Onpin_jon_2kClickCallback
+    }
+
+    ///METHOD OnslaveGardenHotspotClickCallback
+    public IEnumerator OnslaveGardenHotspotClickCallback ( State Scene ) {
+        ///METHOD_BODY_START OnslaveGardenHotspotClickCallback
+        GameFlags.P1NightLocationsVisited++;
+        yield return Actions.DialogOpenBlocking("p1_night_slave_garden");
+        yield return GlobalScripts.P1NightMapAfterSpot("kingsGardenHotspot");
+        ///METHOD_BODY_END OnslaveGardenHotspotClickCallback
     }
 
     ///METHOD OnsmokehouseHotspotClickCallback
