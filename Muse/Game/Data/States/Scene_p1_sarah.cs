@@ -13,7 +13,7 @@ using NodeMaps;
 //USING
 
 //USING
-[State("p1_sarah")]
+[State("p1_sarah", "Sarah")]
 //CLASS Scene_p1_sarah : State
 public class Scene_p1_sarah : State {
     //CLASS SceneScriptsClass
